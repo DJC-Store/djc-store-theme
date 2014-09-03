@@ -1,6 +1,6 @@
 {
   "name": "DJC-Store",
-  "version": "test",
+  "version": "git-test",
   "devDependencies": {
     "grunt": "^0.4",
     "grunt-contrib-watch": "^0.5",

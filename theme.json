@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "test"
+    "version": "git-test"
   },
   "settings": {},
   "pageTypes": [],
