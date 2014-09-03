@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     '*.png'
   ],
 
-versionCmd = ':'; // e.g. 'git describe --tags --always' or 'svn info'
+versionCmd = 'git describe --tags --always'; // e.g. 'git describe --tags --always' or 'svn info'
 
 grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),

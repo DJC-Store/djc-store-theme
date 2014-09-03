@@ -1,10 +1,12 @@
 {
   "about": {
-    "name": "Your Theme",
+    "name": "DJC-Store",
+    "author": "Jason Subers",
     "extends": "core5",
     "isDesktop": true,
     "isMobile": true,
-    "version": "0.1.0"
+    "defaultLanguage": "en-US",
+    "version": "test"
   },
   "settings": {},
   "pageTypes": [],

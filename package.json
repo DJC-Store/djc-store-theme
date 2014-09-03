@@ -1,6 +1,6 @@
 {
-  "name": "your_theme",
-  "version": "0.1.0",
+  "name": "DJC-Store",
+  "version": "test",
   "devDependencies": {
     "grunt": "^0.4",
     "grunt-contrib-watch": "^0.5",
