@@ -1,0 +1,32 @@
+﻿@headerHeight: 60px;
+@headerBaseline: 36px;
+@searchBoxHeight: 30px;
+
+.mz-pageheader {
+    position: relative;
+    background: #303030;
+    padding: @gutter/2 @gutter;
+
+    .mz-utilitynav {
+        float:left;
+    }
+
+    .dj-topright {
+        float:right;
+    }
+
+    @media only screen {
+        @media (max-width: 768px) {
+            height: auto;
+            .mz-storebranding, .dj-topright, .mz-utilitynav {
+                position: relative;
+                margin-bottom: 10px;
+                clear: both;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

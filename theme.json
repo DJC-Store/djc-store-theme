@@ -1,12 +1,12 @@
 {
   "about": {
-    "name": "DJC-Store",
+    "name": "DaniJohnson.com Online Store",
     "author": "Jason Subers",
     "extends": "core5",
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "git-test"
+    "version": "rc7-4-g2b54197"
   },
   "settings": {},
   "pageTypes": [],

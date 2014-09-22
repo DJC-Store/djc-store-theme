@@ -1,0 +1,7 @@
+<div class="dj-softcart">
+    <a class="dj-softcart-nav" href="/cart">
+        {{ labels.viewCart }} (<span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>)
+        {% require_script "modules/cart-monitor" %}
+        <i class="icon-cart2"></i>
+    </a>
+</div>

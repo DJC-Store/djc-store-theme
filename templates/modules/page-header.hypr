@@ -1,0 +1,15 @@
+﻿<header class="mz-pageheader">
+	<div class="dj-container">
+    {% block utility-nav %}
+        {% include "modules/page-header/utility-nav" %}
+    {% endblock utility-nav %}
+	    <div class="dj-topright">
+	    {% block soft-cart %}
+			{% include "modules/page-header/soft-cart" %}
+		{% endblock %}
+		{% block search-box %}
+		    {% include "modules/page-header/search-box" %}
+		{% endblock search-box %}
+		</div>
+    </div>
+</header>

@@ -1,6 +1,6 @@
 {
-  "name": "DJC-Store",
-  "version": "git-test",
+  "name": "DaniJohnson.com Online Store",
+  "version": "helpmerhonda",
   "devDependencies": {
     "grunt": "^0.4",
     "grunt-contrib-watch": "^0.5",
