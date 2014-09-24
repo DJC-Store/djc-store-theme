@@ -1,7 +1,7 @@
 <div class="sitenav-promotion">
 	{% if not user.isAnonymous %}
 		<div class="featured-ad">
-			
+			<a href="#"><img src="" /></a>
 		</div>
 	{% else %}
 		<div class="sign-in-cta">

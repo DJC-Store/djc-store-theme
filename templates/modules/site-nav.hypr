@@ -61,12 +61,14 @@
                         </ul>
                       </div>
                     </div>
+                    <div class="master-nav">
                     {% block promoted-ad %}
                       {% include "modules/site-nav/promoted-ad" %}
                     {% endblock %}
                     {% block featured-links %}
                       {% include "modules/site-nav/featured-links" %}
                     {% endblock %}
+                    </div>
                     <div class="clear"></div>
                   </div>
                 </div>
