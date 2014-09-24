@@ -17,9 +17,10 @@
         width: 800px;
         position: absolute;
         top: 0;
-        left: -600px;
-        background-color: @djcOrange;
+        left: -580px;
         z-index: 10;
+        background-size: 100% auto;
+        background-position: top right;
     }
     @media only screen {
         @media (min-width: 768px) {
@@ -35,10 +36,15 @@
     }
 }
 
+.orange-dash {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMzUuMSAyMTcuMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzNS4xIDIxNy4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkY4OTM2IiBkPSJNMTA5NC41IDIxNy4zYy0yODYuOCAwLTgwNy43IDAtMTA5NC41IDBDMCAxNDQuOCAwIDcyLjQgMCAwYzMwMC4zIDAgODM0LjcgMCAxMTM1IDBDMTEzMC43IDIxLjggMTA5NS4yIDIxMC4zIDEwOTQuNSAyMTcuM3oiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+}
+
 .main-nav {
     display: none;
     float: right;
-    width: 65%;
+    width: 66.7%;
 
     li {
         float: left;
@@ -126,11 +132,7 @@
         -webkit-box-shadow: 0 5px 5px rgba(48, 48, 48, 0.3);
                 box-shadow: 0 5px 5px rgba(48, 48, 48, 0.3);
         margin-top: 0;
-
-        .sub-nav-container {
-            float: right;
-            padding: 0 1em;
-        }
+        overflow: hidden;
 
         h5 {
             font-size: 14px;
@@ -142,11 +144,24 @@
             margin-top: 0;
         }
 
+        .nav-bg {
+            height: 400px;
+            width: 600px;
+            position: relative;
+            margin: 0 -600px -400px 0;
+            background-size: auto 100%;
+            background-position:top right;
+            top: -49px;
+            left: -424px;
+        }
+
         .in-section {
             width: 50%;
-            padding-left:20%;
+            padding-left: 0;
             text-align: left;
             float: left;
+            position:relative;
+            left:205px;
         }
 
         ul {
@@ -171,6 +186,15 @@
                         color: #1177a3;
                     }
                 }
+
+                .menu-desc {
+                    li {
+                        color: #6e6e6e;
+                        font-size:14px;
+                        line-height: 1.5em;
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
     }
@@ -192,8 +216,6 @@
             }
         }
         @media (min-width: 940px) {
-            width: 70%;
-            
             li {
                 padding: 1em; 
 
@@ -216,8 +238,6 @@
             }
         }
         @media (min-width: 1194px) {
-            width: 70%;
-            
             li {
                 padding: 1em;
 

@@ -1,7 +1,7 @@
 ﻿<div class="dj-container">
   <div class="logo">
-    <div class="logo-bg"></div>
-    <a href="#"><img src="resources/images/dj-onlinestore-big.png" alt="Logo Alt Text" /></a>
+    <div class="logo-bg orange-dash"></div>
+    <a href="#"><img src="resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
   </div>
 
   <div class="mobile-menu">
@@ -36,6 +36,7 @@
                 </a>
                 <div class="sub-nav">
                   <div class="dj-container">
+                    <div class="nav-bg orange-dash"></div>
                     <div class="in-section">
                       <h5>In this Section</h5>
                       <div class="menu">
