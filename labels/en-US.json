@@ -4,6 +4,8 @@
 
   "logOut"               : "Log Out",
   "logIn"                : "Sign In for Exclusive Promotions",
+  "signIn1"              : "Sign In",
+  "signIn2"              : "for Exclusive Promotions and First Access to Deals with Limited Availability!",
   "signUp"               : "Sign Up",
   "viewCart"             : "Shopping Cart",
   "search"               : "Search...",
@@ -56,6 +58,9 @@
   "creditCard"           : "Credit Card",
   "contactUs"            : "Contact Us",
   "backHome"             : "Back to DaniJohnson.com",
+
+  "chatNow"              : "Chat Now",
+  "submitTicket"         : "Submit a Ticket",
 
   "ccVisa"         : "Visa",
   "ccMastercard"     : "MasterCard",

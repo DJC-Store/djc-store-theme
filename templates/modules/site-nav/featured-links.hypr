@@ -1,0 +1,30 @@
+<div class="featured-column">
+  <h5>Featured Links</h5>
+  <div class="menu featured-links">
+    <ul>
+      <li class="">
+        <a href="#">Starter Bundle</a>
+      </li>
+      <li class="">
+        <a href="#">First Steps to Success</a>
+      </li>
+      <li class="">
+        <a href="#">My Digital Content</a>
+      </li>
+    </ul>
+  </div>
+  <h5>Client Support</h5>
+  <div class="menu client-support">
+    <ul>
+      <li class="">
+        <a href="#"><i class="icon-chat"></i>{{ labels.chatNow }}</a>
+      </li>
+      <li class="">
+        <a href="#"><i class="icon-phone"></i>866-760-8255</a>
+      </li>
+      <li class="">
+        <a href="#/"><i class="icon-mail"></i>{{ labels.submitTicket }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

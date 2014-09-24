@@ -1,0 +1,147 @@
+﻿<nav class="mz-sitenav">
+    <ul class="mz-sitenav-list" 
+        data-mz-contextify='.mz-sitenav-link[href="{{ navigation.currentNode.url }}"]'
+        data-mz-contextify-attr='class'
+        data-mz-contextify-val='is-current'>
+      {% partial_cache %}
+      {% for link in navigation.tree %}
+        {% if not link.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
+          <li class="mz-sitenav-item">
+              <div class="mz-sitenav-item-inner">
+                  <a class="mz-sitenav-link" href="{{link.url}}">{{link.name|truncatechars(themeSettings.maxTopLevelNavLabelLength)}}</a>
+                  {% if link.items %}
+                  <ul class="mz-sitenav-sub">
+                      {% for sublink in link.items %}
+                          <li data-mz-role="sitemenu-item" class="mz-sitenav-item">
+                              <a class="mz-sitenav-link" href="{{sublink.url}}">{{sublink.name}}</a>
+                            {%comment%}
+                            <!-- uncoment out  this block to get 3rd laver of nav -->
+                            {% if sublink.items %}
+                                     <ul class="mz-sitenav-sub-sub">
+                                          {% for subsublink in sublink.items %}
+                                              <li class="mz-sitenav-item">
+                                                  <a class="mz-sitenav-link" href="{{subsublink.url}}">{{subsublink.name}}</a>
+                                              </li>
+                                          {% endfor %}
+                                      </ul>
+                            {% endif %}
+                            {%endcomment%}
+                          </li>
+                      {% endfor %}
+                  </ul>
+                  {% endif %}
+              </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+      {% endpartial_cache %}
+      {% require_script "modules/contextify" %}
+    </ul>
+</nav>
+
+<div class="dj-container">
+  <div class="logo">
+    <div class="logo-bg"></div>
+    <a href="#"><img src="resources/images/dj-onlinestore-big.png" alt="Logo Alt Text" /></a>
+  </div>
+
+  <div class="mobile-menu">
+    <a href="#footer"><span>MENU</span> <img src="/resources/images/djc-assets/mobile-menu.svg" alt=""></a>
+  </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="/events">
+            <i class="icon-ticket"></i>
+            <h2>Events</h2>
+            <h6>Get Tickets</h6>
+          </a>
+          <div class="sub-nav">
+            <div class="dj-container">
+              <div class="in-section">
+                <h5>In this Section</h5>
+                <div class="menu"><ul><li class="page_item page-item-178"><a href="http://dj.readyjump.in/test/">*Test</a></li><li class="page_item page-item-53"><a href="http://dj.readyjump.in/about/">about</a></li><li class="page_item page-item-171"><a href="http://dj.readyjump.in/archive/">archive</a></li><li class="page_item page-item-91"><a href="http://dj.readyjump.in/contact/">contact</a></li><li class="page_item page-item-7"><a href="http://dj.readyjump.in/resource/">resource</a></li><li class="page_item page-item-2"><a href="http://dj.readyjump.in/sample-page/">Sample Page</a></li><li class="page_item page-item-10"><a href="http://dj.readyjump.in/see/">see</a></li><li class="page_item page-item-67"><a href="http://dj.readyjump.in/watch/">watch</a></li></ul></div>
+              </div>
+              {% block promoted-ad %}
+                {% include "modules/site-nav/promoted-ad" %}
+              {% endblock %}
+              {% block featured-links %}
+                {% include "modules/site-nav/featured-links" %}
+              {% endblock %}
+              <div class="clear"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="/books">
+            <i class="icon-book"></i>
+            <h2>Books</h2>
+            <h6>Sub-Head</h6>
+          </a>
+            <div class="sub-nav">
+            <div class="dj-container">
+              <div class="in-section">
+                <h5>In this Section</h5>
+                <div class="menu"><ul><li class="page_item page-item-178"><a href="http://dj.readyjump.in/test/">*Test</a></li><li class="page_item page-item-53"><a href="http://dj.readyjump.in/about/">about</a></li><li class="page_item page-item-171"><a href="http://dj.readyjump.in/archive/">archive</a></li><li class="page_item page-item-91"><a href="http://dj.readyjump.in/contact/">contact</a></li><li class="page_item page-item-7"><a href="http://dj.readyjump.in/resource/">resource</a></li><li class="page_item page-item-2"><a href="http://dj.readyjump.in/sample-page/">Sample Page</a></li><li class="page_item page-item-10"><a href="http://dj.readyjump.in/see/">see</a></li><li class="page_item page-item-67"><a href="http://dj.readyjump.in/watch/">watch</a></li></ul></div>
+              </div>
+              {% block promoted-ad %}
+                {% include "modules/site-nav/promoted-ad" %}
+              {% endblock %}
+              {% block featured-links %}
+                {% include "modules/site-nav/featured-links" %}
+              {% endblock %}
+              <div class="clear"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="/shop">
+            <i class="icon-courses"></i>
+            <h2>Courses</h2>
+            <h6>DVDs &amp; more</h6>
+          </a>
+          <div class="sub-nav">
+            <div class="dj-container">
+              <div class="in-section">
+                <h5>In this Section</h5>
+                <div class="menu"><ul><li class="page_item page-item-178"><a href="http://dj.readyjump.in/test/">*Test</a></li><li class="page_item page-item-53"><a href="http://dj.readyjump.in/about/">about</a></li><li class="page_item page-item-171"><a href="http://dj.readyjump.in/archive/">archive</a></li><li class="page_item page-item-91"><a href="http://dj.readyjump.in/contact/">contact</a></li><li class="page_item page-item-7"><a href="http://dj.readyjump.in/resource/">resource</a></li><li class="page_item page-item-2"><a href="http://dj.readyjump.in/sample-page/">Sample Page</a></li><li class="page_item page-item-10"><a href="http://dj.readyjump.in/see/">see</a></li><li class="page_item page-item-67"><a href="http://dj.readyjump.in/watch/">watch</a></li></ul></div>
+              </div>
+              {% block promoted-ad %}
+                {% include "modules/site-nav/promoted-ad" %}
+              {% endblock %}
+              {% block featured-links %}
+                {% include "modules/site-nav/featured-links" %}
+              {% endblock %}
+              <div class="clear"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="/about">
+            <i class="icon-bundles"></i>
+            <h2>Bundles</h2>
+            <h6>For Killer Success</h6>
+          </a>
+          <div class="sub-nav">
+            <div class="dj-container">
+              <div class="in-section">
+                <h5>In this Section</h5>
+                <div class="menu"><ul><li class="page_item page-item-178"><a href="http://dj.readyjump.in/test/">*Test</a></li><li class="page_item page-item-53"><a href="http://dj.readyjump.in/about/">about</a></li><li class="page_item page-item-171"><a href="http://dj.readyjump.in/archive/">archive</a></li><li class="page_item page-item-91"><a href="http://dj.readyjump.in/contact/">contact</a></li><li class="page_item page-item-7"><a href="http://dj.readyjump.in/resource/">resource</a></li><li class="page_item page-item-2"><a href="http://dj.readyjump.in/sample-page/">Sample Page</a></li><li class="page_item page-item-10"><a href="http://dj.readyjump.in/see/">see</a></li><li class="page_item page-item-67"><a href="http://dj.readyjump.in/watch/">watch</a></li></ul></div>
+              </div>
+              {% block promoted-ad %}
+                {% include "modules/site-nav/promoted-ad" %}
+              {% endblock %}
+              {% block featured-links %}
+                {% include "modules/site-nav/featured-links" %}
+              {% endblock %}
+              <div class="clear"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="clear"></div>
+</div>
+    

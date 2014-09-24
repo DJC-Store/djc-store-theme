@@ -1,0 +1,12 @@
+<div class="sitenav-promotion">
+	{% if not user.isAnonymous %}
+		<div class="featured-ad">
+			
+		</div>
+	{% else %}
+		<div class="sign-in-cta">
+			<a href="#">{{ labels.signIn1 }}</a>
+			<p>{{ labels.signIn2 }}</p>
+		</div>
+	{% endif %}
+</div>
