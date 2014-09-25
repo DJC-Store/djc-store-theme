@@ -4,22 +4,22 @@
 	    <nav class="footer-nav">
 	      	<div class="menu-footer-nav-container">
 	      		<ul id="menu-footer-nav" class="menu">
-	      			<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146">
+	      			<li class="menu-item">
 	      				<a href="http://dj.readyjump.in/watch/">{{ labels.account }}</a>
 	      			</li>
-			      	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+			      	<li class="menu-item">
 			      		<a href="http://dj.readyjump.in/see/">{{ labels.products }}</a>
 			      	</li>
-			      	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-150">
+			      	<li class="menu-item">
 			      		<a href="http://dj.readyjump.in/resource/">{{ labels.categories }}</a>
 			      		<ul class="sub-menu">
-	      					<li id="menu-item-152" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-152">
+	      					<li class="menu-item">
 	      						<a href="http://dj.readyjump.in/learn/topics/personal-finance/">Personal Finance</a>
 	      					</li>
 	      				</ul>
 	      			</li>
-	      			<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-151">
-	      				<a href="/about">{{ labels.support }}</a>
+	      			<li class="menu-item">
+	      				<h6><span class="dj-onlinestore">{{ labels.storeSupport1 }}</span> {{ labels.storeSupport2 }}</h6>
 	      				{% block customersupport %}
 
 	      				{% endblock %}
@@ -30,8 +30,14 @@
 
 		<div class="footer-left-block">
 			<div class="social">
-				{{ labels.social }}
-			</div>
+	          <h6>{{ labels.social }}</h6>
+	          <div class="icons">
+	            <a href="#"><i class="ss-facebook"></i></a>
+	            <a href="#"><i class="ss-twitter"></i></a>
+	            <a href="#"><i class="ss-instagram"></i></a>
+	            <a href="#"><i class="ss-pinterest"></i></a>
+	          </div>
+	        </div>
 			<div class="creds">
 				<img src="/resources/images/auth.png" alt="Authorize.net">
 				<img src="/resources/images/bbb.png" alt="Better Business Bureau">
@@ -44,6 +50,9 @@
 	        	<li><a href="#">{{ labels.privacy }}</a></li>
 	        	<li><a href="#">{{ labels.earnings }}</a></li>
 	        </ul>
+	        <span class="copy">
+				<a href="http://www.danijohnson.com">{{ labels.backHome }}</a>
+	        </span>
       	</div>
 
     </div>

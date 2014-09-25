@@ -64,13 +64,15 @@
   "navCourses"           : "DVDs and More",
   "navBundles"           : "For Killer Success",
 
+  "featuredLinks"        : "Featured Links",
+  "clientSupport"        : "Client Support",
+  "storeSupport1"        : "Online Store",
+  "storeSupport2"        : "Support",
   "chatNow"              : "Chat Now",
   "submitTicket"         : "Submit a Ticket",
-
   "social"               : "Join the Party",
   "products"             : "Products",
   "categories"           : "Categories",
-  "support"              : "Online Store Support",
   "terms"                : "Terms & Conditions",
   "privacy"              : "Privacy Policy",
   "earnings"             : "Earnings Disclaimer",

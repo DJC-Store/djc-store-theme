@@ -3,7 +3,15 @@
   padding: 1em;
 
   h6 {
-    color: white; 
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 0;
+
+    .dj-onlinestore {
+      color: @djcOrange;
+      font-style: italic;
+      font-weight: 600;
+    }
   }
   @media only screen {
     @media (min-width: 768px) {
@@ -98,49 +106,61 @@
 }
 
 .footer-left-block {
-    float: left;
-    color: #9a9a9a;
-    text-align: center;
-    width: 100%;
-    padding-top: 2em;
+  float: left;
+  color: #9a9a9a;
+  text-align: center;
+  width: 100%;
+  padding-top: 2em;
 
-    a {
-      color: #9a9a9a;
+  a {
+    color: #9a9a9a;
+  }
+  @media only screen {
+    @media (min-width: 1120px) {
+      text-align: left;
+      width: auto;
+      padding-top: 0;
     }
-    @media only screen {
-      @media (min-width: 1120px) {
-        text-align: left;
-        width: auto;
-        padding-top: 0;
+  }
+  .social {
+    .icons {
+      margin: 1em 0 2.5em;
+    }
+    i {
+      font-size: 1.5em;
+      margin: 5px;
+    }
+  }
+  .creds {
+    margin-bottom: 20px;
+  }
+  .legal-links, .copy {
+    font-size: 12px;
+    margin: 1em 0 .8em;
+  }
+  .legal-links {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 0.5em;
+      border-left: 1px solid #9a9a9a;
+
+      &:first-child {
+        border-left: none;
+        padding-left: 0; 
+      }
+
+      a {
+        color: #9a9a9a;
+
+        &:hover {
+          color: white;
+        }
       }
     }
-    .creds {
-        margin-bottom: 20px;
-    }
-    .legal-links, .copy {
-      font-size: 12px;
-      margin: 1em 0; 
-    }
-    .legal-links {
-        padding: 0;
-
-        li {
-            display: inline-block;
-            padding: 0 0.5em;
-            border-left: 1px solid #9a9a9a;
-
-            &:first-child {
-                border-left: none;
-                padding-left: 0; 
-            }
-
-            a {
-                color: #9a9a9a;
-
-                &:hover {
-                    color: white;
-                }
-            }
-        }
-    }
+  }
+  .copy a:hover {
+    color: white;
+  }
 }
