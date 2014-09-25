@@ -1,0 +1,146 @@
+﻿footer {
+  background: #303030;
+  padding: 1em;
+
+  h6 {
+    color: white; 
+  }
+  @media only screen {
+    @media (min-width: 768px) {
+      padding: 42px 0; 
+    }
+  }
+}
+
+//footer
+.footer-nav {
+  float: none;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 375px;
+
+  li {
+    color: white;
+    float: left;
+    width: 50%;
+    height: 228px;
+
+    a {
+      color: white;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 1.28579em;
+
+      &:hover {
+        color: #9a9a9a; 
+      }
+    }
+
+    ul {
+      margin-top: 1em;
+      font-size: 14px;
+
+      li {
+        width: 100%;
+        color: #9a9a9a;
+        margin-bottom: 1em;
+        height: auto;
+
+        a {
+          letter-spacing: 0;
+          text-transform: none;
+          color: #9a9a9a;
+
+          &:hover {
+            color: white; 
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen {
+
+    @media (min-width: 500px) {
+      width: 100%;
+      max-width: inherit;
+
+      li {
+        padding-right: 1em;
+        width: 25%;
+        margin-right: 0;
+
+        li {
+          width: 100%;
+          padding-right: 0; 
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      width: 75%;
+      margin: 0 auto;
+
+      li li {
+        margin-right: 32px; 
+      }
+    }
+    @media (min-width: 1120px) {
+      float: right;
+      width: 64%;
+
+      li {
+        padding-right: 0;
+        max-width: 180px; 
+      } 
+    }
+  }
+}
+
+.footer-left-block {
+    float: left;
+    color: #9a9a9a;
+    text-align: center;
+    width: 100%;
+    padding-top: 2em;
+
+    a {
+      color: #9a9a9a;
+    }
+    @media only screen {
+      @media (min-width: 1120px) {
+        text-align: left;
+        width: auto;
+        padding-top: 0;
+      }
+    }
+    .creds {
+        margin-bottom: 20px;
+    }
+    .legal-links, .copy {
+      font-size: 12px;
+      margin: 1em 0; 
+    }
+    .legal-links {
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 0.5em;
+            border-left: 1px solid #9a9a9a;
+
+            &:first-child {
+                border-left: none;
+                padding-left: 0; 
+            }
+
+            a {
+                color: #9a9a9a;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}

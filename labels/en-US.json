@@ -67,6 +67,14 @@
   "chatNow"              : "Chat Now",
   "submitTicket"         : "Submit a Ticket",
 
+  "social"               : "Join the Party",
+  "products"             : "Products",
+  "categories"           : "Categories",
+  "support"              : "Online Store Support",
+  "terms"                : "Terms & Conditions",
+  "privacy"              : "Privacy Policy",
+  "earnings"             : "Earnings Disclaimer",
+
   "ccVisa"         : "Visa",
   "ccMastercard"     : "MasterCard",
   "ccAmericanExpress"    : "American Express",
@@ -243,6 +251,7 @@
   "errorApology"         : "Sorry, an error occurred.",
   "errorDetail"          : "Our software encountered an error it couldn't resolve.",
 
+  "account"              : "Account",
   "myAccount"            : "My Account",
   "yourAccount"          : "Your Account",
   "accountSettings"      : "Account Settings",

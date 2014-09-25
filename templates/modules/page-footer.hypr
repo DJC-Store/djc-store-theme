@@ -1,0 +1,51 @@
+﻿<footer id="footer">
+    <div class="dj-container">
+		{% dropzone "footer" scope="site" %}
+	    <nav class="footer-nav">
+	      	<div class="menu-footer-nav-container">
+	      		<ul id="menu-footer-nav" class="menu">
+	      			<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146">
+	      				<a href="http://dj.readyjump.in/watch/">{{ labels.account }}</a>
+	      			</li>
+			      	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+			      		<a href="http://dj.readyjump.in/see/">{{ labels.products }}</a>
+			      	</li>
+			      	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-150">
+			      		<a href="http://dj.readyjump.in/resource/">{{ labels.categories }}</a>
+			      		<ul class="sub-menu">
+	      					<li id="menu-item-152" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-152">
+	      						<a href="http://dj.readyjump.in/learn/topics/personal-finance/">Personal Finance</a>
+	      					</li>
+	      				</ul>
+	      			</li>
+	      			<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-151">
+	      				<a href="/about">{{ labels.support }}</a>
+	      				{% block customersupport %}
+
+	      				{% endblock %}
+	      			</li>
+	      		</ul>
+	      	</div>
+	    </nav>
+
+		<div class="footer-left-block">
+			<div class="social">
+				{{ labels.social }}
+			</div>
+			<div class="creds">
+				<img src="/resources/images/auth.png" alt="Authorize.net">
+				<img src="/resources/images/bbb.png" alt="Better Business Bureau">
+			</div>
+	        <span class="copy">
+	        	&copy; {% now "Y" %} {{ siteContext.generalSettings.websiteName }}. {{ labels.allRightsReserved }} {{ labels.poweredBy }}
+	        </span>
+	        <ul class="legal-links">
+	        	<li><a href="#">{{ labels.terms|fix_ampersands }}</a></li>
+	        	<li><a href="#">{{ labels.privacy }}</a></li>
+	        	<li><a href="#">{{ labels.earnings }}</a></li>
+	        </ul>
+      	</div>
+
+    </div>
+    <div class="clear"></div>
+</footer>
