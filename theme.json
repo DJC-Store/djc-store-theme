@@ -6,9 +6,41 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-10-g57a4893"
+    "version": "rc7-11-gc6efc6f"
   },
-  "settings": {},
+  "settings": {
+    "allowWishlist": true,
+    "showBreadcrumbs": true,
+    "maxTopLevelNavItems": 4
+  },
   "pageTypes": [],
-  "widgets": []
+  "widgets": [
+    {
+      "id": "djcfooternav",
+      "displayName": "DJC Footer Nav",
+      "displayTemplate": "misc/footer-nav",
+      "icon": "/resources/admin/widgets/footer-nav.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Navigation Parent",
+          "name": "parent",
+          "xtype": "mz-input-navnode"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Number to Display",
+          "name": "numberToDisplay",
+          "xtype": "mz-input-number"
+        }
+      ],
+      "defaultConfig": {
+        "mainCategory": "Category",
+        "numberToDisplay": 8
+      }
+    }
+  ]
 }

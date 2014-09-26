@@ -18,6 +18,24 @@
       padding: 42px 0; 
     }
   }
+  //kill Mozu Dropzone Structure for Footer Nav Widget
+  div[class^="mz-cms-"] {
+    width: auto !important;
+    max-width: 2000px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-height: 9999999px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    float: none !important;
+    background-color: transparent !important;
+  }
+  .mz-cms-row:after {
+    display: block !important;
+    clear: none !important;
+  }
 }
 
 //footer
