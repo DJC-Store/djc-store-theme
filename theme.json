@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-11-gc6efc6f"
+    "version": "rc7-12-g6584fc3"
   },
   "settings": {
     "allowWishlist": true,
@@ -26,9 +26,9 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Navigation Parent",
-          "name": "parent",
-          "xtype": "mz-input-navnode"
+          "fieldLabel": "Main Category",
+          "name": "mainCategory",
+          "xtype": "categorycombobox"
         },
         {
           "anchor": "100%",

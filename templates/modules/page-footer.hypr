@@ -20,6 +20,9 @@
 					    {% endif %}
 					  	{% endfor %}
 					{% endpartial_cache %}
+					<li class="menu-item">
+						{% dropzone "footer-cat-nav" scope="site" %}
+					</li>
 	      			<li class="menu-item">
 	      				<h6><span class="dj-onlinestore">{{ labels.storeSupport1 }}</span> {{ labels.storeSupport2 }}</h6>
 	      				{% block customersupport %}
