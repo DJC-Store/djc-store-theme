@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-12-g6584fc3"
+    "version": "rc7-13-gbfaad37"
   },
   "settings": {
     "allowWishlist": true,
@@ -40,6 +40,39 @@
       "defaultConfig": {
         "mainCategory": "Category",
         "numberToDisplay": 8
+      }
+    },
+    {
+      "id": "djcFeaturePromo",
+      "displayName": "DJC Feature Promo",
+      "displayTemplate": "misc/feature-promo",
+      "icon": "/resources/admin/widgets/widget-promo.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promotion URL",
+          "name": "promoURL",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Image URL (image must be 245px x 285px)",
+          "name": "imageURL",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "OR Ad HTML (please in-line all necessary css)",
+          "name": "promoHTML",
+          "xtype": "htmleditor"
+        }
+      ],
+      "defaultConfig": {
+        "imageURL": "/resources/images/nav-promo.jpg",
+        "promoURL": "http://www.danijohnson.com/fsts"
       }
     }
   ]

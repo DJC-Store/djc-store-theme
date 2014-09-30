@@ -20,9 +20,12 @@
 					    {% endif %}
 					  	{% endfor %}
 					{% endpartial_cache %}
+					{%comment%}
+					<!-- this may not be needed -->
 					<li class="menu-item">
 						{% dropzone "footer-cat-nav" scope="site" %}
 					</li>
+					{%endcomment%}
 	      			<li class="menu-item">
 	      				<h6><span class="dj-onlinestore">{{ labels.storeSupport1 }}</span> {{ labels.storeSupport2 }}</h6>
 	      				{% block customersupport %}

@@ -1,7 +1,7 @@
 ﻿<div class="dj-container">
   <div class="logo">
     <div class="logo-bg orange-dash"></div>
-    <a href="#"><img src="resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
+    <a href="#"><img src="/resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
   </div>
 
   <div class="mobile-menu">
