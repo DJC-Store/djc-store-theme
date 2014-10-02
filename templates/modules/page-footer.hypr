@@ -36,6 +36,8 @@
 	      	</div>
 	    </nav>
 
+		{% require_script "vendor/ss-social-circle/ss-social" %}
+
 		<div class="footer-left-block">
 			<div class="social">
 	          <h6>{{ labels.social }}</h6>

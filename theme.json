@@ -6,11 +6,11 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-13-gbfaad37"
+    "version": "rc7-14-gb1bd69e"
   },
   "settings": {
     "allowWishlist": true,
-    "showBreadcrumbs": true,
+    "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4
   },
   "pageTypes": [],

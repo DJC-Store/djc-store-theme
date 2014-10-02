@@ -64,8 +64,6 @@
         {% include "modules/web-fonts-loader" %}
         {% endblock head-tag-scripts %}
         {% cms_resources %}
-        
-        <link href="/resources/webfonts/ss-social-circle.css" rel="stylesheet" />
 
         {%header_content%}
     
