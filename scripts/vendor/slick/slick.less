@@ -25,7 +25,7 @@
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 
 /* Icons */
-@font-face { font-family: "slick"; src: url("../scripts/vendor/slick/fonts/slick.eot"); src: url("../scripts/vendor/slick/fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "slick"; src: url("../scripts/vendor/slick/fonts/slick.eot"); src: url("../scripts/vendor/slick/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../scripts/vendor/slick/fonts/slick.woff") format("woff"), url("../scripts/vendor/slick/fonts/slick.ttf") format("truetype"), url("../scripts/vendor/slick/fonts/slick.svg#slick") format("svg"); font-weight: normal; font-style: normal; }
 /* Arrows */
 .slick-prev, .slick-next { position: absolute; display: block; height: 20px; width: 20px; line-height: 0; font-size: 0; cursor: pointer; background: transparent; color: transparent; top: 50%; margin-top: -10px; padding: 0; border: none; outline: none; }
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { outline: none; background: transparent; color: transparent; }
@@ -34,10 +34,12 @@
 
 .slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 20px; line-height: 1; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-.slick-prev { left: -25px; }
+/* MODIFIED !!!!! to appear inside slide */
+.slick-prev { left: 25px; }
 .slick-prev:before { content: "\2190"; }
 
-.slick-next { right: -25px; }
+/* MODIFIED !!!!! to appear inside slide */
+.slick-next { right: 25px; }
 .slick-next:before { content: "\2192"; }
 
 /* Dots */

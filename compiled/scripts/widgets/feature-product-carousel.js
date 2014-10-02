@@ -1,0 +1,1 @@
+define(["modules/jquery-mozu"],function(e){e(document).ready(function(){e(".feature-product-carousel").slick({accessibility:!0,dots:!0,slidesToShow:1})})});
