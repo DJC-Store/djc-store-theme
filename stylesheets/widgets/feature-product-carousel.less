@@ -1,0 +1,77 @@
+@caratHeight: 26px;
+@caratWidth: 50px;
+
+.feature-product-carousel {
+	margin-bottom: 0 !important;
+	width: 100%;
+
+	.dj-fpc-carat {
+		width: 100%;
+		max-width: 1196px;
+		position: relative;
+		bottom: 0;
+		padding: 0;
+		margin: -@caratHeight auto 0 auto;
+		list-style: none;
+		text-align: center;
+
+		li {
+			position: relative;
+			display: inline-block;
+			float: left;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			height: @caratHeight;
+			width: 25%;
+
+			&.slick-active {
+				img {
+					opacity: 1;
+				}
+			}
+
+			img {
+				height: @caratHeight;
+				width: @caratWidth;
+				position: absolute;
+				z-index: 1000;
+				bottom: 0;
+				left: 50%;
+				margin-left: -@caratWidth/2;
+				opacity: 0;
+				transition: opacity .2s ease-in;
+				-webkit-transition: opacity .2s ease-in;
+			}
+		}
+
+		&:after {
+			display: table;
+			content: "";
+			clear: both;
+		}
+	}
+}
+.feature-product-carousel-thumbnails {
+	position: relative;
+	width:100%;
+
+	div {
+		display: inline-block;
+		float: left;
+		width: 25%;
+		margin: 0;
+		padding: 0;
+		position:relative;
+
+		&.active {
+
+		}
+	}
+	
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+}
