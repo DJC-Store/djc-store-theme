@@ -4,6 +4,79 @@
 .feature-product-carousel {
 	margin-bottom: 0 !important;
 	width: 100%;
+	height: 449px;
+	background-size: cover;
+	-webkit-background-size: cover cover;
+	background-position: center 25%;
+
+	.fpc-slide {
+		height: 449px;
+	}
+
+	.dj-info-box {
+		border: 2px solid white;
+		margin: 40px;
+		padding: 1.5em 2.5em;
+		color: white;
+		text-align: center;
+		max-width: 530px;
+		position: relative;
+		left: 10%;
+		top: 100px;
+		z-index: 1100;
+	    background: none;
+		-webkit-box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
+		box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
+
+		h1 {
+			margin: 24px 0;
+			color: white;
+			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.5);
+			font-size: 2.25em;
+		}
+		h2 {
+			font-size: 18px;
+			margin: .5em auto;
+			color: white;
+			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.5);
+			letter-spacing: 4px;
+			
+			span {
+				color: #9a9a9a;
+				text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+			}
+		}
+		hr {
+			-webkit-box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
+			box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
+		}
+		p {
+			display: block;
+			margin: 0 auto 10px;
+			font-weight: 300;
+		}
+
+		&.right {
+			margin-right: 2.125em;
+		}
+
+		@media only screen {
+			@media (max-width: 768px) {
+				background: #3ca7d0;
+	    		padding: 1.5em 1em 5em;
+
+				h1 {
+					color: #303030;
+					margin: 24px 0;
+					text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
+					font-size: 3em;
+      			}
+				p {
+		  			width: 310px; 
+				}
+			}
+		}
+	}
 
 	.dj-fpc-carat {
 		width: 100%;
@@ -52,6 +125,7 @@
 		}
 	}
 }
+
 .feature-product-carousel-thumbnails {
 	position: relative;
 	width:100%;
@@ -81,16 +155,34 @@
 			margin: 1.5em auto;
 			padding: 0 10%;
 		}
+		.btn {
+			opacity: 0;
+			position: absolute;
+			width: 80%;
+			left: 50%;
+			margin-left: -40%;
+			bottom: 10px;
+			transition: opacity .2s ease-in;
+			-webkit-transition: opacity .2s ease-in;
+		}
 		img {
+			opacity: 1;
 			display: block;
 			margin: 0 auto;
 			width: 60%;
 			height: auto;
 			position: relative;
+			transition: opacity .2s ease-in;
+			-webkit-transition: opacity .2s ease-in;
 		}
 
 		&.active {
-
+			.btn {
+				opacity: 1;
+			}
+			img {
+				opacity: .3;
+			}
 		}
 	}
 

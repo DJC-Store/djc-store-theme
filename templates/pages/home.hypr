@@ -7,7 +7,14 @@
 {% block feature-header %}
 
 	<div class="feature-product-carousel">
-		<div><img src="http://www.lorempixel.com/1600/500/nature/1"></div>
+		<div class="fpc-slide" style="background-image: url(http://www.lorempixel.com/1600/500/nature/1);">
+			<div class="dj-info-box">
+				<h2>Header or Intro is Here</h2>
+				<h1>GEMS&reg; Mastery</h1>
+				<hr>
+				<p>Subhead or More Info Goes Here. Can be 2 lines long.</p>
+			</div>
+		</div>
 		<div><img data-lazy="http://www.lorempixel.com/1600/500/nature/2"></div>
 		<div><img data-lazy="http://www.lorempixel.com/1600/500/nature/3"></div>
 		<div><img data-lazy="http://www.lorempixel.com/1600/500/nature/4"></div>
@@ -15,20 +22,24 @@
 	<div class="dj-container">
 		<ul class="feature-product-carousel-thumbnails">
 			<li class="fpc_thumb">
-				<h2>GEMS&reg; Mastery</h2>
+				<a href="#"><h2>GEMS&reg; Mastery</h2></a>
 				<img src="/resources/images/temp/gems-thumb.jpg">
+				<a class="btn orange" href="#">Find Out More</a>
 			</li>
 			<li class="fpc_thumb">
-				<h2>First Steps to Success</h2>
+				<a href="#"><h2>First Steps to Success</h2></a>
 				<img src="http://www.lorempixel.com/400/400/nature/2">
+				<a class="btn orange" href="#">Find Out More</a>
 			</li>
 			<li class="fpc_thumb">
-				<h2>Spiritual Development Series</h2>
+				<a href="#"><h2>Spiritual Development Series</h2></a>
 				<img src="http://www.lorempixel.com/400/400/nature/3">
+				<a class="btn orange" href="#">Find Out More</a>
 			</li>
 			<li class="fpc_thumb">
-				<h2>War on Debt</h2>
+				<a href="#"><h2>War on Debt</h2></a>
 				<img src="http://www.lorempixel.com/400/400/nature/4">
+				<a class="btn orange" href="#">Find Out More</a>
 			</li>
 		</ul>
 	</div>
