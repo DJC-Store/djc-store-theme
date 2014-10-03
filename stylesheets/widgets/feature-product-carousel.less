@@ -55,20 +55,45 @@
 .feature-product-carousel-thumbnails {
 	position: relative;
 	width:100%;
+	margin: 0;
+	padding: 0;
+	background: white;
 
-	div {
+	li {
 		display: inline-block;
+		max-height: 200px;
 		float: left;
 		width: 25%;
 		margin: 0;
 		padding: 0;
 		position:relative;
+		border-left: 1px solid #e9e9e9;
+		overflow: hidden;
+		text-align: center;
+
+		&:first-child {
+			border-left: none;
+		}
+
+		h2 {
+			font-size: 18px;
+			text-transform: uppercase;
+			margin: 1.5em auto;
+			padding: 0 10%;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 60%;
+			height: auto;
+			position: relative;
+		}
 
 		&.active {
 
 		}
 	}
-	
+
 	&:after {
 		display: table;
 		content: "";

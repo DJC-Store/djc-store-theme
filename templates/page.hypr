@@ -79,7 +79,7 @@
     {% endblock open-body-tag %}
 
        
-        <div id="page-wrapper" class="mz-l-pagewrapper">
+        <div id="page-wrapper" class="mz-l-pagewrapper dj-bg">
     
             {% block page-header %}
                 {% include "modules/page-header" %}

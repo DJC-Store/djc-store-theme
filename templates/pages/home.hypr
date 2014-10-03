@@ -13,20 +13,24 @@
 		<div><img data-lazy="http://www.lorempixel.com/1600/500/nature/4"></div>
 	</div>
 	<div class="dj-container">
-		<div class="feature-product-carousel-thumbnails">
-			<div class="fpc_thumb">
-				<img src="http://www.lorempixel.com/290/200/nature/1">
-			</div>
-			<div class="fpc_thumb">
-				<img src="http://www.lorempixel.com/290/200/nature/2">
-			</div>
-			<div class="fpc_thumb">
-				<img src="http://www.lorempixel.com/290/200/nature/3">
-			</div>
-			<div class="fpc_thumb">
-				<img src="http://www.lorempixel.com/290/200/nature/4">
-			</div>
-		</div>
+		<ul class="feature-product-carousel-thumbnails">
+			<li class="fpc_thumb">
+				<h2>GEMS&reg; Mastery</h2>
+				<img src="/resources/images/temp/gems-thumb.jpg">
+			</li>
+			<li class="fpc_thumb">
+				<h2>First Steps to Success</h2>
+				<img src="http://www.lorempixel.com/400/400/nature/2">
+			</li>
+			<li class="fpc_thumb">
+				<h2>Spiritual Development Series</h2>
+				<img src="http://www.lorempixel.com/400/400/nature/3">
+			</li>
+			<li class="fpc_thumb">
+				<h2>War on Debt</h2>
+				<img src="http://www.lorempixel.com/400/400/nature/4">
+			</li>
+		</ul>
 	</div>
 
 	{% require_script "vendor/slick/slick" %}
