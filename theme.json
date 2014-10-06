@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-18-g67d7912"
+    "version": "rc7-19-ged0a32a"
   },
   "settings": {
     "allowWishlist": true,
@@ -15,6 +15,38 @@
   },
   "pageTypes": [],
   "widgets": [
+    {
+      "id": "featured_product_carousel",
+      "displayName": "Featured Product Carousel",
+      "displayTemplate": "catalog/feature-product-carousel",
+      "icon": "/resources/admin/widgets/fpc.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Products (must be exactly 4)",
+          "name": "featProd",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Template",
+          "name": "template",
+          "store": [
+            [
+              "modules/product/feature-product-carousel",
+              "default"
+            ]
+          ],
+          "xtype": "combo"
+        }
+      ],
+      "defaultConfig": {
+        "template": "modules/product/feature-product-carousel"
+      }
+    },
     {
       "id": "djcfooternav",
       "displayName": "DJC Footer Nav",

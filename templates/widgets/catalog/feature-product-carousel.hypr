@@ -1,0 +1,1 @@
+{% include_products Model.config.template|default:"modules/product/feature-product-carousel" with productCodes=Model.config.featProd as_parameter %}
