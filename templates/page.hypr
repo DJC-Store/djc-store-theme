@@ -91,7 +91,7 @@
 
             {% block feature-header %}{% endblock feature-header %}
     
-            <div role="main" id="page-content" class="mz-l-pagecontent">
+            <div role="main" id="page-content" class="mz-l-pagecontent dj-container">
                 
                 {% block breadcrumbs %}
                     {% if themeSettings.showBreadcrumbs %}
@@ -102,8 +102,6 @@
                 {% block body-content %}
                     {% dropzone "body" scope="page" %}
                 {% endblock body-content %}
-                
-                {% dropzone "body-bottom" scope="template" %}
                 
             </div>
 

@@ -1,0 +1,44 @@
+.feature-promo-bar {
+	width: 100%;
+	display: block;
+	padding: 16px;
+	background-color: @djcDark;
+	transition: background-color .2s ease-out;
+	-webkit-transition: background-color .2s ease-out;
+
+	div {
+		width: 100%;
+		border-top: 1px solid rgba(255,255,255,0.5);
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+		padding: 12px;
+		text-align: center;
+
+		h2 {
+			color: white;
+			letter-spacing: 4px;
+			font-style: italic;
+			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			text-transform: none;
+
+			span {
+				font-style: normal;
+				font-size: .5em;
+				position: relative;
+				top: -4px;
+			}
+
+			em {
+				font-weight: 700;
+				color: @djcOrange;
+				font-style: normal;
+			}
+		}
+	}
+
+	&:hover, &:focus, &:active {
+		background-color: @djcDarkBlue;
+	}
+}

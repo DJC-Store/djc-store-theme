@@ -1,0 +1,25 @@
+.dj-dropzone {
+  //kill Mozu Dropzone Structure
+  div[class^="mz-cms-"] {
+    width: auto !important;
+    max-width: 2000px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-height: 9999999px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    float: none !important;
+    background-color: transparent !important;
+  }
+  .mz-cms-row:after {
+    display: block !important;
+    clear: none !important;
+  }
+  //give it something back so it's usable in Site Builder
+  .mz-drop-zone {
+  	width: 100%;
+  	min-height: 25px;
+  }
+}

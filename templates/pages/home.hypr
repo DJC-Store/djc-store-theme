@@ -5,13 +5,37 @@
 {% block body-tag-classes %} mz-homepage {% endblock body-tag-classes %}
 
 {% block feature-header %}
-	<div class="fpc-wrapper">
-	{% dropzone "feature-product-carousel" scope="template" %}
-	</div>
+	<div class="dj-dropzone">{% dropzone "feature-product-carousel" scope="template" %}</div>
 {% endblock feature-header %}
 
 {% block body-content %}
 
-    {% dropzone "home" scope="template" %}
+    {% block feature-promo-bar %}
+		<div class="dj-dropzone">{% dropzone "feature-promo-bar" scope="template" %}</div>
+    {% endblock feature-promo-bar %}
+
+    {% block main-body %}
+    <div class="dj-row">
+    	<div class="col-6">
+    		<div class="new-to-dani">
+				test row 1, column 1
+    		</div>
+    	</div>
+    	<div class="col-6">
+    		<div class="topic-search">
+    			test row 1, column 2
+    		</div>
+    	</div>
+	</div>
+	<div class="dj-row">
+		<div class="col-12">
+			<div class="quotation">
+				<div class="quote-bg"><h1 class="quotes">“</h1></div>
+				<hr>
+				<div class="dj-dropzone">{% dropzone "feature-reviews" scope="template" %}</div>
+			</div>
+		</div>
+	</div>
+    {% endblock main-body %}
 
 {% endblock body-content %}

@@ -1,26 +1,6 @@
 @caratHeight: 26px;
 @caratWidth: 50px;
 
-.fpc-wrapper {
-  //kill Mozu Dropzone Structure
-  div[class^="mz-cms-"] {
-    width: auto !important;
-    max-width: 2000px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-height: 9999999px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative !important;
-    overflow: visible !important;
-    float: none !important;
-    background-color: transparent !important;
-  }
-  .mz-cms-row:after {
-    display: block !important;
-    clear: none !important;
-  }
-}
 .feature-product-carousel {
 	margin-bottom: 0 !important;
 	width: 100%;
@@ -31,6 +11,28 @@
 
 	.fpc-slide {
 		height: 449px;
+		background-size: cover;
+		background-position: center center;
+
+		img {
+			display: block;
+			position: absolute;
+			top: 20px;
+			right: 100px;
+			width: auto;
+			height: 500px;
+		}
+		@media only screen {
+			@media (max-width: 768px) {
+				img {
+					position: relative;
+					height: 180px;
+					margin: 10px auto;
+					top: auto;
+					right: 0;
+				}
+			}
+		}
 	}
 
 	.dj-info-box {
@@ -73,6 +75,7 @@
 		p {
 			display: block;
 			margin: 0 auto 10px;
+			padding: 0 40px;
 			font-weight: 300;
 		}
 
@@ -84,6 +87,13 @@
 			@media (max-width: 768px) {
 				background: #3ca7d0;
 	    		padding: 1.5em 1em 5em;
+	    		margin: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				max-width: 100%;
+				border: none;
 
 				h1 {
 					color: #303030;

@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-19-ged0a32a"
+    "version": "rc7-20-ge536a46"
   },
   "settings": {
     "allowWishlist": true,
@@ -26,7 +26,7 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Featured Products (must be exactly 4)",
+          "fieldLabel": "Featured Products",
           "name": "featProd",
           "xtype": "taco-productfield"
         },
@@ -46,6 +46,30 @@
       "defaultConfig": {
         "template": "modules/product/feature-product-carousel"
       }
+    },
+    {
+      "id": "feature-promo-bar",
+      "displayName": "Feature Promo Bar",
+      "displayTemplate": "misc/feature-promo-bar",
+      "icon": "/resources/admin/widgets/promo-bar.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promotion URL",
+          "name": "promoURL",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promotion Copy",
+          "name": "promoCopy",
+          "xtype": "htmleditor"
+        }
+      ],
+      "defaultConfig": {}
     },
     {
       "id": "djcfooternav",
@@ -75,10 +99,10 @@
       }
     },
     {
-      "id": "djcFeaturePromo",
-      "displayName": "DJC Feature Promo",
-      "displayTemplate": "misc/feature-promo",
-      "icon": "/resources/admin/widgets/widget-promo.png",
+      "id": "mega-promo",
+      "displayName": "Mega Menu Promo",
+      "displayTemplate": "misc/mega-promo",
+      "icon": "/resources/admin/widgets/megapromo.png",
       "validPageTypes": [
         "*"
       ],
