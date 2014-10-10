@@ -17,9 +17,9 @@
 	width: 100%;
 	max-width: @maxWidth;
 	margin: 0 auto;
-	padding: 1.75em 2.125em;
+	padding: 2.25em;
 	@media (max-width: 768px) {
-		padding: 1.75em 1em; 
+		padding: 2em; 
 	}
 }
 .dj-row-full {
@@ -70,7 +70,15 @@
 		
 		@media only screen {
 			@media (max-width: 768px) {
-				width: 100%;
+				width: 100% !important;
+				margin-left: 0 !important;
+			}
+		}
+	}
+	[class^="col-"] + [class^="col-"] {
+		@media only screen {
+			@media (max-width: 768px) {
+				margin-top: 2em !important;
 			}
 		}
 	}

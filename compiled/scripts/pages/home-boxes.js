@@ -1,0 +1,1 @@
+define(["modules/jquery-mozu"],function(e){e(document).ready(function(){var c=e(".topic-search").css("height");e(".feature-box").css("height",c)})});

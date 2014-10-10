@@ -1,0 +1,5 @@
+{% for prod in model.items %}
+{% if forloop.counter0 < 1 %}
+	<a class="btn orange" href="{{ prod.url }}">
+{% endif %}
+{% endfor %}

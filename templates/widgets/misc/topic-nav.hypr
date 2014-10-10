@@ -1,0 +1,25 @@
+<div class="icon-module topic-search">
+	<div class="box-icon-bg"><span class="search">
+		<svg version="1.1" id="search-blue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+			<path fill="#1177A3" d="M1.2,93.6l5.3,5.3c1.3,1.3,3.3,1.6,4.3,0.5L42,68.1c6.1,4.2,13.3,6.4,20.8,6.4c9.9,0,19.3-3.9,26.3-10.9
+				S100,47.2,100,37.3s-3.9-19.3-10.9-26.3c-7-7-16.3-10.9-26.3-10.9S43.6,4,36.6,11.1c-7,7-10.9,16.3-10.9,26.3
+				c0,7.5,2.2,14.6,6.2,20.6L0.7,89.2C-0.4,90.3-0.2,92.2,1.2,93.6z M35.8,37.3c0-14.9,12.1-27.1,27.1-27.1s27.1,12.2,27.1,27.1
+				S77.8,64.4,62.9,64.4C47.9,64.4,35.8,52.3,35.8,37.3z"/>
+		</svg>
+	</span></div>
+	<h3>{{ Model.config.headline }}</h3>
+	<div class="topic-inner">
+		<h5>(select one)</h5>
+		<ul>
+		{% with  navigation|find:Model.config.mainCategory as navNode %}
+		{% for item in navNode.items %}
+		{% if forloop.counter0 < Model.config.numberToDisplay %}
+			<a href="{{ item.url }}"><li>{{ item.name }}</li></a>
+		{% endif %}
+		{% endfor %}
+		{% endwith %}
+		</ul>
+	</div>
+	<div class="lower-hr"><hr></div>
+</div>

@@ -16,26 +16,25 @@
 
     {% block main-body %}
     <div class="dj-row">
-    	<div class="col-6">
-    		<div class="new-to-dani">
-				test row 1, column 1
-    		</div>
+    	<div class="col-6 dj-dropzone">
+			{% dropzone "feature-box" scope="template" %}
     	</div>
-    	<div class="col-6">
-    		<div class="topic-search">
-    			test row 1, column 2
-    		</div>
+    	<div class="col-6 dj-dropzone">
+			{% dropzone "topic-nav" scope="template" %}
     	</div>
 	</div>
 	<div class="dj-row">
 		<div class="col-12">
 			<div class="quotation">
-				<div class="quote-bg"><h1 class="quotes">“</h1></div>
+				<div class="box-icon-bg quote-bg"><span class="quotes">“</span></div>
 				<hr>
 				<div class="dj-dropzone">{% dropzone "feature-reviews" scope="template" %}</div>
 			</div>
 		</div>
 	</div>
+
+	{% require_script "pages/home-boxes" %}
+
     {% endblock main-body %}
 
 {% endblock body-content %}

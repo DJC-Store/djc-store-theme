@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-20-ge536a46"
+    "version": "rc7-21-g8f864d6"
   },
   "settings": {
     "allowWishlist": true,
@@ -72,30 +72,91 @@
       "defaultConfig": {}
     },
     {
-      "id": "djcfooternav",
-      "displayName": "DJC Footer Nav",
-      "displayTemplate": "misc/footer-nav",
-      "icon": "/resources/admin/widgets/footer-nav.png",
+      "id": "featureBox",
+      "displayName": "Home Page Feature Box",
+      "displayTemplate": "misc/feature-box",
+      "icon": "/resources/admin/widgets/feature-box.png",
       "validPageTypes": [
         "*"
       ],
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Main Category",
+          "fieldLabel": "Background Image URL",
+          "name": "bgImageURL",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Headline",
+          "name": "headline",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Copy",
+          "name": "copy",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product to Link (if entering a Direct URL, leave empty)",
+          "name": "productCode",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Direct Button URL",
+          "name": "buttonURL",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Button Text",
+          "name": "buttonText",
+          "xtype": "textfield"
+        }
+      ],
+      "defaultConfig": {
+        "bgImageURL": "../resources/images/newtodani2.jpg",
+        "headline": "New to Dani?",
+        "copy": "This is copy. You could copy this copy, but it's copyrighted. Do you copy?",
+        "buttonURL": "#",
+        "buttonText": "Get the Starter Bundle"
+      }
+    },
+    {
+      "id": "topicNav",
+      "displayName": "Home Page Topic Nav",
+      "displayTemplate": "misc/topic-nav",
+      "icon": "/resources/admin/widgets/topic-nav.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Headline",
+          "name": "headline",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Select Category",
           "name": "mainCategory",
           "xtype": "categorycombobox"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Number to Display",
+          "fieldLabel": "Number of Items to Display",
           "name": "numberToDisplay",
           "xtype": "mz-input-number"
         }
       ],
       "defaultConfig": {
-        "mainCategory": "Category",
-        "numberToDisplay": 8
+        "headline": "Find Products So You Can...",
+        "mainCategory": "Topics",
+        "numberToDisplay": 6
       }
     },
     {

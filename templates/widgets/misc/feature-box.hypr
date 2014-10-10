@@ -1,0 +1,13 @@
+<div class="icon-module feature-box" style="background-image: url( {{ Model.config.bgImageURL }} );">
+	<div class="box-icon-bg"><span class="star">★</span></div>
+	<div class="feature-box-inner">
+		<h3>{{ Model.config.headline }}</h3>
+		<p>{{ Model.config.copy }}</p>
+		{% if Model.config.productCode %}
+			{% include_products "modules/product/feature-box-url" with productCodes=Model.config.productCode as_parameter %}
+		{% else %}
+			<a class="btn orange" href="{{ Model.config.buttonURL }}">
+		{% endif %}
+		{{ Model.config.buttonText }}</a>
+	</div>
+</div>
