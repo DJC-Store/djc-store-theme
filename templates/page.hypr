@@ -102,6 +102,10 @@
                 {% block body-content %}
                     {% dropzone "body" scope="page" %}
                 {% endblock body-content %}
+
+                {% block dynamic-content %}
+                    {% include "modules/dynamic-content" %}
+                {% endblock dynamic-content %}
                 
             </div>
 

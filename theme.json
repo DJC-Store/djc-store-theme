@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-21-g8f864d6"
+    "version": "rc7-22-gd70ae21"
   },
   "settings": {
     "allowWishlist": true,
@@ -156,6 +156,33 @@
       "defaultConfig": {
         "headline": "Find Products So You Can...",
         "mainCategory": "Topics",
+        "numberToDisplay": 6
+      }
+    },
+    {
+      "id": "findByCategory",
+      "displayName": "Find by Category",
+      "displayTemplate": "misc/find-by-category",
+      "icon": "/resources/admin/widgets/findbycat.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Select Category",
+          "name": "mainCategory",
+          "xtype": "categorycombobox"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Number of Items to Display",
+          "name": "numberToDisplay",
+          "xtype": "mz-input-number"
+        }
+      ],
+      "defaultConfig": {
+        "mainCategory": "Categories",
         "numberToDisplay": 6
       }
     },

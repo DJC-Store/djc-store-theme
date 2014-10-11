@@ -1,0 +1,18 @@
+<div class="find-by-category">
+	<div class="dj-row">
+		{% with navigation|find:Model.config.mainCategory as navNode %}
+		<h2 class="block-heading">Find Products By <a href="{{navNode.url}}">Category</a></h2>
+		<ul>
+			{% for item in navNode.items %}
+			{% if forloop.counter0 < Model.config.numberToDisplay %}
+			<li>
+				<a href="{{ item.url }}"><i class="round icon-{{item.name|lower|truncatewords:1|cut:" ..."}}"></i></a>
+				<a href="{{ item.url }}"><p>{{ item.name }}</p></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+		{% endwith %}
+	<div class="clear"></div>
+	</div>
+</div>

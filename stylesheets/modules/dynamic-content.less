@@ -1,0 +1,38 @@
+.dynamic-content {
+	width: 100%;
+
+	h2 {
+		margin-top: 0;
+		color: white;
+		letter-spacing: 1.25px;
+		span {
+			color: @djcOrange;
+		}
+	}
+
+	&.dark {
+		background-color: @djcDark;
+	}
+
+	[class^="col-"]:first-child {
+		border-right: 1px solid rgba(255,255,255,0.65);
+		padding-right:35px;
+	}
+
+	.slider {
+		text-align: center;
+
+		img {
+			width: 80%;
+			height: auto;
+			margin: 0 auto;
+		}
+		.product-name {
+			display: inline-block;
+			margin: 10px auto 0;
+			color: white;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	}
+}

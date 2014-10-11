@@ -1,0 +1,63 @@
+<div class="dynamic-content dark dj-dropzone">
+	<div class="dj-row">
+		<div class="col-8">
+			<h2 class="block-heading left">Best <span>Sellers</span></h2>
+			<div class="best-sellers slider">
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/1" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/2" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/3" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/4" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/7" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/8" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<h2 class="block-heading left">Recently <span>Viewed</span></h2>
+			<div class="recently-viewed slider">
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/5" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/6" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/7" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/8" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% require_script "vendor/slick/slick" %}
+{% require_script "modules/dynamic-content" %}
+
+{% block find-by-category %}
+	<div class="dj-dropzone">
+		{% dropzone "find-by-category" scope="template" %}
+	</div>
+{% endblock find-by-category %}

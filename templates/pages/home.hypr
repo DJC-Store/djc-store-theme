@@ -32,9 +32,7 @@
 			</div>
 		</div>
 	</div>
-
 	{% require_script "pages/home-boxes" %}
-
     {% endblock main-body %}
 
 {% endblock body-content %}
