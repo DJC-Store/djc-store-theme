@@ -1,16 +1,26 @@
-{% if model.items %}
+{% with model.config.featProd as productCodes %}
+<!-- {% dump model %} -->
+<!-- {% dump model.config %} -->
+<!-- {% dump model.config.featProd %} -->
+<!-- {% dump model.config.prodBg1 %} -->
+<!-- {% dump productCodes %} -->
+<!-- {% dump model.items %} -->
+{% json_attribute model.config.prodBg1 %}
+{% json_attribute model.config.featProd %}
+{% json_attribute model.config %}
 		<div class="feature-product-carousel">
 			{% for prod in model.items %}
 			{% if forloop.counter0 < 4 %}
-			<div class="fpc-slide" style="background-image: url(/resources/images/featProd-bg.jpg);">
+			<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg1 }} );">
 				<div class="dj-info-box">
-					{% with "blurb" as attribute %}
 				    {% for property in prod.properties %}
-				    	{% ifequal property.attributeDetail.name attribute %}
-							<h2>{{ property.values.stringValue|safe }}</h2>
+				    	{% ifequal property.attributeDetail.name "blurb" %}
+				    		<h2 data-dj-json="{% json_attribute property.values %}-{% json_attribute property.values.stringValue %}">{{ property.values.stringValue }}</h2>
+							{% for attribute in property.values %}
+								<h2 data-dj-place="inside-the-loop">{{ attribute.stringValue }}</h2>
+							{% endfor %}
 				    	{% endifequal %}
 				    {% endfor %}
-					{% endwith %}
 					<h1>{{ prod.content.productName }}</h1>
 					<hr>
 					<p>{{ prod.content.productShortDescription|safe }}</p>
@@ -23,6 +33,7 @@
 		<div class="dj-container">
 			<ul class="feature-product-carousel-thumbnails">
 				{% for prod in model.items %}
+				{% if forloop.counter0 < 4 %}
 				<li class="fpc_thumb" data-mz-product="{{ prod.productCode }}">
 					<a href="{{ prod.url }}"><h2>{{ prod.content.productName }}</h2></a>
 					{% block product-image %}
@@ -37,10 +48,11 @@
 					{% endblock product-image %}
 					<a class="btn orange" href="{{ prod.url }}">Find Out More</a>
 				</li>
+				{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
-{% endif %}
+{% endwith %}
 
 {% require_script "vendor/slick/slick" %}
 

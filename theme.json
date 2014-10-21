@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-22-gd70ae21"
+    "version": "rc7-23-g6237391"
   },
   "settings": {
     "allowWishlist": true,
@@ -41,10 +41,17 @@
             ]
           ],
           "xtype": "combo"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL - First Product",
+          "name": "prodBg1",
+          "xtype": "textfield"
         }
       ],
       "defaultConfig": {
-        "template": "modules/product/feature-product-carousel"
+        "template": "modules/product/feature-product-carousel",
+        "prodBg1": "/resources/images/featProd-bg.jpg"
       }
     },
     {

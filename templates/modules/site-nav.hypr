@@ -10,15 +10,15 @@
   </div>
 
     <nav class="main-nav">
-      <ul data-mz-contextify='.mz-sitenav-link[href="{{ navigation.currentNode.url }}"]'
+      <ul data-mz-contextify='.dj-sitenav-link[href="{{ navigation.currentNode.url }}"]'
           data-mz-contextify-attr='class'
-          data-mz-contextify-val='is-current'>
+          data-mz-contextify-val='active'>
         {% partial_cache %}
           {% for link in navigation.tree %}
             {% if not link.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
               <li>
-                <a href="{{link.url}}">
-                  <i class="icon-{{ link.name }}"></i>
+                <a class="dj-sitenav-link" href="{{link.url}}">
+                  <i class="icon-{{ link.name|lower }}"></i>
                   <h2>{{ link.name }}</h2>
                   <h6>
                     {% ifequal link.name "Events" %}
