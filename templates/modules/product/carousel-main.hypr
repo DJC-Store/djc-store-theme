@@ -1,0 +1,21 @@
+{% for prod in model.items %}
+{% if forloop.counter0 < 1 %}
+	<div class="dj-info-box">
+	    {% for property in prod.properties %}
+	    	{% ifequal property.attributeDetail.name "blurb" %} {%comment%} could also evaluate property.attributeFQN equal to "tenant~blurb" {%endcomment%}
+				{% for attribute in property.values %}
+					<h2>{{ attribute.stringValue }}</h2>
+					{%comment%}
+		    		property.values.stringValue cannot be accessed directly because property.values is an array. Array values must be accessed by using a loop.
+					In this case, the array only has one item, so a for loop without conditions is acceptable. It will only iterate once
+		    		{%endcomment%}
+				{% endfor %}
+	    	{% endifequal %}
+	    {% endfor %}
+		<h1>{{ prod.content.productName }}</h1>
+		<hr>
+		<p>{{ prod.content.productShortDescription|safe }}</p>
+	</div>
+	<img src="{{ prod.mainImage.imageUrl }}" />
+{% endif %}
+{% endfor %}

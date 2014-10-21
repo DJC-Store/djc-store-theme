@@ -4,7 +4,7 @@
 		<h3>{{ Model.config.headline }}</h3>
 		<p>{{ Model.config.copy }}</p>
 		{% if Model.config.productCode %}
-			{% include_products "modules/product/feature-box-url" with productCodes=Model.config.productCode as_parameter %}
+			{% include_products "modules/product/product-url" with productCodes=Model.config.productCode as_parameter %}
 		{% else %}
 			<a class="btn orange" href="{{ Model.config.buttonURL }}">
 		{% endif %}

@@ -1,1 +1,26 @@
-{% include_products Model.config.template|default:"modules/product/feature-product-carousel" with productCodes=model.config.featProd1 as_parameter %}
+<div class="feature-product-carousel">
+	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg1 }} );">
+		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd1 as_parameter %}
+	</div>
+	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg2 }} );">
+		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd2 as_parameter %}
+	</div>
+	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg3 }} );">
+		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd3 as_parameter %}
+	</div>
+	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg4 }} );">
+		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd4 as_parameter %}
+	</div>
+</div>
+<div class="dj-container">
+	<ul class="feature-product-carousel-thumbnails">
+		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd1 as_parameter %}
+		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd2 as_parameter %}
+		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd3 as_parameter %}
+		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd4 as_parameter %}
+	</ul>
+</div>
+
+{% require_script "vendor/slick/slick" %}
+
+{% require_script "widgets/feature-product-carousel" %}

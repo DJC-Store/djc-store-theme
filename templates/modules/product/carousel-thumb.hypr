@@ -1,0 +1,18 @@
+{% for prod in model.items %}
+{% if forloop.counter0 < 1 %}
+<li class="fpc_thumb" data-mz-product="{{ prod.productCode }}">
+	<a href="{{ prod.url }}"><h2>{{ prod.content.productName }}</h2></a>
+	{% block product-image %}
+		{% if prod.mainImage.imageUrl %}
+			<img src="{{ prod.mainImage.imageUrl }}" />
+		{% else %}
+			<span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">
+				{{ labels.productImagePlaceholder }}
+			</span></span>
+		{% endif %}
+	</a>
+	{% endblock product-image %}
+	<a class="btn orange" href="{{ prod.url }}">Find Out More</a>
+</li>
+{% endif %}
+{% endfor %}

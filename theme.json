@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-23-g6237391"
+    "version": "rc7-24-gcd65896"
   },
   "settings": {
     "allowWishlist": true,
@@ -26,32 +26,58 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Featured Products",
-          "name": "featProd",
+          "fieldLabel": "Featured Product One",
+          "name": "featProd1",
           "xtype": "taco-productfield"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Template",
-          "name": "template",
-          "store": [
-            [
-              "modules/product/feature-product-carousel",
-              "default"
-            ]
-          ],
-          "xtype": "combo"
+          "fieldLabel": "Background URL - Product One",
+          "name": "prodBg1",
+          "xtype": "textfield"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Background URL - First Product",
-          "name": "prodBg1",
+          "fieldLabel": "Featured Product Two",
+          "name": "featProd2",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL - Product Two",
+          "name": "prodBg2",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Product Three",
+          "name": "featProd3",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL - Product Three",
+          "name": "prodBg3",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Product Four",
+          "name": "featProd4",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL - Product Four",
+          "name": "prodBg4",
           "xtype": "textfield"
         }
       ],
       "defaultConfig": {
-        "template": "modules/product/feature-product-carousel",
-        "prodBg1": "/resources/images/featProd-bg.jpg"
+        "prodBg1": "/resources/images/featProd-bg.jpg",
+        "prodBg2": "/resources/images/featProd-bg.jpg",
+        "prodBg3": "/resources/images/featProd-bg.jpg",
+        "prodBg4": "/resources/images/featProd-bg.jpg"
       }
     },
     {
