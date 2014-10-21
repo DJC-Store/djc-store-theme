@@ -14,10 +14,26 @@
 </div>
 <div class="dj-container">
 	<ul class="feature-product-carousel-thumbnails">
-		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd1 as_parameter %}
-		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd2 as_parameter %}
-		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd3 as_parameter %}
-		{% include_products "modules/product/carousel-thumb" with productCodes=model.config.featProd4 as_parameter %}
+		<li class="fpc_thumb">
+			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd1 as_parameter %}
+			{% include_products "modules/product/product-url" with productCodes=model.config.featProd1 as_parameter %}
+			{{ model.config.buttonText1 }}</a>
+		</li>
+		<li class="fpc_thumb">
+			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd2 as_parameter %}
+			{% include_products "modules/product/product-url" with productCodes=model.config.featProd2 as_parameter %}
+			{{ model.config.buttonText2 }}</a>
+		</li>
+		<li class="fpc_thumb">
+			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd3 as_parameter %}
+			{% include_products "modules/product/product-url" with productCodes=model.config.featProd3 as_parameter %}
+			{{ model.config.buttonText3 }}</a>
+		</li>
+		<li class="fpc_thumb">
+			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd4 as_parameter %}
+			{% include_products "modules/product/product-url" with productCodes=model.config.featProd4 as_parameter %}
+			{{ model.config.buttonText4 }}</a>
+		</li>
 	</ul>
 </div>
 

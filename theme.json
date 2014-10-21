@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-24-gcd65896"
+    "version": "rc7-25-gbb1b5a1"
   },
   "settings": {
     "allowWishlist": true,
@@ -31,9 +31,15 @@
           "xtype": "taco-productfield"
         },
         {
-          "anchor": "100%",
+          "anchor": "50%",
           "fieldLabel": "Background URL - Product One",
           "name": "prodBg1",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Button Text - Product One",
+          "name": "buttonText1",
           "xtype": "textfield"
         },
         {
@@ -43,9 +49,15 @@
           "xtype": "taco-productfield"
         },
         {
-          "anchor": "100%",
+          "anchor": "50%",
           "fieldLabel": "Background URL - Product Two",
           "name": "prodBg2",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Button Text - Product Two",
+          "name": "buttonText2",
           "xtype": "textfield"
         },
         {
@@ -55,9 +67,15 @@
           "xtype": "taco-productfield"
         },
         {
-          "anchor": "100%",
+          "anchor": "50%",
           "fieldLabel": "Background URL - Product Three",
           "name": "prodBg3",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Button Text - Product Three",
+          "name": "buttonText3",
           "xtype": "textfield"
         },
         {
@@ -67,9 +85,15 @@
           "xtype": "taco-productfield"
         },
         {
-          "anchor": "100%",
+          "anchor": "50%",
           "fieldLabel": "Background URL - Product Four",
           "name": "prodBg4",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Button Text - Product Four",
+          "name": "buttonText4",
           "xtype": "textfield"
         }
       ],
@@ -77,7 +101,11 @@
         "prodBg1": "/resources/images/featProd-bg.jpg",
         "prodBg2": "/resources/images/featProd-bg.jpg",
         "prodBg3": "/resources/images/featProd-bg.jpg",
-        "prodBg4": "/resources/images/featProd-bg.jpg"
+        "prodBg4": "/resources/images/featProd-bg.jpg",
+        "buttonText1": "Find Out More",
+        "buttonText2": "Find Out More",
+        "buttonText3": "Find Out More",
+        "buttonText4": "Find Out More"
       }
     },
     {
