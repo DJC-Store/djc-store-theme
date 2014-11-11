@@ -7,7 +7,7 @@ define(['modules/jquery-mozu'],
 				slidesToShow: 4,
 				swipe: true,
 				touchMove: true,
-				autoplay: true,
+				autoplay: false,
 				dots: true
 			});
 			$('.recently-viewed').slick({
@@ -16,7 +16,7 @@ define(['modules/jquery-mozu'],
 				slidesToShow: 2,
 				swipe: true,
 				touchMove: true,
-				autoplay: true,
+				autoplay: false,
 				dots: true
 			});
 		});

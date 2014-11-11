@@ -53,6 +53,7 @@
 	</div>
 </div>
 
+{% require_script "vendor/jquery-cookie/jquery.cookie" %}
 {% require_script "vendor/slick/slick" %}
 {% require_script "modules/dynamic-content" %}
 

@@ -1,0 +1,5 @@
+<div class="feature-product-carousel">
+	<div class="fpc-slide cat-header" style="background-image: url( {{ model.config.prodBg }} )">
+		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd as_parameter %}
+	</div>
+</div>

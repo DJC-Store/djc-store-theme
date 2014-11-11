@@ -1,0 +1,22 @@
+{% extends "page" %}
+
+{% block title-tag-content %}{% firstof pageContext.metaTitle model.name %}  - {% parent %}{% endblock title-tag-content %}
+
+{% block body-tag-classes %} mz-category {% endblock body-tag-classes %}
+
+{% block feature-header %}
+	<div class="dj-dropzone">{% dropzone "feature-product-header" scope="page" %}</div>
+{% endblock feature-header %}
+
+{% block body-content %}
+
+{% require_script "pages/category" %}
+{% partial_cache model.categoryId pageContext.Sorting pageContext.Pagination %}
+<div data-mz-category="{{model.categoryId}}" class="mz-l-container">
+    <h2 class="mz-pagetitle bottom-bar">{%comment%}<span>★</span>{{ model.name }}<span>★</span>{%endcomment%}</h2>
+    <!-- {% dump model %}  -->
+    {% include_products "modules/product/faceted-products" with includeFacets=themeSettings.showCategoryFacets and pageWithUrl=true and sortWithUrl=true and pageSize=themeSettings.defaultPageSize as_parameter %}
+</div>
+{% endpartial_cache %}
+
+{% endblock body-content %}

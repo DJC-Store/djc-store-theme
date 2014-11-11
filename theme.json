@@ -6,12 +6,14 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-25-gbb1b5a1"
+    "version": "rc7-26-gac24833"
   },
   "settings": {
     "allowWishlist": true,
     "showBreadcrumbs": false,
-    "maxTopLevelNavItems": 4
+    "maxTopLevelNavItems": 4,
+    "megaNavPromoImage": "/resources/images/nav-promo.jpg",
+    "megaNavPromoLink": "http://www.danijohnson.com"
   },
   "pageTypes": [],
   "widgets": [
@@ -278,6 +280,32 @@
       "defaultConfig": {
         "imageURL": "/resources/images/nav-promo.jpg",
         "promoURL": "http://www.danijohnson.com/fsts"
+      }
+    },
+    {
+      "id": "feature_product_header",
+      "displayName": "Featured Product Header",
+      "displayTemplate": "catalog/feature-product-header",
+      "icon": "/resources/admin/widgets/fp-header.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Product",
+          "name": "featProd",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL",
+          "name": "prodBg",
+          "xtype": "textfield"
+        }
+      ],
+      "defaultConfig": {
+        "prodBg": "/resources/images/featProd-bg.jpg"
       }
     }
   ]

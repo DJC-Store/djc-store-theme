@@ -1,0 +1,1 @@
+define(["modules/jquery-mozu","underscore","modules/api","modules/backbone-mozu","modules/models-product"],function(e){e(document).ready(function(){})});
