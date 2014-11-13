@@ -1,0 +1,52 @@
+﻿<div class="mz-productlisting {% block module-classes %}{% endblock module-classes %}" data-mz-product="{{ model.productCode }}">
+    <!-- PRODUCT-LISTING.HYPR.LIVE MODEL DUMP: {% dump model %}  -->
+    <div class="mz-productlisting-image">
+        {% block product-image %}
+        <a href="{{model.url}}">
+            {% if model.mainImage.imageUrl %}
+                <img src="{{model.mainImage.imageUrl}}?max={% block thumbnail-size %}{{ themeSettings.listProductThumbSize }}{% endblock thumbnail-size %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
+            {% else %}
+                <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+            {% endif %}
+        </a>
+        {% endblock product-image %}
+    </div>
+    <div class="mz-productlisting-info">
+        <div class="dj-productlisting-maininfo">
+            <a class="mz-productlisting-title" href="{{model.url}}"><h2>{{model.content.productName}}</h2></a>
+            {% if model.content.productShortDescription and themeSettings.listProductShortDesc %}
+            <h5 class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|striptags|truncatewords(themeSettings.maxProductSummaryWords) }}</h5>
+            {% endif %}
+            {% block product-code %}
+            {% if themeSettings.listProductCode %}
+            <div class="mz-productlisting-productcode">{{model.productCode}}</div>
+            {% endif %}
+            {% endblock product-code %}
+        </div>
+        {%comment%} This section "Adds to Cart" from the Product Listing. Nice in theory, but in practice, hard to implement and takes away configurability.
+        If this is to be implemented, it's much better for this to move to Phase II or III.
+        <button id="add-to-cart" class="btn blue {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="addToCart">{{ labels.addToCart }}</button>
+        {%endcomment%}
+        <a class="btn blue" href="{{model.url}}">{{ labels.productCTA }}</a>
+        {% if themeSettings.listProductPrice %}
+        {% include "modules/product/price-stack" %}
+        {% endif %}
+        {% block product-extrainfo %}
+        {% if dealOfTheDay %}
+          {% if dealOfTheDay.savings %}
+            {% if model.price.discount.impact %}
+              <p class="mz-productlisting-savings">You save: {{ model.price.discount.impact|currency }}</p>
+            {% endif %}
+          {% endif %}
+          {% if dealOfTheDay.expirationDate %}
+            {% if model.price.discount.discount.expirationDate %}
+              <p class="mz-productlisting-expirationdate">Expires: {{ model.price.discount.discount.expirationDate.createDate|date("F j, Y") }}</p>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% endblock product-extrainfo %}
+    </div>
+</div>
+<div class="dj-productlisting-moreinfo">
+    <p>{{ model.content.productFullDescription }}</p>
+</div>

@@ -13,31 +13,28 @@
 		margin-bottom: -30px;
 	}
 
-	.mz-pagenumbers {
+	.mz-pagingcontrols {
+		display:none;
+		float: left;
+		width: 20%;
 		position: relative !important;
-		top: 14px !important;
-		right: 20px !important;
-		text-align: right !important;
+		left: 20px;
+		bottom: auto !important;
+		right: auto !important;
+		top: auto !important;
+		text-align: left !important;
 
-		a:focus, a:hover, a:active {
-			color: white;
-		}
-
-		.mz-pagenumbers-prev {
-			padding-right: 10px;
-			color: white;
-		}
-		.mz-pagenumbers-next {
-			padding-left: 10px;
-			color: white;
+		.mz-pagingcontrols-pagestate-label {
+			display: none;
+			visibility: none;
 		}
 	}
 
 	.mz-sortby {
 		position: relative !important;
+		top: 10px !important;
 		left: auto !important;
 		bottom: auto !important;
-		top: -10px !important;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
@@ -52,21 +49,41 @@
 		}
 	}
 
-	.mz-pagingcontrols {
-		top: 0 !important;
-		left: 20px;
-		bottom: auto !important;
-		right: auto !important;
+	.mz-pagenumbers {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center !important;
+		position: relative !important;
+		top: -10px !important;
 
-		.mz-pagingcontrols-pagestate-label {
-			display: none;
-			visibility: none;
+		a:focus, a:hover, a:active {
+			color: @djcOrange;
+		}
+
+		.mz-pagenumbers-prev {
+			padding-right: 10px;
+			color: black;
+		}
+		.mz-pagenumbers-next {
+			padding-left: 10px;
+			color: black;
 		}
 	}
 }
 .mz-l-paginatedlist-footer {
+	position: relative;
+	bottom: 40px;
+	height: 0;
+
+	&:before {
+		clear: both;
+	}
 	.mz-pagenumbers {
-		display: inherit;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center !important;
+		right: auto !important;
+		top: auto !important;
 	}
 }
 

@@ -369,6 +369,7 @@
   "clearAllFilters"      : "Clear All Filters",
 
   "productImagePlaceholder" : "[no image]",
+  "productCTA"           : "More Info",
   "packageWeight"        : "Package Weight",
 
   "shortDesc"            : "Summary",

@@ -1,0 +1,74 @@
+.dj-product-list {
+	height: auto;
+
+	.mz-productlist-item {
+		padding: 1% 0 1% 1.6%;
+		width:49.2%;
+		min-height: auto !important; /* overwrite default min-height property */
+
+		.dj-product-list {
+			height: 250px;
+			position: relative;
+			background-color: black; /* placeholder - put image background here */
+			overflow: hidden;
+
+			img {
+				float: right;
+				padding: 20px;
+				max-width: 55%;
+			}
+
+			.mz-productlisting-info {
+				position: absolute;
+				width: 100%;
+				bottom: 5px;
+				left: 20px;
+				background: none;
+
+				.dj-productlisting-maininfo {
+					width: 60%;
+				}
+
+				h2 {
+					color: white;
+					text-transform: none;
+					margin-bottom: 0.125em;
+				}
+				h5 {
+					color: #9a9a9a;
+					font-style: italic;
+					font-weight: 400;
+					font-size: 1em;
+					margin-bottom: 1em;
+				}
+				.btn {
+					width: auto;
+					margin-right: 10px;
+				}
+
+				@media only screen {
+					@media (max-width: 768px) {
+						background: #e9e9e9;
+						position: static;
+
+						h2 {
+							color: #303030;
+						}
+					}
+				}
+			}
+		}
+
+		.dj-productlisting-moreinfo {
+			p {
+			}
+		}
+	}
+	.dj-tiles {
+		.mz-productlist-item {
+			&:nth-child(2n - 1) {
+				clear:both;
+			}
+		}
+	}
+}

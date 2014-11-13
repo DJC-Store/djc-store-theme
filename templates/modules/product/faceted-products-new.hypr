@@ -1,0 +1,41 @@
+﻿<script type="text/json" id="data-mz-preload-facetedproducts">
+{
+	"facets": {% json model.facets %}, 
+	"currentPage": {{ model.currentPage }},
+	"firstIndex": {{ model.firstIndex }},
+	"hasNextPage": {{ model.hasNextPage|lower }},
+	"hasPreviousPage": {{ model.hasPreviousPage|lower }},
+	"lastIndex": {{ model.lastIndex }},
+	"middlePageNumbers": {% json model.middlePageNumbers %},
+	"pageCount": {{ model.pageCount }},
+	"pageSize": {{ model.pageSize }},
+	"startIndex": {{ model.startIndex }},
+	"totalCount": {{ model.totalCount }},
+	"currentSort": "{{ model.currentSort }}"
+}
+</script>
+
+<!-- {% dump model.facets %} -->
+
+<div class="mz-l-paginatedlist">
+    <div class="mz-l-paginatedlist-header bottom-bar">
+        <div data-mz-pagesort class="mz-sortby">
+            {% include "modules/common/page-sort" %}
+        </div>
+    </div>
+    <div data-mz-pagenumbers class="mz-pagenumbers">
+		{% include "modules/common/page-numbers" %}
+	</div>
+    <div class="faceting-form">
+		{% include "modules/product/faceting-form" %}
+    </div>
+    <div data-mz-productlist class="mz-l-paginatedlist-list">
+    	{% require_script "pages/product" %}
+        {% include "modules/product/dj-product-list" %}
+    </div>
+    <div class="mz-l-paginatedlist-footer">
+        <div data-mz-pagenumbers class="mz-pagenumbers">
+            {% include "modules/common/page-numbers" %}
+        </div>
+    </div>
+</div>
