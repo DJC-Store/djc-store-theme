@@ -11,5 +11,3 @@
   </select></div>
   <span>★</span>
 </label>
-<!-- {% dump model %} -->
-<!-- {% dump model.sorts %} -->

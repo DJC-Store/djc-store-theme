@@ -1,0 +1,9 @@
+﻿<div class="mz-productlist mz-productlist-tiled dj-event-list">
+    {% if model.items %}
+    <ul class="mz-productlist-list mz-l-tiles dj-tiles">
+        {% for prod in model.items %}
+            <li class="dj-event-item" data-mz-product="{{ prod.productCode }}">{% include "modules/product/event-listing" with model=prod %}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>

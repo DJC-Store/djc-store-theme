@@ -1,0 +1,45 @@
+﻿<div class="mz-productlisting mz-productlist-tiled dj-event-list" data-mz-product="{{ model.productCode }}">
+    <div class="see-block dj-row" style="background:url({% for property in model.properties %}
+                                                        {% ifequal property.attributeDetail.name "Background Image" %}
+                                                            {% for attribute in property.values %}
+                                                                {{ attribute.stringValue }}
+                                                            {% endfor %}
+                                                        {% endifequal %}
+                                                        {% endfor %});">
+        <div class="col-6 first">
+            <h2 class="block-heading">{{ model.content.productName }}</h2>
+            <h3 class="dark"><span>Next Event: </span>
+            {% for property in model.properties %}
+                {% ifequal property.attributeDetail.name "Event Start Date" %}
+                    <!-- PROPERTY.VALUES {% dump property.values %} -->
+                    {% for attribute in property.values %}
+                        {{ attribute.value|date:"M d, Y" }} <!-- [ATTRIBUTE].VALUE {% dump attribute.value %} -->
+                    {% endfor %}
+                {% endifequal %}
+                {% ifequal property.attributeDetail.name "Event Location" %}
+                    {% for attribute in property.values %}
+                        in {{ attribute.stringValue }}
+                    {% endfor %}
+                {% endifequal %}
+            {% endfor %}</h3>
+            <p>{{ model.content.productFullDescription }}</p>
+            <a href="{{ model.url }}" class="btn orange">{{ labels.productCTA }}</a>
+        </div>
+        {% if themeSettings.listEventImage %}
+        <div class="col-6">
+            <div class="mz-productlisting-image">
+                {% block product-image %}
+                <a href="{{model.url}}">
+                    {% if model.mainImage.imageUrl %}
+                        <img src="{{model.mainImage.imageUrl}}?max={% block thumbnail-size %}{{ themeSettings.listProductThumbSize }}{% endblock thumbnail-size %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
+                    {% else %}
+                        <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+                    {% endif %}
+                </a>
+                {% endblock product-image %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="clear"></div>
+    </div>
+</div>

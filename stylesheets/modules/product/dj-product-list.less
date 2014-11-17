@@ -1,6 +1,26 @@
 .dj-product-list {
 	height: auto;
 
+	.dj-productlist-alert {
+		width: 100%;
+		position: absolute;
+		padding-left: 20px;
+		z-index: 1;
+
+		p {
+			color: white;
+			font-style: italic;
+			font-weight: 500;
+		}
+
+		&.sale {
+			background: @djcOrange;
+		}
+		&.new {
+			background: @djcBlue;
+		}
+	}
+
 	.mz-productlist-item {
 		padding: 1% 0 1% 1.6%;
 		width:49.2%;
@@ -9,13 +29,27 @@
 		.dj-product-list {
 			height: 250px;
 			position: relative;
-			background-color: black; /* placeholder - put image background here */
+			background-image: url( ../resources/images/featProd-bg.jpg );
+			background-size: cover;
+			background-repeat: no-repeat;
 			overflow: hidden;
 
 			img {
 				float: right;
+				min-height: 250px;
+				max-width: 50%;
 				padding: 20px;
-				max-width: 55%;
+				position: relative;
+				z-index: 2;
+			}
+			.mz-productlisting-imageplaceholder {
+				float: right;
+				margin-top: 20px;
+				margin-right: 20px;
+				height: 210px;
+				width: 40%;
+				line-height: 210px;
+				z-index: 2;
 			}
 
 			.mz-productlisting-info {
@@ -24,9 +58,10 @@
 				bottom: 5px;
 				left: 20px;
 				background: none;
+				z-index: 3;
 
 				.dj-productlisting-maininfo {
-					width: 60%;
+					width: 50%;
 				}
 
 				h2 {
@@ -61,6 +96,8 @@
 
 		.dj-productlisting-moreinfo {
 			p {
+				font-style: italic;
+				font-size: 16px;
 			}
 		}
 	}
@@ -69,6 +106,50 @@
 			&:nth-child(2n - 1) {
 				clear:both;
 			}
+		}
+	}
+}
+
+.dj-event-list {
+	.dj-row {
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.dj-event-item {
+		width: 100%;
+		margin: 0 !important;
+
+		.mz-productlisting-image {
+			float: right;
+		}
+	}
+	.see-block {
+  		padding: 3em 2.125em;
+
+		.block-heading {
+	 	   margin-bottom: 0;
+	 	   text-align: left !important;
+		}
+
+  		p {
+			font-size: 16px;
+			color: rgba(255, 255, 255, 0.7);
+			font-style: italic;
+			display: block;
+			margin: 0 0 1.5em 0;
+		}
+		h2 {
+    		color: white;
+    	}
+    	h3 {
+		    font-size: 18px;
+		    line-height: 18px;
+		    margin-top: 3px;
+		    font-weight: 400;
+
+		    span {
+		    	color: @djcOrange;
+		    }
 		}
 	}
 }

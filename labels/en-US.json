@@ -58,11 +58,14 @@
   "creditCard"           : "Credit Card",
   "contactUs"            : "Contact Us",
   "backHome"             : "Back to DaniJohnson.com",
+  "onSale"               : "On Sale",
+  "recentlyAdded"        : "New",
 
   "navEvents"            : "Get Tickets",
   "navBooks"             : "The More You Know",
   "navCourses"           : "DVDs and More",
   "navBundles"           : "For Killer Success",
+  "seeDaniLive"          : "See Dani Live",
 
   "featuredLinks"        : "Featured Links",
   "clientSupport"        : "Client Support",

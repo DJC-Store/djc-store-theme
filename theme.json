@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "yikes"
+    "version": "rc7-28-g80ce70f"
   },
   "settings": {
     "allowWishlist": true,
@@ -17,9 +17,18 @@
     "defaultPageSize": 25,
     "listProductCode": false,
     "listProductThumbSize": 250,
-    "listProductPrice": false
+    "listProductPrice": false,
+    "listEventImage": true
   },
-  "pageTypes": [],
+  "pageTypes": [
+    {
+      "entityType": "category",
+      "id": "Event-Category",
+      "template": "category-event",
+      "title": "Event Category",
+      "userCreatable": false
+    }
+  ],
   "widgets": [
     {
       "id": "featured_product_carousel",
