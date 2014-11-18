@@ -1,0 +1,39 @@
+<div class="dynamic-content dark">
+	<div class="dj-row">
+		<div class="{% ifequal model.config.twoColumn "true" %}col-8 first{% else %}col-12{% endifequal %}">
+			<h2 class="block-heading left">Best <span>Sellers</span></h2>
+			<div class="best-sellers slider">
+				{% include_products "modules/product/dynamic-product-list" with productCodes=model.config.bestSellers as_parameter %}
+			</div>
+		</div>
+		{% ifequal model.config.twoColumn "true" %}
+		<div class="col-4">
+			<h2 class="block-heading left">Recently <span>Viewed</span></h2>
+			<div class="recently-viewed slider">
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/5" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/6" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/7" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+				<div>
+					<a href=""><img src="http://lorempixel.com/400/400/nature/8" /></a>
+					<a class="product-name" href="">This is a title</a>
+				</div>
+			</div>
+		</div>
+		{% endifequal %}
+	</div>
+</div>
+
+{% ifequal model.config.twoColumn "true" %}
+	{% require_script "vendor/jquery-cookie/jquery.cookie" %}
+{% endifequal %}
+{% require_script "vendor/slick/slick" %}
+{% require_script "modules/dynamic-content" %}

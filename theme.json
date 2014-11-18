@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-28-g80ce70f"
+    "version": "rc7-29-gf77fe9b"
   },
   "settings": {
     "allowWishlist": true,
@@ -293,6 +293,42 @@
       "defaultConfig": {
         "imageURL": "/resources/images/nav-promo.jpg",
         "promoURL": "http://www.danijohnson.com/fsts"
+      }
+    },
+    {
+      "id": "dynamic_content",
+      "displayName": "Dynamic Content",
+      "displayTemplate": "catalog/dynamic-content",
+      "icon": "/resources/admin/widgets/dynamiccontent.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Choose Layout (currently, two-column doesn't work, so, you know... don't choose it.",
+          "name": "twoColumn",
+          "store": [
+            [
+              "false",
+              "Single Column Layout"
+            ],
+            [
+              "true",
+              "Two Coumn Layout"
+            ]
+          ],
+          "xtype": "combo"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Best Sellers",
+          "name": "bestSellers",
+          "xtype": "taco-productfield"
+        }
+      ],
+      "defaultConfig": {
+        "twoColumn": "false"
       }
     },
     {

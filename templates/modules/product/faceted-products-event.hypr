@@ -17,7 +17,7 @@
 
 <div class="mz-l-paginatedlist">
     <div class="mz-l-paginatedlist-header event-header bottom-bar">
-        <span>★</span>{{labels.seeDaniLive}}<!-- {% dump labels %} --><span>★</span>
+        <span>★</span>{{ labels.seeDaniLive }}<span>★</span>
     </div>
     <div data-mz-productlist class="mz-l-paginatedlist-list">
         {% include "modules/product/event-list" %}

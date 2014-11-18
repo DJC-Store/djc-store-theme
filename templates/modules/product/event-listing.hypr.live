@@ -11,9 +11,8 @@
             <h3 class="dark"><span>Next Event: </span>
             {% for property in model.properties %}
                 {% ifequal property.attributeDetail.name "Event Start Date" %}
-                    <!-- PROPERTY.VALUES {% dump property.values %} -->
                     {% for attribute in property.values %}
-                        {{ attribute.value|date:"M d, Y" }} <!-- [ATTRIBUTE].VALUE {% dump attribute.value %} -->
+                        {{ attribute.value|date:"M d, Y" }}
                     {% endfor %}
                 {% endifequal %}
                 {% ifequal property.attributeDetail.name "Event Location" %}
