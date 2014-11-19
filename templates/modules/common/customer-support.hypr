@@ -1,0 +1,13 @@
+<div class="menu client-support">
+  <ul>
+    <!-- <li>
+      <a href="#"><i class="icon-chat"></i>Chat Now</a>
+    </li> -->
+    <li>
+      <a href="#"><i class="icon-phone"></i>866-760-8255</a>
+    </li>
+    <li class="last">
+      <a href="#"><i class="icon-mail"></i>Submit a Ticket</a>
+    </li>
+  </ul>
+</div>

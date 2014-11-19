@@ -14,17 +14,7 @@
     </ul>
   </div>
   <h5>{{ labels.clientSupport }}</h5>
-  <div class="menu client-support">
-    <ul>
-      <li class="">
-        <a href="#"><i class="icon-chat"></i>{{ labels.chatNow }}</a>
-      </li>
-      <li class="">
-        <a href="#"><i class="icon-phone"></i>866-760-8255</a>
-      </li>
-      <li class="">
-        <a href="#/"><i class="icon-mail"></i>{{ labels.submitTicket }}</a>
-      </li>
-    </ul>
-  </div>
+  {% block customersupport-mega %}
+    {% include "modules/common/customer-support" %}
+  {% endblock customersupport-mega %}
 </div>
