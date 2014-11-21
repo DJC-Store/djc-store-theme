@@ -27,10 +27,14 @@
         <dl class="mz-propertylist mz-propertylist-justified">
           {% for property in model.properties %}
           {% if property.values and not property.isHidden %}
-          <dt>{{property.attributeDetail.name}}</dt>
-          {% for v in property.values %}
-          <dd>{% if v.stringValue %}{{v.stringValue}}{% else %}{{v.value}}{% endif %}</dd>
-          {% endfor %}
+          {% if property.attributeDetail.name != "Product Cross-Sells" and property.attributeDetail.name != "Product Upsells" %}
+            <!--ATTRIBUTEDETAIL {% dump property.attributeDetail %} -->
+            <!--ATTRIBUTEDETAIL.NAME {% dump property.attributeDetail.name %} -->
+            <dt>{{property.attributeDetail.name}}</dt>
+            {% for v in property.values %}
+            <dd>{% if v.stringValue %}{{v.stringValue}}{% else %}{{v.value}}{% endif %}</dd>
+            {% endfor %}
+          {% endif %}
           {% endif %}
           {% endfor %}
         </dl>
@@ -125,9 +129,6 @@
         <span itemprop="value">{{ model.measurements.packageHeight.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageHeight.unit }}</span></dd>
     </dl>
 </div>
-
-
-
 {% endif %}
 
 {% if themeSettings.showProductDetailMeasurements and model.bundledProducts %}

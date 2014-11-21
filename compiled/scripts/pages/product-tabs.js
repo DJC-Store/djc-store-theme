@@ -1,0 +1,1 @@
+define(["modules/jquery-mozu"],function(e){e(document).ready(function(){e("#dj-product-tabs").easyResponsiveTabs({type:"default",width:"100%",fit:!0})})});

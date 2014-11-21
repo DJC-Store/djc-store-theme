@@ -20,8 +20,39 @@
             {% include "modules/product/product-detail" %}
         </div>
     </div>
-
 </div>
+
+<div class="dj-product-tabs-wrap">
+    <div id="dj-product-tabs">          
+        <div class="cd-tabs">
+            <nav>
+                <ul class="cd-tabs-navigation">
+                    <li><a data-content="description" class="selected" href="#0">{{ labels.productDescription }}</a></li>
+                    <li><a data-content="reviews" href="#0">{{ labels.productReviews }}</a></li>
+                    <li><a data-content="shipping" href="#0">{{ labels.shippingInformation }}</a></li>
+                </ul> <!-- cd-tabs-navigation -->
+            </nav>
+         
+            <ul class="cd-tabs-content">
+                <li data-content="description" class="selected">
+                    <div class="dj-dropzone">
+                        {% dropzone "product-description" scope="page" %}
+                    </div>
+                </li>
+                <li data-content="reviews">
+                    <p>COMING SOON</p>
+                </li>
+                <li data-content="shipping">
+                    <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
+         
+                    <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
+                </li>
+            </ul> <!-- cd-tabs-content -->
+        </div> <!-- cd-tabs -->
+    </div>    
+</div>
+
+{% require_script "vendor/responsive-tabs/main" %}
 
 {% endblock body-content %}
 
