@@ -79,6 +79,8 @@
   "terms"                : "Terms & Conditions",
   "privacy"              : "Privacy Policy",
   "earnings"             : "Earnings Disclaimer",
+  "faq1"                 : "Frequently Asked",
+  "faq2"                 : "Questions",
 
   "ccVisa"         : "Visa",
   "ccMastercard"     : "MasterCard",
@@ -140,12 +142,13 @@
   "noResultsText"        : "We're sorry! No results were found matching your query.",
   "searchResultsSummary"  : "Your search for \"{0}\" within {1} returned {2} results. <a href=\"#\" data-mz-action=\"expandSearch\">Repeat this search across all categories.</a>",
 
-  "cart"                 : "Cart",
-  "itemTotal"            : "Item Total",
+  "cart"                 : "Shopping Cart",
+  "itemTotal"            : "Total",
   "cartEmpty"            : "You have no items in your cart.",
   "taxAtCheckout"        : "Tax & Shipping Calculated at Checkout",
+  "promoAtCheckout"      : "Promotional Codes and Coupons may be entered at Checkout",
   "orderTotal"           : "Order Total",
-  "proceedToCheckout"    : "Proceed to Checkout",
+  "proceedToCheckout"    : "Checkout Now",
   "storePickupAt"        : "In-Store Pickup at <strong>{0}</strong>",
 
   "checkout"             : "Checkout",

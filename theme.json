@@ -6,10 +6,10 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-32-gbd7975f"
+    "version": "rc7-33-g3fc8c18"
   },
   "settings": {
-    "allowWishlist": true,
+    "allowWishlist": false,
     "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4,
     "megaNavPromoImage": "/resources/images/nav-promo.jpg",

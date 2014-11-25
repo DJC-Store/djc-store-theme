@@ -1,0 +1,50 @@
+.separator {
+	height: 10px;
+	width: 100%;
+}
+.is-required {
+	color: @djcOrange;
+}
+.mz-myaccount {
+	.mz-l-container {
+		padding: 0 40px;
+	}
+	.mz-pagetitle {
+		color: @djcOrange;
+	}
+	.mz-button-small {
+		font-size: 14px;
+		background: none;
+		border: none;
+		color: @djcOrange;
+		padding: 2px 6px 3px 6px;
+
+		&:focus, &:hover, &:active {
+			background: @djcOrange;
+			color: white;
+		}
+	}
+
+	&-panels {
+		margin-left: 240px;
+
+		.mz-l-stack-section {
+			a {
+				color: @djcOrange;
+			}
+			li {
+				width: 100%;
+			}
+			[class$="-actions"] {
+				text-align: right;
+			}
+		}
+		.mz-l-stack-sectiontitle {
+			a {
+				color: @djcOrange !important;
+				position: relative;
+				bottom: 10px;
+			}
+		}
+	}
+}

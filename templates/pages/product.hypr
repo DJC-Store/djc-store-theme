@@ -40,17 +40,42 @@
                     </div>
                 </li>
                 <li data-content="reviews">
-                    <p>COMING SOON</p>
+                    <div class="dj-row">
+                        <div class="col-12">
+                            <div class="quotation">
+                                <div class="box-icon-bg quote-bg"><span class="quotes">“</span></div>
+                                <hr>
+                                <p>COMING SOON</p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li data-content="shipping">
-                    <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
-         
-                    <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
+                <li id="shipping-info" data-content="shipping">
+                    <div class="dj-row">
+                        <div class="col-6">
+                            <h2>Estimated <span>Delivery</span></h2>
+                            <dl>
+                                <dt>Flat Rate Standard</dt>
+                                <dd>This is a short description telling the price of flat-rate shipping</dd>
+                                <dt>Two Day Air</dt>
+                                <dd>Another short description of a shipping menthod</dd>
+                                <dt>Next Day Air</dt>
+                                <dd>More methods! Get it faster!</dd>
+                                <dt>International</dt>
+                                <dd>Tiene una casa en una ciudad que no es en los Ustados Unidos? Haga Clic Aquí.</dd>
+                            </dl>
+                        </div>
+                        <div class="col-6">
+                            <h2>Digital <span>Content</span></h2>
+                            <p>Here is some text that says something like, "Hey, when you purchase digital content, you'll receive an email from whatever@danijohnson.com within one hour providing you a link to download to your product. Yay!"</p>
+                            <p>You can also access, re-download, and manage your previously purchased digital items <a href="#">here</a></p>
+                        </div>
+                    </div>
                 </li>
             </ul> <!-- cd-tabs-content -->
         </div> <!-- cd-tabs -->
     </div>    
-</div>
+</div><div class="clear"></div>
 
 {% require_script "vendor/responsive-tabs/main" %}
 

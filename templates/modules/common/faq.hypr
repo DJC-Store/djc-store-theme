@@ -1,0 +1,13 @@
+
+<div class="dj-row">
+    <div class="col-12">
+        <div class="quotation">
+            <div class="box-icon-bg quote-bg"><span class="questions">?</span></div>
+            <hr>
+            <h2 class="faq-title">{{ labels.faq1 }}<span> {{ labels.faq2 }}</span></h2>
+			<div class="dj-dropzone">
+				{% dropzone "faq" scope="template" %}
+			</div>
+        </div>
+    </div>
+</div>

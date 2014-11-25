@@ -98,3 +98,53 @@
 	color: #aaa;
 	font-size: 20px;
 }
+
+#dj-product-tabs {
+	&:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+	#shipping-info {
+		.dj-row {
+			padding: 0;
+
+			.col-6:first-child {
+				border-right: none;
+				
+				@media only screen and (min-width: 960px) {
+					border-right: 1px solid #e9e9e9;
+				}
+			}
+		}
+	}
+	h2 {
+		line-height: auto;
+
+		span {
+			color: @djcOrange;
+		}
+	}
+	p {
+		color: #9a9a9a;
+
+		a {
+			color: @djcBlue;
+		}
+	}
+	dl {
+		dt {
+			font-size: 18px;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: black;
+		}
+		dd {
+			font-size: 18px;
+			font-weight: 300;
+			color: #9a9a9a;
+			margin: 0 0 20px 0;
+			padding-right: 40px;
+		}
+	}
+}

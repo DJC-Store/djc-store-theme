@@ -1,0 +1,35 @@
+﻿{% extends "page" %}
+
+{% block title-tag-content %}{% firstof pageContext.metaTitle labels.cart %} - {% parent %}{% endblock title-tag-content %}
+
+{% block body-tag-classes %} mz-cart {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+{% require_script "pages/cart" %}
+
+{% preload_json model "cart" %}
+
+<div class="mz-l-container cart-container">
+	<h3 class="mz-pagetitle"><i class="icon-cart-big"></i>{{ labels.cart }}</h3>
+	<form method="post" action="{{ siteContext.secureHost }}/cart/checkout" id="cartform">
+		{% dropzone "cart-top" scope="template" %}
+		<input type="hidden" name="id" value="{{model.id}}" />
+		<button id="cart-checkout" class="btn reverse"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
+        {% include "modules/common/message-bar" with model=model.messages %}
+        <table class="mz-table mz-table-cart" id="cart">
+            {% include "modules/cart/cart-table" %}
+        </table>
+	</form>
+</div>
+
+{%comment%} RELATED PRODUCTS WILL GO HERE {%endcomment%}
+
+<div class="faq">
+	{% include "modules/common/faq" %}
+</div>
+
+{% endblock body-content %}
+
+{% block dynamic-content %}{% endblock dynamic-content %}
+{% block find-by-category %}{% endblock find-by-category %}
