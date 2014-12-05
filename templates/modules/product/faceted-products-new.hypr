@@ -16,17 +16,14 @@
 </script>
 
 <div class="mz-l-paginatedlist">
-    <div class="mz-l-paginatedlist-header bottom-bar">
-        <div data-mz-pagesort class="mz-sortby">
-            {% include "modules/common/page-sort" %}
+    <div class="mz-l-paginatedlist-header bottom-bar"> 
+        <div class="faceting-form">
+            {% include "modules/product/faceting-form" %}
         </div>
     </div>
     <div data-mz-pagenumbers class="mz-pagenumbers">
 		{% include "modules/common/page-numbers" %}
 	</div>
-    <div class="faceting-form">
-		{% include "modules/product/faceting-form" %}
-    </div>
     <div data-mz-productlist class="mz-l-paginatedlist-list">
         {% include "modules/product/product-list" %}
     </div>

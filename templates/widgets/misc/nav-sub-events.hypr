@@ -1,0 +1,18 @@
+<ul class="sub-events">
+  <li>
+    {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts as_parameter %}
+    <ul>
+      <li>
+        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts-hbew as_parameter %}
+      </li>
+      <li>
+        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts-sel as_parameter %}
+        <p>FREE EVENT!</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-dynasty as_parameter %}
+    <p>Only for FIRST STEPS Grads!</p>
+  </li>
+</ul>

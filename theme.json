@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-34-g0ac0c0e"
+    "version": "rc7-35-g95abd6e"
   },
   "settings": {
     "allowWishlist": false,
@@ -32,6 +32,42 @@
     }
   ],
   "widgets": [
+    {
+      "id": "nav-sub-events",
+      "displayName": "Mega-Menu Events SubNav",
+      "displayTemplate": "misc/nav-sub-events",
+      "icon": "/resources/admin/widgets/nav-sub-events.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "First Steps to Success",
+          "name": "prod-fsts",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Creating a Dynasty",
+          "name": "prod-dynasty",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Home Business Workshop",
+          "name": "prod-fsts-hbew",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Spiritual Equipping",
+          "name": "prod-fsts-sel",
+          "xtype": "taco-productfield"
+        }
+      ],
+      "defaultConfig": {}
+    },
     {
       "id": "featured_product_carousel",
       "displayName": "Featured Product Carousel",

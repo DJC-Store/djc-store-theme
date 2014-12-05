@@ -2,7 +2,7 @@
 <div class="dj-container">
   <div class="logo">
     <div class="logo-bg orange-dash"></div>
-    <a href="#"><img src="/resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
+    <a href="/home"><img src="/resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
   </div>
 
   <div class="mobile-menu">
@@ -15,22 +15,24 @@
           data-mz-contextify-val='active'>
         {% partial_cache %}
           {% for link in navigation.tree %}
-            {% if not link.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
+          {% ifequal link.name "Types" %}
+            {% for sublink in link.items %}
+            {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
               <li>
-                <a class="dj-sitenav-link" href="{{link.url}}">
-                  <i class="icon-{{ link.name|lower }}"></i>
-                  <h2>{{ link.name }}</h2>
+                <a class="dj-sitenav-link" href="{{sublink.url}}">
+                  <i class="icon-{{ sublink.name|lower }}"></i>
+                  <h2>{{ sublink.name }}</h2>
                   <h6>
-                    {% ifequal link.name "Events" %}
+                    {% ifequal sublink.name "Events" %}
                       {{ labels.navEvents }}
                     {% endifequal %}
-                    {% ifequal link.name "Books" %}
+                    {% ifequal sublink.name "Books" %}
                       {{ labels.navBooks }}
                     {% endifequal %}
-                    {% ifequal link.name "Courses" %}
+                    {% ifequal sublink.name "Courses" %}
                       {{ labels.navCourses }}
                     {% endifequal %}
-                    {% ifequal link.name "Bundles" %}
+                    {% ifequal sublink.name "Bundles" %}
                       {{ labels.navBundles }}
                     {% endifequal %}
                   </h6>
@@ -41,25 +43,42 @@
                     <div class="in-section">
                       <h5>In this Section</h5>
                       <div class="menu">
+                        {% ifequal sublink.name "Books" %}
                         <ul>
-                          {% for sublink in link.items %}
                           <li>
-                            <a href="{{sublink.url}}">{{ sublink.name }}</a>
-                            {%comment%}
-                            <!-- The following block (3rd tier links) exists solely to provide a description of higher-level links, and as such are not funtional links. -->
-                            {%endcomment%}
-                            {% if sublink.items %}
-                              <ul class="menu-desc">
-                                  {% for subsublink in sublink.items %}
-                                      <li>
-                                        {{subsublink.name}}
-                                      </li>
-                                  {% endfor %}
-                              </ul>
-                            {% endif %}
+                            <a href="{{ sublink.url }}">{{ sublink.name }}</a>
+                            <p>Here's a lot of stuff about books. You wouldn't know it, but books are nice to read. I like books. Do you like books? What in the world is this for?</p>
                           </li>
-                          {% endfor %}
                         </ul>
+                        {% endifequal %}
+                        {% ifequal sublink.name "Events" %}
+                        <div class="dj-dropzone">
+                          {% dropzone "sub-events" scope="site" %}
+                        </div>
+                        {% endifequal %}
+                        {% ifequal sublink.name "Courses" %}
+                        <ul>
+                          <li>
+                            <a href="{{sublink.url}}">Browse by Category</a>
+                            <ul class="sub-courses">
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A1&categoryId=4">Category Name</a></li>
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A2&categoryId=4">Category Name</a></li>
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A3&categoryId=4">Category Name</a></li>
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A4&categoryId=4">Category Name</a></li>
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A5&categoryId=4">Category Name</a></li>
+                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A6&categoryId=4">Category Name</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        {% endifequal %}
+                        {% ifequal sublink.name "Bundles" %}
+                        <ul>
+                          <li>
+                            <a href="{{ sublink.url }}">Buy Bundles and Save</a>
+                            <p>Get Products Bundled and designed to work together for maximum success.</p>
+                          </li>
+                        </ul>
+                        {% endifequal %}
                       </div>
                     </div>
                     <div class="master-nav">
@@ -75,6 +94,8 @@
                 </div>
               </li>
             {% endif %}
+            {% endfor %}
+          {% endifequal %}
           {% endfor %}
         {% endpartial_cache %}
         {% require_script "modules/contextify" %}
