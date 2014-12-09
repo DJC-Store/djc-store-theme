@@ -3,10 +3,10 @@
     {% if facet.values and facet.facetType != "Hierarchy" %}
     <span>★</span>
     <div class="resource-select">
-        <select class="mz-facetingform-facet mz-facetingform-facet-heirarchy">
+        <select class="mz-facetingform-facet mz-facetingform-facet-heirarchy" data-mz-hier-value="">
                 <option class="mz-facetingform-clearall" data-mz-action="clearFacets">{{ labels.allCategories }}</option>
             {% for fval in facet.values %}
-                <option data-mz-action="drillDown" data-mz-heirarchy-id="{{ fval.value }}" data-mz-facet-value="{{ fval.filterValue }}" data-mz-facet="{{ fval.field }}">
+                <option data-mz-heirarchy-id="{{ fval.value }}" data-mz-hier-value="{{ fval.filterValue }}" data-mz-facet="{{ facet.field }}">
                     {{ fval.label }}
                 </option>
             {% endfor %}

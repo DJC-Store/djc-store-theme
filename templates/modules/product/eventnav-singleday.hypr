@@ -1,0 +1,14 @@
+{% for prod in model.items %}
+{% if forloop.counter0 < 1 %}
+	<a href="#">{{ prod.content.productName }}</a>
+	<p class="event-quickinfo">
+    {% for property in prod.properties %}
+        {% ifequal property.attributeDetail.name "Event Start Date" %}
+            {% for attribute in property.values %}
+                {{attribute.value|date:"M d, Y"}} - {{ labels.freeEvent }}
+            {% endfor %}
+        {% endifequal %}
+    {% endfor %}
+	</p>
+{% endif %}
+{% endfor %}

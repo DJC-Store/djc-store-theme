@@ -16,11 +16,12 @@
 </script>
 
 <div class="mz-l-paginatedlist">
-    <div class="mz-l-paginatedlist-header bottom-bar"> 
+    {%comment%} This just isn't happening right now.{%endcomment%}
+    <!-- <div class="mz-l-paginatedlist-header"> 
         <div class="faceting-form">
-            {% include "modules/product/faceting-form" %}
+            // include "modules/product/faceting-form" //
         </div>
-    </div>
+    </div> -->
     <div data-mz-pagenumbers class="mz-pagenumbers">
 		{% include "modules/common/page-numbers" %}
 	</div>

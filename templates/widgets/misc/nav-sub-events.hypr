@@ -1,13 +1,12 @@
 <ul class="sub-events">
   <li>
     {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts as_parameter %}
-    <ul>
+    <ul class="fsts-events">
       <li>
         {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts-hbew as_parameter %}
       </li>
       <li>
-        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts-sel as_parameter %}
-        <p>FREE EVENT!</p>
+        {% include_products "modules/product/eventnav-singleday" with productCodes=model.config.prod-fsts-sel as_parameter %}
       </li>
     </ul>
   </li>
