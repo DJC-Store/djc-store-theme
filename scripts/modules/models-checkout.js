@@ -78,10 +78,17 @@
                     return (val === "new") ? val : Backbone.MozuModel.DataTypes.Int(val);
                 }
             },
-            helpers: ['contacts'],
+            helpers: ['contacts', 'alteredShippingMethods'],
             contacts: function () {
                 var contacts = this.getOrder().get('customer').get('contacts').toJSON();
                 return contacts && contacts.length > 0 && contacts;
+            },
+            alteredShippingMethods: function() {
+                var order = this.getOrder(), alteredMethods;
+                order.apiModel.getShippingMethodsFromContact().then(function(methods) {
+                    alteredMethods = this.next.alterMethods(methods);
+                });
+                return alteredMethods;
             },
             initialize: function () {
                 var self = this;
@@ -155,12 +162,26 @@
                     allowInvalidAddresses = HyprLiveContext.locals.siteContext.generalSettings.allowInvalidAddresses;
                 this.isLoading(true);
                 var addr = this.get('address');
+
+                var alterMethods = function(methods) {
+                    var alteredMethods = {};
+
+                    _.each(methods, function(method) {
+                        method.price += 1.6;
+                        _.extend(alteredMethods, method);
+                    });
+
+                    return alteredMethods;
+                };
+
                 var completeStep = function () {
                     order.messages.reset();
                     order.syncApiModel();
                     me.isLoading(true);
                     order.apiModel.getShippingMethodsFromContact().then(function (methods) {
-                        return parent.refreshShippingMethods(methods);
+                var alteredMethods = alterMethods(methods);
+                        // return parent.refreshShippingMethods(methods);
+                return parent.refreshShippingMethods(alteredMethods);
                     }).ensure(function () {
                         addr.set('candidateValidatedAddresses', null);
                         me.isLoading(false);

@@ -73,10 +73,10 @@
 			<div class="social">
 	          <h6>{{ labels.social }}</h6>
 	          <div class="icons">
-	            <a href="#"><i class="ss-facebook"></i></a>
-	            <a href="#"><i class="ss-twitter"></i></a>
-	            <a href="#"><i class="ss-instagram"></i></a>
-	            <a href="#"><i class="ss-pinterest"></i></a>
+	            <a href="https://www.facebook.com/danijohnsonlive" target="_blank"><i class="ss-facebook"></i></a>
+	            <a href="https://www.twitter.com/danijohnsonlive" target="_blank"><i class="ss-twitter"></i></a>
+	            <a href="http://instagram.com/danijohnsonlive" target="_blank"><i class="ss-instagram"></i></a>
+	            <a href="http://www.pinterest.com/search/pins/?rs=ac&len=2&q=dani+johnson" target="_blank"><i class="ss-pinterest"></i></a>
 	          </div>
 	        </div>
 			<div class="creds">
@@ -87,7 +87,7 @@
 	        	&copy; {% now "Y" %} {{ siteContext.generalSettings.websiteName }}. {{ labels.allRightsReserved }} {{ labels.poweredBy }}
 	        </span>
 	        <ul class="legal-links">
-	        	<li><a href="#">{{ labels.terms|fix_ampersands }}</a></li>
+	        	<li><a href="#">{{ labels.terms }}</a></li>
 	        	<li><a href="#">{{ labels.privacy }}</a></li>
 	        	<li><a href="#">{{ labels.earnings }}</a></li>
 	        </ul>

@@ -256,6 +256,10 @@ hr.dark {
     display: inline-block;
     text-align: center;
     letter-spacing: 1px;
+
+    &:focus, &:hover, &:active {
+      background: @djcDarkBlue;
+    }
   }
   &.blue-light {
     color: white;
@@ -266,6 +270,10 @@ hr.dark {
     display: inline-block;
     text-align: center;
     letter-spacing: 1px;
+
+    &:focus, &:hover, &:active {
+      background: @djcBlue;
+    }
   }
   &.orange {
     color: white;
@@ -276,6 +284,10 @@ hr.dark {
     display: inline-block;
     text-align: center;
     letter-spacing: 1px;
+
+    &:focus, &:hover, &:active {
+      background: @djcOrange;
+    }
   }
   &.gray {
     color: white;
@@ -286,6 +298,10 @@ hr.dark {
     display: inline-block;
     text-align: center;
     letter-spacing: 1px;
+
+    &:focus, &:hover, &:active {
+      background: @djcDarkGray;
+    }
   }
   &.reverse {
     background: none;
@@ -294,6 +310,11 @@ hr.dark {
     border: none;
     margin:0;
     padding:0;
+
+    &:focus, &:hover, &:active {
+      color: white;
+      background: @djcOrange;
+    }
   }
   &.large {
     font-size: 28px;

@@ -4,10 +4,16 @@
       <a href="#"><i class="icon-chat"></i>Chat Now</a>
     </li> -->
     <li>
-      <a href="#"><i class="icon-phone"></i>866-760-8255</a>
+      <a href="#" data-featherlight="#phone-lightbox"><i class="icon-phone"></i>866-760-8255</a>
     </li>
     <li class="last">
-      <a href="#"><i class="icon-mail"></i>Submit a Ticket</a>
+      <a href="http://www.danijohnson.com/contact"><i class="icon-mail"></i>Submit a Ticket</a>
     </li>
   </ul>
 </div>
+
+<div class="lightbox" id="phone-lightbox">
+  <h2>866-760-8255</h2>
+</div>
+
+{% require_script "vendor/featherlight/featherlight" %}

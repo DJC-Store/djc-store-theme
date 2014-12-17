@@ -1,5 +1,5 @@
 {% for prod in model.items %}
-	<div data-mz-product="{{prod.productCode}}">
+	<div class="dc-slide" data-mz-product="{{prod.productCode}}">
 		<a href="{{prod.url}}">
 			<div class="image-container">
 			{% for thumbnail in prod.content.productImages %}

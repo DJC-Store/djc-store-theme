@@ -3,6 +3,9 @@
 	.mz-l-pagecontent {
 		overflow: visible;
 	}
+	.mz-l-container {
+		padding-bottom: 40px;
+	}
 	.mz-l-paginatedlist {
 		top: 0 !important;
 		overflow: visible;
@@ -62,18 +65,16 @@
 	}
 	.mz-l-paginatedlist-footer {
 		position: relative;
-		bottom: 40px;
+		bottom: 0;
 		height: 0;
+		width: 100%;
 
 		&:before {
 			clear: both;
 		}
 		.mz-pagenumbers {
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center !important;
 			right: auto !important;
-			top: auto !important;
+			top: 0 !important;
 		}
 	}
 
