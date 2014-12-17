@@ -1,6 +1,6 @@
 .mz-cart, .mz-checkout {
 	.mz-l-container {
-		padding: 0 40px;
+		padding: 40px;
 	}
 	.mz-pagetitle {
 		font-size: 40px;
@@ -26,6 +26,10 @@
 	.is-crossedout {
 		font-weight: 400;
 	}
+}
+
+#cartform > button {
+	margin-right: 20px;
 }
 
 .cart-container {
@@ -214,26 +218,7 @@
 }
 .mz-checkoutform {
 	.mz-formstep-next {
-		text-align: right;
-
-		button {
-			border-radius: 5px;
-			padding: 1em;
-			font-size: 1em;
-			text-transform: uppercase;
-			cursor: pointer;
-			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
-			margin-bottom: 1em;
-			-webkit-appearance: none; 
-		    color: white;
-		    background: #6e6e6e;
-		    border: none;
-		    font-weight: 300;
-		    min-width: 150px;
-		    display: inline-block;
-		    text-align: center;
-    		letter-spacing: 1px;
-		}
+		text-align: left;
 	}
 	.mz-ordersummary {
 		&-checkout {
@@ -249,4 +234,27 @@
 			padding: 10px 25px !important;
 		}
 	}
+}
+
+.mz-ordersummary-discount {
+	&name {
+		color: @djcOrange;
+	}
+	&amt {
+		color: @djcOrange;
+		font-weight: 600;
+	}
+}
+
+.mz-formstep-edit {
+	background: none !important;
+    color: @djcOrange !important;
+    text-shadow: none !important;
+    border: none !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    &:active, &:hover, &:focus {
+    	color: white !important;
+    }
 }

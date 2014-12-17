@@ -34,6 +34,11 @@
 		.mz-price {
 			font-size: 40px;
 			color: @djcBlue;
+
+			& > div {
+				font-size: 14px;
+				color: @djcLightGray;
+			}
 		}
 		.mz-propertylist {
 			-webkit-margin-before: 0;
@@ -41,7 +46,7 @@
 			color: @djcBlue;
 
 			dt {
-				display: none;
+				/* display: none; */
 			}
 			dd {
 				float: left;
@@ -90,7 +95,8 @@
 	font-weight: 700;
 	letter-spacing: .01em;
 	font-size: 32px;
-	margin-bottom: 5px;
+	margin: 0 0 5px;
+	color: @textColor;
 }
 .mz-productdetail-shortdesc {
 	font-style: italic;

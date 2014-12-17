@@ -1,5 +1,18 @@
 @maxWidth: 1196px;
 
+.clear {
+	clear:both;
+	width: 100%;
+	height: 0;
+	visibility: hidden;
+
+	&:before, &:after {
+		display: table;
+		content: "";
+		clear:both;
+	}
+}
+
 .dj-bg {
 	width: 100%;
 	background-color: #eceae0;

@@ -1,7 +1,7 @@
 ﻿<div class="mz-ordersummary-checkout">
     <h3 class="mz-formstep-header">
         {{ labels.orderSummary }}
-        <button class="btn reverse" data-mz-action="editCart">{{ labels.edit }}</button>
+        <button class="mz-button mz-button-small mz-formstep-edit" data-mz-action="editCart">{{ labels.edit }}</button>
     </h3>
 
     <div class="mz-formstep-body">

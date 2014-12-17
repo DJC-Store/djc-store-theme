@@ -1,0 +1,5 @@
+﻿      <ul class="dj-digitalproductlist">
+        {% for order in model.items %}
+        	{% include "modules/my-account/digital-product-listing" with model=order %}
+        {% endfor %}
+      </ul>

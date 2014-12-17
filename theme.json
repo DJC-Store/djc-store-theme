@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-36-g57d6c10"
+    "version": "rc7-37-g0c75f1b"
   },
   "settings": {
     "allowWishlist": false,
@@ -44,29 +44,86 @@
         {
           "anchor": "100%",
           "fieldLabel": "First Steps to Success",
-          "name": "prod-fsts",
-          "xtype": "taco-productfield"
+          "name": "fsts",
+          "xtype": "textfield"
         },
         {
-          "anchor": "100%",
-          "fieldLabel": "Creating a Dynasty",
-          "name": "prod-dynasty",
-          "xtype": "taco-productfield"
+          "anchor": "50%",
+          "fieldLabel": "FSTS Subtext",
+          "name": "fstsSubtext",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "FSTS Url",
+          "name": "fstsUrl",
+          "xtype": "textfield"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Home Business Workshop",
-          "name": "prod-fsts-hbew",
-          "xtype": "taco-productfield"
+          "name": "hbew",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "HBEW Subtext",
+          "name": "hbewSubtext",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "HBEW Url",
+          "name": "hbewUrl",
+          "xtype": "textfield"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Spiritual Equipping",
-          "name": "prod-fsts-sel",
-          "xtype": "taco-productfield"
+          "name": "sel",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "SE Subtext",
+          "name": "selSubtext",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "HBEW Url",
+          "name": "hbewUrl",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Creating a Dynasty",
+          "name": "dynasty",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Dynasty Subtext",
+          "name": "dynastySubtext",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Dynasty Url",
+          "name": "dynastyUrl",
+          "xtype": "textfield"
         }
       ],
-      "defaultConfig": {}
+      "defaultConfig": {
+        "fsts": "First Steps to Success",
+        "hbew": "Home Business Entrepreneur Workshop",
+        "sel": "Spiritual Equipping in the Marketplace",
+        "dynasty": "Creating a Dynasty",
+        "fstsSubtext": "City, ST - Month DD - DD, Year",
+        "hbewSubtext": "3 Day Seminar - Month DD - DD",
+        "selSubtext": "FREE EVENT! 7:30pm, Month DD",
+        "dynastySubtext": "City, ST - Month DD - DD, Year. Only for First Steps Grads"
+      }
     },
     {
       "id": "featured_product_carousel",

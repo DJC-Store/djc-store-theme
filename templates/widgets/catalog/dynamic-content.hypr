@@ -1,3 +1,9 @@
+{% ifequal model.config.twoColumn "true" %}
+	{% require_script "vendor/jquery-cookie/jquery.cookie" %}
+{% endifequal %}
+{% require_script "vendor/slick/slick" %}
+{% require_script "modules/dynamic-content" %}
+
 <div class="dynamic-content dark">
 	<div class="dj-row">
 		<div class="{% ifequal model.config.twoColumn "true" %}col-8 first{% else %}col-12{% endifequal %}">
@@ -32,8 +38,3 @@
 	</div>
 </div>
 
-{% ifequal model.config.twoColumn "true" %}
-	{% require_script "vendor/jquery-cookie/jquery.cookie" %}
-{% endifequal %}
-{% require_script "vendor/slick/slick" %}
-{% require_script "modules/dynamic-content" %}

@@ -4,21 +4,58 @@
 	      	<div class="menu-footer-nav-container">
 		      	<ul class="menu">
 					{% partial_cache %}
-					  	{% for link in navigation.tree %}
-					    {% if not link.isHidden  and  forloop.counter0 >= themeSettings.maxTopLevelNavItems %}
-					    <li class="menu-item">
-					        <a href="{{link.url}}">{{ link.name }}</a>
-					        <ul>
-								{% for sublink in link.items %}
-					        	<li><a href="{{sublink.url}}">{{ sublink.name }}</a></li>
-								{% for subsublink in sublink.items %}
-								<li><a href="{{subsublink.url}}">{{ subsublink.name }}</a></li>
-								{% endfor %}
-					        	{% endfor %}
-					      	</ul>
-					    </li>
-					    {% endif %}
-					  	{% endfor %}
+
+			  		{% for link in navigation.tree %}
+			  		{% ifequal link.name "Account" %}
+					<li class="menu-item">
+				        <a href="{{link.url}}">{{ link.name }}</a>
+				        <ul>
+			            	{% for sublink in link.items %}
+			            	{% if not sublink.isHidden %}
+							<li>
+								<a href="{{sublink.url}}">{{ sublink.name }}</a>
+							</li>
+			            	{% endif %}
+			            	{% endfor %}
+				      	</ul>
+				    </li>
+		            {% endifequal %}
+		            {% endfor %}
+
+			  		{% for link in navigation.tree %}
+					{% ifequal link.name "Types" %}
+					<li class="menu-item">
+				        <a href="{{link.url}}">All {{ labels.products }}</a>
+				        <ul>
+			            	{% for sublink in link.items %}
+			            	{% if not sublink.isHidden %}
+							<li>
+								<a href="{{sublink.url}}">{{ sublink.name }}</a>
+							</li>
+			            	{% endif %}
+			            	{% endfor %}
+				      	</ul>
+				    </li>
+		            {% endifequal %}
+		            {% endfor %}
+
+			  		{% for link in navigation.tree %}
+		            {% ifequal link.name "Categories" %}
+					<li class="menu-item">
+				        <a href="{{link.url}}">All {{ link.name }}</a>
+				        <ul>
+			            	{% for sublink in link.items %}
+			            	{% if not sublink.isHidden %}
+							<li>
+								<a href="{{sublink.url}}">{{ sublink.name }}</a>
+							</li>
+			            	{% endif %}
+			            	{% endfor %}
+				      	</ul>
+				    </li>
+		            {% endifequal %}
+			  		{% endfor %}
+
 					{% endpartial_cache %}
 	      			<li class="menu-item">
 	      				<h6><span class="dj-onlinestore">{{ labels.storeSupport1 }}</span> {{ labels.storeSupport2 }}</h6>

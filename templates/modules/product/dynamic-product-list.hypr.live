@@ -1,7 +1,13 @@
 {% for prod in model.items %}
 	<div data-mz-product="{{prod.productCode}}">
 		<a href="{{prod.url}}">
-			<div class="image-container"><img class="dycon-img" src="{{prod.mainImage.imageUrl}}?max={% block thumbnail-size %}{{ themeSettings.listProductThumbSize }}{% endblock thumbnail-size %}" {% if prod.mainImage.altText %}alt="{{ prod.mainImage.altText }}"{% endif %}/></div>
+			<div class="image-container">
+			{% for thumbnail in prod.content.productImages %}
+            {% ifequal thumbnail.sequence 2 %}
+                <img class="dycon-img" src="{{thumbnail.imageUrl}}" {% if thumbnail.altText %}alt="{{ thumbnail.altText }}"{% endif %} />
+            {% endifequal %}
+            {% endfor %}
+			</div>
 		</a>
 		<a class="product-name" href="{{prod.url}}">{{prod.content.productName}}</a>
 	</div>

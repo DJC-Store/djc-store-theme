@@ -14,10 +14,8 @@
 
 {% preload_json model "customer" %}
 
-<div class="mz-l-container">
-    <h2 class="mz-pagetitle">
-        {{ labels.yourAccount }}
-    </h2>
+<div class="mz-l-container"><div class="dj-row">
+    <h2 class="mz-pagetitle">{{ labels.yourAccount }}</h2>
 
     <div class="mz-l-sidebar mz-myaccount-nav">
         {% include "modules/my-account/my-account-nav" with navtarget="body" %}
@@ -40,6 +38,11 @@
             {% include "modules/my-account/my-account-wishlist" with model=model.wishlist %}
         </div>
         {% endif %}
+
+        <a id="protectedcontent"></a>
+        <div class="mz-l-stack-section mz-accountprotectedcontent" id="account-protectedcontent">
+            {% include "modules/my-account/my-account-protectedcontent" with model=model.orderHistory %}
+        </div>
 
         <a id="orderhistory"></a>
         <div class="mz-l-stack-section mz-accountorderhistory" id="account-orderhistory">
@@ -67,6 +70,6 @@
         </div>
 
     </div>
-</div>
+</div></div>
 {% endblock body-content %}
 

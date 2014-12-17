@@ -2,7 +2,7 @@
 <div class="dj-container">
   <div class="logo">
     <div class="logo-bg orange-dash"></div>
-    <a href="/home"><img src="/resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
+    <a href="/"><img src="/resources/images/dj-store-big.png" alt="Logo Alt Text" /></a>
   </div>
 
   <div class="mobile-menu">
@@ -19,7 +19,11 @@
             {% for sublink in link.items %}
             {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
               <li>
+                {% ifequal sublink.name "Events" %}
+                <a class="dj-sitenav-link" href="http://www.danijohnson.com/events">
+                {% else %}
                 <a class="dj-sitenav-link" href="{{sublink.url}}">
+                {% endifequal %}
                   <i class="icon-{{ sublink.name|lower }}"></i>
                   <h2>{{ sublink.name }}</h2>
                   <h6>
@@ -59,7 +63,9 @@
                         {% ifequal sublink.name "Courses" %}
                         <ul>
                           <li>
-                            <a href="{{sublink.url}}">Browse by Category</a>
+                            <a href="{{sublink.url}}">{{ sublink.name }}</a>
+                            {%comment%}
+                            This, for now, is also not happening. It might be best to make all of these widgets.
                             <ul class="sub-courses">
                               <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A1&categoryId=4">Category Name</a></li>
                               <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A2&categoryId=4">Category Name</a></li>
@@ -68,13 +74,15 @@
                               <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A5&categoryId=4">Category Name</a></li>
                               <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A6&categoryId=4">Category Name</a></li>
                             </ul>
+                            {%endcomment%}
+                            <p>This is an explanation of what "Courses" means, in reference to DJC products. In the future, we could even slap a featured product in here. Widgets all around!</p>
                           </li>
                         </ul>
                         {% endifequal %}
                         {% ifequal sublink.name "Bundles" %}
                         <ul>
                           <li>
-                            <a href="{{ sublink.url }}">Buy Bundles and Save</a>
+                            <a href="{{ sublink.url }}">{{ sublink.name }}</a>
                             <p>Get Products Bundled and designed to work together for maximum success.</p>
                           </li>
                         </ul>

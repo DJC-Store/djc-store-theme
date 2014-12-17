@@ -1,17 +1,14 @@
 ﻿<div class="mz-productlisting mz-productlist-tiled dj-product-list" data-mz-product="{{ model.productCode }}">
     {% block product-extrainfo %}
-    {% if dealOfTheDay %}
-      {% if dealOfTheDay.savings %}
-        <div class="dj-productlist-alert sale">
-            <p>{{ labels.onSale }}
-            {% if dealOfTheDay.expirationDate %}
-              {% if model.price.discount.discount.expirationDate %}
-                <span class="mz-productlisting-expirationdate">Offer Expires {{ model.price.discount.discount.expirationDate.createDate|date("F j, Y") }}!</span>
-              {% endif %}
-            {% endif %}
-            </p>
-        </div>
-      {% endif %}
+    {% if model.price.catalogSalePrice %}
+    <div class="dj-productlist-alert sale">
+        <p>{{ labels.onSale }}
+        {% if dealOfTheDay.expirationDate %}
+          {% if model.price.discount.discount.expirationDate %}
+            <span class="mz-productlisting-expirationdate">Offer Expires {{ model.price.discount.discount.expirationDate.createDate|date("F j, Y") }}</span>
+          {% endif %}
+        {% endif %}!</p>
+    </div>
     {% endif %}
     {%comment%}
         Evaluate Recently added products and display "NEW" if within set time period
@@ -23,11 +20,11 @@
     <div class="mz-productlisting-image">
         {% block product-image %}
         <a href="{{model.url}}">
-            {% if model.mainImage.imageUrl %}
-                <img src="{{model.mainImage.imageUrl}}?max={% block thumbnail-size %}{{ themeSettings.listProductThumbSize }}{% endblock thumbnail-size %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
-            {% else %}
-                <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
-            {% endif %}
+            {% for thumbnail in model.content.productImages %}
+                {% ifequal thumbnail.sequence 2 %}
+                    <img src="{{thumbnail.imageUrl}}" {% if thumbnail.altText %}alt="{{ thumbnail.altText }}"{% endif %} />
+                {% endifequal %}
+            {% endfor %}
         </a>
         {% endblock product-image %}
     </div>

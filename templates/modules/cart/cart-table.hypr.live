@@ -1,10 +1,10 @@
 ﻿<thead>
   <tr>
     <th class="mz-carttable-header-product">{{ labels.product }}</th>
-    <th>&nbsp;</th>
     <th class="mz-carttable-header-price">{{ labels.price }}</th>
     <th class="mz-carttable-header-qty">{{ labels.qty }}</th>
     <th class="mz-carttable-header-total">{{ labels.itemTotal }}</th>
+    <th>&nbsp;</th>
   </tr>
 </thead>
 <tbody class="mz-table-cart-{%if Model.IsEmpty %}isempty{% else %}items{% endif %}">
@@ -43,9 +43,6 @@
         {% endif %}
       </div>
     </td>
-    <td class="mz-carttable-item-remove">
-      <a href="javascript:;" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}" class="mz-icon mz-icon-close">{{ labels.remove }}</a>
-    </td>
     <td class="mz-carttable-item-price">
       {% include "modules/common/item-price" %}
     </td>
@@ -54,6 +51,9 @@
     </td>
     <td class="mz-carttable-item-total">
         {% include "modules/common/item-total" %}
+    </td>
+    <td class="mz-carttable-item-remove">
+      <a href="javascript:;" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}" class="mz-icon mz-icon-close">{{ labels.remove }}</a>
     </td>
   </tr>
 {% endfor %}
@@ -67,43 +67,47 @@
 </tbody>
 <tfoot>
   <tr class="mz-carttable-shipping-row">
-    <td colspan="5">
+    <td colspan="4">
       <em class="mz-auxiliary-text">{{ labels.taxAtCheckout }}</em>
     </td>
+    <td></td>
   </tr>
   <tr class="mz-carttable-promo-row">
-    <td colspan="5">
+    <td colspan="4">
       <em class="mz-auxiliary-text">{{ labels.promoAtCheckout }}</em>
     </td>
+    <td></td>
   </tr>
 
   {% for discount in model.orderDiscounts %}
     {% if not discount.excluded %}
-  <tr class="mz-carttable-total-row discount-row">
-    <td class="mz-carttable-total-wrap" colspan="5">
-      {{ discount.discount.name }}:
+  <tr class="mz-carttable-total-row">
+    <td class="mz-carttable-total-label" colspan="3">
+        {{ discount.discount.name }}:
+    </td>
+    <td class="mz-carttable-total-wrap">
       <span class="mz-carttable-rowtotal">- {{ discount.impact|currency }}</span>
     </td>
+    <td></td>
   </tr>
     {% endif %}
   {% endfor %}
 
+
   <tr class="mz-carttable-total-row">
-    <td class="mz-carttable-total-wrap" colspan="5">
+    <td class="mz-carttable-total-wrap" colspan="4">
       {{ labels.orderTotal }}:
         <span id="mz-carttable-total" class="mz-carttable-total">
           <strong>{{ model.discountedTotal|currency }}</strong>
         </span>
     </td>
+    <td></td>
   </tr>
   <tr class="mz-carttable-checkout-row">
-    <td colspan="5">
-      <div class="customer-support-wrapper">
-        <h2>Customer <span>Service</span></h2>
-        {% include "modules/common/customer-support" %}
-      </div>
+    <td colspan="4">
       {% if not model.isEmpty %}<a class="mz-carttable-emptylink" href="javascript:;" data-mz-action="empty">{{ labels.emptyCart }}</a>{% endif %}
-      <button id="cart-checkout" class="btn orange large"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
+      <button id="cart-checkout" class="mz-button mz-button-large btn orange"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
     </td>
+    <td></td>
   </tr>
 </tfoot>

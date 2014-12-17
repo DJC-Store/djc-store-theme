@@ -27,9 +27,7 @@
         <dl class="mz-propertylist mz-propertylist-justified">
           {% for property in model.properties %}
           {% if property.values and not property.isHidden %}
-          {% if property.attributeDetail.name != "Product Cross-Sells" and property.attributeDetail.name != "Product Upsells" %}
-            <!--ATTRIBUTEDETAIL {% dump property.attributeDetail %} -->
-            <!--ATTRIBUTEDETAIL.NAME {% dump property.attributeDetail.name %} -->
+          {% if property.attributeDetail.name != "Product Cross-Sells" and property.attributeDetail.name != "Product Upsells" and property.attributeDetail.name != "Tagline" and property.attributeDetail.name != "Product Category" and property.attributeDetail.name != "Topic" and property.attributeDetail.name != "Digitally Delivered Content" %}
             <dt>{{property.attributeDetail.name}}</dt>
             {% for v in property.values %}
             <dd>{% if v.stringValue %}{{v.stringValue}}{% else %}{{v.value}}{% endif %}</dd>

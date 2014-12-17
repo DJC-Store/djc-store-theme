@@ -1,0 +1,13 @@
+﻿{% block order-items %}
+    {% for item in model.items %}
+    	{% for property in item.product.properties %}
+    	{% ifequal property.attributeFQN "tenant~digital-product" %}
+    		{% for attribute in property.values %}
+    		{% if attribute.value %}
+    			{% include "modules/my-account/digital-product-item-listing" with model=item order=model %}
+    		{% endif %}
+    		{% endfor %}
+    	{% endifequal %}
+    	{% endfor %}
+    {% endfor %}
+{% endblock order-items %}

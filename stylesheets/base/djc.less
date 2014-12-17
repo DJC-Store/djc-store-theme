@@ -236,19 +236,20 @@ hr.dark {
     padding-left: 0; } }
 
 //buttons
-.btn {
+.btn, .mz-button {
   border-radius: 5px;
   padding: 1em;
   font-size: 1em;
   text-transform: uppercase;
   cursor: pointer;
-  text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
   margin-bottom: 1em;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
+  color: black;
+  background: @djcLightGray;
 
   &.blue {
     color: white;
-    background: #1177a3;
+    background: @djcDarkBlue;
     border: none;
     font-weight: 300;
     min-width: 150px;
@@ -258,7 +259,7 @@ hr.dark {
   }
   &.blue-light {
     color: white;
-    background: #3ca7d0;
+    background: @djcBlue;
     border: none;
     font-weight: 300;
     min-width: 150px;
@@ -268,7 +269,7 @@ hr.dark {
   }
   &.orange {
     color: white;
-    background: #ff8936;
+    background: @djcOrange;
     border: none;
     font-weight: 300;
     min-width: 150px;
@@ -278,7 +279,7 @@ hr.dark {
   }
   &.gray {
     color: white;
-    background: #6e6e6e;
+    background: @djcDarkGray;
     border: none;
     font-weight: 300;
     min-width: 150px;

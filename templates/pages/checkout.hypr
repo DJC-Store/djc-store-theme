@@ -13,6 +13,7 @@
 {% preload_json model "checkout" %}
 
 <div class="mz-l-container">
+    <!-- MODEL {% dump model %} -->
     <h3 class="mz-pagetitle"><i class="icon-cart-big"></i>{{ labels.checkout }}
         {% if not user.isAuthenticated %}
         <span class="mz-pagetitle-note">
@@ -46,11 +47,11 @@
 
     <div class="mz-l-column">
 
-        <div class="mz-formstep mz-checkoutform-shippingaddress" id="step-shipping-address">
+        <div class="mz-formstep mz-checkoutform-shippingaddress" id="step-shipping-address" {% if model.digitalOnly %}style="display:none"{% endif %}>
             {% include "modules/checkout/step-shipping-address" %}
         </div>
 
-        <div class="mz-formstep mz-checkoutform-shippingmethod" id="step-shipping-method" {% if not model.requiresFulfillmentInfo %}style="display:none"{% endif %}>
+        <div class="mz-formstep mz-checkoutform-shippingmethod" id="step-shipping-method" {% if not model.requiresFulfillmentInfo or model.digitalOnly %}style="display:none"{% endif %}>
             {% include "modules/checkout/step-shipping-method" %}
         </div>
 

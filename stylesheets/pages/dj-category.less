@@ -1,170 +1,150 @@
-.cat-adjust {
-	margin-top: -41px;
-}
-.bottom-bar {
-	position: relative;
-	height: 52px !important;
-	top: -52px !important;
-	margin-bottom: -25px;
-	font-size: 20px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	text-align: center;
-	text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
-	color: white;
-	text-transform: uppercase;
-	padding: .5em;
-
-	span {
-		padding: 0 5px;
-	}
-}
-
+.mz-category {
 /* override MOZU content */
-.mz-l-pagecontent {
-	overflow: visible;
-}
-.mz-l-paginatedlist {
-	top: 0 !important;
-	overflow: visible;
+	.mz-l-pagecontent {
+		overflow: visible;
+	}
+	.mz-l-paginatedlist {
+		top: 0 !important;
+		overflow: visible;
 
-	.mz-pagingcontrols {
-		display:none;
-		float: left;
-		width: 20%;
-		position: relative !important;
-		left: 20px;
-		bottom: auto !important;
-		right: auto !important;
-		top: auto !important;
-		text-align: left !important;
+		.mz-pagingcontrols {
+			display:none;
+			float: left;
+			width: 20%;
+			position: relative !important;
+			left: 20px;
+			bottom: auto !important;
+			right: auto !important;
+			top: auto !important;
+			text-align: left !important;
 
-		.mz-pagingcontrols-pagestate-label {
-			display: none;
-			visibility: none;
+			.mz-pagingcontrols-pagestate-label {
+				display: none;
+				visibility: none;
+			}
+		}
+
+		.mz-facetingform {
+			position: relative !important;
+			top: 10px !important;
+			left: auto !important;
+			bottom: auto !important;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+
+			span {
+				display: inline-block;
+				color: white;
+			}
+		}
+
+		.mz-pagenumbers {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center !important;
+			position: relative !important;
+			top: -10px !important;
+
+			a:focus, a:hover, a:active {
+				color: @djcOrange;
+			}
+
+			.mz-pagenumbers-prev {
+				padding-right: 10px;
+				color: black;
+			}
+			.mz-pagenumbers-next {
+				padding-left: 10px;
+				color: black;
+			}
+		}
+	}
+	.mz-l-paginatedlist-footer {
+		position: relative;
+		bottom: 40px;
+		height: 0;
+
+		&:before {
+			clear: both;
+		}
+		.mz-pagenumbers {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center !important;
+			right: auto !important;
+			top: auto !important;
 		}
 	}
 
-	.mz-facetingform {
-		position: relative !important;
-		top: 10px !important;
-		left: auto !important;
-		bottom: auto !important;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
+	/* SELECT */
+	.select-style {
+		height: 42px;
+		width: 100%;
+		background: #e9e9e9;
+		position: relative;
+		border-radius: 2px;
+		border: 1px solid #e9e9e9;
+		border: 1px solid rgba(154, 154, 154, 0.3);
+		overflow: hidden;
 
-		span {
-			display: inline-block;
+		&:after {
+			content: url(../resources/images/dark-arrow.png);
+			color: #303030;
+			position: absolute;
+			top: .5em;
+			right: 1em;
+			pointer-events: none;
+		}
+		select {
+			font-size: 1em;
+			padding: 0.60em 1em;
+			width: 110%;
+			height: auto !important;
+			border: none;
+			-webkit-box-shadow: none;
+			        box-shadow: none;
+			background: transparent;
+			background-image: none;
+			-webkit-appearance: none;
+			&:focus {
+				outline: none; 
+			}
+		}
+	}
+
+	.resource-select {
+		width: auto;
+		display: inline-block;
+		position: relative;
+
+		&:after {
+			content: url(../resources/images/light-arrow-small.png);
 			color: white;
+			position: absolute;
+			top: 3px;
+			right: .5em;
+			pointer-events: none;
 		}
-	}
-
-	.mz-pagenumbers {
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center !important;
-		position: relative !important;
-		top: -10px !important;
-
-		a:focus, a:hover, a:active {
-			color: @djcOrange;
-		}
-
-		.mz-pagenumbers-prev {
-			padding-right: 10px;
-			color: black;
-		}
-		.mz-pagenumbers-next {
-			padding-left: 10px;
-			color: black;
-		}
-	}
-}
-.mz-l-paginatedlist-footer {
-	position: relative;
-	bottom: 40px;
-	height: 0;
-
-	&:before {
-		clear: both;
-	}
-	.mz-pagenumbers {
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center !important;
-		right: auto !important;
-		top: auto !important;
-	}
-}
-
-/* SELECT */
-.select-style {
-	height: 42px;
-	width: 100%;
-	background: #e9e9e9;
-	position: relative;
-	border-radius: 2px;
-	border: 1px solid #e9e9e9;
-	border: 1px solid rgba(154, 154, 154, 0.3);
-	overflow: hidden;
-
-	&:after {
-		content: url(../resources/images/dark-arrow.png);
-		color: #303030;
-		position: absolute;
-		top: .5em;
-		right: 1em;
-		pointer-events: none;
-	}
-	select {
-		font-size: 1em;
-		padding: 0.60em 1em;
-		width: 110%;
-		height: auto !important;
-		border: none;
-		-webkit-box-shadow: none;
-		        box-shadow: none;
-		background: transparent;
-		background-image: none;
-		-webkit-appearance: none;
-		&:focus {
-			outline: none; 
-		}
-	}
-}
-
-.resource-select {
-	width: auto;
-	display: inline-block;
-	position: relative;
-
-	&:after {
-		content: url(../resources/images/light-arrow-small.png);
-		color: white;
-		position: absolute;
-		top: 3px;
-		right: .5em;
-		pointer-events: none;
-	}
-	select {
-		font-size: 20px;
-		font-weight: 600;
-		letter-spacing: 2px;
-		text-align: center;
-		text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
-		color: white;
-		text-transform: uppercase;
-		padding: 0 2em 0 1em !important;
-		width: 110%;
-		border: none;
-		-webkit-box-shadow: none;
-		        box-shadow: none;
-		background: transparent;
-		background-image: none;
-		-webkit-appearance: none;
-		&:focus {
-			outline: none; 
+		select {
+			font-size: 20px;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-align: center;
+			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.3);
+			color: white;
+			text-transform: uppercase;
+			padding: 0 2em 0 1em !important;
+			width: 110%;
+			border: none;
+			-webkit-box-shadow: none;
+			        box-shadow: none;
+			background: transparent;
+			background-image: none;
+			-webkit-appearance: none;
+			&:focus {
+				outline: none; 
+			}
 		}
 	}
 }

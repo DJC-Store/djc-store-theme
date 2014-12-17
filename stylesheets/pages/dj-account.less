@@ -5,13 +5,10 @@
 .is-required {
 	color: @djcOrange;
 }
+.is-disabled {
+	color: @djcLightGray !important;
+}
 .mz-myaccount {
-	.mz-l-container {
-		padding: 0 40px;
-	}
-	.mz-pagetitle {
-		color: @djcOrange;
-	}
 	.mz-button-small {
 		font-size: 14px;
 		background: none;
@@ -41,10 +38,28 @@
 		}
 		.mz-l-stack-sectiontitle {
 			a {
-				color: @djcOrange !important;
+				color: @djcOrange;
 				position: relative;
 				bottom: 10px;
 			}
 		}
 	}
+}
+.mz-orderhistory-section {
+	&.mz-l-paginatedlist {
+		.mz-pagingcontrols {
+			right: 10px;
+			z-index: 9999;
+		}
+		.mz-pagenumbers {
+			right: 10px;
+			top: 5px;
+			z-index: 9999;
+		}
+	}
+}
+.dj-digitalproductlist {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }

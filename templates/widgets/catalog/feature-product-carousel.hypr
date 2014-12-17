@@ -1,3 +1,7 @@
+{% require_script "vendor/slick/slick" %}
+
+{% require_script "widgets/feature-product-carousel" %}
+
 <div class="feature-product-carousel">
 	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg1 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd1 as_parameter %}
@@ -36,7 +40,3 @@
 		</li>
 	</ul>
 </div>
-
-{% require_script "vendor/slick/slick" %}
-
-{% require_script "widgets/feature-product-carousel" %}
