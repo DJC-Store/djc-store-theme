@@ -247,6 +247,15 @@ hr.dark {
   color: black;
   background: @djcLightGray;
 
+  &[disabled] {
+    background: @djcLight !important;
+    background-color: @djcLight;
+    &:focus, &:hover, &:active {
+      background: @djcLight !important;
+      background-color: @djcLight;
+    }
+  }
+
   &.blue {
     color: white;
     background: @djcDarkBlue;
@@ -303,7 +312,7 @@ hr.dark {
       background: @djcDarkGray;
     }
   }
-  &.reverse {
+  &.reverse, &.mz-button-small {
     background: none;
     color: @djcOrange;
     text-shadow: none;
@@ -313,7 +322,7 @@ hr.dark {
 
     &:focus, &:hover, &:active {
       color: white;
-      background: @djcOrange;
+      background: @djcOrange !important;
     }
   }
   &.large {

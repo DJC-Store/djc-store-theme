@@ -1,10 +1,10 @@
 <h3 class="mz-l-stack-sectiontitle">{{ labels.protectedContent }}</h3>
 <div class="mz-protectedcontent-section mz-l-paginatedlist">
-    {% if model.items %}
+    {% if model.segments %}
     <div data-mz-orderlist class="mz-l-paginatedlist-list">
       {% include "modules/my-account/digital-product-list" %}
     </div>
   {% else %}
-    {{ labels.accountNoOrders }}
+    {{ labels.accountNoPC }}
   {% endif %}
 </div>

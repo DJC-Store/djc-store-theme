@@ -272,6 +272,7 @@
   "accountNoOrders"      : "You have not placed any orders.",
   "accountNoReturns"     : "You have not requested any returns.",
   "accountNoCredits"     : "You have no store credits.",
+  "accountNoPC"          : "You have not ordered any Digital Products",
   "orderHistory"         : "Order History",
   "paymentMethod"    : "Payment Method",
   "paymentMethods"       : "Payment Methods",
@@ -381,6 +382,7 @@
 
   "productImagePlaceholder" : "[no image]",
   "productCTA"           : "More Info",
+  "clickHere"            : "Click Here",
   "packageWeight"        : "Package Weight",
 
   "shortDesc"            : "Summary",

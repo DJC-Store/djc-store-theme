@@ -1,5 +1,49 @@
 ﻿      <ul class="dj-digitalproductlist">
-        {% for order in model.items %}
-        	{% include "modules/my-account/digital-product-listing" with model=order %}
-        {% endfor %}
+        {% for segment in model.segments %}
+
+		{% ifequal segment.id 1 %}<!-- War on Debt -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 2 %}<!-- Prospect and Close Your Way to Millions -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 3 %}<!-- Script Book - Supplemental -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 4 %}<!-- Script Book -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 5 %}<!-- Insider Secrets -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 6 %}<!-- Expose, Involve & Upgrade -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 7 %}<!-- Presentation Success System -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 8 %}<!-- Spirit Driven Success - Audio -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 9 %}<!-- Spirit Driven Success - Book -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 10 %}<!-- Grooming the Next Generation for Success - Home Study -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% ifequal segment.id 11 %}<!-- Instant Customer Goldmine -->
+			{% include_products "modules/my-account/digital-product-listing" with productCodes="" as_parameter %}
+		{% endifequal %}
+
+		{% endfor %}
       </ul>

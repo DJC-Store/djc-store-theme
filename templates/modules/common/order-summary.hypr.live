@@ -58,13 +58,8 @@
             {% endif %}
             <tr class="mz-ordersummary-shippingtotal">
               <td colspan="4">
-                {% if model.handlingTotal %}
-                  <span class="mz-ordersummary-totalname">{{ labels.shippingHandling }}:</span>
-                  <span class="mz-ordersummary-totalvalue">{{ model.additionalFeeTotal|currency }}</span>
-                {% else %}
-                  <span class="mz-ordersummary-totalname">{{ labels.shippingHandling }}:</span>
-                  <span class="mz-ordersummary-totalvalue">{{ model.shippingSubTotal|currency }}</span>
-                {% endif %}
+                <span class="mz-ordersummary-totalname">{{ labels.shippingHandling }}:</span>
+                <span class="mz-ordersummary-totalvalue">{{ model.shippingSubTotal|currency }}</span>
               </td>
             </tr>
             {% for shippingDiscount in model.shippingDiscounts %}
@@ -75,12 +70,19 @@
               </td>
             </tr>
             {% endfor %}
+            {% if model.handlingTotal %}
+            <tr class="mz-ordersummary-additionalhandling">
+                <td colspan="4">
+                  <span class="mz-ordersummary-totalname">{{ labels.additionalHandling }}{% if model.handlingAmount > model.handlingTotal  %}<span class="is-crossedout" {% block crossedout-inline-style %}{% endblock crossedout-inline-style %}> ( {{ model.handlingAmount|currency }} )</span>{% endif %}</span>
+                  <span class="mz-ordersummary-totalvalue">{{ model.handlingTotal|currency }}</span>
+                </td>
+            </tr>
+            {% endif %}
 
           <tr class="mz-ordersummary-grandtotal">
                 <td colspan="4">
                     <span class="mz-ordersummary-totalname">{{ labels.total }}:</span>
                     <span class="mz-ordersummary-totalvalue">{{ model.total|currency }}</span>
-                    <!-- {% dump model %} -->
                 </td>
             </tr>
         {% if model.billingInfo and model.billingInfo.digitalCreditPaymentTotal %}
