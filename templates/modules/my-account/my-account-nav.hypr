@@ -2,44 +2,44 @@
     <ul class="mz-scrollnav-list nav">
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#settings">
-                {{ labels.accountSettings }}
+                <i class="icon-account-settings"></i>{{ labels.accountSettings }}
             </a>
         </li>
         {% if themeSettings.allowWishlist %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#wishlist">
-                {{ labels.accountMyWishlist }}
+                <i class="icon-account-wishlist"></i>{{ labels.accountMyWishlist }}
             </a>
         </li>
         {% endif %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#protectedcontent">
-                {{ labels.protectedContent }}
+                <i class="icon-account-digital"></i>{{ labels.protectedContent }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#orderhistory">
-                {{ labels.orderHistory }}
+                <i class="icon-account-history"></i>{{ labels.orderHistory }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#returnhistory">
-                {{ labels.returns }}
+                <i class="icon-account-returns"></i>{{ labels.returns }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#paymentmethods">
-                {{ labels.paymentMethods }}
+                <i class="icon-account-card"></i>{{ labels.paymentMethods }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#addressbook">
-                {{ labels.addressBook }}
+                <i class="icon-account-address"></i>{{ labels.addressBook }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#{{ labels.digitalCreditsAnchor }}">
-                {{ labels.digitalCredit }}
+                <i class="icon-account-giftcard"></i>{{ labels.digitalCredit }}
             </a>
         </li>
     </ul>

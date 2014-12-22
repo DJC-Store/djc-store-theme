@@ -1,4 +1,4 @@
-<h3 class="mz-l-stack-sectiontitle">{{ labels.protectedContent }}</h3>
+<h3 class="mz-l-stack-sectiontitle"><i class="icon-account-digital white"></i>{{ labels.protectedContent }}</h3>
 <div class="mz-protectedcontent-section mz-l-paginatedlist">
     {% if model.segments %}
     <div data-mz-orderlist class="mz-l-paginatedlist-list">

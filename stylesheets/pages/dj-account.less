@@ -2,20 +2,37 @@
 	height: 10px;
 	width: 100%;
 }
-.is-required {
-	color: @djcOrange;
-}
-.is-disabled {
-	color: @djcLightGray !important;
+.mz-scrollnav-item {
+	margin: 10px 0;
 }
 .mz-myaccount {
 	&-nav {
 		position: absolute;
+		width: 240px !important;
 
 		&:after {
 			display:table;
 			clear:both;
 			content: "";
+		}
+
+		a {
+			&:focus, &:hover, &:active {
+				text-decoration: none !important;
+				color: @djcOrange;
+			}
+		}
+
+		i {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			margin-right: 10px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 20px auto;
 		}
 	}
 	.mz-button-small {
@@ -49,9 +66,27 @@
 			}
 		}
 		.mz-l-stack-sectiontitle {
-			font-size: 30px !important;
 			color: @djcOrange;
+			font-size: 30px !important;
+			padding: 5px 0 5px 75px !important;
+			position: relative;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMzUuMSAyMTcuMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzNS4xIDIxNy4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkY4OTM2IiBkPSJNMTA5NC41IDIxNy4zYy0yODYuOCAwLTgwNy43IDAtMTA5NC41IDBDMCAxNDQuOCAwIDcyLjQgMCAwYzMwMC4zIDAgODM0LjcgMCAxMTM1IDBDMTEzMC43IDIxLjggMTA5NS4yIDIxMC4zIDEwOTQuNSAyMTcuM3oiLz48L3N2Zz4=);
+			background-repeat: no-repeat;
+			background-position: -160px;
 			border-bottom: 1px solid @djcLight !important;
+
+			i {
+				height: 30px;
+				width: 30px;
+				display: block;
+				position: absolute;
+				left: 12px;
+				top: 6px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 30px;
+				background-color: transparent !important;
+			}
 		}
 	}
 	.mz-orderhistory-section {
@@ -142,26 +177,46 @@
 			background: @djcLight;
 			border-right: none;
 			border-left: 5px solid @djcOrange;
+			position: relative;
 
 			&:nth-child(2n) {
 				margin: 0 0 1.6% 0;
 			}
+		}
+		&-actions {
+			position: absolute;
+			right: 0;
+			top: 8.5px;
+		}
+		&-contacttype-container {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 0 12.5px;
+		}
+		&-contacttype {
+			float:right;
+			margin-left: 10px;
 
-			&-contacttype {
-				height:40px;
-				width:50px;
-				border-radius:30px;
-				background: @djcOrange;
-				position:absolute;
+			i {
+				display:inline-block;
 
-				&-billing {
-					bottom:12.5px;
-					right:12.5px;
+				&.icon-account-billing {
+					width: 60px;
+					height: 60px;
 				}
-				&-shipping {
-					bottom: 12.5px;
-					right: 65px;
+
+				&.icon-account-shipping {
+					width: 54px;
+					height: 54px;
+					position: relative;
+					top: 3px;
 				}
+			}
+		}
+		&-form {
+			.mz-contact-actions {
+				margin-right: 30px;
 			}
 		}
 	}
