@@ -3,7 +3,15 @@
     font-size: 13px;
     margin-top: 9px;
 
-    .mz-utilitynav-item {
+    &-list {
+        @media only screen {
+            @media (max-width: 768px) {
+                height: 20px;
+            }
+        }
+    }
+
+    &-item {
         float: left;
         margin: 0;
         padding: 0 10px;
@@ -27,6 +35,12 @@
             background-repeat: no-repeat;
             background-position: 0 0;
             margin-right: 5px;
+        }
+
+        @media only screen {
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 

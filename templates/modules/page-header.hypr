@@ -12,4 +12,7 @@
 		{% endblock search-box %}
 		</div>
     </div>
+    <div class="mobile-title">
+    	<a href="http://www.danijohnson.com">DaniJohnson.com</a><span> Online Store</span>
+    </div>
 </header>

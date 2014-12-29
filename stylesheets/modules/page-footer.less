@@ -1,6 +1,6 @@
 ﻿footer {
   background: #303030;
-  padding: 1em;
+  padding: 42px;
 
   h6 {
     color: white;
@@ -15,8 +15,8 @@
     }
   }
   @media only screen {
-    @media (min-width: 768px) {
-      padding: 42px 0; 
+    @media (max-width: 768px) {
+      padding: 1em;
     }
   }
   //kill Mozu Dropzone Structure for Footer Nav Widget
@@ -44,15 +44,15 @@
 
 //footer
 .footer-nav {
-  float: none;
-  width: 100%;
+  float: right;
+  width: 65%;
   margin: 0 auto;
-  max-width: 375px;
 
   li {
+    padding-right: 0;
     color: white;
     float: left;
-    width: 50%;
+    width: 25%;
     height: 228px;
 
     a {
@@ -125,38 +125,25 @@
   }
 
   @media only screen {
-
-    @media (min-width: 500px) {
+    @media (max-width: 1195px) {
       width: 100%;
-      max-width: inherit;
-
-      li {
-        padding-right: 1em;
-        width: 25%;
-        margin-right: 0;
-
-        li {
-          width: 100%;
-          padding-right: 0; 
-        }
-      }
     }
-    @media (min-width: 768px) {
-      width: 75%;
+    @media (max-width: 768px) {
+      float: none;
       margin: 0 auto;
 
-      li li {
-        margin-right: 32px; 
-      }
-    }
-    @media (min-width: 1120px) {
-      float: right;
-      width: 64%;
-
       li {
-        padding-right: 0;
-        max-width: 180px; 
-      } 
+        float: right;
+        width: 49%;
+        margin-right: 1.6%;
+        text-align: center;
+        height: auto;
+        margin-bottom: 15px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
@@ -164,20 +151,13 @@
 .footer-left-block {
   float: left;
   color: #9a9a9a;
-  text-align: center;
-  width: 100%;
-  padding-top: 2em;
+  text-align: left;
+  width: auto;
 
   a {
     color: #9a9a9a;
   }
-  @media only screen {
-    @media (min-width: 1120px) {
-      text-align: left;
-      width: auto;
-      padding-top: 0;
-    }
-  }
+
   .social {
     .icons {
       margin: 1em 0 2.5em;
@@ -187,13 +167,16 @@
       margin: 5px;
     }
   }
+
   .creds {
     margin-bottom: 20px;
   }
+
   .legal-links, .copy {
     font-size: 12px;
     margin: 1em 0 .8em;
   }
+
   .legal-links {
     padding: 0;
 
@@ -216,7 +199,32 @@
       }
     }
   }
+
   .copy a:hover {
     color: white;
+  }
+
+  @media only screen {
+    @media (max-width: 1195px) {
+      width: 100%;
+      padding-top: 2em;
+
+      .social, .creds {
+        width: 49%;
+        float: left;
+      }
+      .copy {
+        &:before {
+          display:table;
+          content: "";
+          clear:both;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+      padding-top: 0;
+    }
   }
 }

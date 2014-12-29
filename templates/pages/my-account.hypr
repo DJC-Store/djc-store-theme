@@ -5,7 +5,16 @@
 {% block body-tag-classes %} mz-myaccount {% endblock body-tag-classes %}
 
 {% block feature-header %}
-    <div class="separator"></div>
+<div class="hero">
+    <div class="hero-bg"><img src="/resources/images/account-bg.jpg" class="attachment-full"></div>
+    <div class="gradient"></div>
+    <div class="dj-container">
+        <h2 class="mz-pagetitle">{{ labels.yourAccount }}</h2>
+        <div class="mz-l-sidebar mz-myaccount-nav">
+            {% include "modules/my-account/my-account-nav" with navtarget="body" %}
+        </div>
+    </div>
+</div>
 {% endblock feature-header %}
 
 {% block body-content %}
@@ -15,12 +24,6 @@
 {% preload_json model "customer" %}
 
 <div class="mz-l-container"><div class="dj-row">
-    <h2 class="mz-pagetitle">{{ labels.yourAccount }}</h2>
-
-    <div class="mz-l-sidebar mz-myaccount-nav">
-        {% include "modules/my-account/my-account-nav" with navtarget="body" %}
-    </div>
-
     <div id="account-panels" class="mz-myaccount-panels mz-l-stack mz-l-stack-large">
 
         <div id="account-messages">
@@ -50,10 +53,12 @@
             {% include "modules/my-account/my-account-orderhistory" with model=model.orderHistory %}
         </div>
         
+        {% if themeSettings.showReturns %}
         <a id="returnhistory"></a>
         <div class="mz-l-stack-section mz-accountreturnhistory" id="account-returnhistory">
             {% include "modules/my-account/my-account-returnhistory" with model=model.returnHistory %}
         </div>
+        {% endif %}
 
         <a id="paymentmethods"></a>
         <div class="mz-l-stack-section mz-accountpaymentmethods" id="account-paymentmethods">

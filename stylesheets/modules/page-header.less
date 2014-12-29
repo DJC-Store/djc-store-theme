@@ -15,10 +15,42 @@
         float:right;
     }
 
+    .mobile-title {
+        display:none;
+
+        a {
+            color: white;
+            padding-right: 5px;
+        }
+
+        span {
+            font-style:italic;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: @djcOrange;
+        }
+
+        @media only screen {
+            @media (max-width: 768px) {
+                display: block;
+                position: absolute;
+                top:18px;
+                font-size: 18px;
+                line-height: 1em;
+                color: white;
+                width: 280px;
+                left: 50%;
+                margin-left: -130px;
+            }
+        }
+    }
+
     @media only screen {
         @media (max-width: 768px) {
             height: auto;
             .mz-storebranding, .dj-topright, .mz-utilitynav {
+                width: 100%;
+                text-align: center;
                 position: relative;
                 margin-bottom: 10px;
                 clear: both;

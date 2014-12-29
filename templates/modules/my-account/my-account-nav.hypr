@@ -2,44 +2,46 @@
     <ul class="mz-scrollnav-list nav">
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#settings">
-                <i class="icon-account-settings"></i>{{ labels.accountSettings }}
+                <i class="icon-account-settings white"></i><span class="long">{{ labels.accountSettings }}</span><span class="short">{{ labels.accountSettingsShort }}</span>
             </a>
         </li>
         {% if themeSettings.allowWishlist %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#wishlist">
-                <i class="icon-account-wishlist"></i>{{ labels.accountMyWishlist }}
+                <i class="icon-account-wishlist white"></i><span class="long">{{ labels.accountMyWishlist }}</span><span class="short">{{ labels.accountMyWishlistShort }}</span>
             </a>
         </li>
         {% endif %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#protectedcontent">
-                <i class="icon-account-digital"></i>{{ labels.protectedContent }}
+                <i class="icon-account-digital white"></i><span class="long">{{ labels.protectedContent }}</span><span class="short">{{ labels.protectedContentShort }}</span>
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#orderhistory">
-                <i class="icon-account-history"></i>{{ labels.orderHistory }}
+                <i class="icon-account-history white"></i><span class="long">{{ labels.orderHistory }}</span><span class="short">{{ labels.orderHistoryShort }}</span>
             </a>
         </li>
+        {% if themeSettings.showReturns %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#returnhistory">
-                <i class="icon-account-returns"></i>{{ labels.returns }}
+                <i class="icon-account-returns white"></i><span class="long">{{ labels.returns }}</span><span class="short">{{ labels.returns }}</span>
             </a>
         </li>
+        {% endif %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#paymentmethods">
-                <i class="icon-account-card"></i>{{ labels.paymentMethods }}
+                <i class="icon-account-card white"></i><span class="long">{{ labels.paymentMethods }}</span><span class="short">{{ labels.paymentMethodsShort }}</span>
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#addressbook">
-                <i class="icon-account-address"></i>{{ labels.addressBook }}
+                <i class="icon-account-address white"></i><span class="long">{{ labels.addressBook }}</span><span class="short">{{ labels.addressBookShort }}</span>
             </a>
         </li>
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#{{ labels.digitalCreditsAnchor }}">
-                <i class="icon-account-giftcard"></i>{{ labels.digitalCredit }}
+                <i class="icon-account-giftcard white"></i><span class="long">{{ labels.digitalCredit }}</span><span class="short">{{ labels.digitalCreditShort }}</span>
             </a>
         </li>
     </ul>
