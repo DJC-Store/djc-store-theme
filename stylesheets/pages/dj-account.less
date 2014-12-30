@@ -26,8 +26,15 @@
 			&-item {
 				display: inline-block !important;
 				margin: 4px 20px !important;
+				float: none !important;
 				border-bottom: none;
 				padding-bottom: 5px;
+
+				@media only screen {
+			        @media (max-width: 450px) {
+			        	margin: 4px 5px !important;
+			        }
+				}
 			}
 			&-link {
 				color: white !important;
@@ -150,20 +157,87 @@
 				background-size: 30px;
 				background-color: transparent !important;
 			}
+
+		    @media only screen {
+		        @media (max-width: 768px) {
+		            font-size: 20px !important;
+		            padding: 5px 0 5px 55px !important;
+		            background-position: -120px;
+
+		            i {
+		            	height: 25px;
+		            	width: 25px;
+		            	background-size: 25px;
+		            	left: 9px;
+		            	top: 4px;
+		            }
+		        }
+		    }
 		}
 	}
-	.mz-orderhistory-section {
-		&.mz-l-paginatedlist {
-			.mz-pagingcontrols {
-				right: 10px;
-				z-index: 9999;
-			}
-			.mz-pagenumbers {
-				right: 10px;
-				top: 5px;
-				z-index: 9999;
+	.mz-accountorderhistory{
+		.mz-orderlisting {
+			border: 1px solid #eee;
+
+			&-items {
+				.mz-itemlisting {
+					min-height: 10px !important;
+					margin-bottom: 10px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					&-title {
+						color: @djcOrange;
+						font-style: italic;
+					}
+					&-description {
+						color: @djcLightGray;
+					}
+				}
 			}
 		}
+
+		.mz-orderhistory-section {
+			&.mz-l-paginatedlist {
+				.mz-pagingcontrols {
+					right: 10px;
+					z-index: 9999;
+				}
+				.mz-pagenumbers {
+					right: 10px;
+					top: 5px;
+					z-index: 9999;
+				}
+			}
+		}
+		@media only screen {
+	        @media (max-width: 768px) {
+	        	.mz-orderlisting {
+	        		&-detail {
+		        		position: relative;
+		        		width: 100%;
+		        		font-size: 12px;
+	        		}
+	        		&-date {
+	        			position: absolute;
+	        			margin: 0;
+	        			right: 15px;
+	        			bottom: 15px;
+	        		}
+	        		&-items {
+	        			margin-left: 0;
+
+		        		.mz-itemlisting {
+		        			&-title {
+		        				font-size: 14px;
+		        			}
+		        		}
+	        		}
+	        	}
+	        }
+	    }
 	}
 	.mz-accountpaymentmethods {
 		&-form {
@@ -182,10 +256,13 @@
 			.mz-creditcard-actions {
 				margin-right: 20px;
 			}
+			.mz-l-formfieldgroup .mz-l-formfieldgroup-cell label {
+				text-align: left !important;
+			}
 		}
 		.mz-paymentmethod {
 			&-myaccount {
-				border: 2px solid @djcLight;
+				border: 2px outset @djcLight;
 				border-radius: 15px;
 				box-sizing: border-box;
 				padding:12.5px 0 12.5px 12.5px;
@@ -194,6 +271,16 @@
 				height: 190px;
 				min-height: 190px;
 				position: relative;
+				box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);
+				background: rgb(255,255,255); /* Old browsers */
+				background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+				background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 			}
 			&-methoddetails {
 				position: absolute;
@@ -205,6 +292,7 @@
 				letter-spacing:.1em;
 				font-family: courier;
 				margin-top:20px;
+				text-shadow: 1px 1px rgba(0,0,0,0.1);
 			}
 			&-cardexp {
 				color: rgba(0,0,0,0);
@@ -215,6 +303,7 @@
 					float: right;
 					font-size: 16px;
 					margin-right:2px;
+					text-shadow: 1px 1px rgba(0,0,0,0.1);
 				}
 				&:after {
 					display: table;
@@ -226,8 +315,39 @@
 				font-size: 16px;
 				font-family: courier;
 				text-transform: uppercase;
+				text-shadow: 1px 1px rgba(0,0,0,0.1);
 			}
 		}
+
+		@media only screen {
+	        @media (max-width: 768px) {
+	        	font-size: 13px;
+
+	        	.mz-paymentmethod {
+	        		&-myaccount {
+	        			width: 250px;
+	        			height: 160px;
+	        			min-height: 160px;
+	        		}
+	        		&-methoddetails {
+	        			position: relative;
+	        			left: 10px;
+	        			bottom: 0;
+	        		}
+	        		&-cardnumber {
+						font-size: 16px;
+	        		}
+	        		&-cardexp {
+	        			span {
+	        				font-size: 13px;
+	        			}
+	        		}
+	        		&-cardname {
+	        			font-size: 14px;
+	        		}
+	        	}
+	        }
+	    }
 	}
 	.mz-accountaddressbook {
 		&-contact {
@@ -235,21 +355,60 @@
 			min-height: 10px !important;
 			display: inline-block;
 			margin: 0 1.6% 1.6% 0;
-			padding: 12.5px 0 12.5px 12.5px;
+			padding: 15px 0 20px 20px;
 			float: left;
-			background: @djcLight;
+			background: #eee;
 			border-right: none;
-			border-left: 5px solid @djcOrange;
+			border-left: 5px solid @djcDark;
+			border-bottom: 1px solid #303030;
 			position: relative;
 
 			&:nth-child(2n) {
 				margin: 0 0 1.6% 0;
 			}
+
+			@media only screen {
+		        @media (max-width: 768px) {
+		        	width: 100% !important;
+		        	font-size: 13px;
+					padding: 12.5px 0 12.5px 12.5px;
+		        }
+		    }
+		}
+		&-contactdetails {
+			font-weight: 300;
+			color: @djcDarkGray;
+
+			.address {
+				&-name {
+					font-weight: 700;
+					font-size: 1.3em;
+					text-transform:uppercase;
+					letter-spacing: .2em;
+					color: #3ca7d0;
+					margin-bottom: 5px;
+				}
+				&-line1, &-line2, &-line3, &-city, &-country {
+					text-transform: uppercase;
+					font-size: 1.2em;
+				}
+				&-city, &-country {
+					display: inline-block;
+				}
+				&-country {
+					color: @djcLightGray;
+					margin-left: 5px;
+				}
+			}
 		}
 		&-actions {
 			position: absolute;
 			right: 0;
-			top: 8.5px;
+			top: 12px;
+
+			a {
+				border: none !important;
+			}
 		}
 		&-contacttype-container {
 			position: absolute;

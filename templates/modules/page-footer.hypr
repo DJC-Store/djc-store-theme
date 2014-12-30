@@ -84,7 +84,7 @@
 				<img src="/resources/images/bbb.png" alt="Better Business Bureau">
 			</div>
 	        <span class="copy">
-	        	&copy; {% now "Y" %} {{ siteContext.generalSettings.websiteName }}. {{ labels.allRightsReserved }} {{ labels.poweredBy }}
+	        	&copy; {% now "Y" %} {{labels.destinyGlobal}}. {{ labels.allRightsReserved }} {{ labels.poweredBy }}
 	        </span>
 	        <ul class="legal-links">
 	        	<li><a href="#">{{ labels.terms }}</a></li>

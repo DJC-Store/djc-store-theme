@@ -1,0 +1,13 @@
+﻿    <span class="address-name">{{ model.firstName }} {{ model.lastNameOrSurname }}</span>
+    <span class="address-line1">{{ model.address.address1 }}</span>
+    {% if model.address.address2 %}
+        <span class="address-line2">{{ model.address.address2 }}</span>
+    {% endif %}
+    {% if model.address.address3 %}
+        <span class="address-line3">{{ model.address.address3 }}</span>
+    {% endif %}
+    <span class="address-city">{{ model.address.cityOrTown }}, {{ model.address.stateOrProvince }} {{ model.address.postalOrZipCode }}</span>
+    <span class="address-country">{{ model.address.countryCode }}</span>
+    {% if model.phoneNumbers.home %}
+        <span class="address-phone">{{ model.phoneNumbers.home }}</span>
+    {% endif %}
