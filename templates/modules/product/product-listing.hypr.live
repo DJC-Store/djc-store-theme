@@ -12,7 +12,7 @@
     {% endif %}
     {%comment%}
         Evaluate Recently added products and display "NEW" if within set time period
-        <div class="dj-productlist-alert new">
+        <div class="dj-product-list-alert new">
             <p>{{ labels.recentlyAdded }}</p>
         </div>
     {%endcomment%}
