@@ -30,7 +30,12 @@
 			            	{% for sublink in link.items %}
 			            	{% if not sublink.isHidden %}
 							<li>
-								<a href="{{sublink.url}}">{{ sublink.name }}</a>
+								{% ifequal sublink.name "Events" %}
+				                <a href="http://www.danijohnson.com/events">
+				                {% else %}
+				                <a href="{{sublink.url}}">
+				                {% endifequal %}
+								{{ sublink.name }}</a>
 							</li>
 			            	{% endif %}
 			            	{% endfor %}

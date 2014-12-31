@@ -3,7 +3,7 @@
         <li class="mz-utilitynav-item">
             <a href="http://www.danijohnson.com/" target="self" class="mz-utilitynav-link backhome"><i class="icon-leftarrow"></i>{{ labels.backHome }}</a>
         </li>
-        <li class="mz-utilitynav-item">
+        <li class="mz-utilitynav-item tablet-hidden">
             <a href="http://www.danijohnson.com/contact" data-dj-action="contact" data-placement="bottom" class="mz-utilitynav-link">{{ labels.contactUs }}</a>
         </li>
         {% if not user.isAnonymous %}

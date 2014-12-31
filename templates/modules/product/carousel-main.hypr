@@ -5,7 +5,8 @@
 	    {% for property in prod.properties %}
 	    	{% ifequal property.attributeFQN "tenant~tagline" %}
 				{% for attribute in property.values %}
-					<h2>{{ attribute.stringValue }}</h2>
+				    <h2 class="mobile">{{ labels.featuredProduct }}</h2>
+					<h2 class="mobile-hidden">{{ attribute.stringValue }}</h2>
 					{%comment%}
 		    		property.values.stringValue cannot be accessed directly because property.values is an array. Array values must be accessed by using a loop.
 					In this case, the array only has one item, so a for loop without conditions is acceptable. It will only iterate once

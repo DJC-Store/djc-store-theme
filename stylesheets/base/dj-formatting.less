@@ -75,3 +75,30 @@ input[type="checkbox"] {
 	line-height: 0;
 	color: white;
 }
+
+.mobile {
+  display: none;
+
+  @media only screen {
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+.mobile-hidden {
+  display: block;
+
+  @media only screen {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.tablet-hidden {
+	display: block;
+	@media only screen {
+		@media (max-width: 940px) {
+			display: none;
+		}
+	}
+}

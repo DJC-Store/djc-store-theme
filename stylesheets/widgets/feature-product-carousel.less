@@ -19,7 +19,6 @@
 		}
 		@media (max-width: 768px) {
 			height: auto;
-			margin-bottom: 52px !important;
 		}
 	}
 
@@ -83,7 +82,7 @@
 		max-width: 530px;
 		position: relative;
 		left: 4%;
-		top: 70px;
+		top: 40px;
 		z-index: 1100;
 	    background: none;
 		-webkit-box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
@@ -92,14 +91,14 @@
 		h1 {
 			margin: 24px 0;
 			color: white;
-			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.5);
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 			font-size: 2.5em;
 		}
 		h2 {
 			font-size: 18px;
 			margin: .5em auto;
 			color: white;
-			text-shadow: 0 -1px 0 rgba(48, 48, 48, 0.5);
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 			letter-spacing: 4px;
 			
 			span {
@@ -123,12 +122,13 @@
 		}
 
 		@media only screen {
-			@media (max-width: 1195px) {
-				top: 50px;
-			}
 			@media (max-width: 1000px) {
 				font-size: .8em;
 				width: 400px;
+
+				h2 {
+					font-size: 14px;
+				}
 			}
 			@media (max-width: 900px) {
 				left: 0;
@@ -147,7 +147,7 @@
 					color: #303030;
 					margin: 24px 0;
 					text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
-					font-size: 3em;
+					font-size: 2em;
       			}
 				p {
 		  			width: 310px; 
@@ -165,6 +165,12 @@
 		margin: -@caratHeight auto 0 auto;
 		list-style: none;
 		text-align: center;
+
+		@media only screen {
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
 
 		li {
 			position: relative;
@@ -206,10 +212,16 @@
 
 .feature-product-carousel-thumbnails {
 	position: relative;
-	width:100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	background: white;
+
+	@media only screen {
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
 
 	li {
 		display: inline-block;
