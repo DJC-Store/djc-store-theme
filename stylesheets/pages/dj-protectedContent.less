@@ -1,0 +1,27 @@
+.dj-protectedContent {
+	.hero {
+		height: auto !important;
+		overflow: hidden;
+
+		h5 {
+			position: relative;
+			text-align: center;
+			color: #ffffff;
+		}
+		a {
+			color: #ffffff;
+
+			&:link, &:visited {
+				color: #ffffff;
+			}
+			&:focus, &:hover, &:active {
+				color: @djcOrange;
+			}
+		}
+	}
+	.arbitraryOrangeBar {
+		height: 20px;
+		background-color: @djcOrange;
+		width: 100%;
+	}
+}

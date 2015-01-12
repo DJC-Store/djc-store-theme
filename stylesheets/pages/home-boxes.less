@@ -47,6 +47,15 @@
 		}
 		background: @djcBlue;
 
+		@media only screen {
+            @media (max-width: 768px) {
+                h3 {
+                	font-size: 1.5em;
+                	margin-top: 0;
+                }
+            }
+        }
+
 		.topic-inner {
 			width: 100%;
 			border-top: 1px solid rgba(255,255,255,0.65);
@@ -137,6 +146,12 @@
 	top: -25px;
 	left: 50%;
 	margin-left: -38px;
+
+	@media only screen {
+        @media (max-width: 768px) {
+            display:none;
+        }
+    }
 
 	&.quote-bg {
 		background: white;

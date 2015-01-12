@@ -30,7 +30,7 @@
                 <div class="mz-l-formfieldgroup-row">
                     <div class="mz-l-formfieldgroup-cell"></div>
                     <div class="mz-l-formfieldgroup-cell">
-                        <button class="mz-button mz-button-large">{{ labels.logIn }}</button>
+                        <button class="mz-button orange mz-button-large">{{ labels.logIn }}</button>
 						<a href="javascript:;" class="right mz-forgot" data-mz-action="launchforgotpassword">{{ labels.forgotPasswordLink }}</a>
                     </div>
                 </div>
@@ -38,3 +38,6 @@
         </form>
     </div></div>
 {% endblock body-content %}
+
+{% block dynamic-content %}{% endblock dynamic-content %}
+{% block find-by-category %}{% endblock find-by-category %}

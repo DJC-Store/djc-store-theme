@@ -1,5 +1,5 @@
 <div class="dj-row">
-  <div class="col-8">
+  <div class="col-8 equalize">
 
     {% include "modules/common/message-bar" %}    
     <h2 class="mz-pagetitle" itemprop="name">{{ model.content.productName }}</h2>
@@ -15,7 +15,7 @@
     </div>
 
   </div>
-  <div class="col-4">
+  <div class="col-4 equalize">
     
     <div class="price-box">
       <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="mz-productdetail-price mz-l-stack-section">

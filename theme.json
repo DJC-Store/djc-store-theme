@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-44-gb5405f9"
+    "version": "rc7-45-gfedf1a8"
   },
   "settings": {
     "allowWishlist": false,
@@ -30,6 +30,36 @@
       "template": "category-event",
       "title": "Event Category",
       "userCreatable": false
+    },
+    {
+      "documentType": "web_page",
+      "entityType": "webpage",
+      "id": "protectedContent",
+      "template": "protectedContent",
+      "title": "Protected Content",
+      "userCreatable": true,
+      "zones": [
+        {
+          "id": "pc-content-body",
+          "rows": [
+            {
+              "columns": [
+                {
+                  "span": 12,
+                  "widgets": [
+                    {
+                      "definitionId": "html",
+                      "config": {
+                        "body": "<div class=\"pc-content-container\">Put Protected Content Here</div>"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "widgets": [

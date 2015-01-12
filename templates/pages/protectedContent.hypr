@@ -1,0 +1,26 @@
+﻿{% extends "page" %}
+
+{% block title-tag-content %}{% firstof pageContext.metaTitle labels.pcPageTitle %} - {% parent %}{% endblock title-tag-content %}
+
+{% block body-tag-classes %} dj-protectedContent {% endblock body-tag-classes %}
+
+{% block feature-header %}
+<div class="hero">
+    <div class="hero-bg"><img src="/resources/images/pc-bg.jpg" class="attachment-full"></div>
+    <div class="gradient"></div>
+    <div class="dj-container">
+        <h2 class="mz-pagetitle">{{ pageContext.metaTitle }}</h2>
+        <h5><a href="/myaccount">Back to My Account</a></h5>
+    </div>
+</div>
+<div class="arbitraryOrangeBar"></div>
+{% endblock feature-header %}
+
+{% block body-content %}
+<div class="mz-l-container">
+    <div class="dj-row pc-content-body">
+        {% dropzone "pc-content-body" scope="page" %}
+    </div>
+</div>
+{% endblock body-content %}
+

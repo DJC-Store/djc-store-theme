@@ -1,3 +1,7 @@
+.popover {
+	z-index: 99999 !important; /* make sure popover windows are above logo and all other elements */
+}
+
 .block-heading {
 	text-align: center;
 	letter-spacing: 1.25px;
@@ -8,6 +12,13 @@
 	}
 	span, a, a:link, a:visited {
 		color: @djcOrange;
+	}
+
+	@media only screen {
+	    @media (max-width: 768px) {
+	        font-size: 1.25em;
+	        text-align: center !important;
+	    }
 	}
 }
 
