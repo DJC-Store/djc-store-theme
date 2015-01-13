@@ -1,9 +1,20 @@
 {% extends "page" %}
 
-{% block title-tag-content %}{% firstof pageContext.metaTitle labels.comingSoon %} - {% parent %}{% endblock title-tag-content %}
+{% block title-tag-content %}{% firstof pageContext.metaTitle labels.checkout %} - {% parent %}{% endblock title-tag-content %}
 
-{% block body-tag %}
+{% block body-tag-classes %} dj-comingsoon {% endblock body-tag-classes %}
+
+{% block page-header %}{% endblock page-header %}
+{% block site-nav %}{% endblock site-nav %}
+{% block feature-header %}{% endblock feature-header %}
+
+{% block body-content %}
 	<div class="dj-dropzone">
-		{% dropzone "comingsoon" scope="page" %}
+		{% dropzone "coming-soon" scope="template" %}
 	</div>
-{% endblock body-tag %}
+{% endblock body-content %}
+
+{% block dynamic-content %}{% endblock dynamic-content %}
+{% block find-by-category %}{% endblock find-by-category %}
+
+{% block page-footer %}{% endblock page-footer %}
