@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-47-g71b7a23"
+    "version": "rc7-48-g2726418"
   },
   "settings": {
     "allowWishlist": false,
@@ -29,6 +29,14 @@
     ]
   },
   "pageTypes": [
+    {
+      "documentType": "web_page",
+      "entityType": "webpage",
+      "id": "comingSoon",
+      "template": "comingSoon",
+      "title": "Coming Soon",
+      "userCreatable": true
+    },
     {
       "entityType": "category",
       "id": "Event-Category",

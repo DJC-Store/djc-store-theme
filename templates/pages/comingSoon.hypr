@@ -1,0 +1,9 @@
+{% extends "page" %}
+
+{% block title-tag-content %}{% firstof pageContext.metaTitle labels.comingSoon %} - {% parent %}{% endblock title-tag-content %}
+
+{% block body-tag %}
+	<div class="dj-dropzone">
+		{% dropzone "comingsoon" scope="page" %}
+	</div>
+{% endblock body-tag %}
