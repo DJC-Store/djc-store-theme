@@ -2,11 +2,11 @@
   "about": {
     "name": "DaniJohnson.com Online Store",
     "author": "Jason Subers",
-    "extends": "core5",
+    "extends": "core6",
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-46-gf436101"
+    "version": "rc7-47-g71b7a23"
   },
   "settings": {
     "allowWishlist": false,
@@ -21,7 +21,12 @@
     "listProductPrice": false,
     "listEventImage": true,
     "maxProductImageThumbnailSize": 75,
-    "showProductDetailMeasurements": false
+    "showProductDetailMeasurements": false,
+    "autocompleteProducts": true,
+    "fallbackFontFamily": "sans-serif",
+    "fonts": [
+      "Source Sans Pro:regular,italic,bold,bolditalic"
+    ]
   },
   "pageTypes": [
     {
