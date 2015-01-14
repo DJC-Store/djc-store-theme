@@ -398,8 +398,21 @@ hr.dark {
     padding:0;
 
     &:focus, &:hover, &:active {
-      color: white;
+      color: white !important;
       background: @djcOrange !important;
+    }
+  }
+  &.static {
+    background: none;
+    color: @djcOrange;
+    text-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:focus, &:hover, &:active {
+      background: none !important;
+      color: @djcOrange !important;
     }
   }
   &.large {
@@ -425,6 +438,18 @@ hr.dark {
   bottom:0;
   left:0;
   right:0;
+
+  .dj-bg {
+    background: white;
+    background-color: white;
+  }
+  .mz-cms-image {
+    text-align: center;
+    img {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
 }
 
 //forms

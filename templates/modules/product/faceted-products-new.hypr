@@ -16,17 +16,29 @@
 </script>
 
 <div class="mz-l-paginatedlist">
-    {%comment%} This just isn't happening right now.{%endcomment%}
-    <!-- <div class="mz-l-paginatedlist-header"> 
-        <div class="faceting-form">
-            // include "modules/product/faceting-form" //
+
+    <div class="mz-l-paginatedlist-header">
+        {%comment%} This isn't a thing right now.
+        {% if model.facets %}
+        <div data-mz-facets class="faceting-form">
+        {% include "modules/product/faceting-form" %}
+        </div> 
+        {% endif %}
+        {%endcomment%}
+
+        <div data-mz-pagesort class="mz-sortby">
+            {% include "modules/common/page-sort" %}
         </div>
-    </div> -->
-    <div data-mz-pagenumbers class="mz-pagenumbers">
-		{% include "modules/common/page-numbers" %}
-	</div>
+        <div data-mz-pagenumbers class="mz-pagenumbers">
+            {% include "modules/common/page-numbers" %}
+        </div>
+        <div data-mz-pagingcontrols class="mz-pagingcontrols">
+            {% include "modules/common/paging-controls" %}
+        </div>
+    </div>
+
     <div data-mz-productlist class="mz-l-paginatedlist-list">
-        {% include "modules/product/product-list" %}
+        {% include "modules/product/product-list-tiled" %}
     </div>
     <div class="mz-l-paginatedlist-footer">
         <div data-mz-pagenumbers class="mz-pagenumbers">

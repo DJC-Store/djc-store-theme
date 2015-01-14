@@ -103,16 +103,20 @@
                     {% dropzone "body" scope="page" %}
                 {% endblock body-content %}
 
-                {% block dynamic-content %}
-                    <div class="dj-dropzone">
-                        {% dropzone "dynamic-content" scope="template" %}
-                    </div>
-                {% endblock dynamic-content %}
-                {% block find-by-category %}
-                    <div class="dj-dropzone">
-                        {% dropzone "find-by-category" scope="template" %}
-                    </div>
-                {% endblock find-by-category %}
+                {% block body-below-content %}
+
+                    {% block dynamic-content %}
+                        <div class="dj-dropzone">
+                            {% dropzone "dynamic-content" scope="template" %}
+                        </div>
+                    {% endblock dynamic-content %}
+                    {% block find-by-category %}
+                        <div class="dj-dropzone">
+                            {% dropzone "find-by-category" scope="template" %}
+                        </div>
+                    {% endblock find-by-category %}
+
+                {% endblock body-below-content %}
             </div>
 
             {% block page-footer %}

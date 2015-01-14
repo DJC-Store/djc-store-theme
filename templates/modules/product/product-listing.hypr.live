@@ -1,4 +1,4 @@
-﻿<div class="mz-productlisting mz-productlist-tiled dj-product-list" data-mz-product="{{ model.productCode }}">
+﻿<div class="mz-productlisting dj-product-list {% block module-classes %}{% endblock module-classes %}" data-mz-product="{{ model.productCode }}">
     {% block product-extrainfo %}
     {% if model.price.catalogSalePrice %}
     <div class="dj-productlist-alert sale">
@@ -21,9 +21,9 @@
         {% block product-image %}
         <a href="{{model.url}}">
             {% for thumbnail in model.content.productImages %}
-                {% ifequal thumbnail.sequence 2 %}
+                {% if thumbnail.sequence == 2 %}
                     <img src="{{thumbnail.imageUrl}}" {% if thumbnail.altText %}alt="{{ thumbnail.altText }}"{% endif %} />
-                {% endifequal %}
+                {% endif %}
             {% endfor %}
         </a>
         {% endblock product-image %}
@@ -32,7 +32,7 @@
         <div class="dj-productlisting-maininfo">
             <a class="mz-productlisting-title" href="{{model.url}}"><h2>{{model.content.productName}}</h2></a>
             {% if model.content.productShortDescription and themeSettings.listProductShortDesc %}
-            <h5 class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|striptags|truncatewords(themeSettings.maxProductSummaryWords) }}</h5>
+            <h5 class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|striptags|truncatewords(themeSettings.maxProductSummaryWords)|safe }}</h5>
             {% endif %}
             {% block product-code %}
             {% if themeSettings.listProductCode %}

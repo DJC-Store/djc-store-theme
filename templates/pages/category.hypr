@@ -11,13 +11,14 @@
 {% block body-content %}
 
 {% require_script "pages/category" %}
-{% partial_cache model.categoryId pageContext.Sorting pageContext.Pagination %}
+
 <div data-mz-category="{{model.categoryId}}" class="mz-l-container">
 	<div class="bottom-bar">
 		<span>★</span>{{ model.content.name }}<span>★</span>
 	</div>
+	{% partial_cache model.categoryId pageContext.Sorting pageContext.Pagination %}
     {% include_products "modules/product/faceted-products-new" with includeFacets=themeSettings.showCategoryFacets and pageWithUrl=true and sortWithUrl=true and pageSize=themeSettings.defaultPageSize as_parameter %}
+	{% endpartial_cache %}
 </div>
-{% endpartial_cache %}
 
 {% endblock body-content %}

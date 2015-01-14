@@ -39,5 +39,5 @@
     </div></div>
 {% endblock body-content %}
 
-{% block dynamic-content %}{% endblock dynamic-content %}
-{% block find-by-category %}{% endblock find-by-category %}
+{% block body-below-content %}
+{% endblock body-below-content %}
