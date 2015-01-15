@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-50-g6d4bdf0"
+    "version": "rc7-51-g13337be"
   },
   "settings": {
     "allowWishlist": false,
@@ -494,6 +494,94 @@
       ],
       "defaultConfig": {
         "prodBg": "/resources/images/featProd-bg.jpg"
+      }
+    },
+    {
+      "id": "reviews_manual",
+      "displayName": "Reviews (Manual)",
+      "displayTemplate": "misc/reviews",
+      "icon": "/resources/admin/widgets/reviews.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Number of Reviews",
+          "name": "reviewCount",
+          "store": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "2"
+            ],
+            [
+              "3",
+              "3"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product Being Reviewed",
+          "name": "prod1",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Name",
+          "name": "name1",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Review",
+          "name": "review1",
+          "xtype": "htmleditor"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product Being Reviewed (2)",
+          "name": "prod2",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Name (2)",
+          "name": "name2",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Review (2)",
+          "name": "review2",
+          "xtype": "htmleditor"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product Being Reviewed (3)",
+          "name": "prod3",
+          "xtype": "taco-productfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Name (3)",
+          "name": "name3",
+          "xtype": "textfield"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Review (3)",
+          "name": "review3",
+          "xtype": "htmleditor"
+        }
+      ],
+      "defaultConfig": {
+        "reviewCount": "3"
       }
     }
   ]

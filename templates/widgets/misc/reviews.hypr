@@ -1,0 +1,27 @@
+<div class="reviews-manual dj-row">
+	<div class="{% if model.config.reviewCount == "1" %}col-12{% else %}{% if model.config.reviewCount == "2" %}col-6{% else %}col-4{% endif %}{% endif %}">
+		{% include_products "modules/product/review-link" with productCodes=model.config.prod1 as_parameter %}
+		<div class="reviews-manual-review-item">
+			{% if model.config.reviewCount == "1" %}<h1>{% else %}<p>{% endif %}{{ model.config.review1 }}{% if model.config.reviewCount == "1" %}</h1>{% else %}</p>{% endif %}
+			{% if model.config.reviewCount == "1" %}<h5>{% else %}<p>- {% endif %}{{ model.config.name1 }}{% if model.config.reviewCount == "1" %}</h5>{% else %}</p>{% endif %}
+		</div>
+	</div>
+	{% if model.config.reviewCount != "1" %}
+	<div class="{% if model.config.reviewCount == "2" %}col-6{% else %}col-4{% endif %}">
+		{% include_products "modules/product/review-link" with productCodes=model.config.prod2 as_parameter %}
+		<div class="reviews-manual-review-item">
+			<p>{{ model.config.review2 }}</p>
+			<p>- {{ model.config.name2 }}</p>
+		</div>
+	</div>
+	{% if model.config.reviewCount == "3" %}
+	<div class="col-4">
+		{% include_products "modules/product/review-link" with productCodes=model.config.prod3 as_parameter %}
+		<div class="reviews-manual-review-item">
+			<p>{{ model.config.review3 }}</p>
+			<p>- {{ model.config.name3 }}</p>
+		</div>
+	</div>
+	{% endif %}
+	{% endif %}
+</div>

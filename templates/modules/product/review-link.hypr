@@ -1,0 +1,3 @@
+{% for prod in model.items %}
+	<h3><a href="{{ prod.url }}"> {{ prod.content.productName }} </a></h3>
+{% endfor %}

@@ -20,7 +20,7 @@
             {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
               <li>
                 {% ifequal sublink.name "Events" %}
-                <a class="dj-sitenav-link" href="http://www.danijohnson.com/events">
+                <a class="dj-sitenav-link" href="http://www.danijohnson.com/see">
                 {% else %}
                 <a class="dj-sitenav-link" href="{{sublink.url}}">
                 {% endifequal %}
@@ -51,7 +51,7 @@
                         <ul>
                           <li>
                             <a href="{{ sublink.url }}">{{ sublink.name }}</a>
-                            <p>Here's a lot of stuff about books. You wouldn't know it, but books are nice to read. I like books. Do you like books? What in the world is this for?</p>
+                            <p>Dani's best-selling books aren't just a great read. They're the next step to becoming the person you've always wanted to be.</p>
                           </li>
                         </ul>
                         {% endifequal %}
@@ -75,7 +75,7 @@
                               <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A6&categoryId=4">Category Name</a></li>
                             </ul>
                             {%endcomment%}
-                            <p>This is an explanation of what "Courses" means, in reference to DJC products. In the future, we could even slap a featured product in here. Widgets all around!</p>
+                            <p>DaniJohnson.com has a diverse offering of unique, targeted products designed to help you improve your life today. If you're ready for radical transformation, this is your start.</p>
                           </li>
                         </ul>
                         {% endifequal %}
@@ -83,7 +83,7 @@
                         <ul>
                           <li>
                             <a href="{{ sublink.url }}">{{ sublink.name }}</a>
-                            <p>Get Products Bundled and designed to work together for maximum success.</p>
+                            <p>Want the most bang for your buck? Get it here with one of our powerfully strategic product bundles.</p>
                           </li>
                         </ul>
                         {% endifequal %}

@@ -13,9 +13,12 @@
     float: none !important;
     background-color: transparent !important;
   }
-  .mz-cms-row:after {
-    display: block !important;
-    clear: none !important;
+  .mz-cms-row {
+    min-width: 680px;
+    &:after {
+      display: block !important;
+      clear: none !important;
+    }
   }
   //give it something back so it's usable in Site Builder
   .mz-drop-zone {

@@ -5,7 +5,7 @@
 
     a {
         font-size: 14px !important;
-        text-transform: none;
+        text-transform: uppercase !important;
         color: #9a9a9a;
         padding: 0.2em 0;
         font-weight: 300;
@@ -26,6 +26,13 @@
 
     .featured-links {
         margin-bottom: 25px;
+        float: left;
+
+        &:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
     }
 
     .client-support {

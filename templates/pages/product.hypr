@@ -45,7 +45,9 @@
                             <div class="quotation">
                                 <div class="box-icon-bg quote-bg"><span class="quotes">“</span></div>
                                 <hr>
-                                <p>COMING SOON</p>
+                                <div class="dj-dropzone">
+                                    {% dropzone "product-reviews" scope="page" %}
+                                </div>
                             </div>
                         </div>
                     </div>
