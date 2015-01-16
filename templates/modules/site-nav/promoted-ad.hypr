@@ -5,7 +5,7 @@
 		</div>
 	{% else %}
 		<div class="sign-in-cta">
-			<a href="#">{{ labels.signIn1 }}</a>
+			<a href="/user/login" data-mz-action="login" data-placement="bottom">{{ labels.signIn1 }}</a>
 			<p>{{ labels.signIn2 }}</p>
 		</div>
 	{% endif %}

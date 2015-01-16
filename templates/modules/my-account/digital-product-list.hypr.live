@@ -1,4 +1,7 @@
 ﻿      <ul class="dj-digitalproductlist">
+      	<!-- {% dump model %} -->
+      	<!-- {% dump model.segments %} -->
+      	<!-- {% dump model.hasSegments %} -->
         {% for segment in model.segments %}
 
 		{% ifequal segment.id 1 %}<!-- War on Debt -->

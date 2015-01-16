@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-51-g13337be"
+    "version": "rc7-52-g2f25229"
   },
   "settings": {
     "allowWishlist": false,
@@ -14,7 +14,7 @@
     "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4,
     "megaNavPromoImage": "/resources/images/nav-promo.jpg",
-    "megaNavPromoLink": "http://www.danijohnson.com",
+    "megaNavPromoLink": "http://www.danijohnson.com/insider",
     "defaultPageSize": 15,
     "listProductCode": false,
     "listProductThumbSize": 250,
