@@ -15,7 +15,7 @@
             {% ifequal property.attributeFQN "tenant~digital-delivery-url" %}
             {% for attribute in property.values %}
             <h2><a class="mz-itemlisting-title" href="{{attribute.value}}">{{ prod.content.productName }}</a></h2>
-            <p><a class="btn blue" href="{{attribute.value}}">{{ labels.clickHere }}</a></p>
+            <p><a class="mz-button blue" href="{{attribute.value}}">{{ labels.clickHere }}</a></p>
             {% endfor %}
             {% endifequal %}
             {% endfor %}
