@@ -17,10 +17,16 @@
 {% endblock feature-header %}
 
 {% block body-content %}
+
+{% require_script "pages/protected-content" %}
+
+{% preload_json model "pcpage" %}
+
+<!-- BEFORE JSON PRELOAD: {% dump model %} -->
+
 <div class="mz-l-container">
     <div class="dj-row pc-content-body">
         {% dropzone "pc-content-body" scope="page" %}
     </div>
 </div>
 {% endblock body-content %}
-

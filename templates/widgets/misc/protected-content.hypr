@@ -1,0 +1,13 @@
+<div class="mz-content-widget-wrap">
+    <div class="mz-content-widget-inner-wrap">
+
+		{% for segment in model.segments %}
+			{% if segment.id == {{ model.config.segmentID }} %}
+    			{{ model.config.content }}
+    		{% else %}
+				<div class="nopermission">You do not have permission to view this content.</div>
+    		{% endif %}
+		{% endfor %}
+
+    </div>
+</div>
