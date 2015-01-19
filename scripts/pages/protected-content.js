@@ -6,7 +6,7 @@ define([
 
     function GetSegments(accountId) {
         return api.request('GET', {
-            url: '/api/commerce/customer/accounts/' + accountId
+            url: '/api/commerce/customer/accounts/' + accountId + '/segments/'
         });
     }
 
@@ -19,10 +19,12 @@ define([
 
             GetSegments(user.accountId).then(function (json) {
 
-                var segmentId = json.segments;
+                var segmentIds = json;
 
-                for(var i = 0; i < json.segments.length; i++) {
-                    var obj = json[i];
+                console.log(segmentIds);
+
+                for(var i = 0; i < segmentIds.length; i++) {
+                    var obj = segmentIds[i];
 
                     console.log(obj.id); //Don't want to log this, want to do something with it
                 }
