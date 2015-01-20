@@ -9,8 +9,8 @@
 
 	{% if segment.id == 128 or segment.id == 129 or segment.id == 130 %} 
 		<li>
-			<a href="/insider"><img class="insider" src="../resources/images/insider.png" /></a>
-			<a href="/insider" class="mz-button blue">Click Here</a>
+			<a href="/insider-232d267756"><img class="insider" src="../resources/images/insider.png" /></a>
+			<a href="/insider-232d267756" class="mz-button blue">Click Here</a>
 		</li>
 	{% else %}
 		<li>You are not currently Subscribed as a Dani Johnson INSIDER.</li>
@@ -200,312 +200,320 @@
 	{% if segment.id == 50 %} <!-- CUSTOMER BELONGS TO GENERAL FIRST STEPS TO SUCCESS TAG --> {% endif %}
 
 	{% if segment.id == 69 %}<!-- FSTS - Feb 2010 London MP3s -->
-		<li><a href="/first-steps-to-success-february-2010">First Steps to Success - Feb 2010 London MP3s</a></li>
+		<li><a href="/first-steps-to-success-february-2010-4b787a5d41">First Steps to Success - Feb 2010 London MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 68 %}<!-- FSTS - March 2010 Jacksonville MP3s -->
-		<li><a href="/first-steps-to-success-march-2010">First Steps to Success - Mar 2010 Jacksonville MP3s</a></li>
+		<li><a href="/first-steps-to-success-march-2010-4d525b3d6a">First Steps to Success - Mar 2010 Jacksonville MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 67 %}<!-- FSTS - April 2010 London MP3s -->
-		<li><a href="/first-steps-to-success-april-2010">First Steps to Success - Apr 2010 London MP3s</a></li>
+		<li><a href="/first-steps-to-success-april-2010-4e57594e4d">First Steps to Success - Apr 2010 London MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 66 %}<!-- FSTS - May 2010 Chicago MP3s -->
-		<li><a href="/first-steps-to-success-may-2010">First Steps to Success - May 2010 Chicago MP3s</a></li>
+		<li><a href="/first-steps-to-success-may-2010-523e65453a">First Steps to Success - May 2010 Chicago MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 65 %}<!-- FSTS - July 2010 Gold Coast MP3s -->
-		<li><a href="/first-steps-to-success-july-2010">First Steps to Success - July 2010 Gold Coast MP3s</a></li>
+		<li><a href="/first-steps-to-success-july-2010-6b3a54287a">First Steps to Success - July 2010 Gold Coast MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 64 %}<!-- FSTS - Aug 2010 LA MP3s -->
-		<li><a href="/first-steps-to-success-august-2010">First Steps to Success - August 2010 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-august-2010-6138304d56">First Steps to Success - August 2010 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 70 %}<!-- FSTS - Oct 2010 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-october-2010">First Steps to Success - Oct 2010 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-october-2010-6854364141">First Steps to Success - Oct 2010 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 62 %}<!-- FSTS - Nov 2010 Atlanta MP3s -->
-		<li><a href="/first-steps-to-success-november-2010">First Steps to Success - Nov 2010 Atlanta MP3s</a></li>
+		<li><a href="/first-steps-to-success-november-2010-482f222c54">First Steps to Success - Nov 2010 Atlanta MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 71 %}<!-- FSTS - Nov 2011 Washington DC MP3s -->
-		<li><a href="/first-steps-to-success-november-2011">First Steps to Success - Nov 2011 Washington DC MP3s</a></li>
+		<li><a href="/first-steps-to-success-november-2011-6166717b4d">First Steps to Success - Nov 2011 Washington DC MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 72 %}<!-- FSTS - Oct 2011 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-october-2011">First Steps to Success - Oct 2011 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-october-2011-47466a342b">First Steps to Success - Oct 2011 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 73 %}<!-- FSTS - Sept 2011 Vancouver MP3s -->
-		<li><a href="/first-steps-to-success-september-2011">First Steps to Success - Sept 2011 Vancouver MP3s</a></li>
+		<li><a href="/first-steps-to-success-september-2011-382a56632d">First Steps to Success - Sept 2011 Vancouver MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 74 %}<!-- FSTS - Aug 2011 LA MP3s -->
-		<li><a href="/first-steps-to-success-august-2011">First Steps to Success - Aug 2011 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-august-2011-7522694939">First Steps to Success - Aug 2011 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 75 %}<!-- FSTS - Jul 2011 St. Louis MP3s -->
-		<li><a href="/first-steps-to-success-july-2011">First Steps to Success - Jul 2011 St. Louis MP3s</a></li>
+		<li><a href="/first-steps-to-success-july-2011-5566276a34">First Steps to Success - Jul 2011 St. Louis MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 76 %}<!-- FSTS - Apr 2011 Pittsburgh MP3s -->
-		<li><a href="/first-steps-to-success-april-2011">First Steps to Success - Apr 2011 Pittsburgh MP3s</a></li>
+		<li><a href="/first-steps-to-success-april-2011-753d3e3a48">First Steps to Success - Apr 2011 Pittsburgh MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 77 %}<!-- FSTS - Mar 2011 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-march-2011">First Steps to Success - Mar 2011 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-march-2011-56654e3a66">First Steps to Success - Mar 2011 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 78 %}<!-- FSTS - Jan 2011 Los Angeles MP3s -->
-		<li><a href="/first-steps-to-success-january-2011">First Steps to Success - Jan 2011 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-january-2011-552c625a27">First Steps to Success - Jan 2011 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 79 %}<!-- FSTS - Nov 2012 LA MP3s -->
-		<li><a href="/first-steps-to-success-november-2012">First Steps to Success - November 2012 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-november-2012-642773365e">First Steps to Success - November 2012 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 80 %}<!-- FSTS - Sep 2012 St. Louis MP3s -->
-		<li><a href="/first-steps-to-success-september-2012">First Steps to Success - Sep 2012 St. Louis MP3s</a></li>
+		<li><a href="/first-steps-to-success-september-2012-2774746633">First Steps to Success - Sep 2012 St. Louis MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 81 %}<!-- FSTS - Aug 2012 Washington DC MP3s -->
-		<li><a href="/first-steps-to-success-august-2012">First Steps to Success - Aug 2012 Washington DC MP3s</a></li>
+		<li><a href="/first-steps-to-success-august-2012-51284a6c34">First Steps to Success - Aug 2012 Washington DC MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 82 %}<!-- FSTS - Jul 2012 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-july-2012">First Steps to Success - Jul 2012 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-july-2012-5227664141">First Steps to Success - Jul 2012 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 83 %}<!-- FSTS - May 2012 Chicago MP3s -->
-		<li><a href="/first-steps-to-success-may-2012">First Steps to Success - May 2012 Chicago MP3s</a></li>
+		<li><a href="/first-steps-to-success-may-2012-21632f584d">First Steps to Success - May 2012 Chicago MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 84 %}<!-- FSTS - Mar 2012 LA MP3s -->
-		<li><a href="/first-steps-to-success-march-2012">First Steps to Success - March 2012 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-march-2012-726933592b">First Steps to Success - March 2012 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 85 %}<!-- FSTS - Jan 2012 Orlando MP3s -->
-		<li><a href="/first-steps-to-success-january-2012">First Steps to Success - Jan 2012 Orlando MP3s</a></li>
+		<li><a href="/first-steps-to-success-january-2012-235c4c426d">First Steps to Success - Jan 2012 Orlando MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 86 %}<!-- FSTS - Oct 2013 Cincinnati MP3s -->
-		<li><a href="/first-steps-to-success-october-2013">First Steps to Success - Oct 2013 Cincinnati MP3s</a></li>
+		<li><a href="/first-steps-to-success-october-2013-737b4c7a3f">First Steps to Success - Oct 2013 Cincinnati MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 87 %}<!-- FSTS - Aug 2013 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-august-2013">First Steps to Success - Aug 2013 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-august-2013-4a34246365">First Steps to Success - Aug 2013 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 88 %}<!-- FSTS - Jul 2013 Los Angeles MP3s -->
-		<li><a href="/first-steps-to-success-july-2013">First Steps to Success - Jul 2013 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-july-2013-41646a5a23">First Steps to Success - Jul 2013 Los Angeles MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 89 %}<!-- FSTS - Apr 2013 Pittsburgh MP3s -->
-		<li><a href="/first-steps-to-success-april-2013">First Steps to Success - Apr 2013 Pittsburgh MP3s</a></li>
+		<li><a href="/first-steps-to-success-april-2013-6a29585c3f">First Steps to Success - Apr 2013 Pittsburgh MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 90 %}<!-- FSTS - Mar 2013 Orlando MP3s -->
-		<li><a href="/first-steps-to-success-march-2013">First Steps to Success - Mar 2013 Orlando MP3s</a></li>
+		<li><a href="/first-steps-to-success-march-2013-5a4b766a2b">First Steps to Success - Mar 2013 Orlando MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 91 %}<!-- FSTS - Feb 2013 London MP3s -->
-		<li><a href="/first-steps-to-success-february-2013">First Steps to Success - Feb 2013 London MP3s</a></li>
+		<li><a href="/first-steps-to-success-february-2013-63513a4e69">First Steps to Success - Feb 2013 London MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 92 %}<!-- FSTS - Jan 2013 Dallas MP3s -->
-		<li><a href="/first-steps-to-success-january-2013">First Steps to Success - Jan 2013 Dallas MP3s</a></li>
+		<li><a href="/first-steps-to-success-january-2013-557a6b2241">First Steps to Success - Jan 2013 Dallas MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 93 %}<!-- FSTS - Oct 2014 Cincinnati MP3s -->
-		<li><a href="/first-steps-to-success-october-2014">First Steps to Success - Oct 2014 Cincinnati MP3s</a></li>
+		<li><a href="/first-steps-to-success-october-2014-6d2b416857">First Steps to Success - Oct 2014 Cincinnati MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 94 %}<!-- FSTS - Aug 2014 Long Beach MP3s -->
-		<li><a href="/first-steps-to-success-august-2014">First Steps to Success - Aug 2014 Long Beach MP3s</a></li>
+		<li><a href="/first-steps-to-success-august-2014-244a7c2341">First Steps to Success - Aug 2014 Long Beach MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 95 %}<!-- FSTS - Jul 2014 San Antonio MP3s -->
-		<li><a href="/first-steps-to-success-july-2014">First Steps to Success - Jul 2014 San Antonio MP3s</a></li>
+		<li><a href="/first-steps-to-success-july-2014-3273744a56">First Steps to Success - Jul 2014 San Antonio MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 96 %}<!-- FSTS - May 2014 Baltimore MP3s -->
-		<li><a href="/first-steps-to-success-may-2014">First Steps to Success - May 2014 Baltimore MP3s</a></li>
+		<li><a href="/first-steps-to-success-may-2014-397d536d78">First Steps to Success - May 2014 Baltimore MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 97 %}<!-- FSTS - Mar 2014 Orlando MP3s -->
-		<li><a href="/first-steps-to-success-march-2014">First Steps to Success - Mar 2014 Orlando MP3s</a></li>
+		<li><a href="/first-steps-to-success-march-2014-51225e5e2c">First Steps to Success - Mar 2014 Orlando MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 98 %}<!-- FSTS - Jan 2014 Los Angeles MP3s -->
-		<li><a href="/first-steps-to-success-january-2014">First Steps to Success - Jan 2014 Los Angeles MP3s</a></li>
+		<li><a href="/first-steps-to-success-january-2014-515b37472e">First Steps to Success - Jan 2014 Los Angeles MP3s</a></li>
+	{% endif %}
+	
+	{% if segment.id == 165 %}<!-- HBEW - Jan 2015 Los Angeles MP3s -->
+		<li><a href="/first-steps-to-success-january-2015-7873215440">First Steps to Success - Jan 2015 Austin MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 135 %}<!-- FSTS Bonus Packages -->
-		<li><a href="/first-steps-to-success-bonuses-july-2014">First Steps to Success Bonus Packages</a></li>
+		<li><a href="/first-steps-to-success-bonuses-july-2014-7769447776">First Steps to Success Bonus Packages</a></li>
 	{% endif %}
 
 	<!-- HBEW -->
 	{% if segment.id == 100 %}<!-- HBEW - Nov 2011 Washington DC MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-november-2011">Home Business Entrepreneur Workshop - Nov 2011 Washington DC MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-november-2011-6349302452">Home Business Entrepreneur Workshop - Nov 2011 Washington DC MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 101 %}<!-- HBEW - Oct 2011 Dallas MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-october-2011">Home Business Entrepreneur Workshop - Oct 2011 Dallas MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-october-2011-2222376326">Home Business Entrepreneur Workshop - Oct 2011 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 102 %}<!-- HBEW - Aug 2011 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-august-2011">Home Business Entrepreneur Workshop - Aug 2011 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-august-2011-36263e7870">Home Business Entrepreneur Workshop - Aug 2011 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 103 %}<!-- HBEW - Jul 2011 St. Louis MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-july-2011">Home Business Entrepreneur Workshop - Jul 2011 St. Louis MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-july-2011-3b5c65433b">Home Business Entrepreneur Workshop - Jul 2011 St. Louis MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 104 %}<!-- HBEW - Apr 2011 Pittsburgh MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-april-2011">Home Business Entrepreneur Workshop - Apr 2011 Pittsburgh MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-april-2011-3c68337a7a">Home Business Entrepreneur Workshop - Apr 2011 Pittsburgh MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 105 %}<!-- HBEW - Mar 2011 Dallas MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-march-2011">Home Business Entrepreneur Workshop - Mar 2011 Dallas MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-march-2011-2771642521">Home Business Entrepreneur Workshop - Mar 2011 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 106 %}<!-- HBEW - Jan 2011 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-january-2011">Home Business Entrepreneur Workshop - Jan 2011 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-january-2011-6e66495128">Home Business Entrepreneur Workshop - Jan 2011 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 107 %}<!-- HBEW - Nov 2012 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-november-2012">Home Business Entrepreneur Workshop - Nov 2012 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-november-2012-305638705c">Home Business Entrepreneur Workshop - Nov 2012 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 108 %}<!-- HBEW - Sep 2012 St. Louis MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-september-2012">Home Business Entrepreneur Workshop - Sep 2012 St. Louis MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-september-2012-6725713271">Home Business Entrepreneur Workshop - Sep 2012 St. Louis MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 109 %}<!-- HBEW - Aug 2012 Washington DC MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-august-2012">Home Business Entrepreneur Workshop - Aug 2012 Washington DC MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-august-2012-452c77694a">Home Business Entrepreneur Workshop - Aug 2012 Washington DC MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 110 %}<!-- HBEW - July 2012 Dallas MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-july-2012">Home Business Entrepreneur Workshop - July 2012 Dallas MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-july-2012-7467512a38">Home Business Entrepreneur Workshop - July 2012 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 111 %}<!-- HBEW - May 2012 Chicago MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-may-2012">Home Business Entrepreneur Workshop - May 2012 Chicago MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-may-2012-4643763b24">Home Business Entrepreneur Workshop - May 2012 Chicago MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 112 %}<!-- HBEW - Mar 2012 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-march-2012">Home Business Entrepreneur Workshop - Mar 2012 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-march-2012-793a796655">Home Business Entrepreneur Workshop - Mar 2012 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 113 %}<!-- HBEW - Jan 2012 Orlando MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-january-2012">Home Business Entrepreneur Workshop - Jan 2012 Orlando MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-january-2012-2665632462">Home Business Entrepreneur Workshop - Jan 2012 Orlando MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 114 %}<!-- HBEW - Oct 2013 Cincinnati MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-october-2013">Home Business Entrepreneur Workshop - Oct 2013 Cincinnati MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-october-2013-26757e673d">Home Business Entrepreneur Workshop - Oct 2013 Cincinnati MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 115 %}<!-- HBEW - Aug 2013 Dallas MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-august-2013">Home Business Entrepreneur Workshop - Aug 2013 Dallas MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-august-2013-6f5e654166">Home Business Entrepreneur Workshop - Aug 2013 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 116 %}<!-- HBEW - Jul 2013 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-july-2013">Home Business Entrepreneur Workshop - Jul 2013 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-july-2013-56752c555e">Home Business Entrepreneur Workshop - Jul 2013 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 117 %}<!-- HBEW - Apr 2013 Pittsburgh MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-april-2013">Home Business Entrepreneur Workshop - Apr 2013 Pittsburgh MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-april-2013-563f71767c">Home Business Entrepreneur Workshop - Apr 2013 Pittsburgh MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 118 %}<!-- HBEW - Mar 2013 Orlando MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-march-2013">Home Business Entrepreneur Workshop - Mar 2013 Orlando MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-march-2013-6e4526474e">Home Business Entrepreneur Workshop - Mar 2013 Orlando MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 119 %}<!-- HBEW - Jan 2013 Dallas MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-january-2013">Home Business Entrepreneur Workshop - Jan 2013 Dallas MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-january-2013-7b5a206627">Home Business Entrepreneur Workshop - Jan 2013 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 120 %}<!-- HBEW - Oct 2014 Cincinnati MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-october-2014">Home Business Entrepreneur Workshop - Oct 2014 Cincinnati MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-october-2014-6b23773e38">Home Business Entrepreneur Workshop - Oct 2014 Cincinnati MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 121 %}<!-- HBEW - Aug 2014 Long Beach MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-august-2014">Home Business Entrepreneur Workshop - Aug 2014 Long Beach MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-august-2014-286e4a6c3e">Home Business Entrepreneur Workshop - Aug 2014 Long Beach MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 122 %}<!-- HBEW - Jul 2014 San Antonio MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-july-2014">Home Business Entrepreneur Workshop - Jul 2014 San Antonio MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-july-2014-2b39557d6c">Home Business Entrepreneur Workshop - Jul 2014 San Antonio MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 123 %}<!-- HBEW - May 2014 Baltimore MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-may-2014">Home Business Entrepreneur Workshop - May 2014 Baltimore MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-may-2014-5f2e2d6b28">Home Business Entrepreneur Workshop - May 2014 Baltimore MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 126 %}<!-- HBEW - Mar 2014 Orlando MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-march-2014">Home Business Entrepreneur Workshop - Mar 2014 Orlando MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-march-2014-3c4654537e">Home Business Entrepreneur Workshop - Mar 2014 Orlando MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 127 %}<!-- HBEW - Jan 2014 Los Angeles MP3s -->
-		<li><a href="/home-business-entrepreneur-workshop-january-2014">Home Business Entrepreneur Workshop - Jan 2014 Los Angeles MP3s</a></li>
+		<li><a href="/home-business-entrepreneur-workshop-january-2014-752e222f30">Home Business Entrepreneur Workshop - Jan 2014 Los Angeles MP3s</a></li>
+	{% endif %}
+	
+	{% if segment.id == 166 %}<!-- HBEW - Jan 2015 Austin MP3s -->
+		<li><a href="/home-business-entrepreneur-workshop-january-2015-374f254f24">Home Business Entrepreneur Workshop - Jan 2015 Austin MP3s</a></li>
 	{% endif %}
 
 	<!-- CREATING A DYNASTY -->
 	{% if segment.id == 51 %} <!-- CUSTOMER BELONGS TO GENERAL DYNASTY TAG --> {% endif %}
 
 	{% if segment.id == 52 %}<!-- Creating a Dynasty - Dec 2010 Atlanta MP3s -->
-		<li><a href="/creating-a-dynasty-december-2010">Creating a Dynasty - Dec 2010 Atlanta MP3s</a></li>
+		<li><a href="/creating-a-dynasty-december-2010-33273c2c6a">Creating a Dynasty - Dec 2010 Atlanta MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 53 %}<!-- Creating a Dynasty - Jun 2010 St. Louis MP3s -->
-		<li><a href="/creating-a-dynasty-june-2010">Creating a Dynasty - Jun 2010 St. Louis MP3s</a></li>
+		<li><a href="/creating-a-dynasty-june-2010-3431744b26">Creating a Dynasty - Jun 2010 St. Louis MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 54 %}<!-- Creating a Dynasty - Dec 2011 Dallas MP3s -->
-		<li><a href="/creating-a-dynasty-december-2011">Creating a Dynasty - Dec 2011 Dallas MP3s</a></li>
+		<li><a href="/creating-a-dynasty-december-2011-5f44616e2e">Creating a Dynasty - Dec 2011 Dallas MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 55 %}<!-- Creating a Dynasty - May 2011 Pittsburgh MP3s -->
-		<li><a href="/creating-a-dynasty-may-2011">Creating a Dynasty - May 2011 Pittsburgh MP3s</a></li>
+		<li><a href="/creating-a-dynasty-may-2011-2232304a77">Creating a Dynasty - May 2011 Pittsburgh MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 56 %}<!-- Creating a Dynasty - Dec 2012 St. Louis MP3s -->
-		<li><a href="/creating-a-dynasty-december-2012">Creating a Dynasty - Dec 2012 St. Louis MP3s</a></li>
+		<li><a href="/creating-a-dynasty-december-2012-5a42354956">Creating a Dynasty - Dec 2012 St. Louis MP3s</a></li>
 	{% endif %}
 
 	{% if segment.id == 57 %}<!-- Creating a Dynasty - May 2012 LA MP3s -->
-		<li><a href="/creating-a-dynasty-may-2012">Creating a Dynasty - May 2012 Los Angeles MP3s</a></li>
+		<li><a href="/creating-a-dynasty-may-2012-7a4e35442f">Creating a Dynasty - May 2012 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 58 %}<!-- Creating a Dynasty - Nov 2013 Dallas MP3s -->
-		<li><a href="/creating-a-dynasty-november-2013">Creating a Dynasty - Nov 2013 Dallas MP3s MP3s</a></li>
+		<li><a href="/creating-a-dynasty-november-2013-6526456c42">Creating a Dynasty - Nov 2013 Dallas MP3s MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 59 %}<!-- Creating a Dynasty - May 2013 Pittsburgh MP3s -->
-		<li><a href="/creating-a-dynasty-may-2013">Creating a Dynasty - May 2013 Pittsburgh MP3s MP3s</a></li>
+		<li><a href="/creating-a-dynasty-may-2013-786d3c656a">Creating a Dynasty - May 2013 Pittsburgh MP3s MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 60 %}<!-- Creating a Dynasty - Nov 2014 LA MP3s -->
-		<li><a href="/creating-a-dynasty-november-2014">Creating a Dynasty - Nov 2014 Los Angeles MP3s</a></li>
+		<li><a href="/creating-a-dynasty-november-2014-65386e7d41">Creating a Dynasty - Nov 2014 Los Angeles MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 61 %}<!-- Creating a Dynasty - May 2014 Atlanta MP3s -->
-		<li><a href="/creating-a-dynasty-may-2014">Creating a Dynasty - May 2014 Atlanta MP3s</a></li>
+		<li><a href="/creating-a-dynasty-may-2014-334a725848">Creating a Dynasty - May 2014 Atlanta MP3s</a></li>
 	{% endif %}
 
 	<!-- OTHER EVENTS -->
 	{% if segment.id == 99 %}<!-- Prospect and Close Workshop - Apr 2010 Vancouver -->
-		<li><a href="/prospect-and-close-your-way-to-millions-workshop-april-2010">Prospect and Close Your Way to Millions Workshop - Apr 2010 Vancouver MP3s</a></li>
+		<li><a href="/prospect-and-close-your-way-to-millions-workshop-april-2010-6d4a742651">Prospect and Close Your Way to Millions Workshop - Apr 2010 Vancouver MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 124 %}<!-- Live in London March 2014 Spiritual Equipping -->
-		<li><a href="/dani-jonhson-live-in-london-march-2014">Live in London - Mar 2014 Spiritual Equipping MP3s</a></li>
+		<li><a href="/dani-jonhson-live-in-london-march-2014-3d212b4e73">Live in London - Mar 2014 Spiritual Equipping MP3s</a></li>
 	{% endif %}
 	
 	{% if segment.id == 125 %}<!-- Live in London March 2014 -->
-		<li><a href="/dani-jonhson-live-in-london-march-2014">Live in London - Mar 2014 MP3s</a></li>
+		<li><a href="/dani-jonhson-live-in-london-march-2014-3d212b4e73">Live in London - Mar 2014 MP3s</a></li>
 	{% endif %}
 
 	{% endfor %}
@@ -515,20 +523,20 @@
 	<h4>Reports</h4>
 	{% for segment in model.segments %}
 
-	{% if segment.id == 161 %}<!-- Face Your Fears and Accomplish Your Goals -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="fyf" as_parameter %}
-	{% endif %}
-
 	{% if segment.id == 162 %}<!-- Ten Steps to a Stress-Free Life -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="tensteps" as_parameter %}
+		<li><a href="/10-steps-to-a-stress-free-life-5343714f77">Ten Steps to a Stress-Free Life</a></li>
 	{% endif %}
 
 	{% if segment.id == 163 %}<!-- Owning Your Time -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="oyt" as_parameter %}
+		<li><a href="/owning-your-time-777d295c48">Owning Your Time</a></li>
 	{% endif %}
 
 	{% if segment.id == 164 %}<!-- Feed Your Family on $100 a Week or Less -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="feed" as_parameter %}
+		<li><a href="/">Feed Your Family on $100 a Week</a></li>
+	{% endif %}
+
+	{% if segment.id == 161 %}<!-- Face Your Fears and Accomplish Your Goals -->
+		<li><a href="/">Face Your Fears and Accomplish Your Goals</a></li>
 	{% endif %}
 
 	{% endfor %}
@@ -539,115 +547,115 @@
 	{% for segment in model.segments %}
 
 	{% if segment.id == 132 %}<!-- Breakthrough Sales Package -->
-		<li><a href="/breakthrough-sales-package-bonus-content">Breakthrough Sales Package</a></li>
+		<li><a href="/breakthrough-sales-package-bonus-content-3a58647d47">Breakthrough Sales Package</a></li>
 	{% endif %}
 
 	{% if segment.id == 133 %}<!-- Armchair Gold Rush -->
-		<li><a href="/armchair-goldrush-bonus-content">Armchair Gold Rush</a></li>
+		<li><a href="/armchair-goldrush-bonus-content-41636f255a">Armchair Gold Rush</a></li>
 	{% endif %}
 
 	{% if segment.id == 134 %}<!-- Grooming 7 Year Anniversary -->
-		<li><a href="/grooming-the-next-generation-7-year-bonuses">Grooming 7 Year Anniversary</a></li>
+		<li><a href="/grooming-the-next-generation-7-year-bonuses-514c766575">Grooming 7 Year Anniversary</a></li>
 	{% endif %}
 
 	{% if segment.id == 136 %}<!-- Scriptbook 7 Day Special or OTO Bonus -->
-		<li><a href="/script-book-7-day-special">Scriptbook Special Offer Bonuses</a></li>
+		<li><a href="/script-book-7-day-special-563f7c2246">Scriptbook Special Offer Bonuses</a></li>
 	{% endif %}
 
 	{% if segment.id == 138 %}<!-- Retail Success Teleseminar 2007 -->
-		<li><a href="/retail-teleseminar-2007-digital-content">Retail Success Teleseminar 2007</a></li>
+		<li><a href="/retail-teleseminar-2007-digital-content-3527774f3c">Retail Success Teleseminar 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 137 %}<!-- Retail Success Teleseminar 2008 -->
-		<li><a href="/retail-teleseminar-2008-digital-content">Retail Success Teleseminar 2008</a></li>
+		<li><a href="/retail-teleseminar-2008-digital-content-44347e4174">Retail Success Teleseminar 2008</a></li>
 	{% endif %}
 
 	{% if segment.id == 139 %}<!-- Prospecting and Closing Teleseminar -->
-		<li><a href="/prosepecting-and-closing-teleseminar-2008-digital-content">Prospecting and Closing Teleseminar</a></li>
+		<li><a href="/prosepecting-and-closing-teleseminar-2008-digital-content-7a7048532d">Prospecting and Closing Teleseminar</a></li>
 	{% endif %}
 
 	{% if segment.id == 140 %}<!-- Nuclear Coaching May 2014 -->
-		<li><a href="/nuclear-coaching-2014-digital-content">Nuclear Coaching May 2014</a></li>
+		<li><a href="/nuclear-coaching-2014-digital-content-6d683f3d50">Nuclear Coaching May 2014</a></li>
 	{% endif %}
 
 	{% if segment.id == 141 %}<!-- Home Business Mastery Teleseminar -->
-		<li><a href="/home-business-mastery-teleseminar-digital-content">Home Business Mastery Teleseminar</a></li>
+		<li><a href="/home-business-mastery-teleseminar-digital-content-785f2a6531">Home Business Mastery Teleseminar</a></li>
 	{% endif %}
 
 	{% if segment.id == 142 %}<!-- Duplication Mastery Teleseminar -->
-		<li><a href="/duplication-teleseminar-2008-digital-content">Duplication Mastery Teleseminar</a></li>
+		<li><a href="/duplication-teleseminar-2008-digital-content-293d413d5d">Duplication Mastery Teleseminar</a></li>
 	{% endif %}
 
 	{% if segment.id == 143 %}<!-- Group Prospecting Class Sep 2012 -->
-		<li><a href="/group-prospecting-class-september-2012-digital-content">Group Prospecting Class - Sep 2012</a></li>
+		<li><a href="/group-prospecting-class-september-2012-digital-content-417461582d">Group Prospecting Class - Sep 2012</a></li>
 	{% endif %}
 
 	{% if segment.id == 144 %}<!-- Group Prospecting Class Oct 2007 -->
-		<li><a href="/group-prospecting-class-october-2007-digital-content">Group Prospecting Class - Oct 2007</a></li>
+		<li><a href="/group-prospecting-class-october-2007-digital-content-4d5d395a74">Group Prospecting Class - Oct 2007</a></li>
 	{% endif %}
 
-	{% if segment.id == 145 %}<!-- Group Prospecting Class May 2009 -->
-		<li><a href="/group-prospecting-class-may-2009-digital-content">Group Prospecting Class - May 2009</a></li>
+	{% if segment.id == 145 %}<!-- Group Prospecting Class March 2009 -->
+		<li><a href="/group-prospecting-class-march-2009-digital-content-5a47466e29">Group Prospecting Class - March 2009</a></li>
 	{% endif %}
 
 	{% if segment.id == 146 %}<!-- Group Prospecting Class Jun 2008 -->
-		<li><a href="/group-prospecting-class-june-2008-digital-content">Group Prospecting Class - Jun 2008</a></li>
+		<li><a href="/group-prospecting-class-june-2008-digital-content-542134444a">Group Prospecting Class - Jun 2008</a></li>
 	{% endif %}
 
 	{% if segment.id == 147 %}<!-- Group Prospecting Class Jun 2007 -->
-		<li><a href="/group-prospecting-class-june-2007-digital-content">Group Prospecting Class - Jun 2007</a></li>
+		<li><a href="/group-prospecting-class-june-2007-digital-content-4559274d71">Group Prospecting Class - Jun 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 148 %}<!-- Group Prospecting Class Feb 2012 -->
-		<li><a href="/group-prospecting-class-february-2012-digital-content">Group Prospecting Class - Feb 2012</a></li>
+		<li><a href="/group-prospecting-class-february-2012-digital-content-7e255c532d">Group Prospecting Class - Feb 2012</a></li>
 	{% endif %}
 
 	{% if segment.id == 149 %}<!-- Group Prospecting Class Aug 2009 -->
-		<li><a href="/group-prospecting-class-august-2009-digital-content">Group Prospecting Class - Aug 2009</a></li>
+		<li><a href="/group-prospecting-class-august-2009-digital-content-65253b5f47">Group Prospecting Class - Aug 2009</a></li>
 	{% endif %}
 
 	{% if segment.id == 150 %}<!-- Group Prospecting Class Aug 2007 -->
-		<li><a href="/group-prospecting-class-august-2007-digital-content">Group Prospecting Class - Aug 2007</a></li>
+		<li><a href="/group-prospecting-class-august-2007-digital-content-2c353f6b74">Group Prospecting Class - Aug 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 151 %}<!-- Group Prospecting Class Apr 2012 -->
-		<li><a href="/group-prospecting-class-april-2012-digital-content">Group Prospecting Class - Apr 2012</a></li>
+		<li><a href="/group-prospecting-class-april-2012-digital-content-67257d2c37">Group Prospecting Class - Apr 2012</a></li>
 	{% endif %}
 
 	{% if segment.id == 152 %}<!-- Group Closing Class Sep 2012 -->
-		<li><a href="/group-closing-class-september-2012-digital-content">Group Closing Class - Sep 2012</a></li>
+		<li><a href="/group-closing-class-september-2012-digital-content-2a777a636d">Group Closing Class - Sep 2012</a></li>
 	{% endif %}
 
 	{% if segment.id == 153 %}<!-- Group Closing Class Oct 2007 -->
-		<li><a href="/group-closing-class-october-2007-digital-content">Group Closing Class - Oct 2007</a></li>
+		<li><a href="/group-closing-class-october-2007-digital-content-692e527850">Group Closing Class - Oct 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 154 %}<!-- Group Closing Class Mar 2009 -->
-		<li><a href="/group-closing-class-march-2009-digital-content">Group Closing Class - Mar 2009</a></li>
+		<li><a href="/group-closing-class-march-2009-digital-content-5f476f3527">Group Closing Class - Mar 2009</a></li>
 	{% endif %}
 
 	{% if segment.id == 155 %}<!-- Group Closing Class Jun 2008 -->
-		<li><a href="/group-closing-class-june-2008-digital-content">Group Closing Class - Jun 2008</a></li>
+		<li><a href="/group-closing-class-june-2008-digital-content-49453d4d69">Group Closing Class - Jun 2008</a></li>
 	{% endif %}
 
 	{% if segment.id == 156 %}<!-- Group Closing Class Jun 2007 -->
-		<li><a href="/group-closing-class-june-2007-digital-content">Group Closing Class - Jun 2007</a></li>
+		<li><a href="/group-closing-class-june-2007-digital-content-4829775a65">Group Closing Class - Jun 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 157 %}<!-- Group Closing Class Feb 2012 -->
-		<li><a href="/group-closing-class-february-2012-digital-content">Group Closing Class - Feb 2012</a></li>
+		<li><a href="/group-closing-class-february-2012-digital-content-2d3d323421">Group Closing Class - Feb 2012</a></li>
 	{% endif %}
 
 	{% if segment.id == 158 %}<!-- Group Closing Class Aug 2009 -->
-		<li><a href="/group-closing-class-august-2009-digital-content">Group Closing Class - Aug 2009</a></li>
+		<li><a href="/group-closing-class-august-2009-digital-content-562829554d">Group Closing Class - Aug 2009</a></li>
 	{% endif %}
 
 	{% if segment.id == 159 %}<!-- Group Closing Class Aug 2007 -->
-		<li><a href="/group-closing-class-august-2007-digital-content">Group Closing Class - Aug 2007</a></li>
+		<li><a href="/group-closing-class-august-2007-digital-content-7423322742">Group Closing Class - Aug 2007</a></li>
 	{% endif %}
 
 	{% if segment.id == 160 %}<!-- Group Closing Class Apr 2012 -->
-		<li><a href="/group-closing-class-april-2012-digital-content">Group Closing Class - Apr 2012</a></li>
+		<li><a href="/group-closing-class-april-2012-digital-content-4a7344227c">Group Closing Class - Apr 2012</a></li>
 	{% endif %}
 
 	{% endfor %}

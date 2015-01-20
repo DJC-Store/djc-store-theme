@@ -92,9 +92,9 @@
 	        	&copy; {% now "Y" %} {{labels.destinyGlobal}}. {{ labels.allRightsReserved }} {{ labels.poweredBy }}
 	        </span>
 	        <ul class="legal-links">
-	        	<li><a href="#">{{ labels.terms }}</a></li>
-	        	<li><a href="#">{{ labels.privacy }}</a></li>
-	        	<li><a href="#">{{ labels.earnings }}</a></li>
+	        	<li><a href="http://www.danijohnson.com/terms-of-use/">{{ labels.terms }}</a></li>
+	        	<li><a href="http://www.danijohnson.com/terms-of-use/">{{ labels.privacy }}</a></li>
+	        	<li><a href="http://www.danijohnson.com/terms-of-use/">{{ labels.earnings }}</a></li>
 	        </ul>
 	        <span class="copy">
 				<a href="http://www.danijohnson.com">{{ labels.backHome }}</a>

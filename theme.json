@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-55-gb56ba1b"
+    "version": "rc7-56-gfe30339"
   },
   "settings": {
     "allowWishlist": false,
@@ -14,8 +14,8 @@
     "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4,
     "megaNavPromoImage": "/resources/images/nav-promo.jpg",
-    "megaNavPromoLink": "http://www.danijohnson.com/insider",
-    "defaultPageSize": 15,
+    "megaNavPromoLink": "/insider-membership/p/insider_membership",
+    "defaultPageSize": 50,
     "listProductCode": false,
     "listProductThumbSize": 250,
     "listProductPrice": false,

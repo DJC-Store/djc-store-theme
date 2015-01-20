@@ -276,7 +276,9 @@
 
                     & + p {
                         margin: 5px 0;
-                        font-size: 14px;
+                        font-size: 18px;
+                        color: @djcLightGray;
+                        line-height: 1.5em;
                     }
                 }
 
@@ -323,6 +325,16 @@
                 font-weight: 600;
                 color: @djcLightGray;
                 font-size: 14px;
+            }
+
+            @media only screen {
+                @media (max-width: 940px) {
+                    .fsts-events {
+                        a + p {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }

@@ -13,7 +13,9 @@
             {% endif %}
         </div>
         <div class="mz-formstep-fields mz-l-formfieldgroup">
+            <!-- MODEL: % dump model%} -->
             {% if model.availableShippingMethods %}
+                <!-- Available Shipping Methods {% dump model.availableShippingMethods %} -->
                 {% for method in model.availableShippingMethods %}
                     <div>
                         <label>
