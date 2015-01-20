@@ -850,17 +850,17 @@ define([
                 acceptsMarketing: Backbone.MozuModel.DataTypes.Boolean,
                 amountRemainingForPayment: Backbone.MozuModel.DataTypes.Float
             },
-            helpers: ['additionalFeeTotal', 'digitalOnly'],
-            additionalFeeTotal: function() {
-                return this.get('shippingTotal') + this.get('handlingTotal');
-            },
-            digitalOnly: function() {
-                return _.every(this.get('items'), function(item) {
-                    return _.some(item.product.properties, function(prop) {
-                        return prop.attributeFQN('tenant~digital-product') && prop.values[0].value === true;
-                    });
-                });
-            },
+            //helpers: ['additionalFeeTotal', 'digitalOnly'],
+            //additionalFeeTotal: function() {
+            //    return this.get('shippingTotal') + this.get('handlingTotal');
+            //},
+            //digitalOnly: function() {
+            //    return _.every(this.get('items'), function(item) {
+            //        return _.some(item.product.properties, function(prop) {
+            //            return prop.attributeFQN('tenant~digital-product') && prop.values[0].value === true;
+            //        });
+            //    });
+            //},
             initialize: function (data) {
 
                 var self = this,

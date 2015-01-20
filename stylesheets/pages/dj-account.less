@@ -178,6 +178,7 @@
 	.mz-accountorderhistory{
 		.mz-orderlisting {
 			border: 1px solid #eee;
+			min-height: 150px;
 
 			&-items {
 				.mz-itemlisting {
@@ -262,7 +263,6 @@
 		}
 		.mz-paymentmethod {
 			&-myaccount {
-				border: 2px outset @djcLight;
 				border-radius: 15px;
 				box-sizing: border-box;
 				padding:12.5px 0 12.5px 12.5px;
@@ -357,10 +357,8 @@
 			margin: 0 1.6% 1.6% 0;
 			padding: 15px 0 20px 20px;
 			float: left;
-			background: #eee;
-			border-right: none;
+			border: 1px solid @djcLight;
 			border-left: 5px solid @djcDark;
-			border-bottom: 1px solid #303030;
 			position: relative;
 
 			&:nth-child(2n) {
@@ -381,16 +379,12 @@
 
 			.address {
 				&-name {
-					font-weight: 700;
+					font-weight: 600;
 					font-size: 1.3em;
-					text-transform:uppercase;
-					letter-spacing: .2em;
-					color: #3ca7d0;
 					margin-bottom: 5px;
 				}
 				&-line1, &-line2, &-line3, &-city, &-country {
-					text-transform: uppercase;
-					font-size: 1.2em;
+					font-weight: 400;
 				}
 				&-city, &-country {
 					display: inline-block;

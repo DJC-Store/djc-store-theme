@@ -25,167 +25,163 @@
     {% for segment in model.segments %}
 
 	{% if segment.id == 1 %}<!-- War on Debt -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="wod" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="136841" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 2 %}<!-- Prospect and Close Your Way to Millions -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="pacywtm" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="133187" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 3 %}<!-- Script Book - Supplemental -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sb_supp" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="134064" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 4 %}<!-- Script Book -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sb" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="133951D" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 5 %}<!-- Insider Secrets -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="is" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="134213" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 6 %}<!-- Expose, Involve & Upgrade -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="eiu" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="134214" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 7 %}<!-- Presentation Success System -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="pss" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="134215" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 8 %}<!-- Spirit Driven Success - Audio -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sds_audio" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="136062B" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 9 %}<!-- Spirit Driven Success - Book -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sds_book" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="136520" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 10 %}<!-- Grooming the Next Generation for Success - Home Study -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="gng" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="137083" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 11 %}<!-- Instant Customer Goldmine -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="icg" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="137697" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 12 %}<!-- Spiritual Equipping Live - CDs 1-10 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_1-10" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="SEL_bundle_01-10" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 22 %}<!-- Spiritual Equipping Live - CD 10 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_10" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_10" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 23 %}<!-- Spiritual Equipping Live - The Breaking Point -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_bp" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="SEL_bundle_10-15" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 24 %}<!-- Spiritual Equipping Live - CD 1 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_01" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_01" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 25 %}<!-- Spiritual Equipping Live - CD 2 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_02" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_02" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 26 %}<!-- Spiritual Equipping Live - CD 3 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_03" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_03" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 27 %}<!-- Spiritual Equipping Live - CD 4 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_04" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_04" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 28 %}<!-- Spiritual Equipping Live - CD 5 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_05" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_05" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 29 %}<!-- Spiritual Equipping Live - CD 6 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_06" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_06" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 30 %}<!-- Spiritual Equipping Live - CD 7 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_07" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_07" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 31 %}<!-- Spiritual Equipping Live - CD 8 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_08" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_08" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 32 %}<!-- Spiritual Equipping Live - CD 9 -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="se_live_09" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_eqipping_live_09" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 33 %}<!-- Grooming the Next Generation - Book -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="gng_book" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="138044" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 34 %}<!-- 6 Figures in 6 Months -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sfism" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="138090" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 35 %}<!-- First Steps to Wealth - Book -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="fstw_book" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="138514" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 36 %}<!-- Magnetic Influence -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="mi" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="138937" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 37 %}<!-- GEMS Mastery -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="gems_mastery" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="138938" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 38 %}<!-- GEMS Intro -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="gems_intro" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139070" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 39 %}<!-- GEMS Facilitator -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="gems_facilitator" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139169B" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 40 %}<!-- Conditioning For Success -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="cfs" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139093" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 41 %}<!-- Profit Skills -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="ps" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139104" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 42 %}<!-- Unlimited Success Bundle -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="us" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139152" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 43 %}<!-- Time Secrets -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="ts" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139365" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 44 %}<!-- Conquering the Financial Kingdom -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="ctfk" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139490" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 45 %}<!-- Debt Elimintation and Financial Independence -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="defi" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="debt_elimination" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 46 %}<!-- Job Domination -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="jd" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="job_domination" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 47 %}<!-- Rule the Real Estate Market -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="rrem" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="rule_real_estate_market" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 48 %}<!-- Social Media Empire -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sme" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="social_media_empire" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 49 %}<!-- Spiritual Development Series -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="sdseries" as_parameter %}
-	{% endif %}
-
-	{% if segment.id == 131 %}<!-- Ultimate Financial Success Kit -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="ufsk" as_parameter %}
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_development_series" as_parameter %}
 	{% endif %}
 
 	{% endfor %}
@@ -532,7 +528,7 @@
 	{% endif %}
 
 	{% if segment.id == 164 %}<!-- Feed Your Family on $100 a Week or Less -->
-		<li><a href="/">Feed Your Family on $100 a Week</a></li>
+		<li><a href="/feed-your-family-on-100-a-week-or-less-5f703e3829">Feed Your Family on $100 a Week</a></li>
 	{% endif %}
 
 	{% if segment.id == 161 %}<!-- Face Your Fears and Accomplish Your Goals -->
@@ -545,6 +541,10 @@
 <ul class="dj-digitallegacylist">
 	<h4>Coaching, Special Promotions, and Legacy Products</h4>
 	{% for segment in model.segments %}
+
+	{% if segment.id == 131 %}<!-- Ultimate Financial Success Kit -->
+		<li><a href="/ultimate-financial-success-kit-bonus-content-5a7c636356">Feed Your Family on $100 a Week</a></li>
+	{% endif %}
 
 	{% if segment.id == 132 %}<!-- Breakthrough Sales Package -->
 		<li><a href="/breakthrough-sales-package-bonus-content-3a58647d47">Breakthrough Sales Package</a></li>
