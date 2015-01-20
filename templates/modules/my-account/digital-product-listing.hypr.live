@@ -12,12 +12,12 @@
     <div class="mz-itemlisting-details">
         <div class="mz-itemlisting-description">
             {% for property in prod.properties %}
-            {% ifequal property.attributeFQN "tenant~digital-delivery-url" %}
+            {% if property.attributeFQN == "Tenant~digital-delivery-url" or property.attributeFQN == "tenant~digital-delivery-url" %}
             {% for attribute in property.values %}
             <h2><a class="mz-itemlisting-title" href="{{attribute.value}}">{{ prod.content.productName }}</a></h2>
             <p><a class="mz-button blue" href="{{attribute.value}}">{{ labels.clickHere }}</a></p>
             {% endfor %}
-            {% endifequal %}
+            {% endif %}
             {% endfor %}
         </div>
     </div>

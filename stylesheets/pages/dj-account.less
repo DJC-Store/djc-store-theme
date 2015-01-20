@@ -466,8 +466,9 @@
 
 		&-listing {
 			position: relative;
-			width: 40% !important;
+			width: 40%;
 			max-width: 450px;
+			height: 200px;
 			float: left;
 			box-sizing: border-box;
 			padding: 10px 10px 10px 30px;
@@ -477,7 +478,7 @@
 			background-size: cover;
 
 			&:nth-child(2n) {
-				margin: 1.6% 0 0 0;
+				margin: 1.6% 1.6% 0 0;
 			}
 
 			.mz-itemlisting-details {
@@ -499,6 +500,7 @@
 
 			h2 {
 				font-size: 1em !important;
+				padding-right: 200px;
 			}
 			a {
 				color: white !important;
@@ -507,6 +509,23 @@
 				color: @djcLightGray;
 				margin-bottom: 0;
 			}
+
+			@media only screen {
+		        @media (max-width: 768px) {
+		        	height: auto;
+
+		        	.mz-itemlisting-details {
+		        		position: relative;
+		        		left: 0;
+		        	}
+		        	.mz-itemlisting-thumb {
+		        		display: none;
+		        	}
+		        	h2 {
+		        		padding-right: 10px;
+		        	}
+		        }
+		    }
 		}
 	}
 }
