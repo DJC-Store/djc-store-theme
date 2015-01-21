@@ -38,6 +38,23 @@
 		}
 	}
 
+	@media only screen {
+        @media (max-width: 768px) {
+            h2 {
+            	font-size: 1em;
+            }
+        }
+        @media (max-width: 414px) {
+            padding: 8px;
+            div {
+            	padding: 6px;
+            }
+            h2 {
+            	letter-spacing: 1px !important;
+            }
+        }
+    }
+
 	&:hover, &:focus, &:active {
 		background-color: @djcDarkBlue;
 	}

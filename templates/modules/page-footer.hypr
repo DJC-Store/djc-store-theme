@@ -85,7 +85,8 @@
 	          </div>
 	        </div>
 			<div class="creds">
-				<img src="/resources/images/auth.png" alt="Authorize.net">
+				<!-- (c) 2005, 2015. Authorize.Net is a registered trademark of CyberSource Corporation -->
+				<div class="AuthorizeNetSeal"> <script type="text/javascript" language="javascript">var ANS_customer_id="4886c39d-dc62-4b88-8916-5a1741e302b7";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script> <a href="http://www.authorize.net/" id="AuthorizeNetText" target="_blank">Payment Processing</a> </div>
 				<img src="/resources/images/bbb.png" alt="Better Business Bureau">
 			</div>
 	        <span class="copy">

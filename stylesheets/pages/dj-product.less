@@ -1,6 +1,12 @@
 .dj-product-container {
 	padding: 60px 40px 40px 40px;
 
+	@media only screen {
+		@media (max-width: 768px) {
+			padding: 0 20px; 
+		}
+	}	
+
 	.mz-productimages {
 		&-main {
 			text-align: center;
@@ -19,7 +25,17 @@
 
 		@media only screen {
 			@media (max-width: 940px) {
-				width: 250px;
+				width: 250px !important;
+			}
+			@media (max-width: 768px) {
+				width: 100% !important;
+
+				&-main {
+					min-height:100px;
+				}
+				&-thumbs {
+					display: none;
+				}
 			}
 		}
 	}
@@ -195,6 +211,13 @@
 			color: #9a9a9a;
 			margin: 0 0 20px 0;
 			padding-right: 40px;
+		}
+	}
+	@media only screen {
+		@media (max-width: 768px) {
+			li {
+				padding: 5px;
+			}
 		}
 	}
 }

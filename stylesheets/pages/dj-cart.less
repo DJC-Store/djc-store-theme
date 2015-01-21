@@ -22,7 +22,9 @@
 
 		@media only screen {
             @media (max-width: 768px) {
+            	text-align: center;
                 font-size: 20px;
+                margin-top: 20px;
 
                 i {
                 	height: 30px;
@@ -37,6 +39,14 @@
 	}
 	.is-crossedout {
 		font-weight: 400;
+	}
+
+	@media only screen {
+		@media (max-width: 768px) {
+			.mz-l-container {
+				padding: 10px;
+			}
+		}
 	}
 }
 
@@ -128,6 +138,9 @@
                         }
                     }
                 }
+			}
+			&-remove {
+				text-align: center !important;
 			}
 			&-total {
 				font-size: 22px;
@@ -280,6 +293,15 @@
   p {
     font-style: italic;
     color: @djcLightGray;
+  }
+
+  @media only screen {
+    @media (max-width: 768px) {
+	  h2 {
+		margin-top: 20px;
+		font-size: 18px;
+	  }
+	}
   }
 }
 

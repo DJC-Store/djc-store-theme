@@ -4,6 +4,8 @@
 
 {% block body-tag-classes %} mz-loginpage {% endblock body-tag-classes %}
 
+{% block dj-container %} dj-container full {% endblock dj-container %}
+
 {% block body-content %}
     <div class="mz-l-container"><div class="dj-row">
         <h2 class="mz-pagetitle">{{ labels.logIn }}</h2>

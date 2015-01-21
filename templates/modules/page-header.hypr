@@ -13,6 +13,6 @@
 		</div>
     </div>
     <div class="mobile-title">
-    	<a href="http://www.danijohnson.com">DaniJohnson.com</a><span> Online Store</span>
+    	<a href="http://www.danijohnson.com">DaniJohnson.com</a><span class="mobilish"> Online Store</span><span class="tiny"> Store</span>
     </div>
 </header>

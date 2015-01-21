@@ -2,6 +2,7 @@
 <div class="mz-protectedcontent-section mz-l-paginatedlist">
     {% if model.segments %}
     <div data-mz-orderlist class="mz-l-paginatedlist-list">
+      <h5 class="pc-sga">Don't see a product you've purchased? We're actively investigating these issues. We appreciate your patience while we work out the kinks!</h5>
       {% include "modules/my-account/digital-product-list" %}
     </div>
   {% else %}

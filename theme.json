@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-58-gce6ed9b"
+    "version": "rc7-59-g3cc01db"
   },
   "settings": {
     "allowWishlist": false,
@@ -135,8 +135,8 @@
         },
         {
           "anchor": "50%",
-          "fieldLabel": "HBEW Url",
-          "name": "hbewUrl",
+          "fieldLabel": "SEL Url",
+          "name": "selUrl",
           "xtype": "textfield"
         },
         {

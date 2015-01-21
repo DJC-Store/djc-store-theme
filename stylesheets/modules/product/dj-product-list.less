@@ -94,6 +94,7 @@
 			@media (max-width: 768px) {
 				width: 100%;
 				padding: 0;
+				min-height: 100px !important;
 
 				.dj-product-list {
 					height: auto !important;
@@ -104,6 +105,7 @@
 					}
 					h2 {
 						font-size: 18px;
+						font-weight: 500;
 					}
 					h5 {
 						margin: 5px 0 10px;
@@ -128,6 +130,15 @@
 				.dj-productlisting-moreinfo {
 					p {
 						margin: 12.5px;
+					}
+				}
+			}
+			@media (max-width: 414px) {
+				.dj-product-list {
+					img {
+						top: -10px;
+						right: -60px;
+						max-width: 80%;
 					}
 				}
 			}

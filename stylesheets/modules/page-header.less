@@ -5,7 +5,8 @@
 .mz-pageheader {
     position: relative;
     background: #303030;
-    padding: @gutter/2 @gutter;
+    padding: 1em 25px;
+    max-height: 61px;
 
     .mz-utilitynav {
         float:left;
@@ -13,6 +14,8 @@
 
     .dj-topright {
         float:right;
+        margin-top: -1px;
+        margin-right: 30px;
     }
 
     .mobile-title {
@@ -24,10 +27,15 @@
         }
 
         span {
+            display: inline-block;
             font-style:italic;
             font-weight: 600;
             text-transform: uppercase;
             color: @djcOrange;
+
+            &.tiny {
+                display:none;
+            }
         }
 
         @media only screen {
@@ -41,6 +49,19 @@
                 width: 280px;
                 left: 50%;
                 margin-left: -130px;
+
+            }
+            @media (max-width: 414px) {
+                margin-left: -98px;
+
+                span {
+                    &.mobilish {
+                        display: none;
+                    }
+                    &.tiny {
+                        display: inline-block;
+                    }
+                }
             }
         }
     }
@@ -48,11 +69,15 @@
     @media only screen {
         @media (max-width: 768px) {
             height: auto;
+            max-height: 999px;
+            padding: .5em 25px;
+
             .mz-storebranding, .dj-topright, .mz-utilitynav {
                 width: 100%;
                 text-align: center;
                 position: relative;
                 margin-bottom: 10px;
+                margin-right: 0;
                 clear: both;
                 top: 0;
                 left: 0;

@@ -29,7 +29,6 @@
         <div id="account-messages">
             {% include "modules/common/message-bar" with model=model.messages %}
         </div>
-        <!-- CUSTOMER MODEL {% dump model %} -->
 
         <a id="settings"></a>
         <div class="mz-l-stack-section mz-accountsettings" id="account-settings">

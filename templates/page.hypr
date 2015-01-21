@@ -48,6 +48,7 @@
         <meta name="correlationId" content="{{ pageContext.correlationId }}">
 
         {% endblock meta-tags %}
+        <link rel="icon" type="image/png" href="/resources/images/dj-favicon.png">
 
         <title>{% block title-tag-content %}{{ siteContext.generalSettings.websiteName }} {% endblock title-tag-content %}</title>
 
@@ -91,7 +92,7 @@
 
             {% block feature-header %}{% endblock feature-header %}
     
-            <div role="main" id="page-content" class="mz-l-pagecontent dj-container">
+            <div role="main" id="page-content" class="mz-l-pagecontent {% block dj-container %}dj-container{% endblock dj-container %}">
                 
                 {% block breadcrumbs %}
                     {% if themeSettings.showBreadcrumbs %}

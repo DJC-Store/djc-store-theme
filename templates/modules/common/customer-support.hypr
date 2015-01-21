@@ -6,8 +6,11 @@
     <li>
       <a href="#" data-featherlight="#phone-lightbox"><i class="icon-phone"></i>866-760-8255</a>
     </li>
-    <li class="last">
+    <li>
       <a href="http://www.danijohnson.com/contact"><i class="icon-mail"></i>Submit a Ticket</a>
+    </li>
+    <li class="last">
+      <a href="#" data-featherlight="#video-lightbox"><i class="icon-camera"></i>Get Started</a>
     </li>
   </ul>
 </div>
@@ -15,5 +18,7 @@
 <div class="lightbox" id="phone-lightbox">
   <h2>866-760-8255</h2>
 </div>
+
+<iframe class="lightbox" id="video-lightbox" width="600" height="450" src="https://www.youtube.com/embed/mk1XopLj0ig" frameborder="0" allowfullscreen></iframe>
 
 {% require_script "vendor/featherlight/featherlight" %}
