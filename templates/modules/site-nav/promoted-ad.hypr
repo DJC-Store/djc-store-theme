@@ -1,5 +1,5 @@
 <div class="sitenav-promotion">
-	{% if not user.isAnonymous %}
+	{% if not user.isAnonymous or themeSettings.megaNavPromoForErrbody == true %}
 		<div class="featured-ad">
 			<a href="{{ themeSettings.megaNavPromoLink }}"><img src="{{ themeSettings.megaNavPromoImage }}" /></a>
 		</div>

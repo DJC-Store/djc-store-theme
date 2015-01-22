@@ -6,13 +6,14 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-59-g3cc01db"
+    "version": "rc7-60-ga905603"
   },
   "settings": {
     "allowWishlist": false,
     "showReturns": false,
     "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4,
+    "megaNavPromoForErrbody": true,
     "megaNavPromoImage": "/resources/images/nav-promo.jpg",
     "megaNavPromoLink": "/insider-membership/p/insider_membership",
     "defaultPageSize": 50,
