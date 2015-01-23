@@ -414,6 +414,15 @@ hr.dark {
       background: none !important;
       color: @djcOrange !important;
     }
+
+    &[disabled] {
+      color: @djcLightGray !important;
+      background: none !important;
+      &:focus, &:hover, &:active {
+        color: @djcLightGray !important;
+        background: none !important;
+      }
+    }
   }
   &.large {
     font-size: 28px;

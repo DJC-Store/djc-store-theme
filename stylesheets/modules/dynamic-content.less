@@ -2,8 +2,13 @@
 	width: 100%;
 
     @media only screen {
+    	@media (max-width: 768px) {
+    		.dj-row {
+    			padding: 1.25em 0 !important;
+    		}
+    	}
         @media (max-width: 414px) {
-            padding: 1em;
+            padding: 1em 0;
         }
     }
 
@@ -27,6 +32,26 @@
 
 	.slider {
 		text-align: center;
+		margin-left: 0px;
+		margin-right: 0px;
+
+		@media only screen {
+	        @media (max-width: 786px) {
+	            margin-left: 0;
+	            margin-right: 0;
+	        }
+	    }
+		
+		.slick-prev, .slick-next {
+			width: 35px;
+			height: 35px;
+
+			&:before {
+				font-size: 35px;
+			}
+		}
+		.slick-prev { left: -55px !important; }
+		.slick-next { right: -55px !important; }
 
 		.dc-slide {
 			&:first-child {
@@ -36,7 +61,7 @@
 		}
 
 		.image-container {
-			width: 80%;
+			width: 100%;
 			margin: 0 auto;
 			height:200px;
 			overflow: hidden;
@@ -66,6 +91,12 @@
 			color: white;
 			text-transform: uppercase;
 			font-weight: 600;
+
+			@media only screen {
+				@media (max-width: 768px) {
+		            font-size: 11px;
+		        }
+			}
 		}
 	}
 }

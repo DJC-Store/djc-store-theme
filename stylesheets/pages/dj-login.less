@@ -22,3 +22,35 @@
 		margin-left: 10px;
 	}
 }
+.mz-l-formfieldgroup {
+	@media only screen {
+		@media (max-width: 600px) {
+			&-cell {
+				width: 100%;
+				float: left;
+				padding: 5px 15px 0 !important;
+
+				label {
+					text-align: left;
+				}
+
+			    input[type="text"],
+			    input[type="password"],
+			    input[type="tel"],
+			    input[type="email"],
+			    select {
+			        width: 100%;
+			        &.mz-l-formfieldgroup-halfsize {
+			            width: 50%;
+			        }
+			    }
+
+			    &:after {
+			    	content: "";
+			    	display: table;
+			    	clear: both;
+			    }
+			}
+		}
+	}
+}

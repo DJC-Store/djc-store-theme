@@ -11,6 +11,12 @@
 					<li class="menu-item">
 				        <a href="{{link.url}}">{{ link.name }}</a>
 				        <ul>
+				        	<li class="mobile">
+								<a href="/user/login">{{ labels.logIn }}</a>
+				        	</li>
+				        	<li class="mobile">
+								<a href="/user/signup">{{ labels.signUp }}</a>
+				        	</li>
 			            	{% for sublink in link.items %}
 			            	{% if not sublink.isHidden %}
 							<li>

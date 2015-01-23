@@ -19,7 +19,6 @@ define(['modules/jquery-mozu'],
 					{
 						breakpoint: 786,
 						settings: {
-							arrows: true,
 							dotsClass: 'slick-dots',
 							customPaging: function(slider, i) {
 								return '<button type="button" data-role="none">' + (i + 1) + '</button>';

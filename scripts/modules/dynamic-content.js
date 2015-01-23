@@ -5,23 +5,35 @@ define(['modules/jquery-mozu'],
 				accessibility: true,
 				arrows: false,
 				slidesToShow: 4,
-				swipe: true,
-				touchMove: true,
-				autoplay: false,
+				autoplay: true,
 				dots: true,
 				responsive: [
 					{
 						breakpoint: 940,
 						settings: {
-							slidesToShow: 2,
-							arrows: true
+							centerMode: true,
+							centerPadding: '100px',
+							arrows: false,
+							swipe: true,
+							swipeToSlide: true,
+							touchMove: true
 						}
 					},
 					{
 						breakpoint: 786,
 						settings: {
+							centerMode: true,
+							centerPadding: '80px',
+							arrows: false,
+							autoplay: true
+						}
+					},
+					{
+						breakpoint: 414,
+						settings: {
+							centerMode: true,
 							slidesToShow: 1,
-							arrows: true,
+							arrows: false,
 							autoplay: true
 						}
 					}
