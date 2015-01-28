@@ -198,7 +198,7 @@
   "orderWelcome"         : "Hello",
   "storePickupFor"       : "Store Pickup for <strong>{0}</strong>",
   "storeName"            : "Store Name",
-  "orderConfirmationBlob1": "Thank you for shopping with us at {0}. Your order was received and we are preparing it for shipment.  If you would like to view or manage your orders, please visit <a href=\"http://{1}/myaccount\">My Account</a>.",
+  "orderConfirmationBlob1": "Thank you for shopping with us at {0}. Your order was received and we are preparing it for shipment.  If you would like to view or manage your orders, please visit <a href=\"http://{1}/myaccount\">My Account</a>.</p><p>Did you order products at an event? Please review the full invoice including adjustments to find that the total charges are accurate.",
   "emailOpening"         : "<p>Hello {0}!</p>",
   "emailOpeningAlternative" : "<p>Hello!</p>",
   "emailClosing"         : "<p>Sincerely,<br /><br />Customer Service</br>{0}</p>",

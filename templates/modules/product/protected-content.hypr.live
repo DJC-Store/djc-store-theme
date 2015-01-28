@@ -1,15 +1,11 @@
 {% require_script "pages/protected-content" %}
 
 <!-- model: {% dump model %} -->
-<!-- model.Customer: {% dump model.Customer %} -->
-<!-- model.customer: {% dump model.customer %} -->
-
-<!-- Customer: {% dump Customer %} -->
 
 <div class="mz-l-container">
     <div class="dj-row pc-content-body">
         <div class="disclaimer">
-        <h5>Can't see your content? We're investigating an issue which is preventing some browers from being able to display your digital content. While we work to fix the issue, you can use the latest version of <a href="http://www.mozilla.org/firefox">Firefox</a> or Safari (for Mac users) as a <a href="#" data-featherlight="#workaround-lightbox">temporary workaround.</a> Thanks for your patience as we work to resolve these issues!
+            <h5>Can't see your content? We're investigating an issue which is preventing some browers from being able to display your digital content. While we work to fix the issue, you can use the latest version of <a href="http://www.mozilla.org/firefox">Firefox</a> or Safari (for Mac users) as a <a href="#" data-featherlight="#workaround-lightbox">temporary workaround.</a> Thanks for your patience as we work to resolve these issues!
         </div>
         <div class="lightbox" id="workaround-lightbox">
             <h5>Firefox:</h5>
@@ -18,6 +14,8 @@
             <h5>Safari:</h5>
             <p>Safari should allow the content to be displayed automatically, thought it might warn you about an unsecure connection. Just click "OK!"</p>
         </div>
+        <div class="test" data-dj-pc-authentication=""></div>
+        {% dropzone "pc-content-authentication" scope="page" %}
         {% dropzone "pc-content-body" scope="page" %}
     </div>
 </div>

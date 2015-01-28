@@ -3,21 +3,17 @@
 <!-- {% dump model.hasSegments %} -->
 
 <!-- INSIDER -->
-<ul class="dj-insiderlist">
-	<h4>Dani Johnson INSIDER</h4>
 	{% for segment in model.segments %}
-
-	{% if segment.id == 128 or segment.id == 129 or segment.id == 130 %} 
+	{% if segment.id == 128 or segment.id == 129 or segment.id == 130 %}
+	<ul class="dj-insiderlist">
+		<h4>Dani Johnson INSIDER</h4>
 		<li>
 			<a href="/insider-232d267756"><img class="insider" src="../resources/images/insider.png" /></a>
 			<a href="/insider-232d267756" class="mz-button blue">Click Here</a>
 		</li>
-	{% else %}
-		<li>You are not currently Subscribed as a Dani Johnson INSIDER.</li>
+	</ul>
 	{% endif %}
-
 	{% endfor %}
-</ul>
 
 <ul class="dj-digitalproductlist">
 
@@ -530,7 +526,7 @@
 	{% endif %}
 
 	{% if segment.id == 164 %}<!-- Feed Your Family on $100 a Week or Less -->
-		<li><a href="/feed-your-family-on-100-a-week-or-less-5f703e3829">Feed Your Family on $100 a Week</a></li>
+		<li><a href="/feedyourfamily-5f703e3829">Feed Your Family on $100 a Week</a></li>
 	{% endif %}
 
 	{% if segment.id == 161 %}<!-- Face Your Fears and Accomplish Your Goals -->
