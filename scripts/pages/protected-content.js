@@ -22,7 +22,7 @@
 //           GetSegments(user.accountId)
 //             .then(function (json) {
 
-//               // ... do your data validation/parsing here 
+//               // ... do your data validation/parsing here
               
 //               return segmentData; // this is a JSON object/object literal
 //             })

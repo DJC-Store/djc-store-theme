@@ -14,8 +14,8 @@
             {% for property in prod.properties %}
             {% if property.attributeFQN == "Tenant~digital-delivery-url" or property.attributeFQN == "tenant~digital-delivery-url" %}
             {% for attribute in property.values %}
-            <h2><a class="mz-itemlisting-title" href="{{attribute.value}}">{{ prod.content.productName }}</a></h2>
-            <p><a class="mz-button blue" href="{{attribute.value}}">{{ labels.clickHere }}</a></p>
+            <h2><a class="mz-itemlisting-title" href="http://shop.danijohnson.com{{attribute.value}}">{{ prod.content.productName }}</a></h2>
+            <p><a class="mz-button blue" href="http://shop.danijohnson.com{{attribute.value}}">{{ labels.clickHere }}</a></p>
             {% endfor %}
             {% endif %}
             {% endfor %}
