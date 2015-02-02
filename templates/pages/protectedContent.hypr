@@ -20,4 +20,13 @@
 
     {% include "modules\product\protected-content" %}
 
+    {% require_script "vendor/video-js/video" %}
+    {% require_script "vendor/responsive-tabs/main" %}
+
 {% endblock body-content %}
+
+{% block script-tag %}
+    <script>
+      videojs.options.flash.swf = "/scripts/vendor/video-js/video-js.swf"
+    </script>
+{% endblock script-tag %}

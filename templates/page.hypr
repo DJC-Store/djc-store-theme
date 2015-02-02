@@ -129,6 +129,7 @@
         {% block trailing-scripts %}
             {% include "modules/trailing-scripts" %}
         {% endblock trailing-scripts %}
+        {% block script-tag %}{% endblock script-tag %}
 
         {% visitor_tracking_pixel %}
 

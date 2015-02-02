@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-63-gdc89537"
+    "version": "rc7-64-gd20f8da"
   },
   "settings": {
     "allowWishlist": false,
@@ -470,6 +470,99 @@
       "defaultConfig": {
         "twoColumn": "false"
       }
+    },
+    {
+      "id": "protected-content",
+      "displayName": "Protected Content",
+      "displayTemplate": "misc/protected-content",
+      "icon": "/resources/admin/widgets/protectedcontent.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Segment ID",
+          "name": "segmentId",
+          "xtype": "mz-input-number"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Video Section",
+          "name": "video",
+          "store": [
+            [
+              "true",
+              "Yes"
+            ],
+            [
+              "false",
+              "No"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "fieldLabel": "Video Section HTML",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "videoContent",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Audio Section",
+          "name": "audio",
+          "store": [
+            [
+              "true",
+              "Yes"
+            ],
+            [
+              "false",
+              "No"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "fieldLabel": "Audio Section HTML",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "audioContent",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Downloads Section",
+          "name": "downloads",
+          "store": [
+            [
+              "true",
+              "Yes"
+            ],
+            [
+              "false",
+              "No"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "fieldLabel": "Download Section HTML",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "downloadContent",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        }
+      ],
+      "defaultConfig": {}
     },
     {
       "id": "feature_product_header",
