@@ -6,10 +6,10 @@
 
 {% block feature-header %}
 <div class="hero">
-    <div class="hero-bg"><img src="/resources/images/pc-bg.jpg" class="attachment-full"></div>
-    <div class="gradient"></div>
+    <div class="hero-bg"><img src="/resources/images/featProd-bg.jpg" class="attachment-full"></div>
+    <!-- <div class="gradient"></div> this is unnecessary with the featProd background -->
     <div class="dj-container">
-        <h2 class="mz-pagetitle">{{ pageContext.metaTitle }}</h2>
+        <h1 class="mz-pagetitle">{{ pageContext.metaTitle }}</h1>
         <h5><a href="/myaccount">Back to My Account</a></h5>
     </div>
 </div>

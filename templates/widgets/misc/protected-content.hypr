@@ -1,47 +1,41 @@
-<div class="mz-content-widget-wrap">
-    <div class="mz-content-widget-inner-wrap">
+{%comment%}
+{% for segment in model.segments %}
+	{% if segment.id == {{ model.config.segmentID }} %}
+		{{ model.config.content }}
+	{% else %}
+		<div class="nopermission">{{ labels.noPermission }}</div>
+	{% endif %}
+{% endfor %}
+{%endcomment%}
 
-		{%comment%}
-		{% for segment in model.segments %}
-			{% if segment.id == {{ model.config.segmentID }} %}
-    			{{ model.config.content }}
-    		{% else %}
-				<div class="nopermission">You do not have permission to view this content.</div>
-    		{% endif %}
-		{% endfor %}
-		{%endcomment%}
-
-		<div class="dj-product-tabs-wrap">
-		    <div id="dj-product-tabs">
-		        <div class="cd-tabs is-ended">
-		            <nav>
-		                <ul class="cd-tabs-navigation">
-		                    {% if model.config.video == "true" %}<li><a data-content="video" class="selected" href="#0">Video</a></li>{% endif %}
-		                    {% if model.config.audio == "true" %}<li><a data-content="audio" {% if model.config.video != "true" %}class="selected"{% endif %} href="#0">Audio</a></li>{% endif %}
-		                    {% if model.config.downloads == "true" %}<li><a data-content="downloads" {% if model.config.video != "true" and model.config.audio != "true" %}class="selected"{% endif %} href="#0">Downloads</a></li>{% endif %}
-		                </ul> <!-- cd-tabs-navigation -->
-		            </nav>
-		         
-		            <ul class="cd-tabs-content" style="height: auto;">
-		                {% if model.config.video == "true" %}
-		                <li data-content="video" class="selected">
-							{{ model.config.videoContent|safe }}
-		                </li>
-		                {% endif %}
-		                {% if model.config.audio == "true" %}
-		                <li data-content="audio">
-		                	{{ model.config.audioContent|safe }}
-		                </li>
-		                {% endif %}
-		                {% if model.config.downloads == "true" %}
-		                <li data-content="downloads">
-		                    {{ model.config.downloadContent|safe }}
-		                </li>
-		                {% endif %}
-		            </ul> <!-- cd-tabs-content -->
-		        </div> <!-- cd-tabs -->
-		    </div>    
-		</div>
-
-    </div>
+<div class="dj-product-tabs-wrap">
+    <div id="dj-product-tabs">
+        <div class="cd-tabs is-ended">
+            <nav>
+                <ul class="cd-tabs-navigation">
+                    {% if model.config.video == "true" %}<li class="{% if model.config.audio == "true" %}{% if model.config.downloads == "true" %}{% else %} halvsies {% endif %}{% else %}{% if model.config.downloads == "true" %} halvsies {% else %} singleton {% endif %}{% endif %}"><a data-content="video" class="selected" href="#0">{{ labels.video }}</a></li>{% endif %}
+                    {% if model.config.audio == "true" %}<li class="{% if model.config.video == "true" %}{% if model.config.downloads == "true" %}{% else %} halvsies {% endif %}{% else %}{% if model.config.downloads == "true" %} halvsies {% else %} singleton {% endif %}{% endif %}"><a data-content="audio" {% if model.config.video != "true" %} class="selected" {% endif %} href="#0">{{ labels.audio }}</a></li>{% endif %}
+                    {% if model.config.downloads == "true" %}<li class="{% if model.config.video == "true" %}{% if model.config.audio == "true" %}{% else %} halvsies {% endif %}{% else %}{% if model.config.audio == "true" %} halvsies {% else %} singleton {% endif %}{% endif %}"><a data-content="downloads" {% if model.config.video != "true" and model.config.audio != "true" %} class="selected" {% endif %} href="#0">{{ labels.downloads }}</a></li>{% endif %}
+                </ul> <!-- cd-tabs-navigation -->
+            </nav>
+         
+            <ul class="cd-tabs-content" style="height: auto;">
+                {% if model.config.video == "true" %}
+                <li data-content="video" class="selected">
+					{{ model.config.videoContent|safe }}
+                </li>
+                {% endif %}
+                {% if model.config.audio == "true" %}
+                <li data-content="audio" {% if model.config.video != "true" %} class="selected" {% endif %}>
+                	{{ model.config.audioContent|safe }}
+                </li>
+                {% endif %}
+                {% if model.config.downloads == "true" %}
+                <li data-content="downloads" {% if model.config.video != "true" and model.config.audio != "true" %} class="selected" {% endif %}>
+                    {{ model.config.downloadContent|safe }}
+                </li>
+                {% endif %}
+            </ul> <!-- cd-tabs-content -->
+        </div> <!-- cd-tabs -->
+    </div>    
 </div>

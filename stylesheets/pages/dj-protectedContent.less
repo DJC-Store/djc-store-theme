@@ -3,6 +3,10 @@
 		height: auto !important;
 		overflow: hidden;
 
+		h1 {
+			color: #ffffff;
+		}
+
 		h5 {
 			position: relative;
 			text-align: center;
@@ -18,11 +22,34 @@
 				color: @djcOrange;
 			}
 		}
+		@media only screen {
+			@media (max-width: 768px) {
+				.hero-bg {
+					display: none;
+				}
+				.dj-container {
+					float:left;
+					background-image: url(../resources/images/featProd-bg.jpg);
+					background-size: cover;
+					background-position: center center;
+
+					&:after {
+						content:"";
+						display: table;
+						clear:both;
+					}
+				}
+			}
+		}
 	}
 	.arbitraryOrangeBar {
 		height: 20px;
 		background-color: @djcOrange;
 		width: 100%;
+	}
+	.mz-content-widget-wrap {
+		max-width: 640px;
+		margin: 0 auto;
 	}
 	.pc-content-body {
 		padding: 0 !important;
@@ -40,6 +67,9 @@
 		[class*="mz-cms-col-"], .mz-cms-content {
 			padding: 0 !important;
 		}
+		.dj-product-tabs-wrap {
+			margin-top: 0 !important;
+		}
 	}
 	.cd-tabs-content {
 		padding-bottom: 40px;
@@ -56,15 +86,16 @@
 	}
 }
 .disclaimer {
-	margin-top: 1em;
-	margin-bottom: .4em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #eceae0;
 
 	h5 {
 		margin: 0 10px;
 		color: @djcLightGray;
 		text-align: center;
 		font-style: italic;
-		
+
 		span {
 			text-transform: uppercase;
 			color: @djcOrange;
