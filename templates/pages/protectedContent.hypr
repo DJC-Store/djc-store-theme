@@ -10,7 +10,9 @@
     <!-- <div class="gradient"></div> this is unnecessary with the featProd background -->
     <div class="dj-container">
         <h1 class="mz-pagetitle">{{ pageContext.metaTitle }}</h1>
-        <h5><a href="/myaccount">Back to My Account</a></h5>
+        <div class="dj-dropzone">
+            {% dropzone "pc-header" scope="page" %}
+        </div>
     </div>
 </div>
 <div class="arbitraryOrangeBar"></div>

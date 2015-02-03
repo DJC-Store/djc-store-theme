@@ -1,0 +1,5 @@
+{% for prod in model.items %}
+{% if forloop.counter0 < 1 %}
+	<img src="{{ prod.mainImage.imageUrl }}" />
+{% endif %}
+{% endfor %}

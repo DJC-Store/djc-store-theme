@@ -4,9 +4,6 @@
 
 <div class="mz-l-container">
     <div class="dj-row pc-content-body">
-        <div class="disclaimer">
-            <h5>{{ labels.pcPageDisclaimer1|safe }}{% now \"Y\" %}{{ labels.pcPageDisclaimer2|safe }}</h5>
-        </div>
         <div class="test" data-dj-pc-authentication=""></div>
         {% dropzone "pc-content-authentication" scope="page" %}
         {% dropzone "pc-content-body" scope="page" %}

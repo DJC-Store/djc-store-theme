@@ -1,0 +1,9 @@
+<div class="dj-row">
+	<div class="col-4">
+		{% include_products "modules/product/product-image" with productCodes=model.config.product as_parameter %}
+	</div>
+	<div class="col-8">
+		{{ model.config.summary|safe }}
+		<h5><a href="/myaccount">{{ labels.backToMyAccount }}</a></h5>
+	</div>
+</div>

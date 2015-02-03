@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-65-g7869b52"
+    "version": "rc7-66-gb89e4d8"
   },
   "settings": {
     "allowWishlist": false,
@@ -469,6 +469,35 @@
       ],
       "defaultConfig": {
         "twoColumn": "false"
+      }
+    },
+    {
+      "id": "pc-header-summary",
+      "displayName": "PC Page Header",
+      "displayTemplate": "misc/pc-header-summary",
+      "icon": "/resources/admin/widgets/pc-header-summary.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product",
+          "name": "product",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "fieldLabel": "Summary Copy (HTML)",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "summary",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        }
+      ],
+      "defaultConfig": {
+        "summary": "<p>Insert Summary Copy Here.</p>"
       }
     },
     {
