@@ -9,106 +9,71 @@
     <a href="#footer"><img src="/resources/images/mobile-menu.svg" alt=""></a>
   </div>
 
-    <nav class="main-nav">
-      <ul data-mz-contextify='.dj-sitenav-link[href="{{ navigation.currentNode.url }}"]'
-          data-mz-contextify-attr='class'
-          data-mz-contextify-val='active'>
-        {% partial_cache %}
-          {% for link in navigation.tree %}
-          {% ifequal link.name "Types" %}
-            {% for sublink in link.items %}
-            {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
-              <li>
-                {% ifequal sublink.name "Events" %}
-                <a class="dj-sitenav-link" href="http://www.danijohnson.com/see">
-                {% else %}
-                <a class="dj-sitenav-link" href="{{sublink.url}}">
-                {% endifequal %}
-                  <i class="icon-{{ sublink.name|lower }}"></i>
-                  <h2>{{ sublink.name }}</h2>
-                  <h6>
-                    {% ifequal sublink.name "Events" %}
-                      {{ labels.navEvents }}
-                    {% endifequal %}
-                    {% ifequal sublink.name "Books" %}
-                      {{ labels.navBooks }}
-                    {% endifequal %}
-                    {% ifequal sublink.name "Courses" %}
-                      {{ labels.navCourses }}
-                    {% endifequal %}
-                    {% ifequal sublink.name "Bundles" %}
-                      {{ labels.navBundles }}
-                    {% endifequal %}
-                  </h6>
-                </a>
-                <div class="sub-nav">
-                  <div class="dj-container">
-                    <div class="nav-bg orange-dash"></div>
-                    <div class="in-section">
-                      <h5>In this Section</h5>
-                      <div class="menu">
-                        {% ifequal sublink.name "Books" %}
-                        <ul>
-                          <li>
-                            <a href="{{ sublink.url }}">{{ sublink.name }}</a>
-                            <p>Dani's best-selling books aren't just a great read. They're the next step to becoming the person you've always wanted to be.</p>
-                          </li>
-                        </ul>
-                        {% endifequal %}
-                        {% ifequal sublink.name "Events" %}
-                        <div class="dj-dropzone">
-                          {% dropzone "sub-events" scope="site" %}
-                        </div>
-                        {% endifequal %}
-                        {% ifequal sublink.name "Courses" %}
-                        <ul>
-                          <li>
-                            <a href="{{sublink.url}}">{{ sublink.name }}</a>
-                            {%comment%}
-                            This, for now, is also not happening. It might be best to make all of these widgets.
-                            <ul class="sub-courses">
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A1&categoryId=4">Category Name</a></li>
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A2&categoryId=4">Category Name</a></li>
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A3&categoryId=4">Category Name</a></li>
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A4&categoryId=4">Category Name</a></li>
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A5&categoryId=4">Category Name</a></li>
-                              <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A6&categoryId=4">Category Name</a></li>
-                            </ul>
-                            {%endcomment%}
-                            <p>DaniJohnson.com has a diverse offering of unique, targeted products designed to help you improve your life today. If you're ready for radical transformation, this is your start.</p>
-                          </li>
-                        </ul>
-                        {% endifequal %}
-                        {% ifequal sublink.name "Bundles" %}
-                        <ul>
-                          <li>
-                            <a href="{{ sublink.url }}">{{ sublink.name }}</a>
-                            <p>Want the most bang for your buck? Get it here with one of our powerfully strategic product bundles.</p>
-                          </li>
-                        </ul>
-                        {% endifequal %}
-                      </div>
-                    </div>
-                    <div class="master-nav">
-                    {% block promoted-ad %}
-                      {% include "modules/site-nav/promoted-ad" %}
-                    {% endblock %}
-                    {% block featured-links %}
-                      {% include "modules/site-nav/featured-links" %}
-                    {% endblock %}
-                    </div>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-              </li>
-            {% endif %}
-            {% endfor %}
-          {% endifequal %}
-          {% endfor %}
-        {% endpartial_cache %}
-        {% require_script "modules/contextify" %}
-      </ul>
-    </nav>
+  <nav class="main-nav">
+    <ul data-mz-contextify='.dj-sitenav-link[href="{{ navigation.currentNode.url }}"]'
+        data-mz-contextify-attr='class'
+        data-mz-contextify-val='active'>
+    {% partial_cache %}
+    {% for link in navigation.tree %}{% ifequal link.name "Types" %}
+      {% for sublink in link.items %}
+      {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
+      <li>
+        {% ifequal sublink.name "Events" %}
+        <a class="dj-sitenav-link" href="http://www.danijohnson.com/see">
+        {% else %}
+        <a class="dj-sitenav-link" href="{{sublink.url}}">
+        {% endifequal %}
+          <i class="icon-{{ sublink.name|lower }}"></i>
+          <h2>{{ sublink.name }}</h2>
+          <h6>
+            {% ifequal sublink.name "Events" %}
+              {{ themeSettings.navEventsFlavorText }}
+            {% endifequal %}
+            {% ifequal sublink.name "Books" %}
+              {{ themeSettings.navBooksFlavorText }}
+            {% endifequal %}
+            {% ifequal sublink.name "Courses" %}
+              {{ themeSettings.navCoursesFlavorText }}
+            {% endifequal %}
+            {% ifequal sublink.name "Bundles" %}
+              {{ themeSettings.navBundlesFlavorText }}
+            {% endifequal %}
+          </h6>
+        </a>
+        <div class="sub-nav">
+          <div class="dj-container">
+            <div class="nav-bg orange-dash"></div>
+              {% ifequal sublink.name "Books" %}
+              <div class="dj-dropzone">
+                {% dropzone "sub-books" scope="site" %}
+              </div>
+              {% endifequal %}
+              {% ifequal sublink.name "Events" %}
+              <div class="dj-dropzone">
+                {% dropzone "sub-events" scope="site" %}
+              </div>
+              {% endifequal %}
+              {% ifequal sublink.name "Courses" %}
+              <div class="dj-dropzone">
+                {% dropzone "sub-courses" scope="site" %}
+              </div>
+              {% endifequal %}
+              {% ifequal sublink.name "Bundles" %}
+              <div class="dj-dropzone">
+                {% dropzone "sub-bundles" scope="site" %}
+              </div>
+              {% endifequal %}
+            <div class="clear"></div>
+          </div>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+    {% endifequal %}{% endfor %}
+    {% endpartial_cache %}
+    {% require_script "modules/contextify" %}
+    </ul>
+  </nav>
   <div class="clear"></div>
 </div>
 </div>

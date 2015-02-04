@@ -1,0 +1,82 @@
+<div class="in-section">
+  <h5>{{ labels.inThisSection }}</h5>
+  <div class="menu">
+    <!-- {%comment%} Events Currently do not reside on MOZU. Scrub this section until further notice. MANUAL LINKING TO EVENTS.
+    <ul class="sub-events">
+      <li>
+        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts as_parameter %}
+        <ul class="fsts-events">
+          <li>
+            {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts-hbew as_parameter %}
+          </li>
+          <li>
+            {% include_products "modules/product/eventnav-singleday" with productCodes=model.config.prod-fsts-sel as_parameter %}
+          </li>
+        </ul>
+      </li>
+      <li>
+        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-dynasty as_parameter %}
+        <p>Only for FIRST STEPS Grads!</p>
+      </li>
+    </ul>
+    {%endcomment%} -->
+    <ul class="sub-events">
+      <li>
+        <a href="http://{{model.config.fstsUrl}}">{{ model.config.fsts }}</a>
+        <p class="event-quickinfo">{{ model.config.fstsSubtext }}</p>
+        <ul class="fsts-events">
+          <li>
+            <a href="http://{{model.config.hbewUrl}}">{{ model.config.hbew }}</a>
+            <p class="event-quickinfo">{{ model.config.hbewSubtext }}</p>
+          </li>
+          <li>
+            <a href="http://{{model.config.selUrl}}">{{ model.config.sel }}</a>
+            <p class="event-quickinfo">{{ model.config.selSubtext }}</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="http://{{model.config.dynastyUrl}}">{{ model.config.dynasty }}</a>
+        <p class="event-quickinfo">{{ model.config.dynastySubtext }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="master-nav">
+  <div class="sitenav-promotion">
+    {% if not user.isAnonymous or themeSettings.megaNavPromoForErrbody == true %}
+      {% if model.config.promoHTML %}
+        {{ model.config.promoHTML|safe }}
+      {% else %}
+        <div class="featured-ad">
+          <a href="{{ model.config.promoUrl }}"><img src="{{ model.config.promoImage }}" /></a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="sign-in-cta">
+        <a href="/user/login" data-mz-action="login" data-placement="bottom">{{ labels.signIn1 }}</a>
+        <p>{{ labels.signIn2 }}</p>
+      </div>
+    {% endif %}
+  </div>
+  <div class="featured-column">
+    <h5>{{ labels.featuredLinks }}</h5>
+    <div class="menu featured-links">
+      <ul>
+        <li class="">
+          <a href="{{ model.config.featureUrl1 }}">{{ model.config.featureLabel1 }}</a>
+        </li>
+        <li class="">
+          <a href="{{ model.config.featureUrl2 }}">{{ model.config.featureLabel2 }}</a>
+        </li>
+        <li class="">
+          <a href="{{ model.config.featureUrl3 }}">{{ model.config.featureLabel3 }}</a>
+        </li>
+      </ul>
+    </div>
+    <h5>{{ labels.clientSupport }}</h5>
+    {% block customersupport-mega %}
+      {% include "modules/common/customer-support" %}
+    {% endblock customersupport-mega %}
+  </div>
+</div>

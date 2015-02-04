@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-66-gb89e4d8"
+    "version": "rc7-67-g5d4efc7"
   },
   "settings": {
     "allowWishlist": false,
@@ -14,8 +14,10 @@
     "showBreadcrumbs": false,
     "maxTopLevelNavItems": 4,
     "megaNavPromoForErrbody": true,
-    "megaNavPromoImage": "/resources/images/nav-promo.jpg",
-    "megaNavPromoLink": "/insider-membership/p/insider_membership",
+    "navEventsFlavorText": "Get Tickets",
+    "navBooksFlavorText": "Best Sellers",
+    "navCoursesFlavorText": "DVDs and More",
+    "navBundlesFlavorText": "Great Deals",
     "defaultPageSize": 50,
     "listProductCode": false,
     "listProductThumbSize": 250,
@@ -78,10 +80,106 @@
   ],
   "widgets": [
     {
-      "id": "nav-sub-events",
-      "displayName": "Mega-Menu Events SubNav",
-      "displayTemplate": "misc/nav-sub-events",
-      "icon": "/resources/admin/widgets/nav-sub-events.png",
+      "id": "subnav",
+      "displayName": "Mega Menu Sub Nav",
+      "displayTemplate": "misc/subnav",
+      "icon": "/resources/admin/widgets/subnav.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "\"In This Section\" Link URL",
+          "name": "sublinkUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "\"In This Section\" Link Label",
+          "name": "sublinkLabel",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "\"In This Section\" Link Description",
+          "name": "sublinkDescription",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promo Ad - Image URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Image size must be 245px x 220px</span>",
+          "name": "promoImage",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promo Ad - Link URL",
+          "name": "promoUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "fieldLabel": "Promo Ad - HTML<br><span style=\"font-size:.8em; color:#9a9a9a;\">Instead of an image, you can alternatively insert HTML. If anything is in this field, it will override the Image and URL entires above.</span>",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "promoHTML",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 1 - URL",
+          "name": "featureUrl1",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 1 - Label",
+          "name": "featureLabel1",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 2 - URL",
+          "name": "featureUrl2",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 2 - Label",
+          "name": "featureLabel2",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 3 - URL",
+          "name": "featureUrl3",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 3 - Label",
+          "name": "featureLabel3",
+          "xtype": "mz-input-text"
+        }
+      ],
+      "defaultConfig": {
+        "promoImage": "/resources/images/nav-promo.jpg",
+        "promoUrl": "/insider-membership/p/insider_membership",
+        "featureUrl1": "/war-on-debt/p/136841",
+        "featureLabel1": "War on Debt",
+        "featureUrl2": "/gems-mastery/p/138938",
+        "featureLabel2": "GEMS Mastery",
+        "featureUrl3": "/magnetic-influence/p/138937",
+        "featureLabel3": "Magnetic Influence"
+      }
+    },
+    {
+      "id": "subnav-events",
+      "displayName": "Events Sub Nav",
+      "displayTemplate": "misc/subnav-events",
+      "icon": "/resources/admin/widgets/subnav-events.png",
       "validPageTypes": [
         "*"
       ],
@@ -90,73 +188,130 @@
           "anchor": "100%",
           "fieldLabel": "First Steps to Success",
           "name": "fsts",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "FSTS Subtext",
           "name": "fstsSubtext",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "FSTS Url",
+          "fieldLabel": "FSTS URL",
           "name": "fstsUrl",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Home Business Workshop",
           "name": "hbew",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "HBEW Subtext",
           "name": "hbewSubtext",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "HBEW Url",
+          "fieldLabel": "HBEW URL",
           "name": "hbewUrl",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Spiritual Equipping",
           "name": "sel",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "SE Subtext",
+          "fieldLabel": "SEL Subtext",
           "name": "selSubtext",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "SEL Url",
+          "fieldLabel": "SEL URL",
           "name": "selUrl",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Creating a Dynasty",
           "name": "dynasty",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Dynasty Subtext",
           "name": "dynastySubtext",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "Dynasty Url",
+          "fieldLabel": "Dynasty URL",
           "name": "dynastyUrl",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promo Ad - Image URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Image size must be 245px x 220px</span>",
+          "name": "promoImage",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Promo Ad - Link URL",
+          "name": "promoUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "fieldLabel": "Promo Ad - HTML<br><span style=\"font-size:.8em; color:#9a9a9a;\">Instead of an image, you can alternatively insert HTML. If anything is in this field, it will override the Image and URL entires above.</span>",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
+          "name": "promoHTML",
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 1 - URL",
+          "name": "featureUrl1",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 1 - Label",
+          "name": "featureLabel1",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 2 - URL",
+          "name": "featureUrl2",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 2 - Label",
+          "name": "featureLabel2",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Link 3 - URL",
+          "name": "featureUrl3",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Featured Link 3 - Label",
+          "name": "featureLabel3",
+          "xtype": "mz-input-text"
         }
       ],
       "defaultConfig": {
@@ -167,12 +322,20 @@
         "fstsSubtext": "City, ST - Month DD - DD, Year",
         "hbewSubtext": "3 Day Seminar - Month DD - DD",
         "selSubtext": "FREE EVENT! 7:30pm, Month DD",
-        "dynastySubtext": "City, ST - Month DD - DD, Year. Only for First Steps Grads"
+        "dynastySubtext": "City, ST - Month DD - DD, Year. Only for First Steps Grads",
+        "promoImage": "/resources/images/nav-promo.jpg",
+        "promoUrl": "/insider-membership/p/insider_membership",
+        "featureUrl1": "/war-on-debt/p/136841",
+        "featureLabel1": "War on Debt",
+        "featureUrl2": "/gems-mastery/p/138938",
+        "featureLabel2": "GEMS Mastery",
+        "featureUrl3": "/magnetic-influence/p/138937",
+        "featureLabel3": "Magnetic Influence"
       }
     },
     {
-      "id": "featured_product_carousel",
-      "displayName": "Featured Product Carousel",
+      "id": "featprod-carousel",
+      "displayName": "Feature Product Carousel",
       "displayTemplate": "catalog/feature-product-carousel",
       "icon": "/resources/admin/widgets/fpc.png",
       "validPageTypes": [
@@ -183,73 +346,73 @@
           "anchor": "100%",
           "fieldLabel": "Featured Product One",
           "name": "featProd1",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Background URL - Product One",
           "name": "prodBg1",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Button Text - Product One",
           "name": "buttonText1",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Featured Product Two",
           "name": "featProd2",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Background URL - Product Two",
           "name": "prodBg2",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Button Text - Product Two",
           "name": "buttonText2",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Featured Product Three",
           "name": "featProd3",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Background URL - Product Three",
           "name": "prodBg3",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Button Text - Product Three",
           "name": "buttonText3",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Featured Product Four",
           "name": "featProd4",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Background URL - Product Four",
           "name": "prodBg4",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Button Text - Product Four",
           "name": "buttonText4",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         }
       ],
       "defaultConfig": {
@@ -261,6 +424,32 @@
         "buttonText2": "Find Out More",
         "buttonText3": "Find Out More",
         "buttonText4": "Find Out More"
+      }
+    },
+    {
+      "id": "feature_product_header",
+      "displayName": "Featured Product Header",
+      "displayTemplate": "catalog/feature-product-header",
+      "icon": "/resources/admin/widgets/fp-header.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Featured Product",
+          "name": "featProd",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Background URL",
+          "name": "prodBg",
+          "xtype": "mz-input-text"
+        }
+      ],
+      "defaultConfig": {
+        "prodBg": "/resources/images/featProd-bg.jpg"
       }
     },
     {
@@ -276,13 +465,16 @@
           "anchor": "100%",
           "fieldLabel": "Promotion URL",
           "name": "promoURL",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
-          "anchor": "100%",
-          "fieldLabel": "Promotion Copy",
+          "fieldLabel": "Promo Copy - HTML<br><span style=\"font-size:.8em; color:#9a9a9a;\">Use \"em\" tags to highlight specific text.</span>",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 400,
           "name": "promoCopy",
-          "xtype": "htmleditor"
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
         }
       ],
       "defaultConfig": {}
@@ -300,37 +492,37 @@
           "anchor": "100%",
           "fieldLabel": "Background Image URL",
           "name": "bgImageURL",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Headline",
           "name": "headline",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Copy",
+          "fieldLabel": "Copy<br><span style=\"font-size:.8em; color:#9a9a9a;\">This field does NOT accept HTML.</span>",
           "name": "copy",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "100%",
-          "fieldLabel": "Product to Link (if entering a Direct URL, leave empty)",
-          "name": "productCode",
-          "xtype": "taco-productfield"
-        },
-        {
-          "anchor": "100%",
-          "fieldLabel": "Direct Button URL",
-          "name": "buttonURL",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Button Text",
           "name": "buttonText",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Button Link - Product<br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose a Product to link to. Leave this field empty if entering a Custom URL in the field below. This field overrides the Custom URL.</span>",
+          "name": "productCode",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Button Link - Custom URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Use this field if you want to link to something other than a product, like a single page or promotion.</span>",
+          "name": "buttonURL",
+          "xtype": "mz-input-text"
         }
       ],
       "defaultConfig": {
@@ -354,13 +546,13 @@
           "anchor": "100%",
           "fieldLabel": "Headline",
           "name": "headline",
-          "xtype": "textfield"
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Select Category",
           "name": "mainCategory",
-          "xtype": "categorycombobox"
+          "xtype": "mz-input-navnode"
         },
         {
           "anchor": "100%",
@@ -388,7 +580,7 @@
           "anchor": "100%",
           "fieldLabel": "Select Category",
           "name": "mainCategory",
-          "xtype": "categorycombobox"
+          "xtype": "mz-input-navnode"
         },
         {
           "anchor": "100%",
@@ -403,39 +595,6 @@
       }
     },
     {
-      "id": "mega-promo",
-      "displayName": "Mega Menu Promo",
-      "displayTemplate": "misc/mega-promo",
-      "icon": "/resources/admin/widgets/megapromo.png",
-      "validPageTypes": [
-        "*"
-      ],
-      "editViewFields": [
-        {
-          "anchor": "100%",
-          "fieldLabel": "Promotion URL",
-          "name": "promoURL",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "100%",
-          "fieldLabel": "Image URL (image must be 245px x 285px)",
-          "name": "imageURL",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "100%",
-          "fieldLabel": "OR Ad HTML (please in-line all necessary css)",
-          "name": "promoHTML",
-          "xtype": "htmleditor"
-        }
-      ],
-      "defaultConfig": {
-        "imageURL": "/resources/images/nav-promo.jpg",
-        "promoURL": "http://www.danijohnson.com/fsts"
-      }
-    },
-    {
       "id": "dynamic_content",
       "displayName": "Dynamic Content",
       "displayTemplate": "catalog/dynamic-content",
@@ -446,7 +605,7 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Choose Layout (currently, two-column doesn't work, so, you know... don't choose it.",
+          "fieldLabel": "Choose Layout<br><span style=\"font-size:.8em; color:#9a9a9a;\">Currently, Two-Column doesn't work, so please do not use it.</span>",
           "name": "twoColumn",
           "store": [
             [
@@ -464,7 +623,7 @@
           "anchor": "100%",
           "fieldLabel": "Best Sellers",
           "name": "bestSellers",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         }
       ],
       "defaultConfig": {
@@ -482,12 +641,12 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Product",
+          "fieldLabel": "Product<br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose a product to display its Main Image.</span>",
           "name": "product",
           "xtype": "mz-input-productmulti"
         },
         {
-          "fieldLabel": "Summary Copy (HTML)",
+          "fieldLabel": "Summary Copy - HTML",
           "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
           "height": 400,
           "name": "summary",
@@ -497,7 +656,7 @@
         }
       ],
       "defaultConfig": {
-        "summary": "<p>Insert Summary Copy Here.</p>"
+        "summary": "<p>Insert Summary Copy Here. Remember to keep the paragraph tags.</p>"
       }
     },
     {
@@ -511,13 +670,13 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "Segment ID",
+          "fieldLabel": "Segment ID<br><span style=\"font-size:.8em; color:#9a9a9a;\">This Segment ID will be used to identify which customers will be permitted to view this page's contents.</span>",
           "name": "segmentId",
           "xtype": "mz-input-number"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Video Section",
+          "fieldLabel": "Video Section<br><span style=\"font-size:.8em; color:#9a9a9a;\">Does this page contain Video content?</span>",
           "name": "video",
           "store": [
             [
@@ -542,7 +701,7 @@
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Audio Section",
+          "fieldLabel": "Audio Section<br><span style=\"font-size:.8em; color:#9a9a9a;\">Does this page contain Audio content?</span>",
           "name": "audio",
           "store": [
             [
@@ -567,7 +726,7 @@
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Downloads Section",
+          "fieldLabel": "Downloads Section<br><span style=\"font-size:.8em; color:#9a9a9a;\">Does this page contain other Downloadable content?</span>",
           "name": "downloads",
           "store": [
             [
@@ -592,32 +751,6 @@
         }
       ],
       "defaultConfig": {}
-    },
-    {
-      "id": "feature_product_header",
-      "displayName": "Featured Product Header",
-      "displayTemplate": "catalog/feature-product-header",
-      "icon": "/resources/admin/widgets/fp-header.png",
-      "validPageTypes": [
-        "*"
-      ],
-      "editViewFields": [
-        {
-          "anchor": "100%",
-          "fieldLabel": "Featured Product",
-          "name": "featProd",
-          "xtype": "taco-productfield"
-        },
-        {
-          "anchor": "100%",
-          "fieldLabel": "Background URL",
-          "name": "prodBg",
-          "xtype": "textfield"
-        }
-      ],
-      "defaultConfig": {
-        "prodBg": "/resources/images/featProd-bg.jpg"
-      }
     },
     {
       "id": "reviews_manual",
@@ -650,57 +783,57 @@
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Product Being Reviewed",
+          "fieldLabel": "Product Being Reviewed (1)",
           "name": "prod1",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
-          "anchor": "50%",
-          "fieldLabel": "Name",
-          "name": "name1",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "50%",
-          "fieldLabel": "Review",
+          "anchor": "100%",
+          "fieldLabel": "Review (1)",
           "name": "review1",
           "xtype": "htmleditor"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Name (1)",
+          "name": "name1",
+          "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
           "fieldLabel": "Product Being Reviewed (2)",
           "name": "prod2",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
         },
         {
-          "anchor": "50%",
-          "fieldLabel": "Name (2)",
-          "name": "name2",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "50%",
+          "anchor": "100%",
           "fieldLabel": "Review (2)",
           "name": "review2",
           "xtype": "htmleditor"
         },
         {
+          "anchor": "50%",
+          "fieldLabel": "Name (2)",
+          "name": "name2",
+          "xtype": "mz-input-text"
+        },
+        {
           "anchor": "100%",
           "fieldLabel": "Product Being Reviewed (3)",
           "name": "prod3",
-          "xtype": "taco-productfield"
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Review (3)",
+          "name": "review3",
+          "xtype": "htmleditor"
         },
         {
           "anchor": "50%",
           "fieldLabel": "Name (3)",
           "name": "name3",
-          "xtype": "textfield"
-        },
-        {
-          "anchor": "50%",
-          "fieldLabel": "Review (3)",
-          "name": "review3",
-          "xtype": "htmleditor"
+          "xtype": "mz-input-text"
         }
       ],
       "defaultConfig": {
