@@ -1,5 +1,5 @@
-define(['modules/jquery-mozu'],
-	function ($) {
+define(['modules/jquery-mozu', 'vendor/slick/slick'],
+	function ($, slick) {
 		$(document).ready(function(){
 			$('.best-sellers').slick({
 				accessibility: true,

@@ -1,5 +1,5 @@
-define(['modules/jquery-mozu'],
-	function ($) {
+define(['modules/jquery-mozu', 'vendor/slick/slick'],
+	function ($, slick) {
 		$(document).ready(function(){
 			$('.feature-product-carousel').slick({
 				accessibility: true,

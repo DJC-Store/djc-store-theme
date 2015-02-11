@@ -1,5 +1,15 @@
 {% extends "page" %}
 
+{% block meta-redirect %}
+    {% for property in model.properties %}
+        {% if property.attributeFQN == "tenant~redirect" %} <!-- if the "redirect" attribute exists, invoke the META refresh tag -->
+            {% for v in property.values %}
+                <META http-equiv="refresh" content="0;URL={{v.stringValue}}">
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endblock meta-redirect %}
+
 {% block title-tag-content %}{% firstof pageContext.metaTitle model.content.productName %}  - {% parent %}{% endblock title-tag-content %}
 
 {% block body-tag-classes %} mz-product {% endblock body-tag-classes %}
