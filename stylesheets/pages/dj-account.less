@@ -49,6 +49,9 @@
 				padding-bottom: 5px;
 
 				@media only screen {
+					@media (max-width: 940px) {
+						margin: 4px 10px !important;
+					}
 			        @media (max-width: 450px) {
 			        	margin: 4px 5px !important;
 			        }
@@ -100,6 +103,10 @@
 						width: 25px;
 						height: 25px;
 						background-size: 25px auto;
+
+						&.icon-account-password {
+							background-size: 18px auto !important;
+						}
 					}
 				}
 			}
@@ -115,6 +122,10 @@
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: 20px auto;
+
+			&.icon-account-password {
+				background-size: 14px auto !important;
+			}
 		}
 	}
 	.mz-button-small {
@@ -174,6 +185,10 @@
 				background-position: center center;
 				background-size: 30px;
 				background-color: transparent !important;
+
+				&.icon-account-password {
+					background-size: 20px auto !important;
+				}
 			}
 
 		    @media only screen {
@@ -188,6 +203,10 @@
 		            	background-size: 25px;
 		            	left: 9px;
 		            	top: 4px;
+
+						&.icon-account-password {
+							background-size: 18px auto !important;
+						}
 		            }
 		        }
 		    }

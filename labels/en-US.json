@@ -422,6 +422,10 @@
   "height"         : "Height",
   "productDescription"   : "Description",
   "productReviews"       : "Reviews",
+  "estimatedDelivery"    : "Estimated <span>Delivery</span>",
+  "shipMethodSummaryList": "<dt>USPS Priority</dt><dd>Packages are usually delivered 1 to 2 days after shipping</dd><dt>USPS First Class International</dt><dd>Delivery outside the United States in 1 to 2 weeks</dd>",
+  "digitalContent"       : "Digital <span>Content</span>",
+  "digitalShipInfo"      : "When you purchase digital content, you'll receive access to your product almost instantly. It can be viewed in your Account Page <a href=\"/myaccount\">here</a>, where you can also access, re-download, and manage your previously purchased digital items.",
 
   "localStores"          : "Local Stores",
   "findAtLocalStore"     : "Find it at a Local Store",

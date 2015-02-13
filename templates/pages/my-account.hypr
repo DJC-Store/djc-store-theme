@@ -5,6 +5,11 @@
 {% block body-tag-classes %} mz-myaccount {% endblock body-tag-classes %}
 
 {% block feature-header %}
+
+{% require_script "pages/myaccount" %}
+
+{% preload_json model "customer" %}
+
 <div class="hero">
     <div class="hero-bg"><img src="/resources/images/account-bg.jpg" class="attachment-full"></div>
     <div class="gradient"></div>
@@ -19,10 +24,6 @@
 
 {% block body-content %}
 
-{% require_script "pages/myaccount" %}
-
-{% preload_json model "customer" %}
-
 <div class="mz-l-container"><div class="dj-row">
     <div id="account-panels" class="mz-myaccount-panels mz-l-stack mz-l-stack-large">
 
@@ -33,6 +34,12 @@
         <a id="settings"></a>
         <div class="mz-l-stack-section mz-accountsettings" id="account-settings">
             {% include "modules/my-account/my-account-settings" %}
+            {% include "modules/my-account/my-account-password" %}
+        </div>
+
+        <a id="password"></a>
+        <div class="mz-l-stack-section mz-passwordsection" id="password-section">
+            {% include "modules/my-account/my-account-password" %}
         </div>
 
         {% if siteContext.generalSettings.isWishlistCreationEnabled %}
@@ -77,4 +84,6 @@
     </div>
 </div></div>
 {% endblock body-content %}
+
+
 

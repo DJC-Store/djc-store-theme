@@ -56,7 +56,7 @@
                                 <div class="box-icon-bg quote-bg"><span class="quotes">“</span></div>
                                 <hr>
                                 <div class="dj-dropzone">
-                                    {% dropzone "product-reviews" scope="page" %}
+                                    {% dropzone "product-reviews" scope="template" %}
                                 </div>
                             </div>
                         </div>
@@ -65,17 +65,12 @@
                 <li id="shipping-info" data-content="shipping">
                     <div class="dj-row">
                         <div class="col-6">
-                            <h2>Estimated <span>Delivery</span></h2>
-                            <dl>
-                                <dt>USPS Priority</dt>
-                                <dd>Packages are usually delivered 1 to 2 days after shipping</dd>
-                                <dt>USPS First Class International</dt>
-                                <dd>Delivery outside the United States in 1 to 2 weeks</dd>
-                            </dl>
+                            <h2>{{ labels.estimatedDelivery|safe }}</h2>
+                            <dl>{{ labels.shipMethodSummaryList|safe }}</dl>
                         </div>
                         <div class="col-6">
-                            <h2>Digital <span>Content</span></h2>
-                            <p>When you purchase digital content, you'll receive access to your product almost instantly. It can be viewed in your Account Page <a href="/myaccount">here</a>, where you can also access, re-download, and manage your previously purchased digital items.</p>
+                            <h2>{{ labels.digitalContent|safe }}</h2>
+                            <p>{{ labels.digitalShipInfo|safe }}</p>
                         </div>
                     </div>
                 </li>

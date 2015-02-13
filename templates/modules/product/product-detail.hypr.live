@@ -1,7 +1,10 @@
 <div class="dj-row">
   <div class="col-8 equalize">
 
-    {% include "modules/common/message-bar" %}    
+    {% include "modules/common/message-bar" %}
+    <div class="dj-dropzone">
+      {% dropzone "bv-summary" scope="template" %}
+    </div>
     <h2 class="mz-pagetitle" itemprop="name">{{ model.content.productName }}</h2>
 
     {% if model.content.productShortDescription and themeSettings.showProductDetailShortDesc %}

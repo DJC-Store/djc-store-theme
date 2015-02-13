@@ -75,9 +75,12 @@
     {% endblock head-tag %}
     
     {% block body-tag %}
+    {% if themeSettings.maintenanceMode %}
+        {% include "modules/maintenanceMode" %}
+    {% else %}
 
     {% block open-body-tag %}
-        <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
+    <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
     {% endblock open-body-tag %}
 
        
@@ -134,6 +137,7 @@
         {% visitor_tracking_pixel %}
 
     </body>
+    {% endif %}
     {% endblock body-tag %}
 
 </html>

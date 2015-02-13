@@ -5,6 +5,11 @@
                 <i class="icon-account-settings white"></i><span class="long">{{ labels.accountSettings }}</span><span class="short">{{ labels.accountSettingsShort }}</span>
             </a>
         </li>
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" href="#password">
+                <i class="icon-account-password white"></i><span class="long">{{ labels.password }}</span><span class="short">{{ labels.password }}</span>
+            </a>
+        </li>
         {% if themeSettings.allowWishlist %}
         <li class="mz-scrollnav-item">
             <a class="mz-scrollnav-link" href="#wishlist">

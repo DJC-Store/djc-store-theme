@@ -1,0 +1,58 @@
+<div class="in-section">
+  <h5>{{ labels.inThisSection }}</h5>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="{{ model.config.sublinkUrl }}">{{ model.config.sublinkLabel }}</a>
+        <!-- {%comment%}This, for now, is also not happening. It might be best to make all of these widgets.
+        <ul class="sub-courses">
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A1&categoryId=4">Category Name</a></li>
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A2&categoryId=4">Category Name</a></li>
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A3&categoryId=4">Category Name</a></li>
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A4&categoryId=4">Category Name</a></li>
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A5&categoryId=4">Category Name</a></li>
+          <li><a href="{{sublink.url}}?facetValueFilter=tenant~categories%3A6&categoryId=4">Category Name</a></li>
+        </ul>{%endcomment%} -->
+        <p>{{ model.config.sublinkDescription }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="master-nav">
+  <div class="sitenav-promotion">
+    {% if not user.isAnonymous or themeSettings.megaNavPromoForErrbody == true %}
+      {% if model.config.promoHTML %}
+        {{ model.config.promoHTML|safe }}
+      {% else %}
+        <div class="featured-ad">
+          <a href="{{ model.config.promoUrl }}"><img src="{{ model.config.promoImage }}" /></a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="sign-in-cta">
+        <a href="/user/login" data-mz-action="login" data-placement="bottom">{{ labels.signIn1 }}</a>
+        <p>{{ labels.signIn2 }}</p>
+      </div>
+    {% endif %}
+  </div>
+  <div class="featured-column">
+    <h5>{{ labels.featuredLinks }}</h5>
+    <div class="menu featured-links">
+      <ul>
+        <li class="">
+          <a href="{{ model.config.featureUrl1 }}">{{ model.config.featureLabel1 }}</a>
+        </li>
+        <li class="">
+          <a href="{{ model.config.featureUrl2 }}">{{ model.config.featureLabel2 }}</a>
+        </li>
+        <li class="">
+          <a href="{{ model.config.featureUrl3 }}">{{ model.config.featureLabel3 }}</a>
+        </li>
+      </ul>
+    </div>
+    <h5>{{ labels.clientSupport }}</h5>
+    {% block customersupport-mega %}
+      {% include "modules/common/customer-support" %}
+    {% endblock customersupport-mega %}
+  </div>
+</div>

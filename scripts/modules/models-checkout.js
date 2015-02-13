@@ -240,11 +240,11 @@
             refreshShippingMethods: function (methods) {
                 if (!this.digitalOnly() && this.getOrder()) {
                     methods = _.reject(methods, function(method) {
-                        return method.shippingMethodName.match(/free/gi);
+                        return method.shippingMethodName.match(/digital/gi);
                     });
                 } else {
                     methods = _.filter(methods, function(method) {
-                        return method.shippingMethodName.match(/free/gi);
+                        return method.shippingMethodName.match(/digital/gi);
                     });
                 }
                 _.defer(this.set({
@@ -271,7 +271,7 @@
                 if(this.getOrder()){
                     return _.every(this.getOrder().get('items'), function(item) {
                         return _.some(item.product.properties, function(prop) {
-                            return prop.attributeFQN === 'tenant~digital-product' && prop.values[0].value === true;
+                            return prop.attributeFQN === 'Tenant~digital-product' && prop.values[0].value === true;
                         });
                     });
                 } else { return false; }
@@ -884,7 +884,7 @@
                 return _.every(this.get('items'), function(item) {
                     return _.some(item.product.properties, function(prop) {
                         console.log(prop);
-                        return prop.attributeFQN === 'tenant~digital-product' && prop.values[0].value === true;
+                        return prop.attributeFQN === 'Tenant~digital-product' && prop.values[0].value === true;
                     });
                 });
             },

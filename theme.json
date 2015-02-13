@@ -6,9 +6,10 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-68-g1fde8f4"
+    "version": "rc7-69-gdb80298"
   },
   "settings": {
+    "maintenanceMode": false,
     "allowWishlist": false,
     "showReturns": false,
     "showBreadcrumbs": false,
