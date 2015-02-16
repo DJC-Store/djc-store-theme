@@ -45,6 +45,14 @@
 			height: 500px;
 		}
 
+		&.banner-ad {
+			a {
+				display: block;
+				width: 100%;
+				height: inherit;
+			}
+		}
+
 		@media only screen {
 			@media (max-width: 1195px) {
 				height: 400px;
@@ -275,6 +283,15 @@
 			}
 			h4 {
 				color: rgba(0,0,0,0.2);
+			}
+		}
+
+		&.banner-ad {
+			span {
+				color: @djcOrange;
+				font-weight: 600;
+				font-style: italic;
+				font-size:1.2em;
 			}
 		}
 	}

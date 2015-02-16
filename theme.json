@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-69-gdb80298"
+    "version": "rc7-70-gfe9bb10"
   },
   "settings": {
     "maintenanceMode": false,
@@ -345,6 +345,58 @@
       "editViewFields": [
         {
           "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad / Promo (optional)</span><br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose \"Yes,\" then fill out the fields in RED in order to display a Hero Banner Ad. This ad will take the place of Featured Prodcut One.</span>",
+          "name": "bannerAd",
+          "store": [
+            [
+              "true",
+              "Yes"
+            ],
+            [
+              "false",
+              "No"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Title<br><span style=\"font-size:.8em; color:#9a9a9a;\">This Title will appear in place of the Product Name in the Carousel Thumbnail.</span>",
+          "name": "adTitle",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Thumbnail Image<br><span style=\"font-size:.8em; color:#9a9a9a;\">If you want a Thumbnail image to appear in the Carousel Thumbnail, insert the image URL here.</span>",
+          "name": "bannerThumbImageUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Blurb<br><span style=\"font-size:.8em; color:#9a9a9a;\">A VERY Short summary appearing in place of an image the in the Carousel Thumbnail. A Thumbnail Image URL will override this field.</span>",
+          "name": "adBlurb",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Button<br><span style=\"font-size:.8em; color:#9a9a9a;\">Button Text in the Carousel Thumbnail.</span>",
+          "name": "adButtonText",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Link URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Destination URL</span>",
+          "name": "adLinkUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Banner Image URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Image must be 1200px x 500px. The Carousel can shrink to 400px high, so make sure no important text is in the lower 100px.</span>",
+          "name": "adImageUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
           "fieldLabel": "Featured Product One",
           "name": "featProd1",
           "xtype": "mz-input-productmulti"
@@ -417,6 +469,7 @@
         }
       ],
       "defaultConfig": {
+        "bannerAd": "false",
         "prodBg1": "/resources/images/featProd-bg.jpg",
         "prodBg2": "/resources/images/featProd-bg.jpg",
         "prodBg3": "/resources/images/featProd-bg.jpg",

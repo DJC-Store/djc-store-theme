@@ -3,9 +3,15 @@
 {% require_script "widgets/feature-product-carousel" %}
 
 <div class="feature-product-carousel">
+	{% if model.config.bannerAd == "true" %}
+	<div class="fpc-slide banner-ad" style="background-image: url( {{model.config.adImageUrl}} );">
+		<a href="{{model.config.adLinkUrl}}"></a>
+	</div>
+	{% else %}
 	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg1 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd1 as_parameter %}
 	</div>
+	{% endif %}
 	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg2 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd2 as_parameter %}
 	</div>
@@ -18,11 +24,26 @@
 </div>
 <div class="dj-container">
 	<ul class="feature-product-carousel-thumbnails">
+		{% if model.config.bannerAd == "true" %}
+		<li class="fpc_thumb banner-ad">
+			<a href="{{ model.config.adLinkUrl }}"><h2>{{ model.config.adTitle }}</h2></a>
+				{% if model.config.bannerThumbImageUrl %}
+				<img src="{{ model.config.bannerThumbImageUrl }}" />
+				{% else %}
+				<span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">
+					{{ model.config.adBlurb }}
+				</span></span>
+				{% endif %}
+			</a>
+			<a class="btn orange" href="{{ model.config.adLinkUrl }}">{{ model.config.adButtonText }}</a>
+		</li>
+		{% else %}
 		<li class="fpc_thumb">
 			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd1 as_parameter %}
 			{% include_products "modules/product/product-url" with productCodes=model.config.featProd1 as_parameter %}
 			{{ model.config.buttonText1 }}</a>
 		</li>
+		{% endif %}
 		<li class="fpc_thumb">
 			{% include_products "modules/product/carousel-thumb-part1" with productCodes=model.config.featProd2 as_parameter %}
 			{% include_products "modules/product/product-url" with productCodes=model.config.featProd2 as_parameter %}
