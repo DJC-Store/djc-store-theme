@@ -47,7 +47,6 @@
         <meta name="keywords" content="{{ PageContext.MetaKeywords }}">
         <meta name="correlationId" content="{{ pageContext.correlationId }}">
         {% endblock meta-tags %}
-        {% block meta-redirect %}{% endblock meta-redirect %}
 
         <link rel="icon" type="image/png" href="/resources/images/dj-favicon.png">
 
@@ -82,6 +81,8 @@
     {% block open-body-tag %}
     <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
     {% endblock open-body-tag %}
+
+    {% include "modules/google-tag-script" %}
 
        
         <div id="page-wrapper" class="mz-l-pagewrapper dj-bg">

@@ -1,31 +1,25 @@
 ﻿<div class="mz-productlisting mz-productlist-tiled dj-event-list" data-mz-product="{{ model.productCode }}">
-    <div class="see-block dj-row" style="background:url({% for property in model.properties %}
-                                                        {% ifequal property.attributeDetail.name "Background Image" %}
-                                                            {% for attribute in property.values %}
-                                                                {{ attribute.stringValue }}
-                                                            {% endfor %}
-                                                        {% endifequal %}
-                                                        {% endfor %});">
-        <div class="col-6 first">
+    <div class="see-block dj-row" style="background-image: {% for property in model.properties %}{% ifequal property.attributeDetail.name "Background Image" %}{% for attribute in property.values %} url({{ attribute.stringValue }}); {% endfor %}{% endifequal %}{% endfor %}">
+        <div class="col-8 first">
             <h2 class="block-heading">{{ model.content.productName }}</h2>
             <h3 class="dark"><span>Next Event: </span>
             {% for property in model.properties %}
+                {% ifequal property.attributeDetail.name "Event Location" %}
+                    {% for attribute in property.values %}
+                        {{ attribute.stringValue }} - 
+                    {% endfor %}
+                {% endifequal %}
                 {% ifequal property.attributeDetail.name "Event Start Date" %}
                     {% for attribute in property.values %}
                         {{ attribute.value|date:"M d, Y" }}
                     {% endfor %}
                 {% endifequal %}
-                {% ifequal property.attributeDetail.name "Event Location" %}
-                    {% for attribute in property.values %}
-                        in {{ attribute.stringValue }}
-                    {% endfor %}
-                {% endifequal %}
             {% endfor %}</h3>
-            <p>{{ model.content.productFullDescription }}</p>
+            <p>{{ model.content.productFullDescription|safe }}</p>
             <a href="{{ model.url }}" class="btn orange">{{ labels.productCTA }}</a>
         </div>
         {% if themeSettings.listEventImage %}
-        <div class="col-6">
+        <div class="col-4">
             <div class="mz-productlisting-image">
                 {% block product-image %}
                 <a href="{{model.url}}">

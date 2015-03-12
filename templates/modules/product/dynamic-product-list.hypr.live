@@ -10,5 +10,8 @@
 			</div>
 		</a>
 		<a class="product-name" href="{{prod.url}}">{{prod.content.productName}}</a>
+		<div id="BVRRInlineRating-{{prod.productCode}}" class="bvr-inline-rating" data-mz-product-code="{{ prod.productCode }}" data-mz-product-url="{{ prod.url }}"></div>
 	</div>
 {% endfor %}
+
+{% require_script "widgets/bazaarvoice" %}

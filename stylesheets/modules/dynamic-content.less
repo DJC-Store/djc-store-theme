@@ -24,6 +24,16 @@
 	&.dark {
 		background-color: @djcDark;
 	}
+	&.blue {
+		background-color: @djcDarkBlue;
+
+		h2 {
+			color: @djcBlue !important;
+			span {
+				color: white !important;
+			}
+		}
+	}
 
 	.first {
 		border-right: 1px solid rgba(255,255,255,0.65);
@@ -34,6 +44,7 @@
 		text-align: center;
 		margin-left: 0px;
 		margin-right: 0px;
+		margin-bottom: 0px !important;
 
 		@media only screen {
 	        @media (max-width: 786px) {
@@ -98,5 +109,9 @@
 		        }
 			}
 		}
+	}
+	.bvr-inline-rating {
+		width: 78px;
+		margin: 0 auto;
 	}
 }

@@ -1,8 +1,23 @@
 ﻿<div class="mz-productlist mz-productlist-tiled dj-event-list">
     {% if model.items %}
-    <ul class="mz-productlist-list mz-l-tiles dj-tiles">
+    <ul class="mz-productlist-list mz-l-tiles dj-tiles event-bundles">
         {% for prod in model.items %}
+        {% if prod.productUsage == "Bundle" %}
             <li class="dj-event-item" data-mz-product="{{ prod.productCode }}">{% include "modules/product/event-listing" with model=prod %}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <div class="dj-row">
+        <div class="dj-dropzone">
+            {% dropzone "event-copy" scope="page" %}
+        </div>
+    </div>
+    <h1>{{ labels.alacarte }}</h1>
+    <ul class="mz-productlist-list mz-l-tiles dj-tiles event-standalone">
+        {% for prod in model.items %}
+        {% if prod.productUsage == "Standard" %}
+            <li class="dj-event-item" data-mz-product="{{ prod.productCode }}">{% include "modules/product/event-listing" with model=prod %}</li>
+        {% endif %}
         {% endfor %}
     </ul>
     {% endif %}

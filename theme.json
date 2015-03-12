@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-70-gfe9bb10"
+    "version": "rc7-71-gc278495"
   },
   "settings": {
     "maintenanceMode": false,
@@ -336,7 +336,7 @@
     },
     {
       "id": "featprod-carousel",
-      "displayName": "Feature Product Carousel",
+      "displayName": "Featured Product Carousel",
       "displayTemplate": "catalog/feature-product-carousel",
       "icon": "/resources/admin/widgets/fpc.png",
       "validPageTypes": [
@@ -491,6 +491,34 @@
       "editViewFields": [
         {
           "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad / Promo (optional)</span><br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose \"Yes,\" then fill out the fields in RED in order to display a Hero Banner Ad. This ad will take the place of a Featured Product.</span>",
+          "name": "bannerAd",
+          "store": [
+            [
+              "true",
+              "Yes"
+            ],
+            [
+              "false",
+              "No"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Link URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Destination URL</span>",
+          "name": "adLinkUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Hero Banner Ad</span> - Banner Image URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Image must be 1200px x 500px. The Carousel can shrink to 400px high, so make sure no important text is in the lower 100px.</span>",
+          "name": "adImageUrl",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
           "fieldLabel": "Featured Product",
           "name": "featProd",
           "xtype": "mz-input-productmulti"
@@ -503,6 +531,7 @@
         }
       ],
       "defaultConfig": {
+        "bannerAd": "false",
         "prodBg": "/resources/images/featProd-bg.jpg"
       }
     },
@@ -582,9 +611,8 @@
       "defaultConfig": {
         "bgImageURL": "../resources/images/newtodani2.jpg",
         "headline": "New to Dani?",
-        "copy": "This is copy. You could copy this copy, but it's copyrighted. Do you copy?",
-        "buttonURL": "#",
-        "buttonText": "Get the Starter Bundle"
+        "copy": "Grab the Starter Bundle. This 1-2 knockout will get you on track to where you want to be.",
+        "buttonText": "Start Here!"
       }
     },
     {
@@ -808,7 +836,7 @@
     },
     {
       "id": "reviews_manual",
-      "displayName": "Reviews (Manual)",
+      "displayName": "DJC Testimonials",
       "displayTemplate": "misc/reviews",
       "icon": "/resources/admin/widgets/reviews.png",
       "validPageTypes": [
@@ -893,6 +921,162 @@
       "defaultConfig": {
         "reviewCount": "3"
       }
+    },
+    {
+      "id": "bv-conversations-ratings",
+      "displayName": "BazaarVoice Reviews",
+      "displayTemplate": "BVConversations/bv-conversations-ratings",
+      "editViewFields": [
+        {
+          "name": "widgetType",
+          "fieldLabel": "Widget Type",
+          "xtype": "combo",
+          "store": [
+            [
+              "summary",
+              "Summary"
+            ],
+            [
+              "customerReviews",
+              "Customer Reviews"
+            ],
+            [
+              "qanda",
+              "Q & A"
+            ]
+          ]
+        },
+        {
+          "name": "tabCode",
+          "fieldLabel": "Tab Code",
+          "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
+          "height": 200,
+          "width": "100%",
+          "mode": "html",
+          "xtype": "mz-input-code"
+        }
+      ],
+      "icon": "/resources/admin/widgets/BV_Conversations.png",
+      "validPageTypes": [
+        "product"
+      ]
+    },
+    {
+      "id": "bv-conversations-roibeacon",
+      "displayName": "BazaarVoice ROI Beacon",
+      "displayTemplate": "BVConversations/bv-conversations-roi",
+      "icon": "/resources/admin/widgets/BV_ROI_Beacon.png",
+      "validPageTypes": [
+        "order"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "attributeId": "tenant~product-upsell",
+        "count": "2",
+        "template": "modules/product/product-list-upsell",
+        "title": "Upgrade to a Bundle and <span>Save a Bundle!</span>"
+      },
+      "displayName": "DJC Upsells",
+      "displayTemplate": "catalog/related-products",
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Title",
+          "name": "title",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Template",
+          "name": "template",
+          "store": [
+            [
+              "modules/product/product-list-upsell",
+              "DJC Upsell Template"
+            ],
+            [
+              "modules/product/product-list-carousel",
+              "carousel"
+            ],
+            [
+              "modules/product/product-list-tiled",
+              "tiled"
+            ],
+            [
+              "modules/product/product-list",
+              "list"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Number to display",
+          "name": "count",
+          "xtype": "mz-input-number"
+        }
+      ],
+      "icon": "/resources/admin/widgets/dj-upsells.png",
+      "id": "dj-upsells",
+      "validPageTypes": [
+        "product",
+        "cart"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "attributeId": "tenant~product-related",
+        "count": "4",
+        "template": "modules/product/dynamic-product-list",
+        "title": "Related <span>Products</span>"
+      },
+      "displayName": "Related Products",
+      "displayTemplate": "catalog/dj-related-products",
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Title",
+          "name": "title",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Template",
+          "name": "template",
+          "store": [
+            [
+              "modules/product/dynamic-product-list",
+              "Dynamic Product List"
+            ],
+            [
+              "modules/product/product-list-carousel",
+              "carousel"
+            ],
+            [
+              "modules/product/product-list-tiled",
+              "tiled"
+            ],
+            [
+              "modules/product/product-list",
+              "list"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Number to display",
+          "name": "count",
+          "xtype": "mz-input-number"
+        }
+      ],
+      "icon": "/resources/admin/widgets/dj-relatedproducts.png",
+      "id": "dj-relatedproducts",
+      "validPageTypes": [
+        "product",
+        "cart"
+      ]
     }
   ]
 }

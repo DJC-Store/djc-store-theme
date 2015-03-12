@@ -1,0 +1,3 @@
+﻿{% extends "modules/product/product-list" %}
+{% block module-classes %}dj-product-list-upsell{% endblock module-classes %}
+{% block list-classes %}upsell-list{% endblock list-classes %}

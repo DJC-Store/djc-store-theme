@@ -1,0 +1,21 @@
+﻿<div class="mz-related-products" data-mz-related-products="{% json_attribute model.config%}">
+{% include_products "modules/product/dynamic-product-list" with  productCodes=model.config.productCodes as_parameter %}
+</div>
+
+{% require_script "vendor/slick/slick" %}
+{% require_script "modules/dynamic-content" %}
+
+<div class="dynamic-content blue">
+	<div class="dj-row">
+		<div class="col-12">
+			<h2 class="block-heading">{{ model.config.title|safe }}</h2>
+			<div class="best-sellers slider">
+				<div class="mz-related-products" data-mz-related-products ="{% json_attribute Model.config%}">
+				{% include_products "modules/product/dynamic-product-list" with  productCodes=Model.config.productCodes as_parameter %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% require_script "widgets/related-products" %}

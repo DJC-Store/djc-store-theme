@@ -38,7 +38,7 @@
     </div>
 
     <div data-mz-productlist class="mz-l-paginatedlist-list">
-        {% include "modules/product/product-list-tiled" %}
+        {% include "modules/product/dj-product-list" %}
     </div>
     <div class="mz-l-paginatedlist-footer">
         <div data-mz-pagenumbers class="mz-pagenumbers">

@@ -1,15 +1,5 @@
 {% extends "page" %}
 
-{% block meta-redirect %}
-    {% for property in model.properties %}
-        {% if property.attributeFQN == "tenant~redirect" %} <!-- if the "redirect" attribute exists, invoke the META refresh tag -->
-            {% for v in property.values %}
-                <META http-equiv="refresh" content="0;URL={{v.stringValue}}">
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-{% endblock meta-redirect %}
-
 {% block title-tag-content %}{% firstof pageContext.metaTitle model.content.productName %}  - {% parent %}{% endblock title-tag-content %}
 
 {% block body-tag-classes %} mz-product {% endblock body-tag-classes %}
@@ -29,6 +19,9 @@
         <div id="product-detail" class="mz-productdetail mz-l-stack">
             {% include "modules/product/product-detail" %}
         </div>
+        <div class="dj-dropzone dj-upsell">
+            {% dropzone "upsells" scope="template" %}
+        </div>
     </div>
 </div>
 
@@ -37,26 +30,26 @@
         <div class="cd-tabs">
             <nav>
                 <ul class="cd-tabs-navigation">
-                    <li><a data-content="description" class="selected" href="#0">{{ labels.productDescription }}</a></li>
-                    <li><a data-content="reviews" href="#0">{{ labels.productReviews }}</a></li>
+                    <li><a data-content="description" href="#0">{{ labels.productDescription }}</a></li>
+                    <li><a data-content="reviews" class="selected" href="#0">{{ labels.productReviews }}</a></li>
                     <li><a data-content="shipping" href="#0">{{ labels.shippingInformation }}</a></li>
                 </ul> <!-- cd-tabs-navigation -->
             </nav>
          
             <ul class="cd-tabs-content">
-                <li data-content="description" class="selected">
+                <li data-content="description">
                     <div class="dj-dropzone">
                         {% dropzone "product-description" scope="page" %}
                     </div>
                 </li>
-                <li data-content="reviews">
+                <li data-content="reviews" class="selected">
                     <div class="dj-row">
                         <div class="col-12">
                             <div class="quotation">
                                 <div class="box-icon-bg quote-bg"><span class="quotes">“</span></div>
                                 <hr>
                                 <div class="dj-dropzone">
-                                    {% dropzone "product-reviews" scope="template" %}
+                                    {% dropzone "product-reviews" scope="page" %}
                                 </div>
                             </div>
                         </div>

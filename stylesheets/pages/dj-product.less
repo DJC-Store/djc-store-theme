@@ -42,6 +42,14 @@
 
 	.mz-productdetail-wrap {
 		margin-left: 0 !important;
+
+		.mz-productdetail {
+			@media only screen {
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	.dj-row {
@@ -163,6 +171,15 @@
 	font-weight: 600;
 	color: #aaa;
 	font-size: 20px;
+}
+
+.dj-upsell {
+	h3 {
+		text-transform: uppercase;
+		span {
+			color: @djcOrange;
+		}
+	}
 }
 
 #dj-product-tabs {

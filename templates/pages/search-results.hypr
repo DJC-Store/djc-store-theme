@@ -11,7 +11,7 @@
 <div {% if pageContext.categoryId %}data-mz-category="{{ pageContext.categoryId }}" {% endif %}data-mz-search="{{ pageContext.search.query }}" class="mz-l-container">
 	<div class="dj-row">
 	    <h2 class="mz-pagetitle">{{ labels.searchResults }}: <span class="mz-searchresults-query">{{ pageContext.search.query }}</span></h2>
-	    {% include "modules/product/faceted-products" %}
+	    {% include "modules/product/faceted-products-new" %}
 	    {% comment %}
 	    {% if model.items.length < themeSettings.defaultPageSize and pageContext.categoryId %}
 	    <p>{{ labels.searchResultsSummary|string_format(pageContext.search.query, pageContext.categoryName, model.items.length) }}</p>

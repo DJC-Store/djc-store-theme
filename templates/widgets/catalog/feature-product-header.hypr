@@ -1,5 +1,11 @@
 <div class="feature-product-carousel">
+	{% if model.config.bannerAd == "true" %}
+	<div class="fpc-slide cat-header banner-ad" style="background-image: url( {{model.config.adImageUrl}} );">
+		<a href="{{model.config.adLinkUrl}}"></a>
+	</div>
+	{% else %}
 	<div class="fpc-slide cat-header" style="background-image: url( {{ model.config.prodBg }} )">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd as_parameter %}
 	</div>
+	{% endif %}
 </div>

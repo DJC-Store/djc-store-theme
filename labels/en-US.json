@@ -66,6 +66,7 @@
   "inThisSection"        : "In This Section",
 
   "freeEvent"            : "Free Event",
+  "alacarte"             : "A La Carte",
 
   "featuredLinks"        : "Featured Links",
   "featuredProduct"      : "Featured Product",
@@ -181,7 +182,7 @@
   "promoCodeError"     : "Sorry, '{0}' does not appear to be a valid coupon code.",
   "reviewOrder"          : "Review & Place Order",
   "reviewOrderText"      : "Please review all of the information on this page and, if necessary, make changes before placing your order.",
-  "agreeToTerms"         : "I agree to the terms &amp; conditions.",
+  "agreeToTerms"         : "I agree to the <a href=\"http://www.danijohnson.com/terms-of-use/\" target=\"_blank\">terms &amp; conditions</a>.",
   "createAccount"        : "Create an account for easy checkout on future orders",
   "placeOrder"           : "Place Order",
   "orderConfirmation"    : "Order Confirmation",

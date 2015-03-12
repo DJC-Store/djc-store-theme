@@ -30,9 +30,10 @@
     </div>
     <div class="mz-productlisting-info">
         <div class="dj-productlisting-maininfo">
+            <div id="BVRRInlineRating-{{model.productCode}}" class="bvr-inline-rating" data-mz-product-code="{{ model.productCode }}" data-mz-product-url="{{ model.url }}"></div>
             <a class="mz-productlisting-title" href="{{model.url}}"><h2>{{model.content.productName}}</h2></a>
             {% if model.content.productShortDescription and themeSettings.listProductShortDesc %}
-            <h5 class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|striptags|truncatewords(themeSettings.maxProductSummaryWords)|safe }}</h5>
+            <h5 class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|truncatewords(themeSettings.maxProductSummaryWords)|safe }}</h5>
             {% endif %}
             {% block product-code %}
             {% if themeSettings.listProductCode %}
@@ -51,5 +52,5 @@
     </div>
 </div>
 <div class="dj-productlisting-moreinfo">
-    <p>{{ model.content.productFullDescription }}</p>
+    <p>{{ model.content.productFullDescription|safe }}</p>
 </div>

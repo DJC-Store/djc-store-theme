@@ -18,11 +18,7 @@
       {% for sublink in link.items %}
       {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
       <li>
-        {% ifequal sublink.name "Events" %}
-        <a class="dj-sitenav-link" href="http://www.danijohnson.com/see">
-        {% else %}
         <a class="dj-sitenav-link" href="{{sublink.url}}">
-        {% endifequal %}
           <i class="icon-{{ sublink.name|lower }}"></i>
           <h2>{{ sublink.name }}</h2>
           <h6>
