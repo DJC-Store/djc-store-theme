@@ -41,7 +41,7 @@ require([
                             $BV.ui('rr', 'show_reviews', {
                                 doShowContent: function() {
                                     if (widgetType == "summary") {
-                                        // tabCode // THIS REQUIRES MORE EXPOSITION
+                                        showReviewSummary();
                                     }
                                 }
                             });
@@ -109,10 +109,12 @@ require([
                                 };
                         });
         
-                        var products = {};
-                        products["productIds"] = hash;
-                        products["containerPrefix"] = "BVRRInlineRating";
-                        $BV.ui('rr', 'inline_ratings', products);
+                        if (!jQuery.isEmptyObject(hash)) { 
+                            var products = {};
+                            products["productIds"] = hash;
+                            products["containerPrefix"] = "BVRRInlineRating";
+                            $BV.ui('rr', 'inline_ratings', products);
+                        }
                     })
                     .fail(function(jqxhr, settings, exception) {
                         console.log(jqxhr);

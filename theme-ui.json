@@ -53,6 +53,11 @@
                     "xtype": "mz-input-checkbox",
                     "name": "listProductCode",
                     "fieldLabel": "Show product code in product lists"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "listNextEvent",
+                    "fieldLabel": "Show \"Next Event\" line on Event Category Page"
                 }
             ]
         },

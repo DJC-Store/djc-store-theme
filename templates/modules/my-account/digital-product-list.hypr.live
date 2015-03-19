@@ -182,6 +182,26 @@
 		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_development_series" as_parameter %}
 	{% endif %}
 
+	{% if segment.id == 172 %}<!-- DJU Curriculum -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_dju" as_parameter %}
+	{% endif %}
+
+	{% if segment.id == 173 %}<!-- Business Mastery System -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_business_mastery" as_parameter %}
+	{% endif %}
+
+	{% if segment.id == 178 %}<!-- Basic Business System -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_basic_business" as_parameter %}
+	{% endif %}
+
+	{% if segment.id == 179 %}<!-- Personal Finance System -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_personal_finance" as_parameter %}
+	{% endif %}
+
+	{% if segment.id == 180 %}<!-- Ultimate Success System -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_ultimate_success" as_parameter %}
+	{% endif %}
+
 	{% endfor %}
 </ul>
 
@@ -345,6 +365,10 @@
 		<li><a href="http://shop.danijohnson.com/first-steps-to-success-feb-2015-3d6e7c4d2d">First Steps to Success - Feb 2015 Los Angeles MP3s</a></li>
 	{% endif %}
 
+	{% if segment.id == 175 %}<!-- FSTS - May 2015 Orlando MP3s -->
+		<li><a href="http://shop.danijohnson.com/first-steps-to-success-may-2015-5d5f3f3841">First Steps to Success - May 2015 Orlando MP3s</a></li>
+	{% endif %}
+
 	{% if segment.id == 135 %}<!-- FSTS Bonus Packages -->
 		<li><a href="http://shop.danijohnson.com/first-steps-to-success-bonuses-july-2014-7769447776">First Steps to Success Bonus Packages</a></li>
 	{% endif %}
@@ -458,8 +482,16 @@
 		<li><a href="http://shop.danijohnson.com/home-business-entrepreneur-workshop-january-2015-374f254f24">Home Business Entrepreneur Workshop - Jan 2015 Austin MP3s</a></li>
 	{% endif %}
 
+	{% if segment.id == 170 %}<!-- HBEW - Feb 2015 Orlando MP3s -->
+		<li><a href="http://shop.danijohnson.com/home-business-workshop-mar-2015-5a342b4b6b">Home Business Entrepreneur Workshop - Feb 2015 Los Angeles MP3s</a></li>
+	{% endif %}
+
 	{% if segment.id == 169 %}<!-- HBEW - Mar 2015 Austin MP3s -->
 		<li><a href="http://shop.danijohnson.com/home-business-workshop-mar-2015-5a342b4b6b">Home Business Entrepreneur Workshop - March 2015 Los Angeles MP3s</a></li>
+	{% endif %}
+
+	{% if segment.id == 174 %}<!-- HBEW - May 2015 Orlando MP3s -->
+		<li><a href="http://shop.danijohnson.com/home-business-workshop-may-2015-5b3a6a4439">Home Business Entrepreneur Workshop - May 2015 Orlando MP3s</a></li>
 	{% endif %}
 
 	<!-- CREATING A DYNASTY -->

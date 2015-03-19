@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-71-gc278495"
+    "version": "rc7-72-g0d20473"
   },
   "settings": {
     "maintenanceMode": false,
@@ -24,6 +24,7 @@
     "listProductThumbSize": 250,
     "listProductPrice": false,
     "listEventImage": true,
+    "listNextEvent": false,
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
     "autocompleteProducts": true,
@@ -943,6 +944,10 @@
             [
               "qanda",
               "Q & A"
+            ],
+            [
+              "seo",
+              "SEO"
             ]
           ]
         },

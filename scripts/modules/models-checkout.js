@@ -1316,11 +1316,6 @@
             }
         });
 
-        $(document).ready(function(){
-            // force uncheck to fix glitch
-            $("input:radio").attr("checked", false);
-        });
-
         return {
             CheckoutPage: CheckoutPage
         };

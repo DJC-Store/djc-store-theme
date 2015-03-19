@@ -8,7 +8,7 @@
             {% if themeSettings.requireCheckoutAgreeToTerms %}
             <div class="mz-l-formfieldgroup mz-l-formfieldgroup-norows">
             <label class='inline'>
-                <input type="checkbox" name="terms-and-conditions" id="mz-terms-and-conditions" data-mz-value="agreeToTerms" {% if model.agreeToTerms %} checked="checked"{% endif %}> {{ labels.agreeToTerms }}
+                <input type="checkbox" name="terms-and-conditions" id="mz-terms-and-conditions" data-mz-value="agreeToTerms" {% if model.agreeToTerms %} checked="checked"{% endif %}> {{ labels.agreeToTerms|safe }}
             </label>
             <span class="mz-validationmessage" data-mz-validationmessage-for="agreeToTerms"></span>
             </div>

@@ -56,7 +56,7 @@
 
 .cart-container {
 	.btn {
-		&.reverse {
+		&.cart-upper {
 			float: right;
 			position: relative;
 			top: -45px;
@@ -196,6 +196,23 @@
                         font-size: 16px;
                     }
                 }
+			}
+		}
+		.mz-carttable-continue-shopping {
+			text-align: left;
+			a, a:link, a:visited, a:hover, a:focus, a:active {
+				color: @djcOrange;
+			}
+			i {
+				display:inline-block;
+				width: 0; 
+				height: 0; 
+				border-top: 7px solid transparent;
+				border-bottom: 7px solid transparent;
+				border-right: 7px solid #ff8937;
+				margin-right: 10px;
+				position: relative;
+				top: 0px;
 			}
 		}
 		.mz-carttable-checkout-row {

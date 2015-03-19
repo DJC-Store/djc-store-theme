@@ -152,6 +152,7 @@
   "promoAtCheckout"      : "Promotional Codes and Coupons may be entered at Checkout",
   "orderTotal"           : "Order Total",
   "proceedToCheckout"    : "Checkout Now",
+  "continueShopping"     : "Continue Shopping",
   "storePickupAt"        : "In-Store Pickup at <strong>{0}</strong>",
 
   "checkout"             : "Checkout",

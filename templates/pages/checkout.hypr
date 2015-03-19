@@ -9,6 +9,7 @@
 {% block body-content %}
 
 {% require_script "pages/checkout" %}
+{% require_script "modules/models-checkout-fix" %}
 
 {% preload_json model "checkout" %}
 
