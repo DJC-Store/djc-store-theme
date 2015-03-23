@@ -182,10 +182,6 @@
 		{% include_products "modules/my-account/digital-product-listing" with productCodes="spiritual_development_series" as_parameter %}
 	{% endif %}
 
-	{% if segment.id == 172 %}<!-- DJU Curriculum -->
-		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_dju" as_parameter %}
-	{% endif %}
-
 	{% if segment.id == 173 %}<!-- Business Mastery System -->
 		{% include_products "modules/my-account/digital-product-listing" with productCodes="package_business_mastery" as_parameter %}
 	{% endif %}
@@ -579,6 +575,10 @@
 <ul class="dj-digitallegacylist">
 	<h4>Coaching, Special Promotions, and Legacy Products</h4>
 	{% for segment in model.segments %}
+
+	{% if segment.id == 172 %}<!-- DJU Curriculum -->
+		<li><a href="http://shop.danijohnson.com/dani-johnson-curriculum-733b645155">Dani Johnson Curriculum Bonus Material</a></li>
+	{% endif %}
 
 	{% if segment.id == 131 %}<!-- Ultimate Financial Success Kit -->
 		<li><a href="http://shop.danijohnson.com/ultimate-financial-success-kit-bonus-content-5a7c636356">Feed Your Family on $100 a Week</a></li>

@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-72-g0d20473"
+    "version": "rc7-73-g62ba501"
   },
   "settings": {
     "maintenanceMode": false,
@@ -25,6 +25,7 @@
     "listProductPrice": false,
     "listEventImage": true,
     "listNextEvent": false,
+    "reviewsFallback": true,
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
     "autocompleteProducts": true,
@@ -78,6 +79,14 @@
           ]
         }
       ]
+    },
+    {
+      "documentType": "web_page",
+      "entityType": "webpage",
+      "id": "bvContainer",
+      "template": "bazaarvoice",
+      "title": "BazaarVoice Container Page",
+      "userCreatable": true
     }
   ],
   "widgets": [
@@ -188,37 +197,49 @@
       "editViewFields": [
         {
           "anchor": "100%",
-          "fieldLabel": "First Steps to Success",
+          "fieldLabel": "<span style=\"color:#ff0000;\">First Steps to Success</span><br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose an Event Product in this field to automatically populate the Nav using Product Attributes. Overrides manual fields.</span>",
+          "name": "prod-fsts",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "First Steps to Success<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manually Fill out Event fields. Will not appear if Product is entered in the above field.</span>",
           "name": "fsts",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "FSTS Subtext",
+          "fieldLabel": "FSTS Subtext<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "fstsSubtext",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "FSTS URL",
+          "fieldLabel": "FSTS URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "fstsUrl",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Home Business Workshop",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Home Business Entrepreneur Workshop</span><br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose an Event Product in this field to automatically populate the Nav using Product Attributes. Overrides manual fields.</span>",
+          "name": "prod-hbew",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Home Business Entrepreneur Workshop<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manually Fill out Event fields. Will not appear if Product is entered in the above field.</span>",
           "name": "hbew",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "HBEW Subtext",
+          "fieldLabel": "HBEW Subtext<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "hbewSubtext",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "HBEW URL",
+          "fieldLabel": "HBEW URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "hbewUrl",
           "xtype": "mz-input-text"
         },
@@ -242,19 +263,25 @@
         },
         {
           "anchor": "100%",
-          "fieldLabel": "Creating a Dynasty",
+          "fieldLabel": "<span style=\"color:#ff0000;\">Creating a Dynasty</span><br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose an Event Product in this field to automatically populate the Nav using Product Attributes. Overrides manual fields.</span>",
+          "name": "prod-dynasty",
+          "xtype": "mz-input-productmulti"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Creating a Dynasty<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manually Fill out Event fields. Will not appear if Product is entered in the above field.</span>",
           "name": "dynasty",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "Dynasty Subtext",
+          "fieldLabel": "Dynasty Subtext<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "dynastySubtext",
           "xtype": "mz-input-text"
         },
         {
           "anchor": "50%",
-          "fieldLabel": "Dynasty URL",
+          "fieldLabel": "Dynasty URL<br><span style=\"font-size:.8em; color:#9a9a9a;\">Manual</span>",
           "name": "dynastyUrl",
           "xtype": "mz-input-text"
         },

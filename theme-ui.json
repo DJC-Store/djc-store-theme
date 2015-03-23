@@ -63,6 +63,18 @@
         },
         {
             "xtype": "panel",
+            "title": "Reviews",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "reviewsFallback",
+                    "fieldLabel": "Use manually-entered Product Reviews (non-SEO friendly fallback for BazaarVoice)."
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
             "title": "Search",
             "collapsed": false,
             "items": [

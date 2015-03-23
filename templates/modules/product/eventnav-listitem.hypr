@@ -1,28 +1,23 @@
 {% for prod in model.items %}
 {% if forloop.counter0 < 1 %}
-	<a href="#">{{ prod.content.productName }}</a>
+	<a href="{{ prod.url }}">{{ prod.content.productName }}</a>
 	<p class="event-quickinfo">
-    {% for property in prod.properties %}
-        {% ifequal property.attributeDetail.name "Event Location" %}
-            {% for attribute in property.values %}
-                {{ attribute.stringValue }} - 
-            {% endfor %}
-        {% endifequal %}
-    {% endfor %}
-    {% for property in prod.properties %}
-        {% ifequal property.attributeDetail.name "Event Start Date" %}
-            {% for attribute in property.values %}
-                {{attribute.value|date:"M d"}}
-            {% endfor %}
-        {% endifequal %}
-    {% endfor %}
-    {% for property in prod.properties %}
-        {% ifequal property.attributeDetail.name "Event End Date" %}
-            {% for attribute in property.values %}
-                - {{attribute.value|date:"d, Y"}}
-            {% endfor %}
-        {% endifequal %}
-    {% endfor %}
+        {% if themeSettings.listNextEvent %}
+        {% for property in prod.properties %}
+            {% ifequal property.attributeDetail.name "Event Location" %}
+                {% for attribute in property.values %}
+                    {{ attribute.stringValue }} - 
+                {% endfor %}
+            {% endifequal %}
+        {% endfor %}
+        {% for property in prod.properties %}
+            {% ifequal property.attributeDetail.name "Event Date" %}
+                {% for attribute in property.values %}
+                    {{ attribute.stringValue }}
+                {% endfor %}
+            {% endifequal %}
+        {% endfor %}
+        {% endif %}
 	</p>
 {% endif %}
 {% endfor %}

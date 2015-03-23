@@ -1,5 +1,12 @@
 {% for prod in model.items %}
 {% if forloop.counter0 < 1 %}
+	{% if prod.productType == "Event" %}
+
+	<a href="{{ prod.url }}"><h2>{{ prod.content.productName }}</h2></a>
+	<h4>{{ prod.content.productShortDescription|safe }}</h4>
+
+	{% else %}
+
 	<a href="{{ prod.url }}"><h2>{{ prod.content.productName }}</h2></a>
 	{% block product-image %}
 		{% if prod.mainImage.imageUrl %}
@@ -7,7 +14,8 @@
 		{% else %}
 			<h4>{{ prod.content.productShortDescription|safe }}</h4>
 		{% endif %}
-	</a>
 	{% endblock product-image %}
+
+	{% endif %}
 {% endif %}
 {% endfor %}

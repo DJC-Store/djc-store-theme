@@ -18,4 +18,3 @@
 {% require_script "widgets/bazaarvoice" %}
 
 {% endblock body-content %}
-

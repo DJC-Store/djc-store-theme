@@ -1,6 +1,36 @@
 <div class="dj-container">
 {% for prod in model.items %}
 {% if forloop.counter0 < 1 %}
+	{% if prod.productType == "Event" %}
+
+	<div class="dj-info-box">
+		{% for property in prod.properties %}
+	    	{% ifequal property.attributeFQN "tenant~tagline" %}
+				{% for attribute in property.values %}
+					<h2>{{ attribute.stringValue }}</h2>
+				{% endfor %}
+			{% endifequal %}
+		{% endfor %}	
+		<a href="{{ prod.url }}"><h1>{{ prod.content.productName }}</h1></a>
+		<hr>
+		<p>{% for property in prod.properties %}
+            {% ifequal property.attributeDetail.name "Event Location" %}
+                {% for attribute in property.values %}
+                    {{ attribute.stringValue }} - 
+                {% endfor %}
+            {% endifequal %}
+        {% endfor %}
+        {% for property in prod.properties %}
+            {% ifequal property.attributeDetail.name "Event Date" %}
+                {% for attribute in property.values %}
+                    {{ attribute.stringValue }}
+                {% endfor %}
+            {% endifequal %}
+        {% endfor %}</p>
+	</div>
+
+	{% else %}
+
 	<div class="dj-info-box">
 	    {% for property in prod.properties %}
 	    	{% ifequal property.attributeFQN "tenant~tagline" %}
@@ -19,6 +49,8 @@
 		<p>{{ prod.content.productShortDescription|safe }}</p>
 	</div>
 	<a href="{{ prod.url }}"><img src="{{ prod.mainImage.imageUrl }}" /></a>
+
+	{% endif %}
 {% endif %}
 {% endfor %}
 </div>
