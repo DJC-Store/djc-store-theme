@@ -4,13 +4,16 @@
 .feature-product-carousel {
 	margin-bottom: 0 !important;
 	width: 100%;
-	height: 449px;
+	height: 600px;
 	overflow: hidden;
 	background-size: cover;
 	-webkit-background-size: cover cover;
 	background-position: center 25%;
 
 	@media only screen {
+		@media (max-width: 1500px) {
+			height: 449px;
+		}
 		@media (max-width: 1195px) {
 			height: 400px;
 		}
@@ -32,22 +35,22 @@
 		}
 
 		display: none;
-		height: 449px;
+		height: 600px;
 		background-size: cover;
 		background-position: center center;
 
 		img {
 			display: block;
 			position: absolute;
-			top: 20px;
-			right: 0;
+			top: 0px;
+			right: 0px;
 			width: auto;
 			height: 500px;
 		}
 
 		&.banner-ad {
 			margin-top: 0px !important;
-			
+
 			a {
 				display: block;
 				width: 100%;
@@ -56,6 +59,15 @@
 		}
 
 		@media only screen {
+			@media (max-width: 1500px) {
+				height: 449px;
+
+				img {
+					height: 500px;
+					top: 20px;
+					right: 0;
+				}
+			}
 			@media (max-width: 1195px) {
 				height: 400px;
 
@@ -95,8 +107,8 @@
 		text-align: center;
 		max-width: 530px;
 		position: relative;
-		left: 4%;
-		top: 40px;
+		left: 0;
+		top: 100px;
 		z-index: 1100;
 	    background: none;
 		-webkit-box-shadow: 0 -1px 0 rgba(48, 48, 48, 0.2);
@@ -136,6 +148,10 @@
 		}
 
 		@media only screen {
+			@media (max-width: 1500px) {
+				left: 4%;
+				top: 40px;
+			}
 			@media (max-width: 1000px) {
 				font-size: .8em;
 				width: 400px;
