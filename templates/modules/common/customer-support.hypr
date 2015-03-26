@@ -19,6 +19,6 @@
   <h2>866-760-8255</h2>
 </div>
 
-<iframe class="lightbox" id="video-lightbox" width="600" height="450" src="https://www.youtube.com/embed/mk1XopLj0ig" frameborder="0" allowfullscreen></iframe>
+<iframe class="lightbox" id="video-lightbox" width="600" height="450" src="//www.youtube.com/embed/mk1XopLj0ig" frameborder="0" allowfullscreen></iframe>
 
 {% require_script "vendor/featherlight/featherlight" %}

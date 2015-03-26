@@ -1,0 +1,34 @@
+﻿<script>
+    ga('require', 'ecommerce');
+    ga('ecommerce:addTransaction', {
+      'id': '{{ model.orderNumber }}',
+      'affiliation': '{{ siteContext.generalSettings.websiteName }}',
+      'revenue': '{{ model.total }}',
+      'tax': '{{ model.taxTotal }}',
+      'shipping': '{{ model.shippingTotal }}'
+    });
+
+    {% for item in model.items %}
+    ga('ecommerce:addItem', {
+      'id': '{{ model.orderNumber }}',
+      'sku': 'product-{{ item.product.variationProductCode|default(item.product.productCode) }}-itemid-{{ item.id }}',
+      'name': '{{ item.product.name }}',
+      'category': '{{ item.product.categories|first|prop('id') }}',
+      'price': '{{ item.unitPrice.extendedAmount }}',
+      'quantity': '{{ item.quantity }}'
+    });
+    {% for discount in item.productDiscounts %}{% if not discount.excluded %}
+    ga('ecommerce:addItem', {
+      'id': '{{ model.orderNumber }}',
+      'sku': 'discount-{{ discount.discount.id }}-product-{{ item.product.variationProductCode|default(item.product.productCode) }}-itemid-{{ item.id }}',
+      'name': '{{ discount.discount.name }}',
+      'category': 'Product Discount for {{ item.product.variationProductCode|default(item.product.productCode) }}',
+      'price': '-{{ discount.impactPerUnit }}',
+      'quantity': '{{ discount.discountQuantity }}'
+    });
+    {% endif %}{% endfor %}
+
+    {% endfor %}
+
+    ga('ecommerce:send');
+</script>
