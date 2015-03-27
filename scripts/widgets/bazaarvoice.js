@@ -28,7 +28,6 @@ require([
                 var locale = Api.context.locale.replace("-", "_");
                 var bvScript = "//display" + staging + ".ugc.bazaarvoice.com/static/" + data.clientName + "/" + locale + "/bvapi.js";
 
-
                 $.getScript(bvScript)
                     .done(function(script, textStatus) {
                         if (isWidget) {
@@ -98,6 +97,12 @@ require([
                         } else if (isContainerPage) {
                             $BV.container('global', {});
                         }
+
+                        $('#bv-submit-generic').on('click', function() {
+                            $BV.ui('rr', 'submit_generic', {
+                                // categoryId : 'ExternalId'
+                            });
+                        });
                         
                         var hash = {};
                         $('.bvr-inline-rating').each(function() {

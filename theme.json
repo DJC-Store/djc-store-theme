@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-75-gc8b76b8"
+    "version": "rc7-76-ge6cb04c"
   },
   "settings": {
     "maintenanceMode": false,
@@ -24,7 +24,7 @@
     "listProductThumbSize": 250,
     "listProductPrice": false,
     "listEventImage": true,
-    "listNextEvent": false,
+    "listNextEvent": true,
     "reviewsFallback": true,
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
@@ -1000,6 +1000,50 @@
       "icon": "/resources/admin/widgets/BV_ROI_Beacon.png",
       "validPageTypes": [
         "order"
+      ]
+    },
+    {
+      "id": "bv-conversations-generic",
+      "displayName": "BazaarVoice Generic Reviews",
+      "displayTemplate": "BVConversations/bv-conversations-generic",
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "name": "buttonText",
+          "fieldLabel": "Button Text",
+          "xtype": "mz-input-text"
+        },
+        {
+          "name": "buttonColor",
+          "fieldLabel": "Button Color",
+          "xtype": "combo",
+          "store": [
+            [
+              "orange",
+              "Orange"
+            ],
+            [
+              "blue",
+              "Blue"
+            ],
+            [
+              "blue-light",
+              "Light Blue"
+            ],
+            [
+              "gray",
+              "Gray"
+            ]
+          ]
+        }
+      ],
+      "icon": "/resources/admin/widgets/BV_Conversations.png",
+      "defaultConfig": {
+        "buttonText": "Click Here to Submit a Review",
+        "buttonColor": "orange"
+      },
+      "validPageTypes": [
+        "*"
       ]
     },
     {

@@ -1,0 +1,5 @@
+
+<div id="bvGenericReview" value="1">
+	<button class="btn {{ model.config.buttonColor }}" id="bv-submit-generic">{{ model.config.buttonText }}</button>
+</div>
+{% require_script "widgets/bazaarvoice" %}
