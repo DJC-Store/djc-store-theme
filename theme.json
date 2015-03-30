@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-77-ge9856fc"
+    "version": "rc7-78-g9367b23"
   },
   "settings": {
     "maintenanceMode": false,
@@ -1039,8 +1039,8 @@
         {
           "anchor": "100%",
           "name": "externalId",
-          "fieldLabel": "BV Category ExternalID",
-          "xtype": "mz-input-text"
+          "fieldLabel": "Category ID<br><span style=\"font-size:.8em; color:#9a9a9a;\">Choose a Category to filter Products.</span>",
+          "xtype": "mz-input-navnode"
         }
       ],
       "icon": "/resources/admin/widgets/BV_Conversations.png",

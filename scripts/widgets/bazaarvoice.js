@@ -99,7 +99,8 @@ require([
                         } else if (isContainerPage) {
                             $BV.container('global', {});
                         } else if (isGeneric) {
-                            var externalId = $('[data-bv-generic-config]').data('bv-generic-config').externalId;
+                            var str = $('[data-bv-generic-config]').data('bv-generic-config').externalId;
+                            var externalId = str.replace("cat^^", "");
 
                             $('#bv-submit-generic').on('click', function() {
                                 $BV.ui('rr', 'submit_generic', {
