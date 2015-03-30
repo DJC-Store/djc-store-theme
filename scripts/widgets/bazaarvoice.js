@@ -24,6 +24,7 @@ require([
                 var isWidget = $("#bvProductDetail").val() == 1;
                 var isROIWidget = $("#bvROIWidget").val() == 1;
                 var isContainerPage = $("#containerPage").val() == 1;
+                var isGeneric = $("#bvSubmitGeneric").val() == 1;
                 var deploymentZone = data.deploymentZone.replace(" ", "_");
                 var locale = Api.context.locale.replace("-", "_");
                 var bvScript = "//display" + staging + ".ugc.bazaarvoice.com/static/" + data.clientName + "/" + locale + "/bvapi.js";
@@ -37,6 +38,7 @@ require([
                             });
                             var tabCode = $('[data-mz-bv-config]').data('mzBvConfig').tabCode;
                             var widgetType = $('[data-mz-bv-config]').data('mzBvConfig').widgetType;
+
                             $BV.ui('rr', 'show_reviews', {
                                 doShowContent: function() {
                                     if (widgetType == "summary") {
@@ -96,13 +98,15 @@ require([
                             $BV.SI.trackTransactionPageView(bvOrder);
                         } else if (isContainerPage) {
                             $BV.container('global', {});
-                        }
+                        } else if (isGeneric) {
+                            var externalId = $('[data-bv-generic-config]').data('bv-generic-config').externalId;
 
-                        $('#bv-submit-generic').on('click', function() {
-                            $BV.ui('rr', 'submit_generic', {
-                                // categoryId : 'ExternalId'
+                            $('#bv-submit-generic').on('click', function() {
+                                $BV.ui('rr', 'submit_generic', {
+                                    categoryId: externalId
+                                });
                             });
-                        });
+                        }
                         
                         var hash = {};
                         $('.bvr-inline-rating').each(function() {

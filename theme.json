@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-76-ge6cb04c"
+    "version": "rc7-77-ge9856fc"
   },
   "settings": {
     "maintenanceMode": false,
@@ -1035,6 +1035,12 @@
               "Gray"
             ]
           ]
+        },
+        {
+          "anchor": "100%",
+          "name": "externalId",
+          "fieldLabel": "BV Category ExternalID",
+          "xtype": "mz-input-text"
         }
       ],
       "icon": "/resources/admin/widgets/BV_Conversations.png",
