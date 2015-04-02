@@ -64,6 +64,7 @@
         <script src="{{siteContext.cdnPrefix}}/scripts/vendor/modernizr.min.js"></script>
         {% include "modules/web-fonts-loader" %}
         {% endblock head-tag-scripts %}
+        {% block fb-tracking-pxl %}{% endblock fb-tracking-pxl %}
         {% cms_resources %}
 
         {%header_content%}
@@ -74,9 +75,6 @@
     {% endblock head-tag %}
     
     {% block body-tag %}
-    {% if themeSettings.maintenanceMode %}
-        {% include "modules/maintenanceMode" %}
-    {% else %}
 
     {% block open-body-tag %}
     <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
@@ -138,7 +136,6 @@
         {% visitor_tracking_pixel %}
 
     </body>
-    {% endif %}
     {% endblock body-tag %}
 
 </html>

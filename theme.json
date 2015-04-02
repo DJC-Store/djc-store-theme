@@ -6,10 +6,9 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-78-g9367b23"
+    "version": "rc7-79-gc8f6f16"
   },
   "settings": {
-    "maintenanceMode": false,
     "allowWishlist": false,
     "showReturns": false,
     "showBreadcrumbs": false,
@@ -28,6 +27,7 @@
     "reviewsFallback": true,
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
+    "showCheckoutCommentsField": false,
     "autocompleteProducts": true,
     "fallbackFontFamily": "sans-serif",
     "fonts": [

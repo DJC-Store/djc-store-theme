@@ -2,18 +2,6 @@
     "items": [
         {
             "xtype": "panel",
-            "title": "Maintenance",
-            "collapsed": false,
-            "items": [
-                {
-                    "xtype": "mz-input-checkbox",
-                    "name": "maintenanceMode",
-                    "fieldLabel": "Enable Maintenance Mode"
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
             "title": "Site Navigation & Mega Menu",
             "collapsed": false,
             "items": [
@@ -46,7 +34,7 @@
         },
         {
             "xtype": "panel",
-            "title": "Product Lists",
+            "title": "Products & Checkout",
             "collapsed": false,
             "items": [
                 {
@@ -58,6 +46,11 @@
                     "xtype": "mz-input-checkbox",
                     "name": "listNextEvent",
                     "fieldLabel": "Show \"Next Event\" line on Event Category Page"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "showCheckoutCommentsField",
+                    "fieldLabel": "Show Comments Field on Checkout Page"
                 }
             ]
         },
