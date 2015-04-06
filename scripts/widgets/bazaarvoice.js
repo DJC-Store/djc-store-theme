@@ -1,3 +1,4 @@
+/* global $BV, jQuery, showReviewSummary */
 require([
         'modules/jquery-mozu',
         'hyprlive',
@@ -17,7 +18,7 @@ require([
             res.then(function(r) {
                 var data = r.data.items[0];
                 var staging = "-stg";
-                if (data.environment != "Staging") {
+                if (data.environment !== "Staging") {
                     staging = "";
                 }
 
@@ -55,50 +56,50 @@ require([
                             var order = OrderModels.Order.fromCurrent().attributes;
 
                             var bvOrder = {};
-                            bvOrder["orderId"] = order.orderNumber;
-                            bvOrder["tax"] = order.taxTotal;
-                            bvOrder["shipping"] = order.shippingTotal;
-                            bvOrder["total"] = order.total;
-                            bvOrder["city"] = order.billingInfo.billingContact.address.cityOrTown;
-                            bvOrder["state"] = order.billingInfo.billingContact.address.stateOrProvince;
-                            bvOrder["country"] = order.billingInfo.billingContact.address.countryCode;
-                            bvOrder["currency"] = order.currencyCode;
-                            bvOrder["email"] = order.email;
-                            bvOrder["locale"] = locale;
+                            bvOrder.orderId = order.orderNumber;
+                            bvOrder.tax = order.taxTotal;
+                            bvOrder.shipping = order.shippingTotal;
+                            bvOrder.total = order.total;
+                            bvOrder.city = order.billingInfo.billingContact.address.cityOrTown;
+                            bvOrder.state = order.billingInfo.billingContact.address.stateOrProvince;
+                            bvOrder.country = order.billingInfo.billingContact.address.countryCode;
+                            bvOrder.currency = order.currencyCode;
+                            bvOrder.email = order.email;
+                            bvOrder.locale = locale;
                             var address = {};
                             if (order.fulfillmentInfo !== null && order.fulfillmentInfo.fulfillmentContact !== null) {
                                 address = order.fulfillmentInfo.fulfillmentContact.address;
-                                bvOrder["nickname"] = order.fulfillmentInfo.fulfillmentContact.firstName;
+                                bvOrder.nickname = order.fulfillmentInfo.fulfillmentContact.firstName;
                             } else {
                                 address = order.billingInfo.billingContact.address;
-                                bvOrder["nickname"] = order.billingInfo.billingContact.firstName;
+                                bvOrder.nickname = order.billingInfo.billingContact.firstName;
                             }
-                            bvOrder["city"] = address.cityOrTown;
-                            bvOrder["state"] = address.stateOrProvince;
-                            bvOrder["country"] = address.countryCode;
+                            bvOrder.city = address.cityOrTown;
+                            bvOrder.state = address.stateOrProvince;
+                            bvOrder.country = address.countryCode;
                             var items = [];
                             var item = {};
 
                             for (var i = 0; i < order.items.models.length; i++) {
                                 var lineItem = order.items.models[i].attributes;
-                                item["sku"] = lineItem.product.attributes.productCode;
-                                item["name"] = lineItem.product.attributes.name;
+                                item.sku = lineItem.product.attributes.productCode;
+                                item.name = lineItem.product.attributes.name;
                                 if (lineItem.product.attributes.categories.length > 0) {
-                                    item["category"] = lineItem.product.attributes.categories[0].id;
-                                    item["price"] = lineItem.total;
+                                    item.category = lineItem.product.attributes.categories[0].id;
+                                    item.price = lineItem.total;
                                 }
-                                item["quantity"] = lineItem.quantity;
+                                item.quantity = lineItem.quantity;
                                 if (lineItem.product.attributes.imageUrl !== null) {
-                                    item["imageURL"] = lineItem.product.attributes.imageUrl;
+                                    item.imageURL = lineItem.product.attributes.imageUrl;
                                 }
                                 items[i] = item;
                             }
-                            bvOrder["items"] = items;
+                            bvOrder.items = items;
                             $BV.SI.trackTransactionPageView(bvOrder);
                         } else if (isContainerPage) {
                             $BV.container('global', {});
                         }
-                        
+
                         var hash = {};
                         $('.bvr-inline-rating').each(function() {
                                 var $this = $(this);
@@ -108,11 +109,11 @@ require([
                                     containerId: $this.attr('id')
                                 };
                         });
-        
-                        if (!jQuery.isEmptyObject(hash)) { 
+
+                        if (!$.isEmptyObject(hash)) {
                             var products = {};
-                            products["productIds"] = hash;
-                            products["containerPrefix"] = "BVRRInlineRating";
+                            products.productIds = hash;
+                            products.containerPrefix = "BVRRInlineRating";
                             $BV.ui('rr', 'inline_ratings', products);
                         }
                     })
