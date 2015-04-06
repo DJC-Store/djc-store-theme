@@ -1,6 +1,8 @@
 ﻿{% extends "page" %}
 
-{% block title-tag-content %}{% firstof pageContext.metaTitle labels.yourAccount %} - {% parent %}{% endblock title-tag-content %}
+{% block title-tag-content %}
+    {% firstof pageContext.metaTitle labels.yourAccount %} - {% parent %}
+{% endblock title-tag-content %}
 
 {% block body-tag-classes %} mz-myaccount {% endblock body-tag-classes %}
 
@@ -51,14 +53,18 @@
 
         <a id="protectedcontent"></a>
         <div class="mz-l-stack-section mz-accountprotectedcontent" id="account-protectedcontent">
+            {% include "modules/my-account/my-account-digital-downloads-container" %}
+
+        {% comment %}
             {% include "modules/my-account/my-account-protectedcontent" with model=model %}
+        {% endcomment %}
         </div>
 
         <a id="orderhistory"></a>
         <div class="mz-l-stack-section mz-accountorderhistory" id="account-orderhistory">
             {% include "modules/my-account/my-account-orderhistory" with model=model.orderHistory %}
         </div>
-        
+
         {% if themeSettings.showReturns %}
         <a id="returnhistory"></a>
         <div class="mz-l-stack-section mz-accountreturnhistory" id="account-returnhistory">
@@ -82,8 +88,5 @@
         </div>
 
     </div>
-</div></div>
+</div>
 {% endblock body-content %}
-
-
-

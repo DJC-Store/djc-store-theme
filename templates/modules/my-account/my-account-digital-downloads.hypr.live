@@ -1,0 +1,11 @@
+{% if model.digitalProducts %}
+  <ul>
+    {% for digitalProduct in model.digitalProducts %}
+      <li>
+        <a href="{{ digitalProduct.url }}">{{ digitalProduct.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  {{ labels.loadingProducts }}
+{% endif %}

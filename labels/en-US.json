@@ -449,5 +449,8 @@
   "notifyWidgetSuccess"  : "You will be notified when this product is back in stock.",
   "notifyWidgetError"    : "There was an error subscribing. Please try again.",
 
-  "dealOfTheDay"     : "Deal of the Day"
+  "dealOfTheDay"     : "Deal of the Day",
+
+  "loadingProducts": "Loading Product information..",
+  "noDigitalProducts": "Sorry no products.."
 }
