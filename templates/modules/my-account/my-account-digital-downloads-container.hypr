@@ -1,0 +1,12 @@
+<data data-model="{% json_attribute model %}"></data>
+
+<h3 class="mz-l-stack-sectiontitle">
+  <i class="icon-account-digital white"></i>{{ labels.protectedContent }}
+</h3>
+
+<div class="mz-digital-downloads" data-mz-container="digital-products">
+  {% include "modules/my-account/my-account-digital-downloads" with model=model%}
+</div>
+
+
+{% require_script "modules/myaccount-digital-downloads" %}
