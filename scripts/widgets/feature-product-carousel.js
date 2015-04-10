@@ -32,7 +32,7 @@ define(['modules/jquery-mozu', 'vendor/slick/slick'],
 			$('.fpc_thumb').hover(
 				function(){
 					var slideIndex = $(this).index();
-					$('.feature-product-carousel').slickGoTo( parseInt(slideIndex) );
+					$('.feature-product-carousel').slickGoTo( parseInt(slideIndex, 10) );
 					$(this).siblings().removeClass( "active" );
 					$(this).addClass( "active" );
 			},	function(){

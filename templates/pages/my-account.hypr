@@ -53,11 +53,10 @@
 
         <a id="protectedcontent"></a>
         <div class="mz-l-stack-section mz-accountprotectedcontent" id="account-protectedcontent">
+            {%comment%}This is the New thing.
             {% include "modules/my-account/my-account-digital-downloads-container" %}
-
-        {% comment %}
+            {%endcomment%}
             {% include "modules/my-account/my-account-protectedcontent" with model=model %}
-        {% endcomment %}
         </div>
 
         <a id="orderhistory"></a>

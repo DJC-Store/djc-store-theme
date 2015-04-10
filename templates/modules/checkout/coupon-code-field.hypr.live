@@ -1,5 +1,5 @@
 ﻿        <div class="mz-l-formfieldgroup-cell">
-            <label for="coupon-code">{{ labels.couponCode }}: </label>
+            <label for="coupon-code" id="coupon-code-label">{{ labels.couponCode }}: </label>
         </div>
         <div class="mz-l-formfieldgroup-cell">
             <input type="text" id="coupon-code" name="coupon-code" value="{{ model.couponCode }}" data-mz-value="couponCode">

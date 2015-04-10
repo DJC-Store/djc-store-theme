@@ -34,6 +34,7 @@ grunt.initConfig({
     jshint: {
       theme_js: jsFiles,
       options: {
+        es3: true,
         ignores: ['scripts/vendor/**/*.js'],
         undef: true,
         laxcomma: true,
@@ -94,7 +95,7 @@ grunt.initConfig({
       },
       build: {
         cmd: versionCmd,
-        themejson: true,
+        themejson: true
       },
       renamezip: {
         cmd: versionCmd,

@@ -19,8 +19,8 @@
     {% if user.isAnonymous %}
 
     <span class="mz-pagetitle-note">
-        {{ labels.signInToContinue }} <a data-mz-action="login" data-placement="right" href="javascript;">{{ labels.signIn1 }}</a>{{ labels.signInToContinue2 }}</br>
-        {{ labels.registeredCustomer }}<a data-mz-action="signup" data-placement="right" href="javascript;">{{ labels.signUp }}</a>
+        {{ labels.signInToContinue }} <a data-mz-action="login" data-placement="right" href="/user/login">{{ labels.signIn1 }}</a>{{ labels.signInToContinue2 }}</br>
+        {{ labels.registeredCustomer }}<a data-mz-action="signup" data-placement="right" href="/user/signup">{{ labels.signUp }}</a>
     </span>
 
     {% else %} 

@@ -45,6 +45,12 @@
 	.is-crossedout {
 		font-weight: 400;
 	}
+	.tc-link {
+		color: @djcBlue;
+		&:hover, &:active, &:visited, &:focus, &:link {
+			color: @djcBlue;
+		}
+	}
 
 	@media only screen {
 		@media (max-width: 768px) {
@@ -356,6 +362,12 @@
 			padding: 10px 25px !important;
 		}
 	}
+}
+
+#coupon-code-label {
+	color: @djcBlue;
+	font-style: italic;
+	font-weight: 600;
 }
 
 .mz-ordersummary-discount {

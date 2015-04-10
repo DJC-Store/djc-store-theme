@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-79-gc8f6f16"
+    "version": "rc7-85-ge4c0f8b"
   },
   "settings": {
     "allowWishlist": false,
@@ -28,6 +28,7 @@
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
     "showCheckoutCommentsField": false,
+    "requireCheckoutAgreeToTerms": true,
     "autocompleteProducts": true,
     "fallbackFontFamily": "sans-serif",
     "fonts": [
@@ -579,16 +580,26 @@
           "xtype": "mz-input-text"
         },
         {
+          "anchor": "100%",
+          "fieldLabel": "Slide-In CTA Text",
+          "name": "promoButtonText",
+          "xtype": "mz-input-text"
+        },
+        {
           "fieldLabel": "Promo Copy - HTML<br><span style=\"font-size:.8em; color:#9a9a9a;\">Use \"em\" tags to highlight specific text.</span>",
           "fieldStyle": "resize:both;font-family:Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace;height:100%",
-          "height": 400,
+          "height": 300,
           "name": "promoCopy",
           "width": "100%",
           "mode": "html",
           "xtype": "mz-input-code"
         }
       ],
-      "defaultConfig": {}
+      "defaultConfig": {
+        "promoURL": "/insider-membership/p/insider_membership?utm_source=shopdjc&amp;utm_medium=banner&amp;utm_campaign=insider&amp;utm_content=promo-bar",
+        "promoCopy": "Become a Dani Johnson <em>Insider</em> for Exclusive Deals!",
+        "promoButtonText": "Click Here!"
+      }
     },
     {
       "id": "featureBox",

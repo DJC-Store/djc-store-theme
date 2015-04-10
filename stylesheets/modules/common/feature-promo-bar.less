@@ -1,12 +1,14 @@
 .feature-promo-bar {
 	width: 100%;
 	display: block;
+	position: relative;
+	overflow: hidden;
 	padding: 16px;
 	background-color: @djcDark;
-	transition: background-color .2s ease-out;
-	-webkit-transition: background-color .2s ease-out;
 
 	div {
+		position: relative;
+		z-index: 10;
 		width: 100%;
 		border-top: 1px solid rgba(255,255,255,0.5);
 		border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -23,6 +25,12 @@
 			text-align: center;
 			text-transform: none;
 
+			&.slide-over {
+				width: 100%;
+				transition: width .3s ease-in-out;
+				-webkit-transition: width .3s ease-in-out;
+			}
+
 			span {
 				font-style: normal;
 				font-size: .5em;
@@ -38,24 +46,105 @@
 		}
 	}
 
+	.slide-in {
+		position: absolute;
+		z-index: 9;
+		width: 30%;
+		background: @djcDarkBlue;
+		height: 100%;
+		display: inline-block;
+		top: 0;
+		right: -30%;
+		padding: 0 0 0 2em;
+		transition: right .2s ease-out;
+		-webkit-transition: right .2s ease-out;
+		border-top: none;
+		border-bottom: none;
+
+		h2 {
+			font-size: 2em;
+			letter-spacing: 2px;
+			font-style: normal;
+			line-height: 2em;
+			margin: 10px 0;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		&:before {
+			display: block;
+			position: absolute;
+			left: -20px;
+			width: 0;
+			height: 0;
+			border-bottom: 150px solid @djcDarkBlue;
+			border-left: 20px solid transparent;
+			content:"";
+		}
+	}
+
+	&:hover, &:focus, &:active {
+		.slide-over {
+			width: 70%;
+		}
+		.slide-in {
+			right: 0;
+		}
+	}
+
 	@media only screen {
         @media (max-width: 768px) {
+        	div {
+				border-top: none;
+				border-bottom: none;
+				padding: 0 0 12px;
+        	}
+
+        	.slide-over {
+            	width: 100%;
+            }
+
+            .slide-in {
+            	right: 0;
+            	width: 100%;
+            	position: relative;
+            	height: auto;
+            	text-align: center;
+            	margin: 0;
+            	padding: 0;
+            	border-radius: 5px;
+
+            	h2 {
+					text-align: center;
+					margin: 0;
+					font-size: 1.2em;
+            	}
+
+            	&:before {
+            		display: none;
+            	}
+            }
+
+			&:hover, &:focus, &:active {
+				.slide-over {
+					width: 100%;
+				}
+			}
+
             h2 {
             	font-size: 1em;
             }
         }
         @media (max-width: 414px) {
             padding: 8px;
+
             div {
-            	padding: 6px;
+            	padding: 0 0 6px;
             }
             h2 {
             	letter-spacing: 1px !important;
             }
+            
         }
     }
-
-	&:hover, &:focus, &:active {
-		background-color: @djcDarkBlue;
-	}
 }

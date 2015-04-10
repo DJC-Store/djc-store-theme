@@ -1,12 +1,7 @@
-require([
-  'modules/jquery-mozu'
-, 'underscore'
-, 'hyprlive'
-, 'modules/api'
-], function($, _, Hypr, api) {
+require([ 'modules/jquery-mozu', 'underscore', 'hyprlive', 'modules/api' ], function($, _, Hypr, api) {
 
-  var user      = require.mozuData('user')
-    , endpoint  = {
+  var user      = require.mozuData('user'), 
+      endpoint  = {
         // segments: 'https://integrations1-hp.mozu.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
         segments: 'https://int1qacs.mozu-qa.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
       }
