@@ -33,9 +33,11 @@
     "tiny-lr-fork": "0.0.5",
     "grunt-contrib-jshint": "~0.8",
     "grunt-contrib-watch": "~0.6",
+    "grunt-contrib-compress": "^0.6",
     "grunt-jsonlint": "*",
     "zubat": "*",
-    "async": "~0.2.10"
+    "async": "~0.2.10",
+    "semver": "^3.0"
   },
   "engines": {
     "node": ">=0.10"

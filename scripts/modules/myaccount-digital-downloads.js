@@ -2,8 +2,9 @@ require([ 'modules/jquery-mozu', 'underscore', 'hyprlive', 'modules/api' ], func
 
   var user      = require.mozuData('user'), 
       endpoint  = {
-        // segments: 'https://integrations1-hp.mozu.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
-        segments: 'https://int1qacs.mozu-qa.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
+        segments: 'https://integrations1-hp.mozu.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
+        //beta server endpoint:
+        //segments: 'https://int1qacs.mozu-qa.com/customersegmentation/api/asset/list?tenantId={{TENANTID}}&siteId={{SITEID}}&accountId={{ACCOUNTID}}'
       }
     ;
 
@@ -18,7 +19,7 @@ require([ 'modules/jquery-mozu', 'underscore', 'hyprlive', 'modules/api' ], func
 
   // issue the request
   api
-    .request('GET', {
+    .request('POST', {
       url: endpoint.segments,
       userClaims: api.context.UserClaims()
     })

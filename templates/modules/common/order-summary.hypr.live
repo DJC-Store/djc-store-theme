@@ -32,6 +32,12 @@
         {% endfor %}
       
         <tbody>
+            <tr class="mz-ordersummary-subtotal">
+              <td colspan="4">
+                <span class="mz-ordersummary-totalname">{{ labels.subtotal }}:</span>
+                <span class="mz-ordersummary-totalvalue">{{ model.discountedSubtotal|currency }}</span>
+              </td>
+            </tr>
             {% for discount in model.orderDiscounts %}
             {% if not discount.excluded %}
             <tr class="mz-ordersummary-discount">
@@ -42,12 +48,6 @@
             </tr>
             {% endif %}
             {% endfor %}
-            <tr class="mz-ordersummary-subtotal">
-              <td colspan="4">
-                <span class="mz-ordersummary-totalname">{{ labels.subtotal }}:</span>
-                <span class="mz-ordersummary-totalvalue">{{ model.discountedSubtotal|currency }}</span>
-              </td>
-            </tr>
             {% if model.taxTotal %}
             <tr class="mz-ordersummary-tax">
                 <td colspan="4">
