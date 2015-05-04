@@ -471,6 +471,25 @@ hr.dark {
   }
 }
 
+//BAZAARVOICE FIX - not functional. Needs better js insertion to replace "bv-content-item" class when paired with bv-secondary-content-clientresponse
+//fix blue background on reviews client response
+.bv-content-list {
+  .dj-bv-content-item {
+    margin: 0 10px 2px !important;
+    border: 0 !important;
+    clear: both !important;
+    display: block !important;
+    -webkit-transition: all ease .5s !important;
+    -moz-transition: all ease .5s !important;
+    -o-transition: all ease .5s !important;
+    transition: all ease .5s !important;
+    background-color: @djcLightGray !important;
+    -webkit-border-radius: .25em !important;
+    border-radius: .25em !important;
+    color: #303030 !important;
+  }
+}
+
 //forms
 input, textarea {
   border-radius: 2px;

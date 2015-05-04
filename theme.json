@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-86-gdeeaa3c"
+    "version": "rc7-87-g0281b60"
   },
   "settings": {
     "allowWishlist": false,
@@ -24,7 +24,7 @@
     "listProductPrice": false,
     "listEventImage": true,
     "listNextEvent": true,
-    "reviewsFallback": true,
+    "reviewsFallback": false,
     "maxProductImageThumbnailSize": 75,
     "showProductDetailMeasurements": false,
     "showCheckoutCommentsField": false,

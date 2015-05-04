@@ -21,6 +21,8 @@
             {% include "modules/cart/cart-table" %}
         </table>
 	</form>
+	
+    <span class="continue-shopping"><a href="/"><i></i>{{ labels.continueShopping }}</a></span>
 </div>
 
 {%comment%} RELATED PRODUCTS WILL GO HERE {%endcomment%}

@@ -29,19 +29,19 @@
         <div class="cd-tabs">
             <nav>
                 <ul class="cd-tabs-navigation">
-                    <li><a data-content="description" href="#0">{{ labels.productDescription }}</a></li>
-                    <li><a data-content="reviews" class="selected" href="#0">{{ labels.productReviews }}</a></li>
+                    <li><a data-content="description" class="selected" href="#0">{{ labels.productDescription }}</a></li>
+                    <li><a data-content="reviews" href="#0">{{ labels.productReviews }}</a></li>
                     <li><a data-content="shipping" href="#0">{{ labels.shippingInformation }}</a></li>
                 </ul> <!-- cd-tabs-navigation -->
             </nav>
          
             <ul class="cd-tabs-content">
-                <li data-content="description">
+                <li data-content="description" class="selected">
                     <div class="dj-dropzone">
                         {% dropzone "product-description" scope="page" %}
                     </div>
                 </li>
-                <li data-content="reviews" class="selected">
+                <li data-content="reviews">
                     <div class="dj-row">
                         <div class="col-12">
                             <div class="quotation">
@@ -59,10 +59,18 @@
                     </div>
                 </li>
                 <li id="shipping-info" data-content="shipping">
-                    <div class="dj-row">
+                    <div class="dj-row physical">
                         <div class="col-6">
                             <h2>{{ labels.estimatedDelivery|safe }}</h2>
                             <dl>{{ labels.shipMethodSummaryList|safe }}</dl>
+                        </div>
+                        <div class="col-6">
+                            <img src="/resources/images/physicalproducts.jpg">
+                        </div>
+                    </div>
+                    <div class="dj-row digital">
+                        <div class="col-6">
+                            <img src="/resources/images/digitalproducts.jpg">
                         </div>
                         <div class="col-6">
                             <h2>{{ labels.digitalContent|safe }}</h2>

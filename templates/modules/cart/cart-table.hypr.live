@@ -76,12 +76,6 @@
     </td>
     <td></td>
   </tr>
-  <tr class="mz-carttable-promo-row">
-    <td colspan="4">
-      <em class="mz-auxiliary-text">{{ labels.promoAtCheckout }}</em>
-    </td>
-    <td></td>
-  </tr>
 
   {% for discount in model.orderDiscounts %}
     {% if not discount.excluded %}
@@ -99,10 +93,7 @@
 
 
   <tr class="mz-carttable-total-row">
-    <td class="mz-carttable-total-wrap mz-carttable-continue-shopping" colspan="1">
-      <a href="/"><i></i>{{ labels.continueShopping }}</a>
-    </td>
-    <td class="mz-carttable-total-wrap" colspan="3">
+    <td class="mz-carttable-total-wrap" colspan="4">
       {{ labels.orderTotal }}:
         <span id="mz-carttable-total" class="mz-carttable-total">
           <strong>{{ model.discountedTotal|currency }}</strong>

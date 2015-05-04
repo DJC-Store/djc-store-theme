@@ -198,12 +198,53 @@
 	#shipping-info {
 		.dj-row {
 			padding: 0;
+			img {
+				width: 80%;
+				margin: 0 auto;
+			}
 
-			.col-6:first-child {
-				border-right: none;
-				
-				@media only screen and (min-width: 960px) {
-					border-right: 1px solid #e9e9e9;
+			&.physical {
+				.col-6:first-child {
+					text-align: right;
+				}
+				.col-6 + .col-6 {
+					text-align: center;
+				}
+			}
+			&.digital {
+				.col-6:first-child {
+					text-align: center;
+				}
+				.col-6 + .col-6 {
+					text-align: left;
+				}
+			}
+
+			&:first-child {
+				margin-bottom: 30px;
+			}
+
+			@media only screen {
+				@media (max-width: 768px) {
+					&.physical {
+						.col-6:first-child {
+							text-align: center;
+						}
+						.col-6 + .col-6 {
+							display: none;
+						}
+					}
+					&.digital {
+						.col-6:first-child {
+							display: none;
+						}
+						.col-6 + .col-6 {
+							text-align: center;
+						}
+					}
+					&:first-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -234,7 +275,6 @@
 			font-weight: 300;
 			color: #9a9a9a;
 			margin: 0 0 20px 0;
-			padding-right: 40px;
 		}
 	}
 	@media only screen {

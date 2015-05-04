@@ -131,6 +131,5 @@ require([
                         console.log(jqxhr);
                     });
             });
-
         });
     });
