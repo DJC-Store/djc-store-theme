@@ -40,4 +40,16 @@ jQuery(document).ready(function($){
 			tabs.parent('.cd-tabs').removeClass('is-ended');
 		}
 	}
+
+	//add listener for BazaarVoice pagination
+	$('.bv-content-btn-pages').on('mousedown', function(){
+		console.log('bv paging click - yes!');
+
+		var selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
+			slectedContentHeight = selectedContent.innerHeight();
+
+		tabContentWrapper.animate({
+			'height': slectedContentHeight
+		}, 200);
+	});
 });

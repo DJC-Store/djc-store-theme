@@ -48,8 +48,12 @@
 		{% include_products "modules/my-account/digital-product-listing" with productCodes="134215" as_parameter %}
 	{% endif %}
 
-	{% if segment.id == 8 %}<!-- Spirit Driven Success - Audio -->
+	{% if segment.id == 8 %}<!-- Spirit Driven Success I - Audio -->
 		{% include_products "modules/my-account/digital-product-listing" with productCodes="136062B" as_parameter %}
+	{% endif %}
+
+	{% if segment.id == 185 %}<!-- Spirit Driven Success II - Audio -->
+		{% include_products "modules/my-account/digital-product-listing" with productCodes="139784" as_parameter %}
 	{% endif %}
 
 	{% if segment.id == 9 %}<!-- Spirit Driven Success - Book -->
@@ -531,6 +535,10 @@
 	
 	{% if segment.id == 61 %}<!-- Creating a Dynasty - May 2014 Atlanta MP3s -->
 		<li><a href="http://shop.danijohnson.com/creating-a-dynasty-may-2014-334a725848">Creating a Dynasty - May 2014 Atlanta MP3s</a></li>
+	{% endif %}
+	
+	{% if segment.id == 186 %}<!-- Creating a Dynasty - May 2015 Atlanta MP3s -->
+		<li><a href="http://shop.danijohnson.com/creating-a-dynasty-may-2015-736d696c65">Creating a Dynasty - May 2015 Orlando MP3s</a></li>
 	{% endif %}
 
 	<!-- OTHER EVENTS -->
