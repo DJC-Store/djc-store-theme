@@ -1,0 +1,3 @@
+<div class="browse-all-products">
+  <h2>{% for link in navigation.tree %}{% ifequal link.name "Categories" %}<a href="{{link.url}}">{{ model.config.linkText }}</a>{% endifequal %}{% endfor %}</h2>
+</div>

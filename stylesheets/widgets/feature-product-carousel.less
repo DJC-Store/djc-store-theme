@@ -147,6 +147,7 @@
 			margin-right: 2.125em;
 		}
 
+
 		@media only screen {
 			@media (max-width: 1500px) {
 				left: 4%;
@@ -178,6 +179,44 @@
 				p {
 		  			display: none;
 				}
+			}
+		}
+	}
+
+	.fpc-slide.light {
+		.dj-info-box {
+			background: white;
+			border: 2px solid @djcBlue;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
+			h1 {
+				text-shadow: none;
+				color: @djcBlue;
+			}
+			h2 {
+				text-shadow: none;
+				color: @djcDark;
+			}
+			hr {
+				border-bottom-color: @djcLightGray;
+			}
+			p {
+				color: @djcDark;
+				font-weight: 400;
+			}
+		}
+		@media only screen {
+			@media (max-width: 768px) {
+				background: none;
+				border: none;
+				box-shadow: none;
+
+				h1, p, hr {
+					display: none;
+      			}
+      			h2 {
+      				color: white;
+      			}
 			}
 		}
 	}

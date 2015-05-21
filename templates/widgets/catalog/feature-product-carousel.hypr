@@ -8,17 +8,17 @@
 		<a href="{{model.config.adLinkUrl}}"></a>
 	</div>
 	{% else %}
-	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg1 }} );">
+	<div class="fpc-slide {% if model.config.bg1Light %}light{% endif %}" style="background-image: url( {{ model.config.prodBg1 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd1 as_parameter %}
 	</div>
 	{% endif %}
-	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg2 }} );">
+	<div class="fpc-slide {% if model.config.bg2Light %}light{% endif %}" style="background-image: url( {{ model.config.prodBg2 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd2 as_parameter %}
 	</div>
-	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg3 }} );">
+	<div class="fpc-slide {% if model.config.bg3Light %}light{% endif %}" style="background-image: url( {{ model.config.prodBg3 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd3 as_parameter %}
 	</div>
-	<div class="fpc-slide" style="background-image: url( {{ model.config.prodBg4 }} );">
+	<div class="fpc-slide {% if model.config.bg4Light %}light{% endif %}" style="background-image: url( {{ model.config.prodBg4 }} );">
 		{% include_products "modules/product/carousel-main" with productCodes=model.config.featProd4 as_parameter %}
 	</div>
 </div>

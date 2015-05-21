@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": true,
     "defaultLanguage": "en-US",
-    "version": "rc7-87-g0281b60"
+    "version": "rc7-88-g7754007"
   },
   "settings": {
     "allowWishlist": false,
@@ -364,6 +364,26 @@
       }
     },
     {
+      "id": "browseAll",
+      "displayName": "Browse All Products",
+      "displayTemplate": "misc/browse-all-products",
+      "icon": "/reources/admin/widgets/browse.png",
+      "validPageTypes": [
+        "*"
+      ],
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Link Text",
+          "name": "linkText",
+          "xtype": "mz-input-text"
+        }
+      ],
+      "defaultConfig": {
+        "linkText": "Browse Our Entire Catalog Here"
+      }
+    },
+    {
       "id": "featprod-carousel",
       "displayName": "Featured Product Carousel",
       "displayTemplate": "catalog/feature-product-carousel",
@@ -438,6 +458,22 @@
         },
         {
           "anchor": "50%",
+          "fieldLabel": "Background Scheme - Product One",
+          "name": "bg1Light",
+          "store": [
+            [
+              true,
+              "Light"
+            ],
+            [
+              false,
+              "Dark"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "50%",
           "fieldLabel": "Button Text - Product One",
           "name": "buttonText1",
           "xtype": "mz-input-text"
@@ -453,6 +489,22 @@
           "fieldLabel": "Background URL - Product Two",
           "name": "prodBg2",
           "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Background Scheme - Product Two",
+          "name": "bg2Light",
+          "store": [
+            [
+              true,
+              "Light"
+            ],
+            [
+              false,
+              "Dark"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
         },
         {
           "anchor": "50%",
@@ -474,6 +526,22 @@
         },
         {
           "anchor": "50%",
+          "fieldLabel": "Background Scheme - Product Three",
+          "name": "bg3Light",
+          "store": [
+            [
+              true,
+              "Light"
+            ],
+            [
+              false,
+              "Dark"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
+        },
+        {
+          "anchor": "50%",
           "fieldLabel": "Button Text - Product Three",
           "name": "buttonText3",
           "xtype": "mz-input-text"
@@ -489,6 +557,22 @@
           "fieldLabel": "Background URL - Product Four",
           "name": "prodBg4",
           "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "50%",
+          "fieldLabel": "Background Scheme - Product Four",
+          "name": "bg4Light",
+          "store": [
+            [
+              true,
+              "Light"
+            ],
+            [
+              false,
+              "Dark"
+            ]
+          ],
+          "xtype": "mz-input-dropdown"
         },
         {
           "anchor": "50%",

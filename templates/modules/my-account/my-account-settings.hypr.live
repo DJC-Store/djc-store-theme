@@ -10,6 +10,7 @@
   <div class="mz-accountsettings-displayname" id="account-settings-name">{{ model.firstName }} {{ model.lastName }}</div>
   {% endif %}
 </div>
+{%comment%} HIDE PHONE AND EMAIL UNTIL FIX IS DELIVERED ON MOZU ISSUE #59626
 <div class="mz-accountsettings-section mz-accountsettings-email">
   <span class="mz-accountsettings-label mz-account-settings-label-email">{{ labels.emailAddress }}</span>
   {% if editing %}
@@ -28,6 +29,7 @@
   <div class="mz-accountsettings-displayphone">{{ model.primaryBillingContact.phoneNumbers.home|default(labels.noPhoneNumber) }}</div>
   {% endif %}
 </div>
+{%endcomment%}
 
 <div class="mz-accountsettings-section mz-accountsettings-acceptsmarketing">
   <input type="checkbox" id="account-acceptsmarketing" data-mz-value="acceptsMarketing" {% if model.acceptsMarketing %}checked="checked"{% endif %} {% if not editing %}disabled="disabled"{% endif %} />
