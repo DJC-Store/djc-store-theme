@@ -13,59 +13,61 @@
     <ul data-mz-contextify='.dj-sitenav-link[href="{{ navigation.currentNode.url }}"]'
         data-mz-contextify-attr='class'
         data-mz-contextify-val='active'>
-    {% partial_cache %}
-    {% for link in navigation.tree %}{% ifequal link.name "Types" %}
-      {% for sublink in link.items %}
-      {% if not sublink.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
-      <li>
-        <a class="dj-sitenav-link" href="{{sublink.url}}">
-          <i class="icon-{{ sublink.name|lower }}"></i>
-          <h2>{{ sublink.name }}</h2>
-          <h6>
-            {% ifequal sublink.name "Events" %}
-              {{ themeSettings.navEventsFlavorText }}
-            {% endifequal %}
-            {% ifequal sublink.name "Books" %}
-              {{ themeSettings.navBooksFlavorText }}
-            {% endifequal %}
-            {% ifequal sublink.name "Courses" %}
-              {{ themeSettings.navCoursesFlavorText }}
-            {% endifequal %}
-            {% ifequal sublink.name "Bundles" %}
-              {{ themeSettings.navBundlesFlavorText }}
-            {% endifequal %}
-          </h6>
-        </a>
-        <div class="sub-nav">
-          <div class="dj-container">
-            <div class="nav-bg orange-dash"></div>
-              {% ifequal sublink.name "Books" %}
-              <div class="dj-dropzone">
-                {% dropzone "sub-books" scope="site" %}
-              </div>
-              {% endifequal %}
-              {% ifequal sublink.name "Events" %}
-              <div class="dj-dropzone">
-                {% dropzone "sub-events" scope="site" %}
-              </div>
-              {% endifequal %}
-              {% ifequal sublink.name "Courses" %}
-              <div class="dj-dropzone">
-                {% dropzone "sub-courses" scope="site" %}
-              </div>
-              {% endifequal %}
-              {% ifequal sublink.name "Bundles" %}
-              <div class="dj-dropzone">
-                {% dropzone "sub-bundles" scope="site" %}
-              </div>
-              {% endifequal %}
-            <div class="clear"></div>
-          </div>
-        </div>
-      </li>
-      {% endif %}
-      {% endfor %}
-    {% endifequal %}{% endfor %}
+        {% partial_cache %}
+        {% for link in navigation.tree %}
+        {% if link.name == "Types" %}
+            {% if link.items %}
+              {% for sublink in link.items %}
+                <li>
+                  <a class="dj-sitenav-link" href="{{sublink.url}}">
+                    <i class="icon-{{ sublink.name|lower }}"></i>
+                    <h2>{{ sublink.name }}</h2>
+                    <h6>
+                      {% if sublink.name == "Events" %}
+                        {{ themeSettings.navEventsFlavorText }}
+                      {% endif %}
+                      {% if sublink.name == "Books" %}
+                        {{ themeSettings.navBooksFlavorText }}
+                      {% endif %}
+                      {% if sublink.name == "Courses" %}
+                        {{ themeSettings.navCoursesFlavorText }}
+                      {% endif %}
+                      {% if sublink.name == "Bundles" %}
+                        {{ themeSettings.navBundlesFlavorText }}
+                      {% endif %}
+                    </h6>
+                  </a>
+                  <div class="sub-nav">
+                    <div class="dj-container">
+                      <div class="nav-bg orange-dash"></div>
+                        {% if sublink.name == "Books" %}
+                        <div class="dj-dropzone">
+                          {% dropzone "sub-books" scope="site" %}
+                        </div>
+                        {% endif %}
+                        {% if sublink.name == "Events" %}
+                        <div class="dj-dropzone">
+                          {% dropzone "sub-events" scope="site" %}
+                        </div>
+                        {% endif %}
+                        {% if sublink.name == "Courses" %}
+                        <div class="dj-dropzone">
+                          {% dropzone "sub-courses" scope="site" %}
+                        </div>
+                        {% endif %}
+                        {% if sublink.name == "Bundles" %}
+                        <div class="dj-dropzone">
+                          {% dropzone "sub-bundles" scope="site" %}
+                        </div>
+                        {% endif %}
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            {% endif %}
+        {% endif %}
+        {% endfor %}
     {% endpartial_cache %}
     {% require_script "modules/contextify" %}
     </ul>

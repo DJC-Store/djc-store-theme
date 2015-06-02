@@ -3,20 +3,12 @@
   <div class="menu">
     <ul class="sub-events">
       <li>
-        {% if model.config.prod-fsts %}
-        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-fsts as_parameter %}
-        {% else %}
         <a href="http://{{model.config.fstsUrl}}">{{ model.config.fsts }}</a>
         <p class="event-quickinfo">{{ model.config.fstsSubtext }}</p>
-        {% endif %}
         <ul class="fsts-events">
           <li>
-            {% if model.config.prod-hbew %}
-            {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-hbew as_parameter %}
-            {% else %}
             <a href="http://{{model.config.hbewUrl}}">{{ model.config.hbew }}</a>
             <p class="event-quickinfo">{{ model.config.hbewSubtext }}</p>
-            {% endif %}
           </li>
           <li>
             <a href="http://{{model.config.selUrl}}">{{ model.config.sel }}</a>
@@ -25,12 +17,8 @@
         </ul>
       </li>
       <li>
-        {% if model.config.prod-dynasty %}
-        {% include_products "modules/product/eventnav-listitem" with productCodes=model.config.prod-dynasty as_parameter %}
-        {% else %}
         <a href="http://{{model.config.dynastyUrl}}">{{ model.config.dynasty }}</a>
         <p class="event-quickinfo">{{ model.config.dynastySubtext }}</p>
-        {% endif %}
       </li>
     </ul>
   </div>

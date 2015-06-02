@@ -63,6 +63,7 @@
         {% block head-tag-scripts %}
         <script src="{{siteContext.cdnPrefix}}/scripts/vendor/modernizr.min.js"></script>
         {% include "modules/web-fonts-loader" %}
+        {% include "modules/analytics/google-analytics-tracking-code" %}
         {% endblock head-tag-scripts %}
         {% block fb-tracking-pxl %}{% endblock fb-tracking-pxl %}
         {% cms_resources %}
@@ -79,9 +80,6 @@
     {% block open-body-tag %}
     <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
     {% endblock open-body-tag %}
-
-    {% include "modules/google-tag-script" %}
-
        
         <div id="page-wrapper" class="mz-l-pagewrapper dj-bg">
     
